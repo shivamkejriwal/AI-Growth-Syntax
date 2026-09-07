@@ -29,6 +29,8 @@ import { CompetitorEngine } from './lib/competitorEngine.js';
 import { FoddaClient } from './lib/foddaClient.js';
 import { SeekingAlphaClient } from './lib/seekingAlphaClient.js';
 import { getActiveMode, getModeConfig, APP_MODES } from './lib/modes.js';
+import { defaultMockDataManager } from './lib/mockDataManager.js';
+import { defaultDb } from './lib/db.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -274,7 +276,8 @@ export async function handleRequest(req, res) {
     // API: /api/macro
     // -------------------------------------------------------------
     if (pathname === '/api/macro' && req.method === 'GET') {
-      const macroDossier = await investor.generateMacroDossier();
+      const mode = searchParams.get('mode') || 'live';
+      const macroDossier = await investor.generateMacroDossier({ mode });
       return sendJson(res, 200, { success: true, macro: macroDossier });
     }
 
@@ -306,7 +309,12 @@ export async function handleRequest(req, res) {
     if (pathname === '/api/institutional-desk' && req.method === 'GET') {
       const ticker = (searchParams.get('ticker') || 'AAPL').trim().toUpperCase();
       const mode = searchParams.get('mode') || 'live';
-      const deskSimulation = await desk.runDeskSimulation(ticker, { mode });
+      let deskSimulation;
+      if (mode === 'mock') {
+        deskSimulation = await defaultMockDataManager.getMockInstitutional(ticker, defaultDb);
+      } else {
+        deskSimulation = await desk.runDeskSimulation(ticker, { mode });
+      }
       return sendJson(res, 200, deskSimulation);
     }
 
@@ -316,7 +324,12 @@ export async function handleRequest(req, res) {
     if (pathname === '/api/experts-desk' && req.method === 'GET') {
       const ticker = (searchParams.get('ticker') || 'MSFT').trim().toUpperCase();
       const mode = searchParams.get('mode') || 'live';
-      const expertsDebate = await expertsDesk.runExpertsDebate(ticker, { mode });
+      let expertsDebate;
+      if (mode === 'mock') {
+        expertsDebate = await defaultMockDataManager.getMockExpertsDesk(ticker, defaultDb);
+      } else {
+        expertsDebate = await expertsDesk.runExpertsDebate(ticker, { mode });
+      }
       return sendJson(res, 200, expertsDebate);
     }
 
@@ -375,7 +388,13 @@ export async function handleRequest(req, res) {
       const ticker = (searchParams.get('ticker') || 'MSFT').trim().toUpperCase();
       const name = searchParams.get('name') || '';
       const refresh = searchParams.get('refresh') === '1' || searchParams.get('force') === 'true';
-      const result = await competitorEngine.getCompetitorAnalysis(ticker, name, { forceRefresh: refresh });
+      const mode = searchParams.get('mode') || 'live';
+      let result;
+      if (mode === 'mock') {
+        result = await defaultMockDataManager.getMockCompetitors(ticker, defaultDb);
+      } else {
+        result = await competitorEngine.getCompetitorAnalysis(ticker, name, { forceRefresh: refresh });
+      }
       return sendJson(res, 200, result);
     }
 
@@ -401,6 +420,11 @@ export async function handleRequest(req, res) {
     // -------------------------------------------------------------
     if (pathname === '/api/fodda/earnings' && req.method === 'GET') {
       const ticker = (searchParams.get('ticker') || 'MSFT').trim().toUpperCase();
+      const mode = searchParams.get('mode') || 'live';
+      if (mode === 'mock') {
+        const earnings = await defaultMockDataManager.getMockFodda(ticker, defaultDb);
+        return sendJson(res, 200, earnings);
+      }
       const view = searchParams.get('view') || 'snapshot';
       const period = searchParams.get('period') || undefined;
       const metrics = searchParams.get('metrics') || undefined;
@@ -490,6 +514,11 @@ export async function handleRequest(req, res) {
     if (pathname === '/api/seeking-alpha' && req.method === 'GET') {
       const ticker = (searchParams.get('ticker') || 'MSFT').toUpperCase();
       const limit = parseInt(searchParams.get('limit') || '15', 10);
+      const mode = searchParams.get('mode') || 'live';
+      if (mode === 'mock') {
+        const feed = await defaultMockDataManager.getMockSeekingAlpha(ticker, defaultDb);
+        return sendJson(res, 200, feed);
+      }
       const feed = await seekingAlpha.getTickerFeed(ticker, limit);
       return sendJson(res, 200, feed);
     }

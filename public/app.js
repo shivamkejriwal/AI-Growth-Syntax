@@ -70,8 +70,65 @@ function showStaticBannerOnce() {
   document.body.prepend(banner);
 }
 
+function getAppMode() {
+  const panelToggle = document.getElementById('panel-mode-toggle');
+  if (modeToggle) return modeToggle.checked ? 'mock' : 'live';
+  if (panelToggle) return panelToggle.checked ? 'mock' : 'live';
+  try {
+    const saved = localStorage.getItem('growth_syntax_mock_mode');
+    return saved === 'false' ? 'live' : 'mock';
+  } catch (e) {
+    return 'mock';
+  }
+}
+
+function isMockMode() {
+  return getAppMode() === 'mock';
+}
+
+function formatApiUrl(url) {
+  if (typeof url !== 'string') return url;
+  if (url.startsWith('/api/') && !url.includes('mode=') && !url.startsWith('/api/status') && !url.startsWith('/api/search') && !url.startsWith('/api/resolve') && !url.startsWith('/api/export-memo')) {
+    const sep = url.includes('?') ? '&' : '?';
+    return `${url}${sep}mode=${getAppMode()}`;
+  }
+  return url;
+}
+
+function setMockMode(enabled, triggerReload = true) {
+  if (modeToggle) modeToggle.checked = enabled;
+  const panelToggle = document.getElementById('panel-mode-toggle');
+  if (panelToggle) panelToggle.checked = enabled;
+
+  try {
+    localStorage.setItem('growth_syntax_mock_mode', enabled ? 'true' : 'false');
+  } catch (e) {
+    // Ignore restricted iframe storage errors
+  }
+
+  updateModeLabel();
+  renderStatusIndicator();
+
+  if (triggerReload) {
+    onModeChanged();
+  }
+}
+
+function onModeChanged() {
+  // If macro view is active, refresh macro data in new mode
+  if (viewMacro && viewMacro.style.display !== 'none') {
+    fetchMacroData();
+  }
+
+  // If current ticker is active, refresh company research in new mode
+  if (currentTicker) {
+    startResearch(currentTicker);
+  }
+}
+
 async function apiFetch(url, options = {}) {
-  const res = await fetch(url, options);
+  const formattedUrl = formatApiUrl(url);
+  const res = await fetch(formattedUrl, options);
   const contentType = res.headers.get('content-type') || '';
 
   // If server responded with HTML (e.g. index.html SPA wildcard rewrite on Firebase Hosting without a backend)
@@ -95,9 +152,16 @@ document.addEventListener('DOMContentLoaded', () => {
   setupExpertsListeners();
   setupCompetitorListeners();
   setupSeekingAlphaListeners();
-  // Default to fast demo/cache mode initially for instant exploration
-  modeToggle.checked = true;
-  updateModeLabel();
+
+  // Restore mock mode preference from localStorage (default: true for instant zero-rate-limit exploration)
+  let initialMock = true;
+  try {
+    const saved = localStorage.getItem('growth_syntax_mock_mode');
+    if (saved !== null) initialMock = (saved === 'true');
+  } catch (e) {
+    initialMock = true;
+  }
+  setMockMode(initialMock, false);
 
   // Check system status
   fetchStatus();
@@ -193,7 +257,9 @@ function setupEventListeners() {
   });
 
   // Mode toggle
-  modeToggle.addEventListener('change', updateModeLabel);
+  modeToggle.addEventListener('change', () => {
+    setMockMode(modeToggle.checked, true);
+  });
 
   // Quick Chips
   quickChips.forEach(chip => {
@@ -297,10 +363,13 @@ function setupEventListeners() {
 }
 
 function updateModeLabel() {
-  if (modeToggle.checked) {
-    modeLabel.textContent = 'Fast Cache / Demo Data Mode';
-  } else {
-    modeLabel.textContent = 'Live Network Queries (Alpha Vantage & SEC)';
+  const isMock = isMockMode();
+  const sublabel = document.getElementById('mode-sublabel-text');
+  if (modeLabel) {
+    modeLabel.textContent = isMock ? 'Mock Mode (SQL / Firestore)' : 'Live Network Mode';
+  }
+  if (sublabel) {
+    sublabel.textContent = isMock ? 'Offline DB Data • Zero API Limits' : 'Alpha Vantage & SEC EDGAR';
   }
   renderStatusIndicator();
 }
@@ -314,6 +383,7 @@ function setupStatusIndicatorListeners() {
   const closeBtn = document.getElementById('btn-close-status-panel');
   const refreshBtn = document.getElementById('btn-refresh-status');
   const container = document.getElementById('status-dropdown-container');
+  const panelToggle = document.getElementById('panel-mode-toggle');
 
   if (!btn || !panel) return;
 
@@ -321,6 +391,12 @@ function setupStatusIndicatorListeners() {
     e.stopPropagation();
     toggleStatusPanel();
   });
+
+  if (panelToggle) {
+    panelToggle.addEventListener('change', () => {
+      setMockMode(panelToggle.checked, true);
+    });
+  }
 
   if (closeBtn) {
     closeBtn.addEventListener('click', (e) => {
@@ -390,7 +466,7 @@ function closeStatusPanel() {
 }
 
 function computeSystemStatus(data) {
-  const isMock = (modeToggle && modeToggle.checked) || isStaticHostingMode;
+  const isMock = isMockMode() || isStaticHostingMode;
 
   if (isMock) {
     return {
@@ -399,7 +475,7 @@ function computeSystemStatus(data) {
       dotClass: 'mock',
       pillClass: 'mock',
       heading: 'Mock mode',
-      sub: 'Pre-cached benchmark demo datasets active. Zero API rate limits consumed.'
+      sub: 'Mock data pulled directly from SQL (SQLite on local) or Cloud Firestore (deployed).'
     };
   }
 
@@ -449,9 +525,15 @@ function renderStatusIndicator() {
 
 function renderStatusPanelDetails() {
   const statusInfo = computeSystemStatus(latestStatusData);
-  const isMock = (modeToggle && modeToggle.checked) || isStaticHostingMode;
+  const isMock = isMockMode() || isStaticHostingMode;
   const keys = latestStatusData?.keys || {};
   const mode = latestStatusData?.mode || (isStaticHostingMode ? 'firebase' : 'local');
+
+  // Synchronize the panel toggle switch
+  const panelToggle = document.getElementById('panel-mode-toggle');
+  if (panelToggle) {
+    panelToggle.checked = isMock;
+  }
 
   // Update summary banner
   const summaryDot = document.getElementById('status-summary-dot');
@@ -471,7 +553,9 @@ function renderStatusPanelDetails() {
     summarySub.textContent = statusInfo.sub;
   }
   if (modeBadge) {
-    modeBadge.textContent = isMock ? 'MOCK / DEMO' : (mode === 'firebase' ? 'FIREBASE DEPLOYED' : 'LOCAL SQLITE');
+    modeBadge.textContent = isMock 
+      ? (mode === 'firebase' ? 'FIRESTORE MOCK' : 'SQLITE MOCK')
+      : (mode === 'firebase' ? 'FIREBASE DEPLOYED' : 'LOCAL SQLITE');
   }
   if (lastChecked) {
     const now = new Date();
@@ -486,49 +570,49 @@ function renderStatusPanelDetails() {
       name: 'SEC EDGAR XBRL Facts',
       desc: 'Form 10-K, 10-Q statements & XBRL financial disclosures',
       status: isMock ? 'mock' : 'online',
-      badge: isMock ? 'Mocked Data' : 'Operational'
+      badge: isMock ? 'SQL / Firestore Mock' : 'Operational'
     },
     {
       name: 'Alpha Vantage / Quotes',
       desc: 'Multi-year financial statements, cash flows & quotes',
       status: isMock ? 'mock' : (keys.alphaVantage ? 'online' : 'partial'),
-      badge: isMock ? 'Mock Cache' : (keys.alphaVantage ? 'Live API Key' : 'Demo / Rate-Limited Fallback')
+      badge: isMock ? 'SQL / Firestore Mock' : (keys.alphaVantage ? 'Live API Key' : 'Demo / Rate-Limited Fallback')
     },
     {
       name: 'FRED (Federal Reserve)',
       desc: '10-Yr Treasury yield (Rf), CPI inflation & credit spread',
       status: isMock ? 'mock' : (keys.fred ? 'online' : 'partial'),
-      badge: isMock ? 'Benchmark Macro' : (keys.fred ? 'Live FRED API' : 'Static Fallback')
+      badge: isMock ? 'SQL / Firestore Mock' : (keys.fred ? 'Live FRED API' : 'Static Fallback')
     },
     {
       name: 'Fodda AI MCP',
       desc: 'AI earnings transcript analysis & brand tracker protocol',
       status: isMock ? 'mock' : (keys.fodda ? 'online' : 'partial'),
-      badge: isMock ? 'Mock Transcripts' : (keys.fodda ? 'Live MCP Connected' : 'Ready / Fallback')
+      badge: isMock ? 'SQL / Firestore Mock' : (keys.fodda ? 'Live MCP Connected' : 'Ready / Fallback')
     },
     {
       name: 'Yahoo Finance Engine',
       desc: 'Real-time market valuation, beta & enterprise consensus metrics',
       status: isMock ? 'mock' : 'online',
-      badge: isMock ? 'Benchmark Quotes' : 'Operational'
+      badge: isMock ? 'SQL / Firestore Mock' : 'Operational'
     },
     {
       name: 'Seeking Alpha Intelligence',
       desc: 'Analyst coverage RSS, headline velocity & peer tag co-mentions',
       status: isMock ? 'mock' : 'online',
-      badge: isMock ? 'Demo Articles' : 'Operational'
+      badge: isMock ? 'SQL / Firestore Mock' : 'Operational'
     },
     {
       name: 'DuckDuckGo Scuttlebutt',
       desc: 'Customer/supplier reviews & executive compensation web audit',
       status: isMock ? 'mock' : 'online',
-      badge: isMock ? 'Cached Scuttlebutt' : 'Operational'
+      badge: isMock ? 'SQL / Firestore Mock' : 'Operational'
     },
     {
       name: 'Competitor Engine',
       desc: 'SIC-code industry discovery & side-by-side multiple matrix',
       status: isMock ? 'mock' : 'online',
-      badge: isMock ? 'Curated Peers' : 'Operational'
+      badge: isMock ? 'SQL / Firestore Mock' : 'Operational'
     },
     {
       name: 'Tiered Store (Cache & DB)',
@@ -540,7 +624,7 @@ function renderStatusPanelDetails() {
       name: 'Gemini AI Executive Desk',
       desc: 'Institutional CIO Decision Memorandum generation',
       status: isMock ? 'mock' : (keys.gemini ? 'online' : 'partial'),
-      badge: isMock ? 'Template Mode' : (keys.gemini ? 'Live Gemini AI' : 'Rule-Based Engine')
+      badge: isMock ? 'SQL / Firestore Mock' : (keys.gemini ? 'Live Gemini AI' : 'Rule-Based Engine')
     }
   ];
 
@@ -718,10 +802,8 @@ async function startResearch(ticker) {
   // Show loading container
   loadingContainer.style.display = 'flex';
   dashboardContent.style.display = 'none';
-  btnViewMemo.style.display = 'none';
-
-  const isDemo = modeToggle.checked;
-  const modeParam = isDemo ? 'demo' : 'live';
+  if (btnViewMemo) btnViewMemo.style.display = 'none';
+  const modeParam = getAppMode();
 
   try {
     // 1. Fetch Composite Research Dossier
@@ -1494,12 +1576,13 @@ async function loadFoddaView(view, force = false) {
 
   try {
     let url = '';
+    const mode = getAppMode();
     if (view === 'snapshot' || view === 'qa') {
-      url = `/api/fodda/earnings?ticker=${encodeURIComponent(currentFoddaTicker)}&view=${view}`;
+      url = `/api/fodda/earnings?ticker=${encodeURIComponent(currentFoddaTicker)}&view=${view}&mode=${mode}`;
     } else if (view === 'brand') {
-      url = `/api/fodda/brand?name=${encodeURIComponent(currentFoddaName || currentFoddaTicker)}`;
+      url = `/api/fodda/brand?name=${encodeURIComponent(currentFoddaName || currentFoddaTicker)}&mode=${mode}`;
     } else if (view === 'graph') {
-      url = `/api/fodda/search?q=${encodeURIComponent(currentFoddaTicker + ' enterprise technology trends')}&type=graph`;
+      url = `/api/fodda/search?q=${encodeURIComponent(currentFoddaTicker + ' enterprise technology trends')}&type=graph&mode=${mode}`;
     }
 
     const res = await fetch(url);
@@ -3390,7 +3473,7 @@ async function fetchDeskData(ticker) {
     btnRunSim.disabled = true;
   }
 
-  const mode = modeToggle && modeToggle.checked ? 'demo' : 'live';
+  const mode = getAppMode();
 
   try {
     const res = await fetch(`/api/institutional-desk?ticker=${encodeURIComponent(sym)}&mode=${mode}`);
@@ -3704,7 +3787,7 @@ async function fetchExpertsDesk(ticker) {
     btnRunDebate.disabled = true;
   }
 
-  const mode = modeToggle && modeToggle.checked ? 'demo' : 'live';
+  const mode = getAppMode();
 
   try {
     const res = await fetch(`/api/experts-desk?ticker=${encodeURIComponent(sym)}&mode=${mode}`);

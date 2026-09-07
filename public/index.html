@@ -62,6 +62,18 @@
               <button id="btn-refresh-status" class="status-refresh-btn" type="button" title="Refresh service health">↻ Refresh</button>
             </div>
 
+            <!-- QUICK MOCK MODE CONTROL -->
+            <div class="status-mock-control">
+              <div class="status-mock-text">
+                <span class="status-mock-title">Mock Mode (SQL / Firestore)</span>
+                <span class="status-mock-sub">Pull mock data from SQLite on local or Firestore on deployed</span>
+              </div>
+              <label class="toggle-switch small" title="Toggle Mock Mode">
+                <input type="checkbox" id="panel-mode-toggle">
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+
             <div class="status-services-list" id="status-services-list">
               <!-- Dynamically populated service items -->
             </div>
@@ -115,12 +127,15 @@
           <button class="chip-btn" data-ticker="AMZN" data-name="Amazon.com Inc.">AMZN <span class="chip-sub">Amazon</span></button>
         </div>
 
-        <div class="mode-toggle-group">
+        <div class="mode-toggle-group" title="Toggle Mock Mode (Pulls mock data from SQLite on local or Firestore on deployed)">
           <label class="toggle-switch">
             <input type="checkbox" id="mode-toggle">
             <span class="toggle-slider"></span>
           </label>
-          <span class="mode-label" id="mode-label-text">Fast Cache / Demo Data</span>
+          <div class="mode-label-wrapper">
+            <span class="mode-label" id="mode-label-text">Mock Mode (SQL / Firestore)</span>
+            <span class="mode-sublabel" id="mode-sublabel-text">Offline DB Data • Zero API Limits</span>
+          </div>
         </div>
       </div>
     </section>
