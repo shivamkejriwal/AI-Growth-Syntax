@@ -183,24 +183,91 @@ export async function handleRequest(req, res) {
     }
 
     // -------------------------------------------------------------
-    // API: /api/research?ticker=<sym>&mode=<live|demo>
+    // API: /api/research?ticker=<sym>&mode=<live|demo>&refresh=<true|false>
     // -------------------------------------------------------------
     if (pathname === '/api/research' && req.method === 'GET') {
       const ticker = (searchParams.get('ticker') || '').trim().toUpperCase();
       const mode = searchParams.get('mode') || 'live';
+      const forceRefresh = searchParams.get('refresh') === 'true';
       const rndYears = searchParams.get('rndYears') ? parseInt(searchParams.get('rndYears'), 10) : undefined;
 
       if (!ticker) {
         return sendJson(res, 400, { error: 'Missing ticker parameter' });
       }
 
-      const dossier = await investor.generateCompositeDossier(ticker, {
+      const dossier = await investor.getCompositeDossier(ticker, {
         mode,
         rndYears,
+        forceRefresh,
         includeScuttlebutt: true
       });
 
       return sendJson(res, 200, { success: true, dossier });
+    }
+
+    // -------------------------------------------------------------
+    // API: /api/company?ticker=<sym>&mode=<live|demo>&refresh=<true|false>
+    // Returns purely the Standardized Objective Company Financial Profile
+    // 100% INDEPENDENT of expert evaluations or opinions
+    // -------------------------------------------------------------
+    if (pathname === '/api/company' && req.method === 'GET') {
+      const ticker = (searchParams.get('ticker') || '').trim().toUpperCase();
+      const mode = searchParams.get('mode') || 'live';
+      const forceRefresh = searchParams.get('refresh') === 'true';
+
+      if (!ticker) {
+        return sendJson(res, 400, { error: 'Missing ticker parameter' });
+      }
+
+      const companyData = await investor.getStandardCompanyData(ticker, {
+        mode,
+        forceRefresh
+      });
+
+      return sendJson(res, 200, { success: true, companyData });
+    }
+
+    // -------------------------------------------------------------
+    // API: /api/experts?ticker=<sym>&mode=<live|demo>
+    // Executes pure, stateless Expert Inference Engine on top of stored company data
+    // -------------------------------------------------------------
+    if (pathname === '/api/experts' && req.method === 'GET') {
+      const ticker = (searchParams.get('ticker') || '').trim().toUpperCase();
+      const mode = searchParams.get('mode') || 'live';
+
+      if (!ticker) {
+        return sendJson(res, 400, { error: 'Missing ticker parameter' });
+      }
+
+      const dossier = await investor.getCompositeDossier(ticker, { mode });
+      return sendJson(res, 200, {
+        success: true,
+        ticker,
+        experts: dossier.experts,
+        synthesis: dossier.synthesis
+      });
+    }
+
+    // -------------------------------------------------------------
+    // API: /api/dossier?ticker=<sym>&mode=<live|demo>&refresh=<true|false>
+    // Returns the Canonical Single Company JSON directly from Tiered Store
+    // -------------------------------------------------------------
+    if (pathname === '/api/dossier' && req.method === 'GET') {
+      const ticker = (searchParams.get('ticker') || '').trim().toUpperCase();
+      const mode = searchParams.get('mode') || 'live';
+      const forceRefresh = searchParams.get('refresh') === 'true';
+
+      if (!ticker) {
+        return sendJson(res, 400, { error: 'Missing ticker parameter' });
+      }
+
+      const dossier = await investor.getCompositeDossier(ticker, {
+        mode,
+        forceRefresh,
+        includeScuttlebutt: true
+      });
+
+      return sendJson(res, 200, dossier);
     }
 
     // -------------------------------------------------------------
@@ -222,7 +289,7 @@ export async function handleRequest(req, res) {
         return sendJson(res, 400, { error: 'Missing ticker parameter' });
       }
 
-      const dossier = await investor.generateCompositeDossier(ticker, { mode });
+      const dossier = await investor.getCompositeDossier(ticker, { mode });
       const memo = investor.generateDecisionMemorandum(dossier);
 
       return sendJson(res, 200, {

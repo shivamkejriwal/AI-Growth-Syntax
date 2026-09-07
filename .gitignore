@@ -145,6 +145,8 @@ vite.config.ts.timestamp-*
 # Application Caches & Local Artifacts
 *_cache/
 *.cache
+.data/
 decision_memos/
 .DS_Store
+
 

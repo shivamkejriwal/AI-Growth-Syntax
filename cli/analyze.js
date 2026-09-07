@@ -29,12 +29,17 @@ Usage:
 Options:
   --demo            Run using pre-loaded offline financial data (no API key needed)
   --export-md       Generate and save Investment Decision Memorandum markdown file
+  --company-data    Output purely standardized objective company financials (no experts)
+  --json            Output canonical Single Company JSON to stdout
+  --refresh         Bypass Cache and DB to force fresh live pull
   --rnd-years <N>   Number of years to amortize R&D (default: 3)
   --help            Show this help menu
 
 Examples:
   node cli/analyze.js MSFT
+  node cli/analyze.js MSFT --company-data
   node cli/analyze.js AAPL --export-md
+  node cli/analyze.js NVDA --json
   node cli/analyze.js DEMO --demo --export-md
 `);
     process.exit(0);
@@ -43,6 +48,9 @@ Examples:
   const ticker = args[0].toUpperCase();
   const isDemo = args.includes('--demo') || ticker === 'DEMO';
   const exportMd = args.includes('--export-md');
+  const asJson = args.includes('--json');
+  const showCompanyData = args.includes('--company-data');
+  const forceRefresh = args.includes('--refresh');
   const showScuttlebutt = args.includes('--scuttlebutt');
   const showDamodaran = args.includes('--damodaran');
   const repoIdx = args.indexOf('--repo');
@@ -50,11 +58,13 @@ Examples:
   const rndYearsIdx = args.indexOf('--rnd-years');
   const rndYears = rndYearsIdx > -1 && args[rndYearsIdx + 1] ? parseInt(args[rndYearsIdx + 1], 10) : null;
 
-  console.log(`\n==============================================================================`);
-  console.log(` COMPOSITE INVESTMENT METHODOLOGY AUDIT: ${ticker}`);
-  console.log(` Synthesis: Lynch | Fisher | Buffett | Damodaran`);
-  console.log(` Mode: ${isDemo ? 'Offline Demo Data' : 'Live Data (Alpha Vantage + EDGAR + FRED + Scuttlebutt + Damodaran Portal)'}`);
-  console.log(`==============================================================================\n`);
+  if (!asJson && !showCompanyData) {
+    console.log(`\n==============================================================================`);
+    console.log(` COMPOSITE INVESTMENT METHODOLOGY AUDIT: ${ticker}`);
+    console.log(` Synthesis: Lynch | Fisher | Buffett | Damodaran`);
+    console.log(` Mode: ${isDemo ? 'Offline Demo Data' : 'Live Data (Cache-First -> DB-First -> Live Multilateral Feed)'}`);
+    console.log(`==============================================================================\n`);
+  }
 
   const investor = new CompositeInvestor();
 
@@ -62,10 +72,22 @@ Examples:
     const options = {
       rndYears,
       repo: customRepo,
+      forceRefresh,
       offlineData: isDemo ? getDemoFinancials(ticker) : null
     };
 
-    const dossier = await investor.generateCompositeDossier(ticker, options);
+    if (showCompanyData) {
+      const companyData = await investor.getStandardCompanyData(ticker, options);
+      console.log(JSON.stringify(companyData, null, 2));
+      process.exit(0);
+    }
+
+    const dossier = await investor.getCompositeDossier(ticker, options);
+
+    if (asJson) {
+      console.log(JSON.stringify(dossier, null, 2));
+      process.exit(0);
+    }
 
     // Terminal Summary
     console.log(`Company: ${dossier.metadata.companyName} (${dossier.metadata.symbol})`);
