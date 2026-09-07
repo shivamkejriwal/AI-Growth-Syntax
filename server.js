@@ -27,6 +27,7 @@ import { TechnicalAnalysis } from './lib/technicalAnalysis.js';
 import { DuckDuckGoClient } from './lib/duckduckgoClient.js';
 import { CompetitorEngine } from './lib/competitorEngine.js';
 import { FoddaClient } from './lib/foddaClient.js';
+import { getActiveMode, getModeConfig, APP_MODES } from './lib/modes.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -61,13 +62,22 @@ const MIME_TYPES = {
   '.md': 'text/markdown; charset=utf-8'
 };
 
-function sendJson(res, statusCode, data) {
-  res.writeHead(statusCode, {
+function sendJson(res, statusCode, data, cacheControl = null) {
+  const headers = {
     'Content-Type': 'application/json; charset=utf-8',
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type'
-  });
+  };
+
+  if (cacheControl) {
+    headers['Cache-Control'] = cacheControl;
+  } else if (getActiveMode() === APP_MODES.FIREBASE && statusCode >= 200 && statusCode < 300) {
+    // 5-min browser cache, 1-hour Firebase Edge CDN cache for public web app
+    headers['Cache-Control'] = 'public, max-age=300, s-maxage=3600';
+  }
+
+  res.writeHead(statusCode, headers);
   res.end(JSON.stringify(data));
 }
 
@@ -99,7 +109,7 @@ function parseJsonBody(req) {
   });
 }
 
-export const server = http.createServer(async (req, res) => {
+export async function handleRequest(req, res) {
   const parsedUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
   const pathname = parsedUrl.pathname;
   const searchParams = parsedUrl.searchParams;
@@ -409,8 +419,11 @@ export const server = http.createServer(async (req, res) => {
     // API: /api/status
     // -------------------------------------------------------------
     if (pathname === '/api/status' && req.method === 'GET') {
+      const currentMode = getActiveMode();
       return sendJson(res, 200, {
         status: 'online',
+        mode: currentMode,
+        modeConfig: getModeConfig(currentMode),
         timestamp: new Date().toISOString(),
         keys: {
           alphaVantage: !!process.env.ALPHA_VANTAGE_API_KEY && process.env.ALPHA_VANTAGE_API_KEY !== 'demo',
@@ -470,7 +483,9 @@ export const server = http.createServer(async (req, res) => {
     console.error(`[Server Error] ${req.method} ${pathname}:`, err);
     return sendJson(res, 500, { error: err.message, stack: process.env.NODE_ENV === 'development' ? err.stack : undefined });
   }
-});
+}
+
+export const server = http.createServer(handleRequest);
 
 export function startServer(port = 3000, maxRetries = 5) {
   let currentPort = port;

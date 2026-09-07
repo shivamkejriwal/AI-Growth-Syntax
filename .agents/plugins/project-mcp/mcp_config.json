@@ -42,6 +42,12 @@
     },
     "fodda_ai": {
       "serverUrl": "https://mcp.fodda.ai/mcp"
+    },
+    "ai_growth_syntax": {
+      "command": "node",
+      "args": [
+        "/Users/shivam/Documents/GitHub/AI-Growth-Syntax/mcp-server.js"
+      ]
     }
   }
 }

@@ -6,8 +6,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
+    "start:local": "node server.js --mode=local",
+    "start:firebase": "node server.js --mode=firebase",
+    "mcp": "node mcp-server.js",
+    "cli": "node cli/analyze.js",
     "test": "node test/testServerDirect.js",
-    "test:all": "node test/testServerDirect.js && node test/testFoddaClient.js && node test/testCompetitorEngine.js",
+    "test:all": "node test/testServerDirect.js && node test/testFoddaClient.js && node test/testCompetitorEngine.js && node test/testModes.js && node test/testMcpServer.js",
     "test:fodda": "node test/testFoddaClient.js",
     "test:competitors": "node test/testCompetitorEngine.js",
     "analyze": "node cli/analyze.js"

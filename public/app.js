@@ -40,6 +40,53 @@ const btnCopyMemo = document.getElementById('btn-copy-memo');
 const btnSaveMemo = document.getElementById('btn-save-memo');
 
 let macroDataLoaded = false;
+let isStaticHostingMode = false;
+let bundledDemo = null;
+
+async function loadBundledDemo() {
+  if (bundledDemo) return bundledDemo;
+  try {
+    const mod = await import('./bundled-demo.js');
+    bundledDemo = mod.BUNDLED_DEMO || mod.default;
+    return bundledDemo;
+  } catch (err) {
+    console.warn('[Demo] Could not load bundled-demo.js:', err.message);
+    return null;
+  }
+}
+
+function showStaticBannerOnce() {
+  if (document.getElementById('static-mode-banner')) return;
+  const banner = document.createElement('div');
+  banner.id = 'static-mode-banner';
+  banner.style.cssText = 'background: linear-gradient(90deg, #1e1b4b, #312e81); border-bottom: 1px solid #6366f1; color: #e0e7ff; padding: 7px 16px; font-size: 12px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.3);';
+  banner.innerHTML = `
+    <div style="display:flex; align-items:center; gap:8px;">
+      <span style="font-size:14px;">⚡</span>
+      <span><strong>Firebase Static Web Mode Active</strong>: Displaying benchmark research datasets (MSFT, AAPL, NVDA, TSLA, AMZN). To run live real-time SEC / Alpha Vantage feeds, run locally (<code>npm start</code>) or connect Cloud Run.</span>
+    </div>
+    <button onclick="this.parentElement.remove()" style="background:transparent; border:none; color:#a5b4fc; font-size:16px; cursor:pointer; line-height:1;">&times;</button>
+  `;
+  document.body.prepend(banner);
+}
+
+async function apiFetch(url, options = {}) {
+  const res = await fetch(url, options);
+  const contentType = res.headers.get('content-type') || '';
+
+  // If server responded with HTML (e.g. index.html SPA wildcard rewrite on Firebase Hosting without a backend)
+  if (contentType.includes('text/html') || (!res.ok && res.status === 404)) {
+    isStaticHostingMode = true;
+    showStaticBannerOnce();
+    throw new Error('STATIC_HOSTING_MODE');
+  }
+
+  if (!res.ok) {
+    throw new Error(`HTTP ${res.status}`);
+  }
+
+  return await res.json();
+}
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
@@ -254,17 +301,23 @@ function updateModeLabel() {
 }
 
 async function fetchStatus() {
+  const statusText = document.getElementById('system-status-text');
   try {
-    const res = await fetch('/api/status');
-    const data = await res.json();
-    const statusText = document.getElementById('system-status-text');
+    const data = await apiFetch('/api/status');
     if (data.status === 'online') {
       const foddaLabel = data.keys?.fodda ? 'Fodda MCP (Live)' : 'Fodda MCP (Ready)';
       const fbLabel = data.keys?.firebase ? 'Firebase: ai-growth-syntax' : 'Firebase Ready';
-      statusText.textContent = `All Engines Online • SEC EDGAR • FRED • ${foddaLabel} • ${fbLabel}`;
+      const modeBadge = data.mode ? `[${data.mode.toUpperCase()}] ` : '';
+      statusText.textContent = `${modeBadge}All Engines Online • SEC EDGAR • FRED • ${foddaLabel} • ${fbLabel}`;
     }
   } catch (err) {
-    console.warn('Status check failed', err);
+    if (err.message === 'STATIC_HOSTING_MODE' || isStaticHostingMode) {
+      if (statusText) {
+        statusText.textContent = `Firebase Web Mode • Benchmark Datasets Active • SEC EDGAR • FRED • Damodaran`;
+      }
+    } else {
+      console.warn('Status check failed', err);
+    }
   }
 }
 
@@ -420,8 +473,7 @@ async function startResearch(ticker) {
 
   try {
     // 1. Fetch Composite Research Dossier
-    const res = await fetch(`/api/research?ticker=${encodeURIComponent(currentTicker)}&mode=${modeParam}`);
-    const data = await res.json();
+    const data = await apiFetch(`/api/research?ticker=${encodeURIComponent(currentTicker)}&mode=${modeParam}`);
 
     if (!data.success || !data.dossier) {
       throw new Error(data.error || 'Failed to generate dossier');
@@ -449,6 +501,31 @@ async function startResearch(ticker) {
     btnViewMemo.style.display = 'inline-flex';
 
   } catch (err) {
+    if (err.message === 'STATIC_HOSTING_MODE' || isStaticHostingMode) {
+      console.log(`[Static Web Mode] Loading precompiled benchmark dossier for ${currentTicker}...`);
+      const bundle = await loadBundledDemo();
+      if (bundle?.dossiers?.[currentTicker]) {
+        currentDossier = bundle.dossiers[currentTicker];
+        if (bundle.memos?.[currentTicker]) {
+          currentMemo = bundle.memos[currentTicker];
+          document.getElementById('memo-content-box').textContent = currentMemo;
+          document.getElementById('memo-date-sub').textContent = `Benchmark Snapshot`;
+        }
+        if (bundle.competitors?.[currentTicker]) {
+          renderCompetitorAnalysis(bundle.competitors[currentTicker]);
+        }
+        renderDashboard(currentDossier);
+        loadingContainer.style.display = 'none';
+        dashboardContent.style.display = 'block';
+        btnViewMemo.style.display = 'inline-flex';
+        return;
+      } else {
+        loadingContainer.style.display = 'none';
+        alert(`In Firebase Static Web Mode, live querying for '${ticker}' requires an active backend.\n\nPrecompiled benchmark companies available: MSFT, AAPL, NVDA, TSLA, AMZN.\n\nTo research any ticker live, run in Local Mode: npm start`);
+        return;
+      }
+    }
+
     loadingContainer.style.display = 'none';
     alert(`Research error for ${ticker}: ${err.message}`);
   }
@@ -456,15 +533,23 @@ async function startResearch(ticker) {
 
 async function fetchMemo(ticker, mode) {
   try {
-    const res = await fetch(`/api/memo?ticker=${encodeURIComponent(ticker)}&mode=${mode}`);
-    const data = await res.json();
+    const data = await apiFetch(`/api/memo?ticker=${encodeURIComponent(ticker)}&mode=${mode}`);
     if (data.success && data.memo) {
       currentMemo = data.memo;
       document.getElementById('memo-content-box').textContent = currentMemo;
       document.getElementById('memo-date-sub').textContent = `Generated ${new Date().toLocaleTimeString()}`;
     }
   } catch (err) {
-    console.error('Memo fetch failed:', err);
+    if (err.message === 'STATIC_HOSTING_MODE' || isStaticHostingMode) {
+      const bundle = await loadBundledDemo();
+      if (bundle?.memos?.[ticker]) {
+        currentMemo = bundle.memos[ticker];
+        document.getElementById('memo-content-box').textContent = currentMemo;
+        document.getElementById('memo-date-sub').textContent = `Benchmark Snapshot`;
+      }
+    } else {
+      console.error('Memo fetch failed:', err);
+    }
   }
 }
 
@@ -2613,15 +2698,23 @@ async function fetchMacroData() {
   if (btn) btn.textContent = '⏳ Loading Macro...';
 
   try {
-    const res = await fetch('/api/macro');
-    const data = await res.json();
+    const data = await apiFetch('/api/macro');
     if (data.success && data.macro) {
       currentMacroData = data.macro;
       renderMacroDashboard(data.macro);
       macroDataLoaded = true;
     }
   } catch (err) {
-    console.error('Failed to fetch macroeconomic data:', err);
+    if (err.message === 'STATIC_HOSTING_MODE' || isStaticHostingMode) {
+      const bundle = await loadBundledDemo();
+      if (bundle && bundle.macro) {
+        currentMacroData = bundle.macro;
+        renderMacroDashboard(bundle.macro);
+        macroDataLoaded = true;
+      }
+    } else {
+      console.error('Failed to fetch macroeconomic data:', err);
+    }
   } finally {
     if (btn) btn.textContent = '🔄 Refresh Macro Data';
   }
@@ -3518,15 +3611,21 @@ async function fetchCompetitors(ticker, forceRefresh = false) {
 
   try {
     const url = `/api/competitors?ticker=${encodeURIComponent(sym)}${forceRefresh ? '&refresh=1' : ''}`;
-    const res = await fetch(url);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
+    const data = await apiFetch(url);
     currentCompetitorData = data;
     renderCompetitors(data);
   } catch (err) {
+    if (err.message === 'STATIC_HOSTING_MODE' || isStaticHostingMode) {
+      const bundle = await loadBundledDemo();
+      if (bundle?.competitors?.[sym]) {
+        currentCompetitorData = bundle.competitors[sym];
+        renderCompetitors(bundle.competitors[sym]);
+        return;
+      }
+    }
     console.warn(`Failed to fetch competitors for ${sym}:`, err);
     if (cardsContainer) {
-      cardsContainer.innerHTML = `<div class="text-warning p-3">Could not load live competitor data: ${err.message}</div>`;
+      cardsContainer.innerHTML = `<div class="text-muted p-3" style="font-size:12px;">Live competitor matrix requires local server or Cloud Run. (Benchmark peers available for MSFT, AAPL, NVDA, TSLA, AMZN)</div>`;
     }
   }
 }
