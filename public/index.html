@@ -34,9 +34,43 @@
       </div>
 
       <div class="header-right">
-        <div class="status-indicator">
-          <span class="status-dot"></span>
-          <span class="status-label" id="system-status-text">SEC EDGAR • FRED • Fodda MCP • Alpha Vantage Ready</span>
+        <div class="status-dropdown-container" id="status-dropdown-container">
+          <button id="status-indicator-btn" class="status-indicator status-btn" type="button" aria-expanded="false" aria-controls="status-dropdown-panel" title="Click to view services status">
+            <span class="status-dot online" id="system-status-dot"></span>
+            <span class="status-label" id="system-status-text">Services Online</span>
+            <span class="status-chevron" id="system-status-chevron">▾</span>
+          </button>
+
+          <!-- EXPANDABLE SERVICES STATUS PANEL -->
+          <div id="status-dropdown-panel" class="status-dropdown-panel" style="display: none;" role="region" aria-label="Services Status Details">
+            <div class="status-panel-header">
+              <div class="status-panel-title-group">
+                <span class="status-panel-title">System & Services Status</span>
+                <span id="status-panel-mode-badge" class="status-badge-mode">LOCAL SQLITE</span>
+              </div>
+              <button id="btn-close-status-panel" class="status-panel-close-btn" type="button" aria-label="Close status panel">&times;</button>
+            </div>
+
+            <div class="status-summary-banner" id="status-summary-banner">
+              <div class="status-summary-left">
+                <span class="status-dot large online" id="status-summary-dot"></span>
+                <div>
+                  <div class="status-summary-heading" id="status-summary-heading">Services Online</div>
+                  <div class="status-summary-sub" id="status-summary-sub">All primary engines and APIs operational</div>
+                </div>
+              </div>
+              <button id="btn-refresh-status" class="status-refresh-btn" type="button" title="Refresh service health">↻ Refresh</button>
+            </div>
+
+            <div class="status-services-list" id="status-services-list">
+              <!-- Dynamically populated service items -->
+            </div>
+
+            <div class="status-panel-footer">
+              <span id="status-last-checked">Checked: Just now</span>
+              <span class="status-ttl-badge">Unified Calendar-Day TTL Active</span>
+            </div>
+          </div>
         </div>
         <button id="btn-view-memo" class="btn btn-secondary" style="display: none;">
           📄 View Memorandum

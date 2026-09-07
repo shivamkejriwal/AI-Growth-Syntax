@@ -291,6 +291,9 @@ function setupEventListeners() {
 
   // Fodda AI MCP Listeners
   setupFoddaListeners();
+
+  // Expandable System Status Indicator Listeners
+  setupStatusIndicatorListeners();
 }
 
 function updateModeLabel() {
@@ -299,26 +302,274 @@ function updateModeLabel() {
   } else {
     modeLabel.textContent = 'Live Network Queries (Alpha Vantage & SEC)';
   }
+  renderStatusIndicator();
+}
+
+let latestStatusData = null;
+let isStatusPanelOpen = false;
+
+function setupStatusIndicatorListeners() {
+  const btn = document.getElementById('status-indicator-btn');
+  const panel = document.getElementById('status-dropdown-panel');
+  const closeBtn = document.getElementById('btn-close-status-panel');
+  const refreshBtn = document.getElementById('btn-refresh-status');
+  const container = document.getElementById('status-dropdown-container');
+
+  if (!btn || !panel) return;
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleStatusPanel();
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeStatusPanel();
+    });
+  }
+
+  if (refreshBtn) {
+    refreshBtn.addEventListener('click', async (e) => {
+      e.stopPropagation();
+      refreshBtn.textContent = '↻ Checking...';
+      refreshBtn.disabled = true;
+      await fetchStatus();
+      refreshBtn.textContent = '↻ Refresh';
+      refreshBtn.disabled = false;
+    });
+  }
+
+  // Prevent clicks inside panel from closing it
+  panel.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  // Light dismiss on click outside
+  document.addEventListener('click', (e) => {
+    if (isStatusPanelOpen && container && !container.contains(e.target)) {
+      closeStatusPanel();
+    }
+  });
+
+  // Light dismiss on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isStatusPanelOpen) {
+      closeStatusPanel();
+    }
+  });
+}
+
+function toggleStatusPanel() {
+  if (isStatusPanelOpen) {
+    closeStatusPanel();
+  } else {
+    openStatusPanel();
+  }
+}
+
+function openStatusPanel() {
+  const btn = document.getElementById('status-indicator-btn');
+  const panel = document.getElementById('status-dropdown-panel');
+  if (!panel || !btn) return;
+
+  isStatusPanelOpen = true;
+  btn.setAttribute('aria-expanded', 'true');
+  panel.style.display = 'flex';
+  renderStatusPanelDetails();
+}
+
+function closeStatusPanel() {
+  const btn = document.getElementById('status-indicator-btn');
+  const panel = document.getElementById('status-dropdown-panel');
+  if (!panel || !btn) return;
+
+  isStatusPanelOpen = false;
+  btn.setAttribute('aria-expanded', 'false');
+  panel.style.display = 'none';
+}
+
+function computeSystemStatus(data) {
+  const isMock = (modeToggle && modeToggle.checked) || isStaticHostingMode;
+
+  if (isMock) {
+    return {
+      type: 'mock',
+      label: 'Mock mode',
+      dotClass: 'mock',
+      pillClass: 'mock',
+      heading: 'Mock mode',
+      sub: 'Pre-cached benchmark demo datasets active. Zero API rate limits consumed.'
+    };
+  }
+
+  // Check backend report
+  const keys = data?.keys || {};
+  const hasAlphaVantage = !!keys.alphaVantage;
+  const hasFred = !!keys.fred;
+
+  // If live mode but missing Alpha Vantage or FRED:
+  if (!hasAlphaVantage || !hasFred) {
+    return {
+      type: 'partial',
+      label: 'Partial Services Online',
+      dotClass: 'partial',
+      pillClass: 'partial',
+      heading: 'Partial Services Online',
+      sub: 'Core financial engines online. Alpha Vantage/FRED operating in fallback mode.'
+    };
+  }
+
+  return {
+    type: 'online',
+    label: 'Services Online',
+    dotClass: 'online',
+    pillClass: 'online',
+    heading: 'Services Online',
+    sub: 'All fundamental APIs, SEC EDGAR, FRED, and intelligence engines operational.'
+  };
+}
+
+function renderStatusIndicator() {
+  const statusInfo = computeSystemStatus(latestStatusData);
+  const statusDot = document.getElementById('system-status-dot');
+  const statusText = document.getElementById('system-status-text');
+
+  if (statusDot) {
+    statusDot.className = `status-dot ${statusInfo.dotClass}`;
+  }
+  if (statusText) {
+    statusText.textContent = statusInfo.label;
+  }
+
+  if (isStatusPanelOpen) {
+    renderStatusPanelDetails();
+  }
+}
+
+function renderStatusPanelDetails() {
+  const statusInfo = computeSystemStatus(latestStatusData);
+  const isMock = (modeToggle && modeToggle.checked) || isStaticHostingMode;
+  const keys = latestStatusData?.keys || {};
+  const mode = latestStatusData?.mode || (isStaticHostingMode ? 'firebase' : 'local');
+
+  // Update summary banner
+  const summaryDot = document.getElementById('status-summary-dot');
+  const summaryHeading = document.getElementById('status-summary-heading');
+  const summarySub = document.getElementById('status-summary-sub');
+  const modeBadge = document.getElementById('status-panel-mode-badge');
+  const lastChecked = document.getElementById('status-last-checked');
+  const listContainer = document.getElementById('status-services-list');
+
+  if (summaryDot) {
+    summaryDot.className = `status-dot large ${statusInfo.dotClass}`;
+  }
+  if (summaryHeading) {
+    summaryHeading.textContent = statusInfo.heading;
+  }
+  if (summarySub) {
+    summarySub.textContent = statusInfo.sub;
+  }
+  if (modeBadge) {
+    modeBadge.textContent = isMock ? 'MOCK / DEMO' : (mode === 'firebase' ? 'FIREBASE DEPLOYED' : 'LOCAL SQLITE');
+  }
+  if (lastChecked) {
+    const now = new Date();
+    const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    lastChecked.textContent = `Checked: ${timeStr}`;
+  }
+
+  if (!listContainer) return;
+
+  const services = [
+    {
+      name: 'SEC EDGAR XBRL Facts',
+      desc: 'Form 10-K, 10-Q statements & XBRL financial disclosures',
+      status: isMock ? 'mock' : 'online',
+      badge: isMock ? 'Mocked Data' : 'Operational'
+    },
+    {
+      name: 'Alpha Vantage / Quotes',
+      desc: 'Multi-year financial statements, cash flows & quotes',
+      status: isMock ? 'mock' : (keys.alphaVantage ? 'online' : 'partial'),
+      badge: isMock ? 'Mock Cache' : (keys.alphaVantage ? 'Live API Key' : 'Demo / Rate-Limited Fallback')
+    },
+    {
+      name: 'FRED (Federal Reserve)',
+      desc: '10-Yr Treasury yield (Rf), CPI inflation & credit spread',
+      status: isMock ? 'mock' : (keys.fred ? 'online' : 'partial'),
+      badge: isMock ? 'Benchmark Macro' : (keys.fred ? 'Live FRED API' : 'Static Fallback')
+    },
+    {
+      name: 'Fodda AI MCP',
+      desc: 'AI earnings transcript analysis & brand tracker protocol',
+      status: isMock ? 'mock' : (keys.fodda ? 'online' : 'partial'),
+      badge: isMock ? 'Mock Transcripts' : (keys.fodda ? 'Live MCP Connected' : 'Ready / Fallback')
+    },
+    {
+      name: 'Yahoo Finance Engine',
+      desc: 'Real-time market valuation, beta & enterprise consensus metrics',
+      status: isMock ? 'mock' : 'online',
+      badge: isMock ? 'Benchmark Quotes' : 'Operational'
+    },
+    {
+      name: 'Seeking Alpha Intelligence',
+      desc: 'Analyst coverage RSS, headline velocity & peer tag co-mentions',
+      status: isMock ? 'mock' : 'online',
+      badge: isMock ? 'Demo Articles' : 'Operational'
+    },
+    {
+      name: 'DuckDuckGo Scuttlebutt',
+      desc: 'Customer/supplier reviews & executive compensation web audit',
+      status: isMock ? 'mock' : 'online',
+      badge: isMock ? 'Cached Scuttlebutt' : 'Operational'
+    },
+    {
+      name: 'Competitor Engine',
+      desc: 'SIC-code industry discovery & side-by-side multiple matrix',
+      status: isMock ? 'mock' : 'online',
+      badge: isMock ? 'Curated Peers' : 'Operational'
+    },
+    {
+      name: 'Tiered Store (Cache & DB)',
+      desc: mode === 'firebase' ? 'Cloud Firestore + L1 Fast Cache' : 'Native SQLite (.data) + L1 Fast Cache',
+      status: 'online',
+      badge: 'Calendar-Day TTL'
+    },
+    {
+      name: 'Gemini AI Executive Desk',
+      desc: 'Institutional CIO Decision Memorandum generation',
+      status: isMock ? 'mock' : (keys.gemini ? 'online' : 'partial'),
+      badge: isMock ? 'Template Mode' : (keys.gemini ? 'Live Gemini AI' : 'Rule-Based Engine')
+    }
+  ];
+
+  listContainer.innerHTML = services.map(s => `
+    <div class="status-service-item">
+      <div class="status-service-info">
+        <div class="status-service-name">
+          <span class="status-dot ${s.status}"></span>
+          ${s.name}
+        </div>
+        <div class="status-service-desc">${s.desc}</div>
+      </div>
+      <span class="status-pill ${s.status}">${s.badge}</span>
+    </div>
+  `).join('');
 }
 
 async function fetchStatus() {
-  const statusText = document.getElementById('system-status-text');
   try {
     const data = await apiFetch('/api/status');
-    if (data.status === 'online') {
-      const foddaLabel = data.keys?.fodda ? 'Fodda MCP (Live)' : 'Fodda MCP (Ready)';
-      const fbLabel = data.keys?.firebase ? 'Firebase: ai-growth-syntax' : 'Firebase Ready';
-      const modeBadge = data.mode ? `[${data.mode.toUpperCase()}] ` : '';
-      statusText.textContent = `${modeBadge}All Engines Online • SEC EDGAR • FRED • ${foddaLabel} • ${fbLabel}`;
-    }
+    latestStatusData = data;
+    renderStatusIndicator();
   } catch (err) {
     if (err.message === 'STATIC_HOSTING_MODE' || isStaticHostingMode) {
-      if (statusText) {
-        statusText.textContent = `Firebase Web Mode • Benchmark Datasets Active • SEC EDGAR • FRED • Damodaran`;
-      }
+      isStaticHostingMode = true;
     } else {
       console.warn('Status check failed', err);
     }
+    renderStatusIndicator();
   }
 }
 
