@@ -369,6 +369,12 @@ export async function handleRequest(req, res) {
       const q = (searchParams.get('q') || searchParams.get('query') || '').trim();
       const ticker = (searchParams.get('ticker') || '').trim().toUpperCase();
       const limit = parseInt(searchParams.get('limit') || '5', 10);
+      const mode = searchParams.get('mode') || 'live';
+
+      if (mode === 'mock') {
+        const audit = await defaultMockDataManager.getMockDuckDuckGo(ticker || q || 'MSFT', defaultDb);
+        return sendJson(res, 200, audit);
+      }
 
       if (ticker) {
         const audit = await duckduckgo.conductScuttlebuttAudit(q || ticker, ticker);
@@ -402,6 +408,16 @@ export async function handleRequest(req, res) {
     // API: /api/fodda/status
     // -------------------------------------------------------------
     if (pathname === '/api/fodda/status' && req.method === 'GET') {
+      const mode = searchParams.get('mode') || 'live';
+      if (mode === 'mock') {
+        return sendJson(res, 200, {
+          online: true,
+          configured: true,
+          toolsCount: 50,
+          mockMode: true,
+          serverVersion: '1.2.0-mock'
+        });
+      }
       const status = await fodda.getStatus();
       return sendJson(res, 200, status);
     }
@@ -438,6 +454,16 @@ export async function handleRequest(req, res) {
     // -------------------------------------------------------------
     if (pathname === '/api/fodda/brand' && req.method === 'GET') {
       const name = searchParams.get('name') || searchParams.get('brand') || '';
+      const mode = searchParams.get('mode') || 'live';
+      if (mode === 'mock') {
+        return sendJson(res, 200, {
+          brand: name || 'Microsoft',
+          score: 94,
+          sentiment: 'Positive',
+          mentions: 12500,
+          mockMode: true
+        });
+      }
       if (!name.trim()) {
         return sendJson(res, 400, { error: 'Missing name or brand parameter' });
       }
@@ -527,26 +553,28 @@ export async function handleRequest(req, res) {
     // API: /api/status
     // -------------------------------------------------------------
     if (pathname === '/api/status' && req.method === 'GET') {
-      const currentMode = getActiveMode();
+      const requestedMode = searchParams.get('mode');
+      const currentMode = requestedMode || getActiveMode();
+      const isMock = currentMode === 'mock';
       return sendJson(res, 200, {
         status: 'online',
         mode: currentMode,
         modeConfig: getModeConfig(currentMode),
         timestamp: new Date().toISOString(),
         keys: {
-          alphaVantage: !!process.env.ALPHA_VANTAGE_API_KEY && process.env.ALPHA_VANTAGE_API_KEY !== 'demo',
+          alphaVantage: isMock || (!!process.env.ALPHA_VANTAGE_API_KEY && process.env.ALPHA_VANTAGE_API_KEY !== 'demo'),
           yahooFinance: true,
           duckduckgo: true,
           competitorEngine: true,
           seekingAlpha: true,
-          fodda: fodda.isConfigured,
+          fodda: isMock || fodda.isConfigured,
           firebase: !!process.env.FIREBASE_PROJECT_ID,
-          fred: !!process.env.FRED_API_KEY && process.env.FRED_API_KEY !== 'demo',
+          fred: isMock || (!!process.env.FRED_API_KEY && process.env.FRED_API_KEY !== 'demo'),
           secEdgarUserAgent: !!process.env.SEC_EDGAR_USER_AGENT,
-          perplexity: !!process.env.PERPLEXITY_API_KEY && process.env.PERPLEXITY_API_KEY.startsWith('pplx-'),
-          gemini: !!(process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY),
-          exa: !!process.env.EXA_API_KEY,
-          nasdaq: !!process.env.NASDAQ_API_KEY
+          perplexity: isMock || (!!process.env.PERPLEXITY_API_KEY && process.env.PERPLEXITY_API_KEY.startsWith('pplx-')),
+          gemini: isMock || !!(process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY),
+          exa: true,
+          nasdaq: true
         },
 
         firebase: {

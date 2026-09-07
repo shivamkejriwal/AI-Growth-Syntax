@@ -122,6 +122,68 @@ async function runTests() {
     assert.ok(debate.debate && (Array.isArray(debate.debate) ? debate.debate.length > 0 : debate.debate.turns?.length > 0));
   });
 
+  // 9. Mock DuckDuckGo Retrieval from DB
+  await test("MockDataManager: getMockDuckDuckGo retrieves instant answer and 4 investigation vectors", async () => {
+    const ddg = await defaultMockDataManager.getMockDuckDuckGo("MSFT", defaultDb);
+    assert.ok(ddg, "DDG mock object must exist");
+    assert.strictEqual(ddg.symbol, "MSFT");
+    assert.ok(ddg.instantAnswer, "instantAnswer must exist");
+    assert.ok(ddg.instantAnswer.heading, "instantAnswer heading must exist");
+    assert.ok(ddg.instantAnswer.abstract, "instantAnswer abstract must exist");
+    assert.ok(Array.isArray(ddg.instantAnswer.relatedTopics), "relatedTopics must be an array");
+    assert.ok(Array.isArray(ddg.investigationVectors), "investigationVectors must be an array");
+    assert.strictEqual(ddg.investigationVectors.length, 4, "Must have 4 scuttlebutt vectors");
+    const categories = ddg.investigationVectors.map(v => v.category);
+    assert.ok(categories.includes("Competitors & Moat"));
+    assert.ok(categories.includes("Customer Sentiment & Churn"));
+    assert.ok(categories.includes("Supply Chain & Regulatory"));
+    assert.ok(categories.includes("Recent News & Catalysts"));
+  });
+
+  // 10. Mock Seeking Alpha Feed Retrieval from DB
+  await test("MockDataManager: getMockSeekingAlpha retrieves consensus, sentiment summary, and categorized articles", async () => {
+    const sa = await defaultMockDataManager.getMockSeekingAlpha("MSFT", defaultDb);
+    assert.ok(sa, "Seeking Alpha mock object must exist");
+    assert.strictEqual(sa.ticker, "MSFT");
+    assert.strictEqual(sa.consensusSentiment, "Bullish");
+    assert.ok(sa.sentimentSummary, "sentimentSummary must exist");
+    assert.ok(sa.sentimentSummary.bullish > 0, "bullish count must be > 0");
+    assert.ok(Array.isArray(sa.coMentionedPeers), "coMentionedPeers must be an array");
+    assert.ok(sa.coMentionedPeers.length > 0, "coMentionedPeers must have peer entries");
+    assert.ok(Array.isArray(sa.articles), "articles must be an array");
+    assert.ok(sa.articles.length > 0, "articles must not be empty");
+    const firstArt = sa.articles[0];
+    assert.ok(firstArt.title);
+    assert.ok(firstArt.category);
+    assert.ok(firstArt.sentiment);
+    assert.ok(firstArt.timeAgo);
+  });
+
+  // 11. Scuttlebutt Completeness inside Composite Dossier (Mock Mode)
+  await test("CompositeInvestor: dossier.pillar2_Fisher contains complete scuttlebutt intelligence", async () => {
+    const investor = new CompositeInvestor();
+    const dossier = await investor.getCompositeDossier("MSFT", { mode: "mock" });
+    const p2 = dossier.pillar2_Fisher;
+    assert.ok(p2, "pillar2_Fisher must exist");
+    
+    // DuckDuckGo
+    assert.ok(p2.duckduckgoIntel, "duckduckgoIntel must exist");
+    assert.ok(p2.duckduckgoIntel.instantAnswer, "instantAnswer must exist");
+    assert.strictEqual(p2.duckduckgoIntel.investigationVectors.length, 4);
+
+    // Seeking Alpha
+    assert.ok(p2.seekingAlphaIntel, "seekingAlphaIntel must exist");
+    assert.strictEqual(p2.seekingAlphaIntel.consensusSentiment, "Bullish");
+
+    // Developer Moat & HN
+    assert.ok(p2.techMoat_GitHub || p2.developerMoat);
+    assert.ok(p2.engineerSentiment_HN || p2.engineeringSentiment);
+
+    // Fisher Fieldwork & Checklist
+    assert.ok(p2.fiveCirclesScript || p2.fiveCirclesInterviewScript);
+    assert.ok(p2.fisher15Points || p2.fisher15PointChecklist);
+  });
+
   console.log("\n====================================================");
   console.log("TEST RESULTS: " + passed + "/" + total + " PASSED");
   console.log("====================================================\n");

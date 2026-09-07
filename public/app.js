@@ -881,6 +881,9 @@ async function startResearch(ticker) {
             currentSeekingAlphaData = bundle.seekingAlpha[currentTicker];
             try { renderSeekingAlpha(bundle.seekingAlpha[currentTicker]); } catch (e) { console.warn(e); }
           }
+          if (bundle.ddg?.[currentTicker] && currentDossier?.pillar2_Fisher) {
+            currentDossier.pillar2_Fisher.duckduckgoIntel = bundle.ddg[currentTicker];
+          }
 
           renderDashboard(currentDossier);
           loadingContainer.style.display = 'none';
@@ -1101,7 +1104,7 @@ function renderDashboard(dossier) {
   // Fisher 5-Circles Fieldwork Scripts
   const circlesContainer = document.getElementById('fisher-circles-accordion');
 
-  const scripts = p2.fiveCirclesScript || {};
+  const scripts = p2.fiveCirclesScript || p2.fiveCirclesInterviewScript || {};
   const circleKeys = [
     { key: 'circle1_Customers', title: '1. Customers & Value Proposition' },
     { key: 'circle2_Competitors', title: '2. Direct Competitors & Churn' },
@@ -1126,12 +1129,13 @@ function renderDashboard(dossier) {
 
   // Fisher 15-Point Checklist
   const points15Container = document.getElementById('fisher-15points-grid');
-  points15Container.innerHTML = (p2.fisher15Points || []).map(p => `
+  const points15 = p2.fisher15Points || p2.fisher15PointChecklist || [];
+  points15Container.innerHTML = points15.map(p => `
     <div class="check-item">
       <span class="check-icon">🔹</span>
       <div class="check-content">
-        <div class="check-point-title">Point ${p.point}: ${p.theme}</div>
-        <div class="check-status">${p.status}</div>
+        <div class="check-point-title">Point ${p.point || p.id}: ${p.theme || p.text}</div>
+        <div class="check-status">${p.status || (p.pass ? 'Strong Pass' : 'Neutral / Under Watch')}</div>
       </div>
     </div>
   `).join('');

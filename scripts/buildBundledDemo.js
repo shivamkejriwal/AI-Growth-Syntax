@@ -27,12 +27,24 @@ async function build() {
   const experts = {};
   const fodda = {};
   const seekingAlpha = {};
+  const ddg = {};
 
   for (const ticker of tickers) {
     console.log(`- Compiling ${ticker}...`);
     try {
       const mockData = DEMO_DATASETS[ticker];
       const d = await investor.generateCompositeDossier(ticker, { offlineData: mockData, mode: 'mock' });
+      
+      ddg[ticker] = defaultMockDataManager._buildMockDuckDuckGoAudit(ticker);
+      fodda[ticker] = defaultMockDataManager._buildMockFoddaEarnings(ticker);
+      seekingAlpha[ticker] = defaultMockDataManager._buildMockSeekingAlphaFeed(ticker);
+
+      if (d?.pillar2_Fisher) {
+        d.pillar2_Fisher.duckduckgoIntel = ddg[ticker];
+        d.pillar2_Fisher.seekingAlphaIntel = seekingAlpha[ticker];
+        d.pillar2_Fisher.foddaIntel = fodda[ticker];
+      }
+
       dossiers[ticker] = d;
       memos[ticker] = investor.generateMarkdownMemorandum(d);
       competitors[ticker] = await competitorEngine.getCompetitorAnalysis(ticker, d.metadata?.name);
@@ -48,9 +60,6 @@ async function build() {
       } catch {
         experts[ticker] = defaultMockDataManager._buildFallbackExpertsDebate(ticker);
       }
-
-      fodda[ticker] = defaultMockDataManager._buildMockFoddaEarnings(ticker);
-      seekingAlpha[ticker] = defaultMockDataManager._buildMockSeekingAlphaFeed(ticker);
     } catch (e) {
       console.warn(`Error compiling ${ticker}:`, e.message);
     }
@@ -72,7 +81,8 @@ export const BUNDLED_DEMO = {
   desk: ${JSON.stringify(desk, null, 2)},
   experts: ${JSON.stringify(experts, null, 2)},
   fodda: ${JSON.stringify(fodda, null, 2)},
-  seekingAlpha: ${JSON.stringify(seekingAlpha, null, 2)}
+  seekingAlpha: ${JSON.stringify(seekingAlpha, null, 2)},
+  ddg: ${JSON.stringify(ddg, null, 2)}
 };
 
 export default BUNDLED_DEMO;

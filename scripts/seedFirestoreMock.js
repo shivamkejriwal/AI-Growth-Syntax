@@ -21,7 +21,7 @@ async function main() {
   console.log("⏳ Seeding Mock Mode datasets into Cloud Firestore...");
   
   // Force seed by clearing seed flag check in this run
-  await firestoreDb.delete("MOCK_SEEDED_STATUS_V3", "mock_system");
+  await firestoreDb.delete("MOCK_SEEDED_STATUS_V4", "mock_system");
   await manager.ensureMockDataSeeded(firestoreDb);
 
   console.log("✅ Seeding completed in " + (Date.now() - startTime) + "ms\n");
@@ -54,7 +54,11 @@ async function main() {
 
   // 7. Verify Seeking Alpha
   const sa = await manager.getMockSeekingAlpha("MSFT", firestoreDb);
-  console.log("  - [mock_seeking_alpha] MSFT:", sa?.articles?.length ? "✅ OK (" + sa.articles.length + " articles)" : "❌ FAIL");
+  console.log("  - [mock_seeking_alpha] MSFT:", sa?.articles?.length ? "✅ OK (" + sa.articles.length + " articles, Consensus: " + sa.consensusSentiment + ")" : "❌ FAIL");
+
+  // 8. Verify DuckDuckGo
+  const ddg = await manager.getMockDuckDuckGo("MSFT", firestoreDb);
+  console.log("  - [mock_duckduckgo] MSFT:", ddg?.investigationVectors?.length ? "✅ OK (" + ddg.investigationVectors.length + " vectors, Heading: " + ddg.instantAnswer?.heading + ")" : "❌ FAIL");
 
   console.log("\n====================================================");
   console.log(" 🎉 CLOUD FIRESTORE SUCCESSFULLY POPULATED!");
