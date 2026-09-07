@@ -22,6 +22,12 @@ import { EdgarClient } from './lib/edgarClient.js';
 import { FoddaClient } from './lib/foddaClient.js';
 import { SeekingAlphaClient } from './lib/seekingAlphaClient.js';
 import { DEMO_DATASETS } from './lib/demoData.js';
+import {
+  defaultOntologyGraph,
+  defaultIngestionPipeline,
+  defaultActionEngine,
+  ActionTypes
+} from './lib/ontology/index.js';
 
 const investor = new CompositeInvestor();
 const competitorEngine = new CompetitorEngine();
@@ -146,6 +152,43 @@ const TOOLS = [
       },
       required: ['ticker']
     }
+  },
+  {
+    name: 'get_ontology_subgraph',
+    description: 'Retrieves the strongly-typed knowledge graph neighborhood (nodes, edges, peer competition, macro factors, and valuation scenarios) for any equity ticker.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        ticker: {
+          type: 'string',
+          description: 'Equity ticker symbol (e.g. AAPL, MSFT, NVDA)'
+        },
+        depth: {
+          type: 'number',
+          description: 'Graph traversal depth (1 or 2, default: 1)'
+        }
+      },
+      required: ['ticker']
+    }
+  },
+  {
+    name: 'execute_ontology_action',
+    description: 'Safely executes a verified Ontological Action Contract under strict precondition checks. Actions include: RUN_DCF_SENSITIVITY, PROPOSE_ORDER_TICKET, PUBLISH_DECISION_MEMO.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        actionType: {
+          type: 'string',
+          enum: ['RUN_DCF_SENSITIVITY', 'PROPOSE_ORDER_TICKET', 'PUBLISH_DECISION_MEMO'],
+          description: 'Action contract type to execute'
+        },
+        params: {
+          type: 'object',
+          description: 'Parameters required by the action contract'
+        }
+      },
+      required: ['actionType', 'params']
+    }
   }
 ];
 
@@ -266,6 +309,52 @@ async function handleToolCall(name, args = {}) {
           {
             type: 'text',
             text: JSON.stringify({ ticker, count: peers.length, relatedCompanies: peers }, null, 2)
+          }
+        ]
+      };
+    }
+
+    case 'get_ontology_subgraph': {
+      const ticker = (args.ticker || '').toUpperCase().trim();
+      if (!ticker) throw new Error('ticker is required');
+      const depth = args.depth ? parseInt(args.depth, 10) : 1;
+      const companyNodeId = `company:${ticker}`;
+
+      if (!defaultOntologyGraph.hasNode(companyNodeId)) {
+        try {
+          const companyData = await investor.getStandardCompanyData(ticker);
+          if (companyData) defaultIngestionPipeline.ingestCompanyData(companyData);
+        } catch (_) {}
+      }
+
+      const subgraph = defaultOntologyGraph.extractSubgraph(companyNodeId, Math.min(depth, 3));
+      return {
+        content: [
+          {
+            type: 'text',
+            text: JSON.stringify(subgraph, null, 2)
+          }
+        ]
+      };
+    }
+
+    case 'execute_ontology_action': {
+      const { actionType, params = {} } = args;
+      if (!actionType) throw new Error('actionType is required');
+
+      if (params.ticker && !defaultOntologyGraph.hasNode(`company:${params.ticker.toUpperCase()}`)) {
+        try {
+          const companyData = await investor.getStandardCompanyData(params.ticker.toUpperCase());
+          if (companyData) defaultIngestionPipeline.ingestCompanyData(companyData);
+        } catch (_) {}
+      }
+
+      const outcome = await defaultActionEngine.executeAction(actionType, params, { caller: 'MCPClient' });
+      return {
+        content: [
+          {
+            type: 'text',
+            text: JSON.stringify(outcome, null, 2)
           }
         ]
       };

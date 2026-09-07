@@ -31,6 +31,13 @@ import { SeekingAlphaClient } from './lib/seekingAlphaClient.js';
 import { getActiveMode, getModeConfig, APP_MODES } from './lib/modes.js';
 import { defaultMockDataManager } from './lib/mockDataManager.js';
 import { defaultDb } from './lib/db.js';
+import {
+  defaultOntologyGraph,
+  defaultIngestionPipeline,
+  defaultLogicEngine,
+  defaultActionEngine,
+  ActionTypes
+} from './lib/ontology/index.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -547,6 +554,82 @@ export async function handleRequest(req, res) {
       }
       const feed = await seekingAlpha.getTickerFeed(ticker, limit);
       return sendJson(res, 200, feed);
+    }
+
+    // -------------------------------------------------------------
+    // API: /api/ontology/graph?ticker=<sym>&depth=<1|2>&mode=<live|demo>
+    // Returns the Ontological Knowledge Subgraph for visual rendering / LLM context
+    // -------------------------------------------------------------
+    if (pathname === '/api/ontology/graph' && req.method === 'GET') {
+      const ticker = (searchParams.get('ticker') || '').trim().toUpperCase();
+      const depth = parseInt(searchParams.get('depth') || '1', 10);
+      const mode = searchParams.get('mode') || 'live';
+
+      if (!ticker) {
+        return sendJson(res, 400, { error: 'Missing ticker parameter' });
+      }
+
+      const companyNodeId = `company:${ticker}`;
+
+      // Ingest if not present in graph
+      if (!defaultOntologyGraph.hasNode(companyNodeId)) {
+        try {
+          const companyData = await investor.getStandardCompanyData(ticker, { mode });
+          if (companyData) {
+            defaultIngestionPipeline.ingestCompanyData(companyData);
+          }
+        } catch (ingestErr) {
+          console.warn(`[Ontology API] Dynamic ingestion warning for ${ticker}:`, ingestErr.message);
+        }
+      }
+
+      const subgraph = defaultOntologyGraph.extractSubgraph(companyNodeId, Math.min(depth, 3));
+      return sendJson(res, 200, {
+        success: true,
+        ticker,
+        subgraph
+      });
+    }
+
+    // -------------------------------------------------------------
+    // API: /api/ontology/action
+    // Executes a verified Ontological Action Contract
+    // -------------------------------------------------------------
+    if (pathname === '/api/ontology/action' && req.method === 'POST') {
+      const body = await parseJsonBody(req);
+      const { actionType, params = {}, context = {} } = body;
+
+      if (!actionType) {
+        return sendJson(res, 400, { error: 'Missing actionType in request body' });
+      }
+
+      // If target ticker is provided and not in graph, warm the graph
+      if (params.ticker && !defaultOntologyGraph.hasNode(`company:${params.ticker.toUpperCase()}`)) {
+        try {
+          const companyData = await investor.getStandardCompanyData(params.ticker.toUpperCase());
+          if (companyData) defaultIngestionPipeline.ingestCompanyData(companyData);
+        } catch (_) {}
+      }
+
+      const outcome = await defaultActionEngine.executeAction(actionType, params, {
+        ...context,
+        caller: context.caller || 'WebAPI'
+      });
+
+      const statusCode = outcome.success ? 200 : 422;
+      return sendJson(res, statusCode, outcome);
+    }
+
+    // -------------------------------------------------------------
+    // API: /api/ontology/stats
+    // Returns global graph metrics and audit trail
+    // -------------------------------------------------------------
+    if (pathname === '/api/ontology/stats' && req.method === 'GET') {
+      return sendJson(res, 200, {
+        success: true,
+        stats: defaultOntologyGraph.getStats(),
+        recentAuditLedger: defaultActionEngine.getAuditLedger(20)
+      });
     }
 
     // -------------------------------------------------------------
