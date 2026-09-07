@@ -20,6 +20,7 @@
     "test:fodda": "node test/testFoddaClient.js",
     "test:competitors": "node test/testCompetitorEngine.js",
     "test:sa": "node test/testSeekingAlpha.js",
+    "seed:firestore": "node scripts/seedFirestoreMock.js",
     "analyze": "node cli/analyze.js"
   },
   "keywords": [
