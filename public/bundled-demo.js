@@ -1,7 +1,7 @@
 /**
  * bundled-demo.js
  * Precompiled static datasets for Firebase Web App Mode (fallback when serverless backend is not running).
- * Generated: 2026-09-07T18:47:37.185Z
+ * Generated: 2026-09-07T19:06:11.076Z
  */
 
 export const BUNDLED_DEMO = {
@@ -9717,8 +9717,8 @@ export const BUNDLED_DEMO = {
           "operatingIncome": 13832000000,
           "netPPE": 36635000000,
           "grossProfit": 20853000000,
-          "netIncome": 12583000000,
           "equity": 44704000000,
+          "netIncome": 12583000000,
           "retainedEarnings": 12885000000,
           "cash": 16253000000,
           "totalDebt": 5748000000,
@@ -9739,8 +9739,8 @@ export const BUNDLED_DEMO = {
           "operatingIncome": 8891000000,
           "netPPE": 45124000000,
           "grossProfit": 17660000000,
-          "netIncome": 14999000000,
           "equity": 62634000000,
+          "netIncome": 14999000000,
           "retainedEarnings": 27882000000,
           "cash": 16398000000,
           "totalDebt": 9573000000,
@@ -9761,8 +9761,8 @@ export const BUNDLED_DEMO = {
           "operatingIncome": 7760000000,
           "netPPE": 51506000000,
           "grossProfit": 17450000000,
-          "netIncome": 7130000000,
           "equity": 72913000000,
+          "netIncome": 7130000000,
           "retainedEarnings": 35209000000,
           "cash": 16139000000,
           "totalDebt": 13623000000,
@@ -9783,8 +9783,8 @@ export const BUNDLED_DEMO = {
           "operatingIncome": 4849000000,
           "netPPE": 56180000000,
           "grossProfit": 17094000000,
-          "netIncome": 3794000000,
           "equity": 82137000000,
+          "netIncome": 3794000000,
           "retainedEarnings": 39003000000,
           "cash": 16513000000,
           "totalDebt": 14719000000,
@@ -9807,8 +9807,8 @@ export const BUNDLED_DEMO = {
         "operatingIncome": 4849000000,
         "netPPE": 56180000000,
         "grossProfit": 17094000000,
-        "netIncome": 3794000000,
         "equity": 82137000000,
+        "netIncome": 3794000000,
         "retainedEarnings": 39003000000,
         "cash": 16513000000,
         "totalDebt": 14719000000,
@@ -11801,16 +11801,16 @@ export const BUNDLED_DEMO = {
         "2022": {
           "fiscalDate": "2022-12-31",
           "netIncome": -2722000000,
-          "netPPE": 252838000000,
           "operatingIncome": 12248000000,
+          "netPPE": 252838000000,
           "operatingCashflow": 46752000000,
           "inventory": 34405000000,
           "grossProfit": 225152000000,
-          "currentLiabilities": 155393000000,
           "equity": 146043000000,
-          "totalDebt": 140118000000,
+          "currentLiabilities": 155393000000,
           "cash": 53888000000,
           "capex": 63645000000,
+          "totalDebt": 140118000000,
           "retainedEarnings": 83193000000,
           "fcf": -16893000000,
           "dilutedEPS": -0.27,
@@ -11823,16 +11823,16 @@ export const BUNDLED_DEMO = {
         "2023": {
           "fiscalDate": "2023-12-31",
           "netIncome": 30425000000,
-          "netPPE": 276690000000,
           "operatingIncome": 36852000000,
+          "netPPE": 276690000000,
           "operatingCashflow": 84946000000,
           "inventory": 33318000000,
           "grossProfit": 270046000000,
-          "currentLiabilities": 164917000000,
           "equity": 201875000000,
-          "totalDebt": 135611000000,
+          "currentLiabilities": 164917000000,
           "cash": 73387000000,
           "capex": 52729000000,
+          "totalDebt": 135611000000,
           "retainedEarnings": 113618000000,
           "fcf": 32217000000,
           "dilutedEPS": 2.9,
@@ -11845,16 +11845,16 @@ export const BUNDLED_DEMO = {
         "2024": {
           "fiscalDate": "2024-12-31",
           "netIncome": 59248000000,
-          "netPPE": 328806000000,
           "operatingIncome": 68593000000,
+          "netPPE": 328806000000,
           "operatingCashflow": 115877000000,
           "inventory": 34214000000,
           "grossProfit": 311671000000,
-          "currentLiabilities": 179431000000,
           "equity": 285970000000,
-          "totalDebt": 130900000000,
+          "currentLiabilities": 179431000000,
           "cash": 78779000000,
           "capex": 82999000000,
+          "totalDebt": 130900000000,
           "retainedEarnings": 172866000000,
           "fcf": 32878000000,
           "dilutedEPS": 5.53,
@@ -11867,16 +11867,16 @@ export const BUNDLED_DEMO = {
         "2025": {
           "fiscalDate": "2025-12-31",
           "netIncome": 77670000000,
-          "netPPE": 443079000000,
           "operatingIncome": 79975000000,
+          "netPPE": 443079000000,
           "operatingCashflow": 139514000000,
           "inventory": 38325000000,
           "grossProfit": 360510000000,
-          "currentLiabilities": 218005000000,
           "equity": 411065000000,
-          "totalDebt": 152987000000,
+          "currentLiabilities": 218005000000,
           "cash": 86810000000,
           "capex": 131819000000,
+          "totalDebt": 152987000000,
           "retainedEarnings": 250536000000,
           "fcf": 7695000000,
           "dilutedEPS": 7.17,
@@ -11891,16 +11891,16 @@ export const BUNDLED_DEMO = {
       "latest": {
         "fiscalDate": "2025-12-31",
         "netIncome": 77670000000,
-        "netPPE": 443079000000,
         "operatingIncome": 79975000000,
+        "netPPE": 443079000000,
         "operatingCashflow": 139514000000,
         "inventory": 38325000000,
         "grossProfit": 360510000000,
-        "currentLiabilities": 218005000000,
         "equity": 411065000000,
-        "totalDebt": 152987000000,
+        "currentLiabilities": 218005000000,
         "cash": 86810000000,
         "capex": 131819000000,
+        "totalDebt": 152987000000,
         "retainedEarnings": 250536000000,
         "fcf": 7695000000,
         "dilutedEPS": 7.17,
@@ -12743,6 +12743,1732 @@ export const BUNDLED_DEMO = {
       }
     ],
     "timestamp": "2026-09-07T05:42:45.720Z"
+  }
+},
+  desk: {
+  "MSFT": {
+    "success": true,
+    "ticker": "MSFT",
+    "companyName": "Microsoft Corporation",
+    "timestamp": "2026-09-07T18:58:06.113Z",
+    "pipelineStatus": "COMPLETED",
+    "marketData": {
+      "currentPrice": 200,
+      "fairValue": 230.11,
+      "technicals": {
+        "success": true,
+        "symbol": "MSFT",
+        "isLive": false,
+        "currentPrice": 200,
+        "barsCount": 252,
+        "rsi": {
+          "value": 58.4,
+          "period": 14,
+          "status": "Neutral (30-70)",
+          "sentiment": "neutral"
+        },
+        "macd": {
+          "macdLine": 3.45,
+          "signalLine": 2.1,
+          "histogram": 1.35,
+          "crossover": "Bullish (Above Signal)",
+          "sentiment": "bullish"
+        },
+        "bollingerBands": {
+          "upper": 212,
+          "middle": 200,
+          "lower": 188,
+          "bandwidthPercent": 12,
+          "percentB": 0.62
+        },
+        "atr": {
+          "value": 4.4,
+          "period": 14,
+          "stopLossBuffer1_5x": 6.6,
+          "stopLossBuffer2x": 8.8
+        },
+        "movingAverages": {
+          "sma50": 192,
+          "sma200": 176,
+          "isAbove50": true,
+          "isAbove200": true,
+          "regime": "Golden Cross (50 DMA > 200 DMA)",
+          "regimeSentiment": "bullish"
+        },
+        "pivots": {
+          "support": 182,
+          "resistance": 216,
+          "rangePct": 18.7
+        },
+        "overallSignal": "Bullish / Accumulation",
+        "timestamp": "2026-09-07T18:58:05.632Z"
+      },
+      "retailSentiment": {
+        "success": true,
+        "ticker": "MSFT",
+        "isLive": true,
+        "totalMessages": 30,
+        "bullishCount": 15,
+        "bearishCount": 2,
+        "neutralCount": 13,
+        "bullRatio": 88,
+        "bearRatio": 12,
+        "sentimentVerdict": "Extremely Bullish",
+        "messages": [
+          {
+            "id": 663750449,
+            "body": "Microsoft’s revenue over the last 10 fiscal years:\n\n2017: $96.6B\n2018: $110.4B\n2019: $125.8B\n2020: $143.0B\n2021: $168.1B\n2022: $198.3B\n2023: $211.9B\n2024: $245.1B\n2025: $281.7B\n2026: $331.8B\n\nThat represents a 14.7% revenue CAGR.\n\n$MSFT has more than tripled its annual revenue while operating at an already enormous scale.",
+            "createdAt": "2026-09-07T18:39:30Z",
+            "username": "Dividendology",
+            "sentiment": "Bullish",
+            "likes": 0
+          },
+          {
+            "id": 663748502,
+            "body": "$AMFN I saw that movie regarding $BB .  Not sure why $MSFT cannot figure out how to be competitive with $AAPL and $NOK. \nWe are the next best thing, like Brent said; we could be the next BTC.",
+            "createdAt": "2026-09-07T17:17:26Z",
+            "username": "spql8r",
+            "sentiment": "Bullish",
+            "likes": 7
+          },
+          {
+            "id": 663746347,
+            "body": "$MSFT if your bearish on MSFT your just plain…….",
+            "createdAt": "2026-09-07T15:50:35Z",
+            "username": "bluenormas",
+            "sentiment": "Bullish",
+            "likes": 1
+          },
+          {
+            "id": 663744698,
+            "body": "$MSFT Summer of Softy continues next week ! 💥☀️",
+            "createdAt": "2026-09-07T14:44:59Z",
+            "username": "Achandler787",
+            "sentiment": "Bullish",
+            "likes": 1
+          },
+          {
+            "id": 663741958,
+            "body": "$QQQ $SPY $NVDA $MU $MSFT  \nIf it&#39;s twice as powerful it loses 4X as much money. The math is clear. If it&#39;s 4X more powerful then it loses 16x as much money.",
+            "createdAt": "2026-09-07T12:36:45Z",
+            "username": "Whodo_Voodoo_Ido",
+            "sentiment": "Neutral",
+            "likes": 1
+          },
+          {
+            "id": 663740910,
+            "body": "$MSFT $498 on hyper. Never seeing $500 again.",
+            "createdAt": "2026-09-07T11:23:48Z",
+            "username": "NetflixUser",
+            "sentiment": "Bearish",
+            "likes": 0
+          },
+          {
+            "id": 663740198,
+            "body": "$QQQ $SPY $NVDA $MU $MSFT",
+            "createdAt": "2026-09-07T09:56:27Z",
+            "username": "TurboSix",
+            "sentiment": "Neutral",
+            "likes": 2
+          },
+          {
+            "id": 663739603,
+            "body": "$LINK.X $BTC.X  $AMZN  $NVDA \n\n$MSFT",
+            "createdAt": "2026-09-07T08:23:30Z",
+            "username": "TheOne_24",
+            "sentiment": "Bullish",
+            "likes": 2
+          },
+          {
+            "id": 663738286,
+            "body": "$MSFT $MU $NVDA $QQQ $SPY it’s not.  Probably will get a pump followed by a massive sell off after it’s labeled a huge disappointment by the public when they use it and Jensen labeling it AGI is the biggest red flag of all so for him.  Very desperate attempt to keep the circular financing ponzi floating along.  Will be funny to see the negative reaction in a few weeks.",
+            "createdAt": "2026-09-07T05:26:55Z",
+            "username": "Stonethrower2",
+            "sentiment": "Neutral",
+            "likes": 1
+          },
+          {
+            "id": 663738282,
+            "body": "$MSFT $600 soon.",
+            "createdAt": "2026-09-07T05:26:12Z",
+            "username": "onlythebestcompanies",
+            "sentiment": "Bullish",
+            "likes": 6
+          }
+        ],
+        "timestamp": "2026-09-07T18:58:05.879Z"
+      },
+      "predictionMarkets": {
+        "rateCuts": [
+          {
+            "id": "616902",
+            "question": "Will no Fed rate cuts happen in 2026?",
+            "slug": "will-no-fed-rate-cuts-happen-in-2026",
+            "url": "https://polymarket.com/event/will-no-fed-rate-cuts-happen-in-2026",
+            "endDate": "2026-12-31",
+            "volume": 8152066,
+            "volumeFormatted": "$8.2M",
+            "mainProbabilityPercent": 93,
+            "outcomes": [
+              {
+                "name": "Yes",
+                "probabilityPercent": 93,
+                "rawPrice": 0.9265
+              },
+              {
+                "name": "No",
+                "probabilityPercent": 7,
+                "rawPrice": 0.0735
+              }
+            ]
+          },
+          {
+            "id": "616913",
+            "question": "Will 11 Fed rate cuts happen in 2026?",
+            "slug": "will-11-fed-rate-cuts-happen-in-2026",
+            "url": "https://polymarket.com/event/will-11-fed-rate-cuts-happen-in-2026",
+            "endDate": "2026-12-31",
+            "volume": 5258799,
+            "volumeFormatted": "$5.3M",
+            "mainProbabilityPercent": 0,
+            "outcomes": [
+              {
+                "name": "Yes",
+                "probabilityPercent": 0,
+                "rawPrice": 0.0005
+              },
+              {
+                "name": "No",
+                "probabilityPercent": 100,
+                "rawPrice": 0.9995
+              }
+            ]
+          },
+          {
+            "id": "616912",
+            "question": "Will 10 Fed rate cuts happen in 2026?",
+            "slug": "will-10-fed-rate-cuts-happen-in-2026",
+            "url": "https://polymarket.com/event/will-10-fed-rate-cuts-happen-in-2026",
+            "endDate": "2026-12-31",
+            "volume": 4941749,
+            "volumeFormatted": "$4.9M",
+            "mainProbabilityPercent": 0,
+            "outcomes": [
+              {
+                "name": "Yes",
+                "probabilityPercent": 0,
+                "rawPrice": 0.0005
+              },
+              {
+                "name": "No",
+                "probabilityPercent": 100,
+                "rawPrice": 0.9995
+              }
+            ]
+          }
+        ],
+        "recession": [
+          {
+            "id": "609655",
+            "question": "US recession by end of 2026?",
+            "slug": "us-recession-by-end-of-2026",
+            "url": "https://polymarket.com/event/us-recession-by-end-of-2026",
+            "endDate": "2027-01-31",
+            "volume": 1738313,
+            "volumeFormatted": "$1.7M",
+            "mainProbabilityPercent": 7,
+            "outcomes": [
+              {
+                "name": "Yes",
+                "probabilityPercent": 7,
+                "rawPrice": 0.07
+              },
+              {
+                "name": "No",
+                "probabilityPercent": 93,
+                "rawPrice": 0.93
+              }
+            ]
+          },
+          {
+            "id": "2061857",
+            "question": "UK Recession in 2026?",
+            "slug": "uk-recession-in-2026",
+            "url": "https://polymarket.com/event/uk-recession-in-2026",
+            "endDate": "2027-03-31",
+            "volume": 10331,
+            "volumeFormatted": "$10K",
+            "mainProbabilityPercent": 8,
+            "outcomes": [
+              {
+                "name": "Yes",
+                "probabilityPercent": 8,
+                "rawPrice": 0.075
+              },
+              {
+                "name": "No",
+                "probabilityPercent": 93,
+                "rawPrice": 0.925
+              }
+            ]
+          },
+          {
+            "id": "3407418",
+            "question": "US recession by end of 2027?",
+            "slug": "us-recession-by-end-of-2027-20260807185409760",
+            "url": "https://polymarket.com/event/us-recession-by-end-of-2027-20260807185409760",
+            "endDate": "2027-12-31",
+            "volume": 7210,
+            "volumeFormatted": "$7K",
+            "mainProbabilityPercent": 28,
+            "outcomes": [
+              {
+                "name": "Yes",
+                "probabilityPercent": 28,
+                "rawPrice": 0.275
+              },
+              {
+                "name": "No",
+                "probabilityPercent": 73,
+                "rawPrice": 0.725
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "researchDebate": {
+      "rounds": 2,
+      "turns": [
+        {
+          "round": 1,
+          "speaker": "Bull Researcher",
+          "role": "bull",
+          "badge": "🟢 Growth, Moat & Catalysts",
+          "argument": "As the Bull Researcher for Microsoft Corporation (MSFT), the fundamental and structural thesis is exceptionally strong. First, our DCF valuation models indicate an intrinsic fair value of $230.11, representing a +15.1% margin of safety against the current market price of $200. Categorized under Peter Lynch's framework as a premier 'Stalwart', the company compounds capital with a high-hurdle ROIC of 16.5%, easily beating the cost of capital. Technically, the stock is underpinned by a bullish Golden Cross (50 DMA > 200 DMA) with RSI at 58.4 (sustainable accumulation, not overbought). Furthermore, retail sentiment on StockTwits is running at 88% bullish conviction with strong institutional accumulation. The risk/reward heavily favors entry."
+        },
+        {
+          "round": 1,
+          "speaker": "Bear Researcher",
+          "role": "bear",
+          "badge": "🔴 Downside, Valuation & Risk",
+          "argument": "As the Bear Researcher, the bull thesis ignores critical macroeconomic headwinds and valuation compression risks. While the DCF claims an upside of $230.11, that projection relies on optimistic terminal growth assumptions that fail to price in rising cost-of-capital realities and margin friction. With a PEG ratio of 2.1, the stock is hardly a bargain; any deceleration in quarterly top-line run rate will trigger severe multiple re-rating. On the technical front, MSFT faces stiff overhead resistance at $216. Moreover, retail euphoria (88% bullish) is a classic contrarian indicator of late-cycle retail crowding. We urge extreme caution against chasing at these levels."
+        },
+        {
+          "round": 2,
+          "speaker": "Bull Researcher",
+          "role": "bull",
+          "badge": "🟢 Moat Durability & Counter",
+          "argument": "The Bear's concerns around multiple compression fail to acknowledge Microsoft Corporation's fortress balance sheet and pricing power. With a conservative Debt-to-Equity ratio of only 0.28, MSFT is entirely immune to liquidity distress and comfortably funds its own high-margin R&D organic reinvestment. Furthermore, average true range (ATR) volatility is contained at $4.4, and current prices sit comfortably above the 50-day moving average ($192). This is not an overextended bubble—it is an institutional compounder consolidating for its next upward leg. The evidence overwhelmingly supports building exposure."
+        },
+        {
+          "round": 2,
+          "speaker": "Bear Researcher",
+          "role": "bear",
+          "badge": "🔴 Asymmetric Downside Warning",
+          "argument": "Fortress balance sheet or not, the Bull Analyst cannot handwave away the law of large numbers. Customer concentration, enterprise IT budget scrutiny, and geopolitical supply chain bottlenecks present tangible downside risks that could shave 15-20% off near-term earnings power. If support at $182 is breached, stop-loss cascades will accelerate selling pressure down to the 200 DMA ($176). Risk-adjusted expected value dictates that we either trim existing holdings or demand a deeper margin of safety before deploying incremental capital."
+        }
+      ]
+    },
+    "researchPlan": {
+      "recommendation": "Buy",
+      "consensusVerdict": "BUY — Bull Case Prevails with Risk Guardrails",
+      "convictionScore": 8.5,
+      "rationale": "After evaluating the 2 rounds of adversarial debate, the Bull Researcher's evidence regarding Microsoft Corporation's durable economic moat (ROIC > 15%), DCF discount, and constructive technical trend carrying above the 50 DMA is more grounded than the Bear's speculative multiple compression warnings. However, the Bear's identification of overhead resistance at $216 is valid and must be respected in execution.",
+      "strategicActions": "1. Authorize the trading desk to initiate/expand long exposure via limit orders near current support.\n2. Enforce strict ATR-based stop-loss discipline to defend against the Bear's breakdown scenario.\n3. Scale position into two tranches to optimize cost-basis."
+    },
+    "traderProposal": {
+      "action": "Buy",
+      "symbol": "MSFT",
+      "currentMarketPrice": 200,
+      "entryPrice": 200,
+      "stopLoss": 193.4,
+      "takeProfit1": 211,
+      "takeProfit2": 217.6,
+      "riskRewardRatio": "1.67:1",
+      "atrValue": 4.4,
+      "atrStopBuffer": "1.5x ATR ($6.60)",
+      "positionSizing": "3.5% of Portfolio Equity",
+      "executionMethod": "Limit Order at Market / Pullback",
+      "reasoning": "Technical market structure confirms Buy signal. Entry is grounded near $200 with dynamic stop-loss at $193.4 calibrated strictly via 1.5x ATR volatility buffer to eliminate market noise. Target 1 offers an attractive 1.67:1 asymmetric reward-to-risk ratio."
+    },
+    "riskDebate": {
+      "consensus": "Approved with Strict ATR Stop-Loss Mandate",
+      "riskScore": 4.2,
+      "debators": [
+        {
+          "speaker": "Aggressive Risk Debater",
+          "role": "aggressive",
+          "stance": "Upsize Exposure & Maximize Alpha",
+          "badge": "⚡ High Reward Focus",
+          "argument": "⚡ Aggressive Risk Debater: The Trader's proposal to Buy $MSFT is sound, but overly timid on position sizing. With favorable risk/reward (1.67:1) and strong momentum, limiting allocation to 3.5% of Portfolio Equity leaves alpha on the table. We should increase exposure to at least 5.0% and trail the stop-loss more aggressively to ride the trend to Take Profit 2 ($217.6)."
+        },
+        {
+          "speaker": "Conservative Risk Debater",
+          "role": "conservative",
+          "stance": "Enforce Strict Capital Preservation & Drawdown Limits",
+          "badge": "🛡️ Capital Preservation",
+          "argument": "🛡️ Conservative Risk Debater: I strongly oppose upsizing. Prediction markets price a 7% chance of recessionary friction, and macro credit conditions remain sensitive. The Trader's 1.5x ATR stop-loss at $193.4 is mandatory and non-negotiable. If volatility spikes and closes below this threshold, the position must be liquidated immediately with zero discretionary hesitation."
+        },
+        {
+          "speaker": "Neutral Risk Arbiter",
+          "role": "neutral",
+          "stance": "Mathematical Expected Value & Sizing Compromise",
+          "badge": "⚖️ Objective Balance",
+          "argument": "⚖️ Neutral Risk Arbiter: Both perspectives highlight valid boundaries. Upsizing to 5% creates excessive single-stock idiosyncratic risk, while exiting completely forfeits asymmetric upside. The Trader's sizing of 3.5% of Portfolio Equity with a hard stop-loss at $193.4 represents the optimal mathematically calibrated Kelly criterion compromise."
+        }
+      ]
+    },
+    "portfolioDecision": {
+      "status": "APPROVED",
+      "decisionBadge": "APPROVED: BUY MSFT",
+      "finalRating": "Buy",
+      "authorizedAllocation": "3.0% - 3.5% of Portfolio",
+      "maxAllowedDrawdown": "-6.5%",
+      "executionInstructions": "Submit limit order for MSFT at $200. Hard stop-loss registered at $193.4. Take-profit limit set at $211 for 50% scale-out, with remainder trailing to $217.6.",
+      "executiveSignOff": "As Portfolio Manager, I have reviewed the Bull/Bear research debate, the Research Manager's investment plan, and the Tri-Party Risk Committee deliberation. The execution ticket for Microsoft Corporation (MSFT) is formally APPROVED. All risk constraints and ATR-based drawdown stops are actively enforced."
+    }
+  },
+  "AAPL": {
+    "success": true,
+    "ticker": "AAPL",
+    "status": "success",
+    "mode": "mock",
+    "traderProposal": {
+      "conviction": "High",
+      "action": "ACCUMULATE",
+      "allocationPercent": 4.5
+    },
+    "portfolioDecision": {
+      "approved": true,
+      "allocation": "4.5%"
+    },
+    "researchDebate": [
+      {
+        "speaker": "Bull Researcher",
+        "text": "AAPL exhibits persistent competitive advantages and pricing durability."
+      }
+    ],
+    "researchPlan": {
+      "focus": "Capital Allocation and ROIC"
+    },
+    "riskDebate": [
+      {
+        "speaker": "Chief Risk Officer",
+        "text": "Downside risk contained by robust free cash flow and conservative balance sheet."
+      }
+    ]
+  },
+  "NVDA": {
+    "success": true,
+    "ticker": "NVDA",
+    "status": "success",
+    "mode": "mock",
+    "traderProposal": {
+      "conviction": "High",
+      "action": "ACCUMULATE",
+      "allocationPercent": 4.5
+    },
+    "portfolioDecision": {
+      "approved": true,
+      "allocation": "4.5%"
+    },
+    "researchDebate": [
+      {
+        "speaker": "Bull Researcher",
+        "text": "NVDA exhibits persistent competitive advantages and pricing durability."
+      }
+    ],
+    "researchPlan": {
+      "focus": "Capital Allocation and ROIC"
+    },
+    "riskDebate": [
+      {
+        "speaker": "Chief Risk Officer",
+        "text": "Downside risk contained by robust free cash flow and conservative balance sheet."
+      }
+    ]
+  },
+  "TSLA": {
+    "success": true,
+    "ticker": "TSLA",
+    "status": "success",
+    "mode": "mock",
+    "traderProposal": {
+      "conviction": "High",
+      "action": "ACCUMULATE",
+      "allocationPercent": 4.5
+    },
+    "portfolioDecision": {
+      "approved": true,
+      "allocation": "4.5%"
+    },
+    "researchDebate": [
+      {
+        "speaker": "Bull Researcher",
+        "text": "TSLA exhibits persistent competitive advantages and pricing durability."
+      }
+    ],
+    "researchPlan": {
+      "focus": "Capital Allocation and ROIC"
+    },
+    "riskDebate": [
+      {
+        "speaker": "Chief Risk Officer",
+        "text": "Downside risk contained by robust free cash flow and conservative balance sheet."
+      }
+    ]
+  },
+  "AMZN": {
+    "success": true,
+    "ticker": "AMZN",
+    "status": "success",
+    "mode": "mock",
+    "traderProposal": {
+      "conviction": "High",
+      "action": "ACCUMULATE",
+      "allocationPercent": 4.5
+    },
+    "portfolioDecision": {
+      "approved": true,
+      "allocation": "4.5%"
+    },
+    "researchDebate": [
+      {
+        "speaker": "Bull Researcher",
+        "text": "AMZN exhibits persistent competitive advantages and pricing durability."
+      }
+    ],
+    "researchPlan": {
+      "focus": "Capital Allocation and ROIC"
+    },
+    "riskDebate": [
+      {
+        "speaker": "Chief Risk Officer",
+        "text": "Downside risk contained by robust free cash flow and conservative balance sheet."
+      }
+    ]
+  }
+},
+  experts: {
+  "MSFT": {
+    "success": true,
+    "ticker": "MSFT",
+    "companyName": "MSFT",
+    "generatedAt": "2026-09-07T18:56:48.255Z",
+    "arbiterSynthesis": {
+      "arbiterName": "Benjamin Graham",
+      "arbiterTitle": "The Father of Value Investing • Senior Arbiter",
+      "arbiterAvatar": "⚖️",
+      "qualityGrade": "Class A: Wide-Moat Compounder",
+      "consensusScore": "9.6 / 10",
+      "marginOfSafety": "+15.0%",
+      "recommendedAllocation": "4.0% - 5.0%",
+      "consensusVerdict": "COMPOSITE BUY & HOLD",
+      "executiveSummary": "As Senior Arbiter, I have observed the arguments presented by Buffett, Lynch, Fisher, and Damodaran regarding MSFT (MSFT). The consensus aligns on an enterprise with verified structural advantages. While Lynch and Fisher celebrate growth momentum, Buffett and Damodaran correctly remind us that security analysis requires a measurable Margin of Safety (+15.0%). MSFT warrants a disciplined 4.0% - 5.0% portfolio allocation, with defensive stops anchored to balance sheet cash and intrinsic asset values.",
+      "keyRisksToWatch": [
+        "Multiple compression if revenue CAGR decelerates below consensus expectations.",
+        "Capex and R&D inflation eroding free cash flow conversion.",
+        "Antitrust scrutiny or customer concentration creating margin friction."
+      ]
+    },
+    "scorecardMatrix": [
+      {
+        "expertId": "buffett",
+        "name": "Warren Buffett",
+        "avatar": "🛡️",
+        "pillar": "Economic Moat & Capital Allocation",
+        "primaryMetric": "ROIC: 16.5%",
+        "secondaryMetric": "Debt/Equity: 0.4x",
+        "stance": "Bullish Moat",
+        "verdictClass": "verdict-bullish",
+        "holdingPeriod": "10+ Years (Forever)",
+        "targetWeight": "4.5%"
+      },
+      {
+        "expertId": "lynch",
+        "name": "Peter Lynch",
+        "avatar": "📈",
+        "pillar": "PEG Ratio & Category Taxonomy",
+        "primaryMetric": "PEG: 1.40",
+        "secondaryMetric": "Class: Stalwart",
+        "stance": "Buy / Fair PEG",
+        "verdictClass": "verdict-bullish",
+        "holdingPeriod": "2 - 4 Years",
+        "targetWeight": "4.5%"
+      },
+      {
+        "expertId": "fisher",
+        "name": "Philip Fisher",
+        "avatar": "🔍",
+        "pillar": "Qualitative Scuttlebutt & R&D",
+        "primaryMetric": "R&D Moat: Tier-1",
+        "secondaryMetric": "Engineer NPS: High",
+        "stance": "Overweight / Moat",
+        "verdictClass": "verdict-bullish",
+        "holdingPeriod": "5+ Years",
+        "targetWeight": "5.0%"
+      },
+      {
+        "expertId": "damodaran",
+        "name": "Aswath Damodaran",
+        "avatar": "🏛️",
+        "pillar": "DCF Intrinsic Fair Value & WACC",
+        "primaryMetric": "Fair Value: $115.00",
+        "secondaryMetric": "Market: $100.00",
+        "stance": "Undervalued",
+        "verdictClass": "verdict-bullish",
+        "holdingPeriod": "Until Fair Value Convergence",
+        "targetWeight": "3.5%"
+      }
+    ],
+    "debate": {
+      "totalTurns": 12,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "turns": [
+        {
+          "round": 1,
+          "expertId": "buffett",
+          "speaker": "Warren Buffett",
+          "avatar": "🛡️",
+          "title": "Chairman & CEO, Berkshire Hathaway",
+          "stance": "Bullish Moat",
+          "badge": "Economic Moat & Owner Earnings",
+          "quote": "Rule No. 1: Never lose money. Rule No. 2: Never forget rule No. 1.",
+          "argument": "When evaluating MSFT (MSFT), my first question is simple: does it possess an enduring economic moat that allows it to earn returns on invested capital well above its cost of capital? With a reported ROIC of 16.5% and a debt-to-equity ratio of 0.40x, the business produces strong cash flow. Its owner earnings ($0.0B) demonstrate that real cash conversion remains healthy relative to reported GAAP net income ($0.0B). However, price is what you pay, value is what you get. If the market is demanding an excessive multiple, even the widest castle moat can become a subpar investment."
+        },
+        {
+          "round": 1,
+          "expertId": "lynch",
+          "speaker": "Peter Lynch",
+          "avatar": "📈",
+          "title": "Former Manager, Fidelity Magellan Fund",
+          "stance": "Growth Bargain",
+          "badge": "PEG Ratio & Taxonomy",
+          "quote": "Know what you own, and know why you own it. Look for growth at a reasonable price.",
+          "argument": "I categorize MSFT as a classic 'Stalwart'. In my playbook, the holy grail is the PEG ratio. Right now, MSFT trades at a PEG of 1.40. At between 1.0 and 1.6, we are paying a fair price for durable earnings expansion. Furthermore, looking at the inventory vs. sales spread and balance sheet net cash per share, this enterprise is far from any liquidity distress. If consumers and enterprises are addicted to their products, you let your winners run!"
+        },
+        {
+          "round": 1,
+          "expertId": "fisher",
+          "speaker": "Philip Fisher",
+          "avatar": "🔍",
+          "title": "Author, Common Stocks and Uncommon Profits",
+          "stance": "High Conviction Pipeline",
+          "badge": "Qualitative Scuttlebutt & R&D",
+          "quote": "The stock market is filled with individuals who know the price of everything, but the value of nothing.",
+          "argument": "Warren and Peter, backward-looking financial ratios only tell you where the company has been, not where it is going over the next 5 to 10 years. My 15-point checklist demands relentless focus on R&D productivity and human capital. Our fieldwork and scuttlebutt audit across developer channels reveal: 'High engineering momentum and strong developer NPS'. When top software engineers and enterprise customers passionately prefer an architecture, the sales pipeline will compound regardless of short-term quarterly noise. Management exhibits outstanding capital allocation and vision."
+        },
+        {
+          "round": 1,
+          "expertId": "damodaran",
+          "speaker": "Aswath Damodaran",
+          "avatar": "🏛️",
+          "title": "Professor of Finance, NYU Stern School of Business",
+          "stance": "Intrinsic Discount",
+          "badge": "DCF Fair Value & Hurdle Rate",
+          "quote": "Narrative without numbers is pure fairy tale; numbers without narrative is an accounting exercise.",
+          "argument": "Let us anchor this discourse in first-principles corporate finance. Using an un-levered beta aligned with the sector and an NYU Stern Implied Equity Risk Premium, we compute a WACC hurdle rate of 8.5%. Our multi-stage discounted cash flow model capitalizes R&D as a long-term asset rather than an immediate expense, yielding an intrinsic fair value of $115.00 against the current market price of $100.00. The stock trades at a 15.0% discount to intrinsic fair value, providing quantifiable upside."
+        },
+        {
+          "round": 2,
+          "expertId": "buffett",
+          "speaker": "Warren Buffett",
+          "avatar": "🛡️",
+          "title": "Chairman & CEO, Berkshire Hathaway",
+          "stance": "Rebuttal to Damodaran",
+          "badge": "Moat vs Complex Modeling",
+          "quote": "It is far better to buy a wonderful company at a fair price than a fair company at a wonderful price.",
+          "argument": "Aswath, I admire your academic precision, but if you need a multi-tab DCF model with three decimal points of beta to know if a company is cheap, it isn’t cheap! Charlie and I never calculated a WACC in our lives. What matters is the pricing power: if MSFT raised prices by 10% tomorrow, would customers leave? Philip is right that customer lock-in is paramount. My caution to Peter Lynch is that paying high P/E multiples on Stalwart companies during cyclical peaks often leads to dead money for five years."
+        },
+        {
+          "round": 2,
+          "expertId": "lynch",
+          "speaker": "Peter Lynch",
+          "avatar": "📈",
+          "title": "Former Manager, Fidelity Magellan Fund",
+          "stance": "Rebuttal to Buffett & Damodaran",
+          "badge": "Missing the 10-Baggers",
+          "quote": "The person who turns over the most rocks wins the game.",
+          "argument": "Warren, with all due respect, if you waited for a single-digit P/E or an obvious cigar butt price on companies like this, you would have missed Microsoft in 1995 or Apple in 2012! High-quality growth companies grow into their valuations faster than spreadsheet purists predict. Aswath's DCF assumes steady-state terminal growth of 2.5%, but when a company invents brand new product categories, its earnings power accelerates exponentially. Watch the product adoption in retail stores and corporate IT budgets, not just Wall Street consensus."
+        },
+        {
+          "round": 2,
+          "expertId": "fisher",
+          "speaker": "Philip Fisher",
+          "avatar": "🔍",
+          "title": "Author, Common Stocks and Uncommon Profits",
+          "stance": "Rebuttal to Buffett & Lynch",
+          "badge": "The 5-Year Horizon",
+          "quote": "If the job has been done correctly when a stock is purchased, the time to sell is almost never.",
+          "argument": "Peter, I agree that growth can surprise on the upside, but you must distinguish between true organic innovation and temporary demand bubbles. Warren's point about management candor is vital. Does leadership talk openly about production challenges and supply chain bottlenecks, or do they only highlight rosy adjusted EBITDA? Our scuttlebutt with ex-employees and suppliers indicates that MSFT maintains genuine technical leadership. We should not trade in and out based on quarterly inventory fluctuations; we hold through multi-year compound cycles."
+        },
+        {
+          "round": 2,
+          "expertId": "damodaran",
+          "speaker": "Aswath Damodaran",
+          "avatar": "🏛️",
+          "title": "Professor of Finance, NYU Stern School of Business",
+          "stance": "Rebuttal to Lynch & Fisher",
+          "badge": "The Reality Filter",
+          "quote": "Every narrative must be tested against the laws of economic gravity.",
+          "argument": "Peter and Philip, I love a compelling growth story as much as anyone, but stories must obey the laws of arithmetic. You cannot have a company growing at 30% indefinitely without eventually becoming larger than global GDP! My 3 P's Reality Filter asks: is this growth narrative Possible, Plausible, or Probable? For MSFT to justify a multiple well above historical averages, reinvestment rates and operating margins must expand simultaneously. Investors must quantify the risk of margin mean-reversion if competition intensifies."
+        },
+        {
+          "round": 3,
+          "expertId": "buffett",
+          "speaker": "Warren Buffett",
+          "avatar": "🛡️",
+          "title": "Chairman & CEO, Berkshire Hathaway",
+          "stance": "ACCUMULATE / COMPOUNDER",
+          "badge": "Holding Period: 10+ Years",
+          "quote": "Our favorite holding period is forever.",
+          "argument": "Final verdict: MSFT possesses the hallmarks of an economic franchise. With disciplined capital reinvestment and high ROIC, it passes our $1 retained earnings test. I vote to ACCUMULATE a core position. Sizing: 4.0% - 5.0% of portfolio equity. Horizon: 10+ years as long as the moat remains unbreached."
+        },
+        {
+          "round": 3,
+          "expertId": "lynch",
+          "speaker": "Peter Lynch",
+          "avatar": "📈",
+          "title": "Former Manager, Fidelity Magellan Fund",
+          "stance": "STRONG BUY / FAST GROWER",
+          "badge": "Holding Period: 2-4 Years",
+          "quote": "Go for a business that any idiot can run — because sooner or later, any idiot is going to run it.",
+          "argument": "Final verdict: MSFT is a standout in its space. Its PEG ratio of 1.40 warrants an aggressive stance. I vote STRONG BUY. Sizing: 4.5% allocation. Horizon: 2 to 4 years, trimming only if the PEG ratio expands past 2.0 or inventory begins piling up faster than revenue."
+        },
+        {
+          "round": 3,
+          "expertId": "fisher",
+          "speaker": "Philip Fisher",
+          "avatar": "🔍",
+          "title": "Author, Common Stocks and Uncommon Profits",
+          "stance": "OVERWEIGHT / INNOVATION LEADER",
+          "badge": "Holding Period: 5+ Years",
+          "quote": "Do not accept the conventional wisdom without checking the facts on the ground.",
+          "argument": "Final verdict: The qualitative moat is pristine. R&D spending is converting into distinct competitive superiority, and internal engineering culture is thriving. I vote OVERWEIGHT with a 5.0% allocation. Horizon: 5+ years, letting management compound value through industry platform shifts."
+        },
+        {
+          "round": 3,
+          "expertId": "damodaran",
+          "speaker": "Aswath Damodaran",
+          "avatar": "🏛️",
+          "title": "Professor of Finance, NYU Stern School of Business",
+          "stance": "BUY / INTRINSIC VALUE",
+          "badge": "Fair Value: $115.00",
+          "quote": "Value is an anchor; price is the boat moving on the waves.",
+          "argument": "Final verdict: Anchoring to our DCF value of $115.00, the risk-adjusted return exceeds our 8.5% WACC hurdle rate. I recommend a BUY. Target entry below $98.00. Position size: 3.5% - 4.0% with periodic re-estimation as 10-K facts update."
+        }
+      ]
+    }
+  },
+  "AAPL": {
+    "success": true,
+    "ticker": "AAPL",
+    "companyName": "AAPL",
+    "generatedAt": "2026-09-07T18:45:09.267Z",
+    "arbiterSynthesis": {
+      "arbiterName": "Benjamin Graham",
+      "arbiterTitle": "The Father of Value Investing • Senior Arbiter",
+      "arbiterAvatar": "⚖️",
+      "qualityGrade": "Class A: Wide-Moat Compounder",
+      "consensusScore": "9.6 / 10",
+      "marginOfSafety": "+15.0%",
+      "recommendedAllocation": "4.0% - 5.0%",
+      "consensusVerdict": "COMPOSITE BUY & HOLD",
+      "executiveSummary": "As Senior Arbiter, I have observed the arguments presented by Buffett, Lynch, Fisher, and Damodaran regarding AAPL (AAPL). The consensus aligns on an enterprise with verified structural advantages. While Lynch and Fisher celebrate growth momentum, Buffett and Damodaran correctly remind us that security analysis requires a measurable Margin of Safety (+15.0%). AAPL warrants a disciplined 4.0% - 5.0% portfolio allocation, with defensive stops anchored to balance sheet cash and intrinsic asset values.",
+      "keyRisksToWatch": [
+        "Multiple compression if revenue CAGR decelerates below consensus expectations.",
+        "Capex and R&D inflation eroding free cash flow conversion.",
+        "Antitrust scrutiny or customer concentration creating margin friction."
+      ]
+    },
+    "scorecardMatrix": [
+      {
+        "expertId": "buffett",
+        "name": "Warren Buffett",
+        "avatar": "🛡️",
+        "pillar": "Economic Moat & Capital Allocation",
+        "primaryMetric": "ROIC: 16.5%",
+        "secondaryMetric": "Debt/Equity: 0.4x",
+        "stance": "Bullish Moat",
+        "verdictClass": "verdict-bullish",
+        "holdingPeriod": "10+ Years (Forever)",
+        "targetWeight": "4.5%"
+      },
+      {
+        "expertId": "lynch",
+        "name": "Peter Lynch",
+        "avatar": "📈",
+        "pillar": "PEG Ratio & Category Taxonomy",
+        "primaryMetric": "PEG: 1.40",
+        "secondaryMetric": "Class: Stalwart",
+        "stance": "Buy / Fair PEG",
+        "verdictClass": "verdict-bullish",
+        "holdingPeriod": "2 - 4 Years",
+        "targetWeight": "4.5%"
+      },
+      {
+        "expertId": "fisher",
+        "name": "Philip Fisher",
+        "avatar": "🔍",
+        "pillar": "Qualitative Scuttlebutt & R&D",
+        "primaryMetric": "R&D Moat: Tier-1",
+        "secondaryMetric": "Engineer NPS: High",
+        "stance": "Overweight / Moat",
+        "verdictClass": "verdict-bullish",
+        "holdingPeriod": "5+ Years",
+        "targetWeight": "5.0%"
+      },
+      {
+        "expertId": "damodaran",
+        "name": "Aswath Damodaran",
+        "avatar": "🏛️",
+        "pillar": "DCF Intrinsic Fair Value & WACC",
+        "primaryMetric": "Fair Value: $115.00",
+        "secondaryMetric": "Market: $100.00",
+        "stance": "Undervalued",
+        "verdictClass": "verdict-bullish",
+        "holdingPeriod": "Until Fair Value Convergence",
+        "targetWeight": "3.5%"
+      }
+    ],
+    "debate": {
+      "totalTurns": 12,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "turns": [
+        {
+          "round": 1,
+          "expertId": "buffett",
+          "speaker": "Warren Buffett",
+          "avatar": "🛡️",
+          "title": "Chairman & CEO, Berkshire Hathaway",
+          "stance": "Bullish Moat",
+          "badge": "Economic Moat & Owner Earnings",
+          "quote": "Rule No. 1: Never lose money. Rule No. 2: Never forget rule No. 1.",
+          "argument": "When evaluating AAPL (AAPL), my first question is simple: does it possess an enduring economic moat that allows it to earn returns on invested capital well above its cost of capital? With a reported ROIC of 16.5% and a debt-to-equity ratio of 0.40x, the business produces strong cash flow. Its owner earnings ($0.0B) demonstrate that real cash conversion remains healthy relative to reported GAAP net income ($0.0B). However, price is what you pay, value is what you get. If the market is demanding an excessive multiple, even the widest castle moat can become a subpar investment."
+        },
+        {
+          "round": 1,
+          "expertId": "lynch",
+          "speaker": "Peter Lynch",
+          "avatar": "📈",
+          "title": "Former Manager, Fidelity Magellan Fund",
+          "stance": "Growth Bargain",
+          "badge": "PEG Ratio & Taxonomy",
+          "quote": "Know what you own, and know why you own it. Look for growth at a reasonable price.",
+          "argument": "I categorize AAPL as a classic 'Stalwart'. In my playbook, the holy grail is the PEG ratio. Right now, AAPL trades at a PEG of 1.40. At between 1.0 and 1.6, we are paying a fair price for durable earnings expansion. Furthermore, looking at the inventory vs. sales spread and balance sheet net cash per share, this enterprise is far from any liquidity distress. If consumers and enterprises are addicted to their products, you let your winners run!"
+        },
+        {
+          "round": 1,
+          "expertId": "fisher",
+          "speaker": "Philip Fisher",
+          "avatar": "🔍",
+          "title": "Author, Common Stocks and Uncommon Profits",
+          "stance": "High Conviction Pipeline",
+          "badge": "Qualitative Scuttlebutt & R&D",
+          "quote": "The stock market is filled with individuals who know the price of everything, but the value of nothing.",
+          "argument": "Warren and Peter, backward-looking financial ratios only tell you where the company has been, not where it is going over the next 5 to 10 years. My 15-point checklist demands relentless focus on R&D productivity and human capital. Our fieldwork and scuttlebutt audit across developer channels reveal: 'High engineering momentum and strong developer NPS'. When top software engineers and enterprise customers passionately prefer an architecture, the sales pipeline will compound regardless of short-term quarterly noise. Management exhibits outstanding capital allocation and vision."
+        },
+        {
+          "round": 1,
+          "expertId": "damodaran",
+          "speaker": "Aswath Damodaran",
+          "avatar": "🏛️",
+          "title": "Professor of Finance, NYU Stern School of Business",
+          "stance": "Intrinsic Discount",
+          "badge": "DCF Fair Value & Hurdle Rate",
+          "quote": "Narrative without numbers is pure fairy tale; numbers without narrative is an accounting exercise.",
+          "argument": "Let us anchor this discourse in first-principles corporate finance. Using an un-levered beta aligned with the sector and an NYU Stern Implied Equity Risk Premium, we compute a WACC hurdle rate of 8.5%. Our multi-stage discounted cash flow model capitalizes R&D as a long-term asset rather than an immediate expense, yielding an intrinsic fair value of $115.00 against the current market price of $100.00. The stock trades at a 15.0% discount to intrinsic fair value, providing quantifiable upside."
+        },
+        {
+          "round": 2,
+          "expertId": "buffett",
+          "speaker": "Warren Buffett",
+          "avatar": "🛡️",
+          "title": "Chairman & CEO, Berkshire Hathaway",
+          "stance": "Rebuttal to Damodaran",
+          "badge": "Moat vs Complex Modeling",
+          "quote": "It is far better to buy a wonderful company at a fair price than a fair company at a wonderful price.",
+          "argument": "Aswath, I admire your academic precision, but if you need a multi-tab DCF model with three decimal points of beta to know if a company is cheap, it isn’t cheap! Charlie and I never calculated a WACC in our lives. What matters is the pricing power: if AAPL raised prices by 10% tomorrow, would customers leave? Philip is right that customer lock-in is paramount. My caution to Peter Lynch is that paying high P/E multiples on Stalwart companies during cyclical peaks often leads to dead money for five years."
+        },
+        {
+          "round": 2,
+          "expertId": "lynch",
+          "speaker": "Peter Lynch",
+          "avatar": "📈",
+          "title": "Former Manager, Fidelity Magellan Fund",
+          "stance": "Rebuttal to Buffett & Damodaran",
+          "badge": "Missing the 10-Baggers",
+          "quote": "The person who turns over the most rocks wins the game.",
+          "argument": "Warren, with all due respect, if you waited for a single-digit P/E or an obvious cigar butt price on companies like this, you would have missed Microsoft in 1995 or Apple in 2012! High-quality growth companies grow into their valuations faster than spreadsheet purists predict. Aswath's DCF assumes steady-state terminal growth of 2.5%, but when a company invents brand new product categories, its earnings power accelerates exponentially. Watch the product adoption in retail stores and corporate IT budgets, not just Wall Street consensus."
+        },
+        {
+          "round": 2,
+          "expertId": "fisher",
+          "speaker": "Philip Fisher",
+          "avatar": "🔍",
+          "title": "Author, Common Stocks and Uncommon Profits",
+          "stance": "Rebuttal to Buffett & Lynch",
+          "badge": "The 5-Year Horizon",
+          "quote": "If the job has been done correctly when a stock is purchased, the time to sell is almost never.",
+          "argument": "Peter, I agree that growth can surprise on the upside, but you must distinguish between true organic innovation and temporary demand bubbles. Warren's point about management candor is vital. Does leadership talk openly about production challenges and supply chain bottlenecks, or do they only highlight rosy adjusted EBITDA? Our scuttlebutt with ex-employees and suppliers indicates that AAPL maintains genuine technical leadership. We should not trade in and out based on quarterly inventory fluctuations; we hold through multi-year compound cycles."
+        },
+        {
+          "round": 2,
+          "expertId": "damodaran",
+          "speaker": "Aswath Damodaran",
+          "avatar": "🏛️",
+          "title": "Professor of Finance, NYU Stern School of Business",
+          "stance": "Rebuttal to Lynch & Fisher",
+          "badge": "The Reality Filter",
+          "quote": "Every narrative must be tested against the laws of economic gravity.",
+          "argument": "Peter and Philip, I love a compelling growth story as much as anyone, but stories must obey the laws of arithmetic. You cannot have a company growing at 30% indefinitely without eventually becoming larger than global GDP! My 3 P's Reality Filter asks: is this growth narrative Possible, Plausible, or Probable? For AAPL to justify a multiple well above historical averages, reinvestment rates and operating margins must expand simultaneously. Investors must quantify the risk of margin mean-reversion if competition intensifies."
+        },
+        {
+          "round": 3,
+          "expertId": "buffett",
+          "speaker": "Warren Buffett",
+          "avatar": "🛡️",
+          "title": "Chairman & CEO, Berkshire Hathaway",
+          "stance": "ACCUMULATE / COMPOUNDER",
+          "badge": "Holding Period: 10+ Years",
+          "quote": "Our favorite holding period is forever.",
+          "argument": "Final verdict: AAPL possesses the hallmarks of an economic franchise. With disciplined capital reinvestment and high ROIC, it passes our $1 retained earnings test. I vote to ACCUMULATE a core position. Sizing: 4.0% - 5.0% of portfolio equity. Horizon: 10+ years as long as the moat remains unbreached."
+        },
+        {
+          "round": 3,
+          "expertId": "lynch",
+          "speaker": "Peter Lynch",
+          "avatar": "📈",
+          "title": "Former Manager, Fidelity Magellan Fund",
+          "stance": "STRONG BUY / FAST GROWER",
+          "badge": "Holding Period: 2-4 Years",
+          "quote": "Go for a business that any idiot can run — because sooner or later, any idiot is going to run it.",
+          "argument": "Final verdict: AAPL is a standout in its space. Its PEG ratio of 1.40 warrants an aggressive stance. I vote STRONG BUY. Sizing: 4.5% allocation. Horizon: 2 to 4 years, trimming only if the PEG ratio expands past 2.0 or inventory begins piling up faster than revenue."
+        },
+        {
+          "round": 3,
+          "expertId": "fisher",
+          "speaker": "Philip Fisher",
+          "avatar": "🔍",
+          "title": "Author, Common Stocks and Uncommon Profits",
+          "stance": "OVERWEIGHT / INNOVATION LEADER",
+          "badge": "Holding Period: 5+ Years",
+          "quote": "Do not accept the conventional wisdom without checking the facts on the ground.",
+          "argument": "Final verdict: The qualitative moat is pristine. R&D spending is converting into distinct competitive superiority, and internal engineering culture is thriving. I vote OVERWEIGHT with a 5.0% allocation. Horizon: 5+ years, letting management compound value through industry platform shifts."
+        },
+        {
+          "round": 3,
+          "expertId": "damodaran",
+          "speaker": "Aswath Damodaran",
+          "avatar": "🏛️",
+          "title": "Professor of Finance, NYU Stern School of Business",
+          "stance": "BUY / INTRINSIC VALUE",
+          "badge": "Fair Value: $115.00",
+          "quote": "Value is an anchor; price is the boat moving on the waves.",
+          "argument": "Final verdict: Anchoring to our DCF value of $115.00, the risk-adjusted return exceeds our 8.5% WACC hurdle rate. I recommend a BUY. Target entry below $98.00. Position size: 3.5% - 4.0% with periodic re-estimation as 10-K facts update."
+        }
+      ]
+    }
+  },
+  "NVDA": {
+    "success": true,
+    "ticker": "NVDA",
+    "companyName": "NVDA",
+    "generatedAt": "2026-09-07T18:45:09.269Z",
+    "arbiterSynthesis": {
+      "arbiterName": "Benjamin Graham",
+      "arbiterTitle": "The Father of Value Investing • Senior Arbiter",
+      "arbiterAvatar": "⚖️",
+      "qualityGrade": "Class A: Wide-Moat Compounder",
+      "consensusScore": "9.6 / 10",
+      "marginOfSafety": "+15.0%",
+      "recommendedAllocation": "4.0% - 5.0%",
+      "consensusVerdict": "COMPOSITE BUY & HOLD",
+      "executiveSummary": "As Senior Arbiter, I have observed the arguments presented by Buffett, Lynch, Fisher, and Damodaran regarding NVDA (NVDA). The consensus aligns on an enterprise with verified structural advantages. While Lynch and Fisher celebrate growth momentum, Buffett and Damodaran correctly remind us that security analysis requires a measurable Margin of Safety (+15.0%). NVDA warrants a disciplined 4.0% - 5.0% portfolio allocation, with defensive stops anchored to balance sheet cash and intrinsic asset values.",
+      "keyRisksToWatch": [
+        "Multiple compression if revenue CAGR decelerates below consensus expectations.",
+        "Capex and R&D inflation eroding free cash flow conversion.",
+        "Antitrust scrutiny or customer concentration creating margin friction."
+      ]
+    },
+    "scorecardMatrix": [
+      {
+        "expertId": "buffett",
+        "name": "Warren Buffett",
+        "avatar": "🛡️",
+        "pillar": "Economic Moat & Capital Allocation",
+        "primaryMetric": "ROIC: 16.5%",
+        "secondaryMetric": "Debt/Equity: 0.4x",
+        "stance": "Bullish Moat",
+        "verdictClass": "verdict-bullish",
+        "holdingPeriod": "10+ Years (Forever)",
+        "targetWeight": "4.5%"
+      },
+      {
+        "expertId": "lynch",
+        "name": "Peter Lynch",
+        "avatar": "📈",
+        "pillar": "PEG Ratio & Category Taxonomy",
+        "primaryMetric": "PEG: 1.40",
+        "secondaryMetric": "Class: Stalwart",
+        "stance": "Buy / Fair PEG",
+        "verdictClass": "verdict-bullish",
+        "holdingPeriod": "2 - 4 Years",
+        "targetWeight": "4.5%"
+      },
+      {
+        "expertId": "fisher",
+        "name": "Philip Fisher",
+        "avatar": "🔍",
+        "pillar": "Qualitative Scuttlebutt & R&D",
+        "primaryMetric": "R&D Moat: Tier-1",
+        "secondaryMetric": "Engineer NPS: High",
+        "stance": "Overweight / Moat",
+        "verdictClass": "verdict-bullish",
+        "holdingPeriod": "5+ Years",
+        "targetWeight": "5.0%"
+      },
+      {
+        "expertId": "damodaran",
+        "name": "Aswath Damodaran",
+        "avatar": "🏛️",
+        "pillar": "DCF Intrinsic Fair Value & WACC",
+        "primaryMetric": "Fair Value: $115.00",
+        "secondaryMetric": "Market: $100.00",
+        "stance": "Undervalued",
+        "verdictClass": "verdict-bullish",
+        "holdingPeriod": "Until Fair Value Convergence",
+        "targetWeight": "3.5%"
+      }
+    ],
+    "debate": {
+      "totalTurns": 12,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "turns": [
+        {
+          "round": 1,
+          "expertId": "buffett",
+          "speaker": "Warren Buffett",
+          "avatar": "🛡️",
+          "title": "Chairman & CEO, Berkshire Hathaway",
+          "stance": "Bullish Moat",
+          "badge": "Economic Moat & Owner Earnings",
+          "quote": "Rule No. 1: Never lose money. Rule No. 2: Never forget rule No. 1.",
+          "argument": "When evaluating NVDA (NVDA), my first question is simple: does it possess an enduring economic moat that allows it to earn returns on invested capital well above its cost of capital? With a reported ROIC of 16.5% and a debt-to-equity ratio of 0.40x, the business produces strong cash flow. Its owner earnings ($0.0B) demonstrate that real cash conversion remains healthy relative to reported GAAP net income ($0.0B). However, price is what you pay, value is what you get. If the market is demanding an excessive multiple, even the widest castle moat can become a subpar investment."
+        },
+        {
+          "round": 1,
+          "expertId": "lynch",
+          "speaker": "Peter Lynch",
+          "avatar": "📈",
+          "title": "Former Manager, Fidelity Magellan Fund",
+          "stance": "Growth Bargain",
+          "badge": "PEG Ratio & Taxonomy",
+          "quote": "Know what you own, and know why you own it. Look for growth at a reasonable price.",
+          "argument": "I categorize NVDA as a classic 'Stalwart'. In my playbook, the holy grail is the PEG ratio. Right now, NVDA trades at a PEG of 1.40. At between 1.0 and 1.6, we are paying a fair price for durable earnings expansion. Furthermore, looking at the inventory vs. sales spread and balance sheet net cash per share, this enterprise is far from any liquidity distress. If consumers and enterprises are addicted to their products, you let your winners run!"
+        },
+        {
+          "round": 1,
+          "expertId": "fisher",
+          "speaker": "Philip Fisher",
+          "avatar": "🔍",
+          "title": "Author, Common Stocks and Uncommon Profits",
+          "stance": "High Conviction Pipeline",
+          "badge": "Qualitative Scuttlebutt & R&D",
+          "quote": "The stock market is filled with individuals who know the price of everything, but the value of nothing.",
+          "argument": "Warren and Peter, backward-looking financial ratios only tell you where the company has been, not where it is going over the next 5 to 10 years. My 15-point checklist demands relentless focus on R&D productivity and human capital. Our fieldwork and scuttlebutt audit across developer channels reveal: 'High engineering momentum and strong developer NPS'. When top software engineers and enterprise customers passionately prefer an architecture, the sales pipeline will compound regardless of short-term quarterly noise. Management exhibits outstanding capital allocation and vision."
+        },
+        {
+          "round": 1,
+          "expertId": "damodaran",
+          "speaker": "Aswath Damodaran",
+          "avatar": "🏛️",
+          "title": "Professor of Finance, NYU Stern School of Business",
+          "stance": "Intrinsic Discount",
+          "badge": "DCF Fair Value & Hurdle Rate",
+          "quote": "Narrative without numbers is pure fairy tale; numbers without narrative is an accounting exercise.",
+          "argument": "Let us anchor this discourse in first-principles corporate finance. Using an un-levered beta aligned with the sector and an NYU Stern Implied Equity Risk Premium, we compute a WACC hurdle rate of 8.5%. Our multi-stage discounted cash flow model capitalizes R&D as a long-term asset rather than an immediate expense, yielding an intrinsic fair value of $115.00 against the current market price of $100.00. The stock trades at a 15.0% discount to intrinsic fair value, providing quantifiable upside."
+        },
+        {
+          "round": 2,
+          "expertId": "buffett",
+          "speaker": "Warren Buffett",
+          "avatar": "🛡️",
+          "title": "Chairman & CEO, Berkshire Hathaway",
+          "stance": "Rebuttal to Damodaran",
+          "badge": "Moat vs Complex Modeling",
+          "quote": "It is far better to buy a wonderful company at a fair price than a fair company at a wonderful price.",
+          "argument": "Aswath, I admire your academic precision, but if you need a multi-tab DCF model with three decimal points of beta to know if a company is cheap, it isn’t cheap! Charlie and I never calculated a WACC in our lives. What matters is the pricing power: if NVDA raised prices by 10% tomorrow, would customers leave? Philip is right that customer lock-in is paramount. My caution to Peter Lynch is that paying high P/E multiples on Stalwart companies during cyclical peaks often leads to dead money for five years."
+        },
+        {
+          "round": 2,
+          "expertId": "lynch",
+          "speaker": "Peter Lynch",
+          "avatar": "📈",
+          "title": "Former Manager, Fidelity Magellan Fund",
+          "stance": "Rebuttal to Buffett & Damodaran",
+          "badge": "Missing the 10-Baggers",
+          "quote": "The person who turns over the most rocks wins the game.",
+          "argument": "Warren, with all due respect, if you waited for a single-digit P/E or an obvious cigar butt price on companies like this, you would have missed Microsoft in 1995 or Apple in 2012! High-quality growth companies grow into their valuations faster than spreadsheet purists predict. Aswath's DCF assumes steady-state terminal growth of 2.5%, but when a company invents brand new product categories, its earnings power accelerates exponentially. Watch the product adoption in retail stores and corporate IT budgets, not just Wall Street consensus."
+        },
+        {
+          "round": 2,
+          "expertId": "fisher",
+          "speaker": "Philip Fisher",
+          "avatar": "🔍",
+          "title": "Author, Common Stocks and Uncommon Profits",
+          "stance": "Rebuttal to Buffett & Lynch",
+          "badge": "The 5-Year Horizon",
+          "quote": "If the job has been done correctly when a stock is purchased, the time to sell is almost never.",
+          "argument": "Peter, I agree that growth can surprise on the upside, but you must distinguish between true organic innovation and temporary demand bubbles. Warren's point about management candor is vital. Does leadership talk openly about production challenges and supply chain bottlenecks, or do they only highlight rosy adjusted EBITDA? Our scuttlebutt with ex-employees and suppliers indicates that NVDA maintains genuine technical leadership. We should not trade in and out based on quarterly inventory fluctuations; we hold through multi-year compound cycles."
+        },
+        {
+          "round": 2,
+          "expertId": "damodaran",
+          "speaker": "Aswath Damodaran",
+          "avatar": "🏛️",
+          "title": "Professor of Finance, NYU Stern School of Business",
+          "stance": "Rebuttal to Lynch & Fisher",
+          "badge": "The Reality Filter",
+          "quote": "Every narrative must be tested against the laws of economic gravity.",
+          "argument": "Peter and Philip, I love a compelling growth story as much as anyone, but stories must obey the laws of arithmetic. You cannot have a company growing at 30% indefinitely without eventually becoming larger than global GDP! My 3 P's Reality Filter asks: is this growth narrative Possible, Plausible, or Probable? For NVDA to justify a multiple well above historical averages, reinvestment rates and operating margins must expand simultaneously. Investors must quantify the risk of margin mean-reversion if competition intensifies."
+        },
+        {
+          "round": 3,
+          "expertId": "buffett",
+          "speaker": "Warren Buffett",
+          "avatar": "🛡️",
+          "title": "Chairman & CEO, Berkshire Hathaway",
+          "stance": "ACCUMULATE / COMPOUNDER",
+          "badge": "Holding Period: 10+ Years",
+          "quote": "Our favorite holding period is forever.",
+          "argument": "Final verdict: NVDA possesses the hallmarks of an economic franchise. With disciplined capital reinvestment and high ROIC, it passes our $1 retained earnings test. I vote to ACCUMULATE a core position. Sizing: 4.0% - 5.0% of portfolio equity. Horizon: 10+ years as long as the moat remains unbreached."
+        },
+        {
+          "round": 3,
+          "expertId": "lynch",
+          "speaker": "Peter Lynch",
+          "avatar": "📈",
+          "title": "Former Manager, Fidelity Magellan Fund",
+          "stance": "STRONG BUY / FAST GROWER",
+          "badge": "Holding Period: 2-4 Years",
+          "quote": "Go for a business that any idiot can run — because sooner or later, any idiot is going to run it.",
+          "argument": "Final verdict: NVDA is a standout in its space. Its PEG ratio of 1.40 warrants an aggressive stance. I vote STRONG BUY. Sizing: 4.5% allocation. Horizon: 2 to 4 years, trimming only if the PEG ratio expands past 2.0 or inventory begins piling up faster than revenue."
+        },
+        {
+          "round": 3,
+          "expertId": "fisher",
+          "speaker": "Philip Fisher",
+          "avatar": "🔍",
+          "title": "Author, Common Stocks and Uncommon Profits",
+          "stance": "OVERWEIGHT / INNOVATION LEADER",
+          "badge": "Holding Period: 5+ Years",
+          "quote": "Do not accept the conventional wisdom without checking the facts on the ground.",
+          "argument": "Final verdict: The qualitative moat is pristine. R&D spending is converting into distinct competitive superiority, and internal engineering culture is thriving. I vote OVERWEIGHT with a 5.0% allocation. Horizon: 5+ years, letting management compound value through industry platform shifts."
+        },
+        {
+          "round": 3,
+          "expertId": "damodaran",
+          "speaker": "Aswath Damodaran",
+          "avatar": "🏛️",
+          "title": "Professor of Finance, NYU Stern School of Business",
+          "stance": "BUY / INTRINSIC VALUE",
+          "badge": "Fair Value: $115.00",
+          "quote": "Value is an anchor; price is the boat moving on the waves.",
+          "argument": "Final verdict: Anchoring to our DCF value of $115.00, the risk-adjusted return exceeds our 8.5% WACC hurdle rate. I recommend a BUY. Target entry below $98.00. Position size: 3.5% - 4.0% with periodic re-estimation as 10-K facts update."
+        }
+      ]
+    }
+  },
+  "TSLA": {
+    "success": true,
+    "ticker": "TSLA",
+    "companyName": "TSLA",
+    "generatedAt": "2026-09-07T19:05:09.045Z",
+    "arbiterSynthesis": {
+      "arbiterName": "Benjamin Graham",
+      "arbiterTitle": "The Father of Value Investing • Senior Arbiter",
+      "arbiterAvatar": "⚖️",
+      "qualityGrade": "Class A: Wide-Moat Compounder",
+      "consensusScore": "9.6 / 10",
+      "marginOfSafety": "+15.0%",
+      "recommendedAllocation": "4.0% - 5.0%",
+      "consensusVerdict": "COMPOSITE BUY & HOLD",
+      "executiveSummary": "As Senior Arbiter, I have observed the arguments presented by Buffett, Lynch, Fisher, and Damodaran regarding TSLA (TSLA). The consensus aligns on an enterprise with verified structural advantages. While Lynch and Fisher celebrate growth momentum, Buffett and Damodaran correctly remind us that security analysis requires a measurable Margin of Safety (+15.0%). TSLA warrants a disciplined 4.0% - 5.0% portfolio allocation, with defensive stops anchored to balance sheet cash and intrinsic asset values.",
+      "keyRisksToWatch": [
+        "Multiple compression if revenue CAGR decelerates below consensus expectations.",
+        "Capex and R&D inflation eroding free cash flow conversion.",
+        "Antitrust scrutiny or customer concentration creating margin friction."
+      ]
+    },
+    "scorecardMatrix": [
+      {
+        "expertId": "buffett",
+        "name": "Warren Buffett",
+        "avatar": "🛡️",
+        "pillar": "Economic Moat & Capital Allocation",
+        "primaryMetric": "ROIC: 16.5%",
+        "secondaryMetric": "Debt/Equity: 0.4x",
+        "stance": "Bullish Moat",
+        "verdictClass": "verdict-bullish",
+        "holdingPeriod": "10+ Years (Forever)",
+        "targetWeight": "4.5%"
+      },
+      {
+        "expertId": "lynch",
+        "name": "Peter Lynch",
+        "avatar": "📈",
+        "pillar": "PEG Ratio & Category Taxonomy",
+        "primaryMetric": "PEG: 1.40",
+        "secondaryMetric": "Class: Stalwart",
+        "stance": "Buy / Fair PEG",
+        "verdictClass": "verdict-bullish",
+        "holdingPeriod": "2 - 4 Years",
+        "targetWeight": "4.5%"
+      },
+      {
+        "expertId": "fisher",
+        "name": "Philip Fisher",
+        "avatar": "🔍",
+        "pillar": "Qualitative Scuttlebutt & R&D",
+        "primaryMetric": "R&D Moat: Tier-1",
+        "secondaryMetric": "Engineer NPS: High",
+        "stance": "Overweight / Moat",
+        "verdictClass": "verdict-bullish",
+        "holdingPeriod": "5+ Years",
+        "targetWeight": "5.0%"
+      },
+      {
+        "expertId": "damodaran",
+        "name": "Aswath Damodaran",
+        "avatar": "🏛️",
+        "pillar": "DCF Intrinsic Fair Value & WACC",
+        "primaryMetric": "Fair Value: $115.00",
+        "secondaryMetric": "Market: $100.00",
+        "stance": "Undervalued",
+        "verdictClass": "verdict-bullish",
+        "holdingPeriod": "Until Fair Value Convergence",
+        "targetWeight": "3.5%"
+      }
+    ],
+    "debate": {
+      "totalTurns": 12,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "turns": [
+        {
+          "round": 1,
+          "expertId": "buffett",
+          "speaker": "Warren Buffett",
+          "avatar": "🛡️",
+          "title": "Chairman & CEO, Berkshire Hathaway",
+          "stance": "Bullish Moat",
+          "badge": "Economic Moat & Owner Earnings",
+          "quote": "Rule No. 1: Never lose money. Rule No. 2: Never forget rule No. 1.",
+          "argument": "When evaluating TSLA (TSLA), my first question is simple: does it possess an enduring economic moat that allows it to earn returns on invested capital well above its cost of capital? With a reported ROIC of 16.5% and a debt-to-equity ratio of 0.40x, the business produces strong cash flow. Its owner earnings ($0.0B) demonstrate that real cash conversion remains healthy relative to reported GAAP net income ($0.0B). However, price is what you pay, value is what you get. If the market is demanding an excessive multiple, even the widest castle moat can become a subpar investment."
+        },
+        {
+          "round": 1,
+          "expertId": "lynch",
+          "speaker": "Peter Lynch",
+          "avatar": "📈",
+          "title": "Former Manager, Fidelity Magellan Fund",
+          "stance": "Growth Bargain",
+          "badge": "PEG Ratio & Taxonomy",
+          "quote": "Know what you own, and know why you own it. Look for growth at a reasonable price.",
+          "argument": "I categorize TSLA as a classic 'Stalwart'. In my playbook, the holy grail is the PEG ratio. Right now, TSLA trades at a PEG of 1.40. At between 1.0 and 1.6, we are paying a fair price for durable earnings expansion. Furthermore, looking at the inventory vs. sales spread and balance sheet net cash per share, this enterprise is far from any liquidity distress. If consumers and enterprises are addicted to their products, you let your winners run!"
+        },
+        {
+          "round": 1,
+          "expertId": "fisher",
+          "speaker": "Philip Fisher",
+          "avatar": "🔍",
+          "title": "Author, Common Stocks and Uncommon Profits",
+          "stance": "High Conviction Pipeline",
+          "badge": "Qualitative Scuttlebutt & R&D",
+          "quote": "The stock market is filled with individuals who know the price of everything, but the value of nothing.",
+          "argument": "Warren and Peter, backward-looking financial ratios only tell you where the company has been, not where it is going over the next 5 to 10 years. My 15-point checklist demands relentless focus on R&D productivity and human capital. Our fieldwork and scuttlebutt audit across developer channels reveal: 'High engineering momentum and strong developer NPS'. When top software engineers and enterprise customers passionately prefer an architecture, the sales pipeline will compound regardless of short-term quarterly noise. Management exhibits outstanding capital allocation and vision."
+        },
+        {
+          "round": 1,
+          "expertId": "damodaran",
+          "speaker": "Aswath Damodaran",
+          "avatar": "🏛️",
+          "title": "Professor of Finance, NYU Stern School of Business",
+          "stance": "Intrinsic Discount",
+          "badge": "DCF Fair Value & Hurdle Rate",
+          "quote": "Narrative without numbers is pure fairy tale; numbers without narrative is an accounting exercise.",
+          "argument": "Let us anchor this discourse in first-principles corporate finance. Using an un-levered beta aligned with the sector and an NYU Stern Implied Equity Risk Premium, we compute a WACC hurdle rate of 8.5%. Our multi-stage discounted cash flow model capitalizes R&D as a long-term asset rather than an immediate expense, yielding an intrinsic fair value of $115.00 against the current market price of $100.00. The stock trades at a 15.0% discount to intrinsic fair value, providing quantifiable upside."
+        },
+        {
+          "round": 2,
+          "expertId": "buffett",
+          "speaker": "Warren Buffett",
+          "avatar": "🛡️",
+          "title": "Chairman & CEO, Berkshire Hathaway",
+          "stance": "Rebuttal to Damodaran",
+          "badge": "Moat vs Complex Modeling",
+          "quote": "It is far better to buy a wonderful company at a fair price than a fair company at a wonderful price.",
+          "argument": "Aswath, I admire your academic precision, but if you need a multi-tab DCF model with three decimal points of beta to know if a company is cheap, it isn’t cheap! Charlie and I never calculated a WACC in our lives. What matters is the pricing power: if TSLA raised prices by 10% tomorrow, would customers leave? Philip is right that customer lock-in is paramount. My caution to Peter Lynch is that paying high P/E multiples on Stalwart companies during cyclical peaks often leads to dead money for five years."
+        },
+        {
+          "round": 2,
+          "expertId": "lynch",
+          "speaker": "Peter Lynch",
+          "avatar": "📈",
+          "title": "Former Manager, Fidelity Magellan Fund",
+          "stance": "Rebuttal to Buffett & Damodaran",
+          "badge": "Missing the 10-Baggers",
+          "quote": "The person who turns over the most rocks wins the game.",
+          "argument": "Warren, with all due respect, if you waited for a single-digit P/E or an obvious cigar butt price on companies like this, you would have missed Microsoft in 1995 or Apple in 2012! High-quality growth companies grow into their valuations faster than spreadsheet purists predict. Aswath's DCF assumes steady-state terminal growth of 2.5%, but when a company invents brand new product categories, its earnings power accelerates exponentially. Watch the product adoption in retail stores and corporate IT budgets, not just Wall Street consensus."
+        },
+        {
+          "round": 2,
+          "expertId": "fisher",
+          "speaker": "Philip Fisher",
+          "avatar": "🔍",
+          "title": "Author, Common Stocks and Uncommon Profits",
+          "stance": "Rebuttal to Buffett & Lynch",
+          "badge": "The 5-Year Horizon",
+          "quote": "If the job has been done correctly when a stock is purchased, the time to sell is almost never.",
+          "argument": "Peter, I agree that growth can surprise on the upside, but you must distinguish between true organic innovation and temporary demand bubbles. Warren's point about management candor is vital. Does leadership talk openly about production challenges and supply chain bottlenecks, or do they only highlight rosy adjusted EBITDA? Our scuttlebutt with ex-employees and suppliers indicates that TSLA maintains genuine technical leadership. We should not trade in and out based on quarterly inventory fluctuations; we hold through multi-year compound cycles."
+        },
+        {
+          "round": 2,
+          "expertId": "damodaran",
+          "speaker": "Aswath Damodaran",
+          "avatar": "🏛️",
+          "title": "Professor of Finance, NYU Stern School of Business",
+          "stance": "Rebuttal to Lynch & Fisher",
+          "badge": "The Reality Filter",
+          "quote": "Every narrative must be tested against the laws of economic gravity.",
+          "argument": "Peter and Philip, I love a compelling growth story as much as anyone, but stories must obey the laws of arithmetic. You cannot have a company growing at 30% indefinitely without eventually becoming larger than global GDP! My 3 P's Reality Filter asks: is this growth narrative Possible, Plausible, or Probable? For TSLA to justify a multiple well above historical averages, reinvestment rates and operating margins must expand simultaneously. Investors must quantify the risk of margin mean-reversion if competition intensifies."
+        },
+        {
+          "round": 3,
+          "expertId": "buffett",
+          "speaker": "Warren Buffett",
+          "avatar": "🛡️",
+          "title": "Chairman & CEO, Berkshire Hathaway",
+          "stance": "ACCUMULATE / COMPOUNDER",
+          "badge": "Holding Period: 10+ Years",
+          "quote": "Our favorite holding period is forever.",
+          "argument": "Final verdict: TSLA possesses the hallmarks of an economic franchise. With disciplined capital reinvestment and high ROIC, it passes our $1 retained earnings test. I vote to ACCUMULATE a core position. Sizing: 4.0% - 5.0% of portfolio equity. Horizon: 10+ years as long as the moat remains unbreached."
+        },
+        {
+          "round": 3,
+          "expertId": "lynch",
+          "speaker": "Peter Lynch",
+          "avatar": "📈",
+          "title": "Former Manager, Fidelity Magellan Fund",
+          "stance": "STRONG BUY / FAST GROWER",
+          "badge": "Holding Period: 2-4 Years",
+          "quote": "Go for a business that any idiot can run — because sooner or later, any idiot is going to run it.",
+          "argument": "Final verdict: TSLA is a standout in its space. Its PEG ratio of 1.40 warrants an aggressive stance. I vote STRONG BUY. Sizing: 4.5% allocation. Horizon: 2 to 4 years, trimming only if the PEG ratio expands past 2.0 or inventory begins piling up faster than revenue."
+        },
+        {
+          "round": 3,
+          "expertId": "fisher",
+          "speaker": "Philip Fisher",
+          "avatar": "🔍",
+          "title": "Author, Common Stocks and Uncommon Profits",
+          "stance": "OVERWEIGHT / INNOVATION LEADER",
+          "badge": "Holding Period: 5+ Years",
+          "quote": "Do not accept the conventional wisdom without checking the facts on the ground.",
+          "argument": "Final verdict: The qualitative moat is pristine. R&D spending is converting into distinct competitive superiority, and internal engineering culture is thriving. I vote OVERWEIGHT with a 5.0% allocation. Horizon: 5+ years, letting management compound value through industry platform shifts."
+        },
+        {
+          "round": 3,
+          "expertId": "damodaran",
+          "speaker": "Aswath Damodaran",
+          "avatar": "🏛️",
+          "title": "Professor of Finance, NYU Stern School of Business",
+          "stance": "BUY / INTRINSIC VALUE",
+          "badge": "Fair Value: $115.00",
+          "quote": "Value is an anchor; price is the boat moving on the waves.",
+          "argument": "Final verdict: Anchoring to our DCF value of $115.00, the risk-adjusted return exceeds our 8.5% WACC hurdle rate. I recommend a BUY. Target entry below $98.00. Position size: 3.5% - 4.0% with periodic re-estimation as 10-K facts update."
+        }
+      ]
+    }
+  },
+  "AMZN": {
+    "success": true,
+    "ticker": "AMZN",
+    "companyName": "AMZN",
+    "generatedAt": "2026-09-07T19:05:09.286Z",
+    "arbiterSynthesis": {
+      "arbiterName": "Benjamin Graham",
+      "arbiterTitle": "The Father of Value Investing • Senior Arbiter",
+      "arbiterAvatar": "⚖️",
+      "qualityGrade": "Class A: Wide-Moat Compounder",
+      "consensusScore": "9.6 / 10",
+      "marginOfSafety": "+15.0%",
+      "recommendedAllocation": "4.0% - 5.0%",
+      "consensusVerdict": "COMPOSITE BUY & HOLD",
+      "executiveSummary": "As Senior Arbiter, I have observed the arguments presented by Buffett, Lynch, Fisher, and Damodaran regarding AMZN (AMZN). The consensus aligns on an enterprise with verified structural advantages. While Lynch and Fisher celebrate growth momentum, Buffett and Damodaran correctly remind us that security analysis requires a measurable Margin of Safety (+15.0%). AMZN warrants a disciplined 4.0% - 5.0% portfolio allocation, with defensive stops anchored to balance sheet cash and intrinsic asset values.",
+      "keyRisksToWatch": [
+        "Multiple compression if revenue CAGR decelerates below consensus expectations.",
+        "Capex and R&D inflation eroding free cash flow conversion.",
+        "Antitrust scrutiny or customer concentration creating margin friction."
+      ]
+    },
+    "scorecardMatrix": [
+      {
+        "expertId": "buffett",
+        "name": "Warren Buffett",
+        "avatar": "🛡️",
+        "pillar": "Economic Moat & Capital Allocation",
+        "primaryMetric": "ROIC: 16.5%",
+        "secondaryMetric": "Debt/Equity: 0.4x",
+        "stance": "Bullish Moat",
+        "verdictClass": "verdict-bullish",
+        "holdingPeriod": "10+ Years (Forever)",
+        "targetWeight": "4.5%"
+      },
+      {
+        "expertId": "lynch",
+        "name": "Peter Lynch",
+        "avatar": "📈",
+        "pillar": "PEG Ratio & Category Taxonomy",
+        "primaryMetric": "PEG: 1.40",
+        "secondaryMetric": "Class: Stalwart",
+        "stance": "Buy / Fair PEG",
+        "verdictClass": "verdict-bullish",
+        "holdingPeriod": "2 - 4 Years",
+        "targetWeight": "4.5%"
+      },
+      {
+        "expertId": "fisher",
+        "name": "Philip Fisher",
+        "avatar": "🔍",
+        "pillar": "Qualitative Scuttlebutt & R&D",
+        "primaryMetric": "R&D Moat: Tier-1",
+        "secondaryMetric": "Engineer NPS: High",
+        "stance": "Overweight / Moat",
+        "verdictClass": "verdict-bullish",
+        "holdingPeriod": "5+ Years",
+        "targetWeight": "5.0%"
+      },
+      {
+        "expertId": "damodaran",
+        "name": "Aswath Damodaran",
+        "avatar": "🏛️",
+        "pillar": "DCF Intrinsic Fair Value & WACC",
+        "primaryMetric": "Fair Value: $115.00",
+        "secondaryMetric": "Market: $100.00",
+        "stance": "Undervalued",
+        "verdictClass": "verdict-bullish",
+        "holdingPeriod": "Until Fair Value Convergence",
+        "targetWeight": "3.5%"
+      }
+    ],
+    "debate": {
+      "totalTurns": 12,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "turns": [
+        {
+          "round": 1,
+          "expertId": "buffett",
+          "speaker": "Warren Buffett",
+          "avatar": "🛡️",
+          "title": "Chairman & CEO, Berkshire Hathaway",
+          "stance": "Bullish Moat",
+          "badge": "Economic Moat & Owner Earnings",
+          "quote": "Rule No. 1: Never lose money. Rule No. 2: Never forget rule No. 1.",
+          "argument": "When evaluating AMZN (AMZN), my first question is simple: does it possess an enduring economic moat that allows it to earn returns on invested capital well above its cost of capital? With a reported ROIC of 16.5% and a debt-to-equity ratio of 0.40x, the business produces strong cash flow. Its owner earnings ($0.0B) demonstrate that real cash conversion remains healthy relative to reported GAAP net income ($0.0B). However, price is what you pay, value is what you get. If the market is demanding an excessive multiple, even the widest castle moat can become a subpar investment."
+        },
+        {
+          "round": 1,
+          "expertId": "lynch",
+          "speaker": "Peter Lynch",
+          "avatar": "📈",
+          "title": "Former Manager, Fidelity Magellan Fund",
+          "stance": "Growth Bargain",
+          "badge": "PEG Ratio & Taxonomy",
+          "quote": "Know what you own, and know why you own it. Look for growth at a reasonable price.",
+          "argument": "I categorize AMZN as a classic 'Stalwart'. In my playbook, the holy grail is the PEG ratio. Right now, AMZN trades at a PEG of 1.40. At between 1.0 and 1.6, we are paying a fair price for durable earnings expansion. Furthermore, looking at the inventory vs. sales spread and balance sheet net cash per share, this enterprise is far from any liquidity distress. If consumers and enterprises are addicted to their products, you let your winners run!"
+        },
+        {
+          "round": 1,
+          "expertId": "fisher",
+          "speaker": "Philip Fisher",
+          "avatar": "🔍",
+          "title": "Author, Common Stocks and Uncommon Profits",
+          "stance": "High Conviction Pipeline",
+          "badge": "Qualitative Scuttlebutt & R&D",
+          "quote": "The stock market is filled with individuals who know the price of everything, but the value of nothing.",
+          "argument": "Warren and Peter, backward-looking financial ratios only tell you where the company has been, not where it is going over the next 5 to 10 years. My 15-point checklist demands relentless focus on R&D productivity and human capital. Our fieldwork and scuttlebutt audit across developer channels reveal: 'High engineering momentum and strong developer NPS'. When top software engineers and enterprise customers passionately prefer an architecture, the sales pipeline will compound regardless of short-term quarterly noise. Management exhibits outstanding capital allocation and vision."
+        },
+        {
+          "round": 1,
+          "expertId": "damodaran",
+          "speaker": "Aswath Damodaran",
+          "avatar": "🏛️",
+          "title": "Professor of Finance, NYU Stern School of Business",
+          "stance": "Intrinsic Discount",
+          "badge": "DCF Fair Value & Hurdle Rate",
+          "quote": "Narrative without numbers is pure fairy tale; numbers without narrative is an accounting exercise.",
+          "argument": "Let us anchor this discourse in first-principles corporate finance. Using an un-levered beta aligned with the sector and an NYU Stern Implied Equity Risk Premium, we compute a WACC hurdle rate of 8.5%. Our multi-stage discounted cash flow model capitalizes R&D as a long-term asset rather than an immediate expense, yielding an intrinsic fair value of $115.00 against the current market price of $100.00. The stock trades at a 15.0% discount to intrinsic fair value, providing quantifiable upside."
+        },
+        {
+          "round": 2,
+          "expertId": "buffett",
+          "speaker": "Warren Buffett",
+          "avatar": "🛡️",
+          "title": "Chairman & CEO, Berkshire Hathaway",
+          "stance": "Rebuttal to Damodaran",
+          "badge": "Moat vs Complex Modeling",
+          "quote": "It is far better to buy a wonderful company at a fair price than a fair company at a wonderful price.",
+          "argument": "Aswath, I admire your academic precision, but if you need a multi-tab DCF model with three decimal points of beta to know if a company is cheap, it isn’t cheap! Charlie and I never calculated a WACC in our lives. What matters is the pricing power: if AMZN raised prices by 10% tomorrow, would customers leave? Philip is right that customer lock-in is paramount. My caution to Peter Lynch is that paying high P/E multiples on Stalwart companies during cyclical peaks often leads to dead money for five years."
+        },
+        {
+          "round": 2,
+          "expertId": "lynch",
+          "speaker": "Peter Lynch",
+          "avatar": "📈",
+          "title": "Former Manager, Fidelity Magellan Fund",
+          "stance": "Rebuttal to Buffett & Damodaran",
+          "badge": "Missing the 10-Baggers",
+          "quote": "The person who turns over the most rocks wins the game.",
+          "argument": "Warren, with all due respect, if you waited for a single-digit P/E or an obvious cigar butt price on companies like this, you would have missed Microsoft in 1995 or Apple in 2012! High-quality growth companies grow into their valuations faster than spreadsheet purists predict. Aswath's DCF assumes steady-state terminal growth of 2.5%, but when a company invents brand new product categories, its earnings power accelerates exponentially. Watch the product adoption in retail stores and corporate IT budgets, not just Wall Street consensus."
+        },
+        {
+          "round": 2,
+          "expertId": "fisher",
+          "speaker": "Philip Fisher",
+          "avatar": "🔍",
+          "title": "Author, Common Stocks and Uncommon Profits",
+          "stance": "Rebuttal to Buffett & Lynch",
+          "badge": "The 5-Year Horizon",
+          "quote": "If the job has been done correctly when a stock is purchased, the time to sell is almost never.",
+          "argument": "Peter, I agree that growth can surprise on the upside, but you must distinguish between true organic innovation and temporary demand bubbles. Warren's point about management candor is vital. Does leadership talk openly about production challenges and supply chain bottlenecks, or do they only highlight rosy adjusted EBITDA? Our scuttlebutt with ex-employees and suppliers indicates that AMZN maintains genuine technical leadership. We should not trade in and out based on quarterly inventory fluctuations; we hold through multi-year compound cycles."
+        },
+        {
+          "round": 2,
+          "expertId": "damodaran",
+          "speaker": "Aswath Damodaran",
+          "avatar": "🏛️",
+          "title": "Professor of Finance, NYU Stern School of Business",
+          "stance": "Rebuttal to Lynch & Fisher",
+          "badge": "The Reality Filter",
+          "quote": "Every narrative must be tested against the laws of economic gravity.",
+          "argument": "Peter and Philip, I love a compelling growth story as much as anyone, but stories must obey the laws of arithmetic. You cannot have a company growing at 30% indefinitely without eventually becoming larger than global GDP! My 3 P's Reality Filter asks: is this growth narrative Possible, Plausible, or Probable? For AMZN to justify a multiple well above historical averages, reinvestment rates and operating margins must expand simultaneously. Investors must quantify the risk of margin mean-reversion if competition intensifies."
+        },
+        {
+          "round": 3,
+          "expertId": "buffett",
+          "speaker": "Warren Buffett",
+          "avatar": "🛡️",
+          "title": "Chairman & CEO, Berkshire Hathaway",
+          "stance": "ACCUMULATE / COMPOUNDER",
+          "badge": "Holding Period: 10+ Years",
+          "quote": "Our favorite holding period is forever.",
+          "argument": "Final verdict: AMZN possesses the hallmarks of an economic franchise. With disciplined capital reinvestment and high ROIC, it passes our $1 retained earnings test. I vote to ACCUMULATE a core position. Sizing: 4.0% - 5.0% of portfolio equity. Horizon: 10+ years as long as the moat remains unbreached."
+        },
+        {
+          "round": 3,
+          "expertId": "lynch",
+          "speaker": "Peter Lynch",
+          "avatar": "📈",
+          "title": "Former Manager, Fidelity Magellan Fund",
+          "stance": "STRONG BUY / FAST GROWER",
+          "badge": "Holding Period: 2-4 Years",
+          "quote": "Go for a business that any idiot can run — because sooner or later, any idiot is going to run it.",
+          "argument": "Final verdict: AMZN is a standout in its space. Its PEG ratio of 1.40 warrants an aggressive stance. I vote STRONG BUY. Sizing: 4.5% allocation. Horizon: 2 to 4 years, trimming only if the PEG ratio expands past 2.0 or inventory begins piling up faster than revenue."
+        },
+        {
+          "round": 3,
+          "expertId": "fisher",
+          "speaker": "Philip Fisher",
+          "avatar": "🔍",
+          "title": "Author, Common Stocks and Uncommon Profits",
+          "stance": "OVERWEIGHT / INNOVATION LEADER",
+          "badge": "Holding Period: 5+ Years",
+          "quote": "Do not accept the conventional wisdom without checking the facts on the ground.",
+          "argument": "Final verdict: The qualitative moat is pristine. R&D spending is converting into distinct competitive superiority, and internal engineering culture is thriving. I vote OVERWEIGHT with a 5.0% allocation. Horizon: 5+ years, letting management compound value through industry platform shifts."
+        },
+        {
+          "round": 3,
+          "expertId": "damodaran",
+          "speaker": "Aswath Damodaran",
+          "avatar": "🏛️",
+          "title": "Professor of Finance, NYU Stern School of Business",
+          "stance": "BUY / INTRINSIC VALUE",
+          "badge": "Fair Value: $115.00",
+          "quote": "Value is an anchor; price is the boat moving on the waves.",
+          "argument": "Final verdict: Anchoring to our DCF value of $115.00, the risk-adjusted return exceeds our 8.5% WACC hurdle rate. I recommend a BUY. Target entry below $98.00. Position size: 3.5% - 4.0% with periodic re-estimation as 10-K facts update."
+        }
+      ]
+    }
+  }
+},
+  fodda: {
+  "MSFT": {
+    "ticker": "MSFT",
+    "quarter": "Q4 Fiscal Year",
+    "available": true,
+    "revenueBeat": "+2.4%",
+    "epsBeat": "+4.1%",
+    "guidanceVerdict": "Raised Fiscal Year Outlook",
+    "managementCommentary": "Strong commercial cloud momentum, enterprise AI adoption expanding deal sizes.",
+    "brandTrackerScore": 92
+  },
+  "AAPL": {
+    "ticker": "AAPL",
+    "quarter": "Q4 Fiscal Year",
+    "available": true,
+    "revenueBeat": "+2.4%",
+    "epsBeat": "+4.1%",
+    "guidanceVerdict": "Raised Fiscal Year Outlook",
+    "managementCommentary": "Strong commercial cloud momentum, enterprise AI adoption expanding deal sizes.",
+    "brandTrackerScore": 92
+  },
+  "NVDA": {
+    "ticker": "NVDA",
+    "quarter": "Q4 Fiscal Year",
+    "available": true,
+    "revenueBeat": "+2.4%",
+    "epsBeat": "+4.1%",
+    "guidanceVerdict": "Raised Fiscal Year Outlook",
+    "managementCommentary": "Strong commercial cloud momentum, enterprise AI adoption expanding deal sizes.",
+    "brandTrackerScore": 92
+  },
+  "TSLA": {
+    "ticker": "TSLA",
+    "quarter": "Q4 Fiscal Year",
+    "available": true,
+    "revenueBeat": "+2.4%",
+    "epsBeat": "+4.1%",
+    "guidanceVerdict": "Raised Fiscal Year Outlook",
+    "managementCommentary": "Strong commercial cloud momentum, enterprise AI adoption expanding deal sizes.",
+    "brandTrackerScore": 92
+  },
+  "AMZN": {
+    "ticker": "AMZN",
+    "quarter": "Q4 Fiscal Year",
+    "available": true,
+    "revenueBeat": "+2.4%",
+    "epsBeat": "+4.1%",
+    "guidanceVerdict": "Raised Fiscal Year Outlook",
+    "managementCommentary": "Strong commercial cloud momentum, enterprise AI adoption expanding deal sizes.",
+    "brandTrackerScore": 92
+  }
+},
+  seekingAlpha: {
+  "MSFT": {
+    "ticker": "MSFT",
+    "sentimentScore": 82,
+    "sentimentVerdict": "Bullish",
+    "articles": [
+      {
+        "title": "MSFT: High ROIC and Secular Tailwinds Justify Long-Term Holding",
+        "author": "Compound Capital",
+        "publishedAt": "2026-09-06",
+        "summary": "Detailed examination of owner earnings growth, competitive advantage, and free cash flow conversion."
+      },
+      {
+        "title": "MSFT Versus Competitors: Market Share Analysis",
+        "author": "Tech Analyst Desk",
+        "publishedAt": "2026-09-04",
+        "summary": "Peer comparison matrix confirms market-leading margins and pricing leverage."
+      }
+    ]
+  },
+  "AAPL": {
+    "ticker": "AAPL",
+    "sentimentScore": 82,
+    "sentimentVerdict": "Bullish",
+    "articles": [
+      {
+        "title": "AAPL: High ROIC and Secular Tailwinds Justify Long-Term Holding",
+        "author": "Compound Capital",
+        "publishedAt": "2026-09-06",
+        "summary": "Detailed examination of owner earnings growth, competitive advantage, and free cash flow conversion."
+      },
+      {
+        "title": "AAPL Versus Competitors: Market Share Analysis",
+        "author": "Tech Analyst Desk",
+        "publishedAt": "2026-09-04",
+        "summary": "Peer comparison matrix confirms market-leading margins and pricing leverage."
+      }
+    ]
+  },
+  "NVDA": {
+    "ticker": "NVDA",
+    "sentimentScore": 82,
+    "sentimentVerdict": "Bullish",
+    "articles": [
+      {
+        "title": "NVDA: High ROIC and Secular Tailwinds Justify Long-Term Holding",
+        "author": "Compound Capital",
+        "publishedAt": "2026-09-06",
+        "summary": "Detailed examination of owner earnings growth, competitive advantage, and free cash flow conversion."
+      },
+      {
+        "title": "NVDA Versus Competitors: Market Share Analysis",
+        "author": "Tech Analyst Desk",
+        "publishedAt": "2026-09-04",
+        "summary": "Peer comparison matrix confirms market-leading margins and pricing leverage."
+      }
+    ]
+  },
+  "TSLA": {
+    "ticker": "TSLA",
+    "sentimentScore": 82,
+    "sentimentVerdict": "Bullish",
+    "articles": [
+      {
+        "title": "TSLA: High ROIC and Secular Tailwinds Justify Long-Term Holding",
+        "author": "Compound Capital",
+        "publishedAt": "2026-09-06",
+        "summary": "Detailed examination of owner earnings growth, competitive advantage, and free cash flow conversion."
+      },
+      {
+        "title": "TSLA Versus Competitors: Market Share Analysis",
+        "author": "Tech Analyst Desk",
+        "publishedAt": "2026-09-04",
+        "summary": "Peer comparison matrix confirms market-leading margins and pricing leverage."
+      }
+    ]
+  },
+  "AMZN": {
+    "ticker": "AMZN",
+    "sentimentScore": 82,
+    "sentimentVerdict": "Bullish",
+    "articles": [
+      {
+        "title": "AMZN: High ROIC and Secular Tailwinds Justify Long-Term Holding",
+        "author": "Compound Capital",
+        "publishedAt": "2026-09-06",
+        "summary": "Detailed examination of owner earnings growth, competitive advantage, and free cash flow conversion."
+      },
+      {
+        "title": "AMZN Versus Competitors: Market Share Analysis",
+        "author": "Tech Analyst Desk",
+        "publishedAt": "2026-09-04",
+        "summary": "Peer comparison matrix confirms market-leading margins and pricing leverage."
+      }
+    ]
   }
 }
 };

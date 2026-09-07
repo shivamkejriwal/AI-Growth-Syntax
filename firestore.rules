@@ -1,0 +1,10 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /growth_syntax_store/{document} {
+      // Allow read-only access to growth_syntax_store for web client
+      allow read: if true;
+      allow write: if false;
+    }
+  }
+}

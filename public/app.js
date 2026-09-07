@@ -40,7 +40,11 @@ const btnCopyMemo = document.getElementById('btn-copy-memo');
 const btnSaveMemo = document.getElementById('btn-save-memo');
 
 let macroDataLoaded = false;
-let isStaticHostingMode = false;
+let isStaticHostingMode = (typeof window !== 'undefined' && (
+  window.location.hostname.includes('web.app') || 
+  window.location.hostname.includes('firebaseapp.com') ||
+  window.location.protocol === 'file:'
+));
 let bundledDemo = null;
 
 async function loadBundledDemo() {
@@ -162,6 +166,17 @@ document.addEventListener('DOMContentLoaded', () => {
     initialMock = true;
   }
   setMockMode(initialMock, false);
+
+  // Preset search input to MSFT and ensure quick chips reflect active MSFT
+  currentTicker = 'MSFT';
+  if (searchInput) searchInput.value = 'MSFT';
+  document.querySelectorAll('.chip-btn').forEach(btn => {
+    if (btn.dataset.ticker === 'MSFT') btn.classList.add('active');
+    else btn.classList.remove('active');
+  });
+
+  // Pre-load bundled demo datasets early
+  loadBundledDemo().catch(() => {});
 
   // Check system status
   fetchStatus();
@@ -840,30 +855,54 @@ async function startResearch(ticker) {
   } catch (err) {
     if (err.message === 'STATIC_HOSTING_MODE' || isStaticHostingMode) {
       console.log(`[Static Web Mode] Loading precompiled benchmark dossier for ${currentTicker}...`);
-      const bundle = await loadBundledDemo();
-      if (bundle?.dossiers?.[currentTicker]) {
-        currentDossier = bundle.dossiers[currentTicker];
-        if (bundle.memos?.[currentTicker]) {
-          currentMemo = bundle.memos[currentTicker];
-          document.getElementById('memo-content-box').textContent = currentMemo;
-          document.getElementById('memo-date-sub').textContent = `Benchmark Snapshot`;
+      try {
+        const bundle = await loadBundledDemo();
+        if (bundle?.dossiers?.[currentTicker]) {
+          currentDossier = bundle.dossiers[currentTicker];
+          if (bundle.memos?.[currentTicker]) {
+            currentMemo = bundle.memos[currentTicker];
+            const memoBox = document.getElementById('memo-content-box');
+            if (memoBox) memoBox.textContent = currentMemo;
+            const memoDate = document.getElementById('memo-date-sub');
+            if (memoDate) memoDate.textContent = `Benchmark Snapshot`;
+          }
+          if (bundle.competitors?.[currentTicker]) {
+            try { renderCompetitors(bundle.competitors[currentTicker]); } catch (e) { console.warn(e); }
+          }
+          if (bundle.desk?.[currentTicker]) {
+            currentDeskData = bundle.desk[currentTicker];
+            try { renderInstitutionalDesk(bundle.desk[currentTicker]); } catch (e) { console.warn(e); }
+          }
+          if (bundle.experts?.[currentTicker]) {
+            currentExpertsData = bundle.experts[currentTicker];
+            try { renderExpertsDesk(bundle.experts[currentTicker]); } catch (e) { console.warn(e); }
+          }
+          if (bundle.seekingAlpha?.[currentTicker]) {
+            currentSeekingAlphaData = bundle.seekingAlpha[currentTicker];
+            try { renderSeekingAlpha(bundle.seekingAlpha[currentTicker]); } catch (e) { console.warn(e); }
+          }
+
+          renderDashboard(currentDossier);
+          loadingContainer.style.display = 'none';
+          dashboardContent.style.display = 'block';
+          if (btnViewMemo) btnViewMemo.style.display = 'inline-flex';
+          return;
+        } else {
+          loadingContainer.style.display = 'none';
+          dashboardContent.style.display = 'block';
+          alert(`In Firebase Web Mode, precompiled benchmark data is preset for MSFT (also AAPL, NVDA, TSLA, AMZN).\n\nTo research any ticker live with SEC & Alpha Vantage, run in Local Mode: npm start`);
+          return;
         }
-        if (bundle.competitors?.[currentTicker]) {
-          renderCompetitorAnalysis(bundle.competitors[currentTicker]);
-        }
-        renderDashboard(currentDossier);
+      } catch (bundleErr) {
+        console.error('[Static Web Mode] Error rendering bundled demo:', bundleErr);
         loadingContainer.style.display = 'none';
         dashboardContent.style.display = 'block';
-        btnViewMemo.style.display = 'inline-flex';
-        return;
-      } else {
-        loadingContainer.style.display = 'none';
-        alert(`In Firebase Static Web Mode, live querying for '${ticker}' requires an active backend.\n\nPrecompiled benchmark companies available: MSFT, AAPL, NVDA, TSLA, AMZN.\n\nTo research any ticker live, run in Local Mode: npm start`);
         return;
       }
     }
 
     loadingContainer.style.display = 'none';
+    dashboardContent.style.display = 'block';
     alert(`Research error for ${ticker}: ${err.message}`);
   }
 }
@@ -1586,9 +1625,20 @@ async function loadFoddaView(view, force = false) {
     }
 
     const res = await fetch(url);
+    const contentType = res.headers.get('content-type') || '';
+    if (contentType.includes('text/html') || !res.ok) {
+      throw new Error('STATIC_HOSTING_MODE');
+    }
     const data = await res.json();
     renderFoddaViewData(view, data);
   } catch (err) {
+    if (err.message === 'STATIC_HOSTING_MODE' || isStaticHostingMode) {
+      const bundle = await loadBundledDemo();
+      if (bundle?.fodda?.[currentFoddaTicker]) {
+        renderFoddaViewData(view, bundle.fodda[currentFoddaTicker]);
+        return;
+      }
+    }
     contentArea.innerHTML = `
       <div class="fodda-info-banner">
         <span>Fodda query error: ${escapeHtml(err.message)}</span>
@@ -3477,11 +3527,22 @@ async function fetchDeskData(ticker) {
 
   try {
     const res = await fetch(`/api/institutional-desk?ticker=${encodeURIComponent(sym)}&mode=${mode}`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const contentType = res.headers.get('content-type') || '';
+    if (contentType.includes('text/html') || !res.ok) {
+      throw new Error('STATIC_HOSTING_MODE');
+    }
     const data = await res.json();
     currentDeskData = data;
     renderInstitutionalDesk(data);
   } catch (err) {
+    if (err.message === 'STATIC_HOSTING_MODE' || isStaticHostingMode) {
+      const bundle = await loadBundledDemo();
+      if (bundle?.desk?.[sym]) {
+        currentDeskData = bundle.desk[sym];
+        renderInstitutionalDesk(bundle.desk[sym]);
+        return;
+      }
+    }
     console.error(`[InstitutionalDesk] Error fetching desk simulation for ${sym}:`, err);
   } finally {
     if (btnRunSim) {
@@ -3519,8 +3580,9 @@ function renderTraderProposal(tp, pm) {
   const reasonEl = document.getElementById('ticket-reasoning');
 
   if (actionBadge) {
-    actionBadge.textContent = `ACTION: ${tp.action.toUpperCase()}`;
-    actionBadge.className = `badge ticket-action-badge ${tp.action === 'Buy' ? 'badge-success' : tp.action === 'Sell' ? 'badge-danger' : 'badge-accent'}`;
+    const actionStr = String(tp.action || 'BUY').toUpperCase();
+    actionBadge.textContent = `ACTION: ${actionStr}`;
+    actionBadge.className = `badge ticket-action-badge ${actionStr.includes('BUY') ? 'badge-success' : actionStr.includes('SELL') ? 'badge-danger' : 'badge-accent'}`;
   }
   if (entryEl) entryEl.textContent = `$${tp.entryPrice?.toFixed(2) || '0.00'}`;
   if (mktEl) mktEl.textContent = `Market: $${tp.currentMarketPrice?.toFixed(2) || '0.00'}`;
@@ -3791,11 +3853,22 @@ async function fetchExpertsDesk(ticker) {
 
   try {
     const res = await fetch(`/api/experts-desk?ticker=${encodeURIComponent(sym)}&mode=${mode}`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const contentType = res.headers.get('content-type') || '';
+    if (contentType.includes('text/html') || !res.ok) {
+      throw new Error('STATIC_HOSTING_MODE');
+    }
     const data = await res.json();
     currentExpertsData = data;
     renderExpertsDesk(data);
   } catch (err) {
+    if (err.message === 'STATIC_HOSTING_MODE' || isStaticHostingMode) {
+      const bundle = await loadBundledDemo();
+      if (bundle?.experts?.[sym]) {
+        currentExpertsData = bundle.experts[sym];
+        renderExpertsDesk(bundle.experts[sym]);
+        return;
+      }
+    }
     console.error(`[ExpertsDesk] Error fetching experts debate for ${sym}:`, err);
   } finally {
     if (btnRunDebate) {
@@ -4219,6 +4292,11 @@ async function fetchSeekingAlpha(ticker) {
   } catch (err) {
     if (err.message === 'STATIC_HOSTING_MODE' || isStaticHostingMode) {
       const bundle = await loadBundledDemo();
+      if (bundle?.seekingAlpha?.[sym]) {
+        currentSeekingAlphaData = bundle.seekingAlpha[sym];
+        renderSeekingAlpha(bundle.seekingAlpha[sym]);
+        return;
+      }
       if (bundle?.dossiers?.[sym]?.pillar2_Fisher?.seekingAlphaIntel) {
         const saData = bundle.dossiers[sym].pillar2_Fisher.seekingAlphaIntel;
         currentSeekingAlphaData = saData;

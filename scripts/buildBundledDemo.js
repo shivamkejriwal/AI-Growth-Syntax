@@ -3,6 +3,9 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { CompositeInvestor } from '../lib/compositeInvestor.js';
 import { CompetitorEngine } from '../lib/competitorEngine.js';
+import { InstitutionalDesk } from '../lib/institutionalDesk.js';
+import { ExpertsDesk } from '../lib/expertsDesk.js';
+import { defaultMockDataManager } from '../lib/mockDataManager.js';
 import { DEMO_DATASETS } from '../lib/demoData.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -13,20 +16,41 @@ async function build() {
   console.log('Building bundled-demo.js for Firebase Static Web Mode...');
   const investor = new CompositeInvestor();
   const competitorEngine = new CompetitorEngine();
+  const institutionalDesk = new InstitutionalDesk();
+  const expertsDesk = new ExpertsDesk();
 
   const tickers = ['MSFT', 'AAPL', 'NVDA', 'TSLA', 'AMZN'];
   const dossiers = {};
   const memos = {};
   const competitors = {};
+  const desk = {};
+  const experts = {};
+  const fodda = {};
+  const seekingAlpha = {};
 
   for (const ticker of tickers) {
     console.log(`- Compiling ${ticker}...`);
     try {
       const mockData = DEMO_DATASETS[ticker];
-      const d = await investor.generateCompositeDossier(ticker, { offlineData: mockData });
+      const d = await investor.generateCompositeDossier(ticker, { offlineData: mockData, mode: 'mock' });
       dossiers[ticker] = d;
       memos[ticker] = investor.generateMarkdownMemorandum(d);
       competitors[ticker] = await competitorEngine.getCompetitorAnalysis(ticker, d.metadata?.name);
+      
+      try {
+        desk[ticker] = await institutionalDesk.runDeskSimulation(ticker, { mode: 'demo' });
+      } catch {
+        desk[ticker] = defaultMockDataManager._buildFallbackInstitutionalDesk(ticker);
+      }
+
+      try {
+        experts[ticker] = await expertsDesk.runExpertsDebate(ticker, { mode: 'demo' });
+      } catch {
+        experts[ticker] = defaultMockDataManager._buildFallbackExpertsDebate(ticker);
+      }
+
+      fodda[ticker] = defaultMockDataManager._buildMockFoddaEarnings(ticker);
+      seekingAlpha[ticker] = defaultMockDataManager._buildMockSeekingAlphaFeed(ticker);
     } catch (e) {
       console.warn(`Error compiling ${ticker}:`, e.message);
     }
@@ -44,7 +68,11 @@ export const BUNDLED_DEMO = {
   macro: ${JSON.stringify(macro, null, 2)},
   dossiers: ${JSON.stringify(dossiers, null, 2)},
   memos: ${JSON.stringify(memos, null, 2)},
-  competitors: ${JSON.stringify(competitors, null, 2)}
+  competitors: ${JSON.stringify(competitors, null, 2)},
+  desk: ${JSON.stringify(desk, null, 2)},
+  experts: ${JSON.stringify(experts, null, 2)},
+  fodda: ${JSON.stringify(fodda, null, 2)},
+  seekingAlpha: ${JSON.stringify(seekingAlpha, null, 2)}
 };
 
 export default BUNDLED_DEMO;
@@ -55,3 +83,4 @@ export default BUNDLED_DEMO;
 }
 
 build().catch(console.error);
+

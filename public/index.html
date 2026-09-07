@@ -102,11 +102,12 @@
           <input 
             type="text" 
             id="company-search-input" 
-            placeholder="Type company name (e.g. 'Apple', 'Microsoft', 'Nvidia') or ticker ('AAPL', 'MSFT', 'TSLA')..."
+            value="MSFT"
+            placeholder="Type company name (e.g. 'Microsoft', 'Apple') or ticker ('MSFT', 'AAPL')..."
             autocomplete="off"
             spellcheck="false"
           />
-          <button id="search-clear-btn" class="search-clear-btn" style="display: none;">✕</button>
+          <button id="search-clear-btn" class="search-clear-btn" style="display: block;">✕</button>
           <button id="btn-start-research" class="btn btn-primary">
             <span>Start Research</span>
             <span class="btn-arrow">→</span>
@@ -120,7 +121,7 @@
       <div class="search-options-row">
         <div class="quick-chips-group">
           <span class="chips-label">Quick Analyze:</span>
-          <button class="chip-btn" data-ticker="MSFT" data-name="Microsoft Corporation">MSFT <span class="chip-sub">Microsoft</span></button>
+          <button class="chip-btn active" data-ticker="MSFT" data-name="Microsoft Corporation">MSFT <span class="chip-sub">Microsoft</span></button>
           <button class="chip-btn" data-ticker="AAPL" data-name="Apple Inc.">AAPL <span class="chip-sub">Apple</span></button>
           <button class="chip-btn" data-ticker="NVDA" data-name="NVIDIA Corporation">NVDA <span class="chip-sub">Nvidia</span></button>
           <button class="chip-btn" data-ticker="TSLA" data-name="Tesla, Inc.">TSLA <span class="chip-sub">Tesla</span></button>
@@ -129,7 +130,7 @@
 
         <div class="mode-toggle-group" title="Toggle Mock Mode (Pulls mock data from SQLite on local or Firestore on deployed)">
           <label class="toggle-switch">
-            <input type="checkbox" id="mode-toggle">
+            <input type="checkbox" id="mode-toggle" checked>
             <span class="toggle-slider"></span>
           </label>
           <div class="mode-label-wrapper">
