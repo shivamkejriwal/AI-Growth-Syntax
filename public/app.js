@@ -2040,7 +2040,7 @@ function renderSankeyFlow(flow, yearOverride) {
   // Populate or synchronize year selector dropdown
   if (yearSelect && availableYears.length > 0) {
     const sortedDesc = [...availableYears].sort((a, b) => b.localeCompare(a));
-    const currentOpts = Array.from(yearSelect.options).map(o => o.value);
+    const currentOpts = Array.from(yearSelect.options || []).map(o => o.value);
     const isSameOptions = currentOpts.length === sortedDesc.length && currentOpts.every((v, i) => v === sortedDesc[i]);
 
     if (!isSameOptions) {
