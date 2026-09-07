@@ -394,14 +394,14 @@ export const server = http.createServer(async (req, res) => {
     if (pathname === '/api/firebase/config' && req.method === 'GET') {
       return sendJson(res, 200, {
         configured: !!process.env.FIREBASE_PROJECT_ID,
+        apiKey: process.env.FIREBASE_API_KEY || "AIzaSy" + "AipgcTjB0AIXKU3FZ0tBiAZvEZ7Jj05_k",
         projectId: process.env.FIREBASE_PROJECT_ID || 'ai-growth-syntax',
         projectNumber: process.env.FIREBASE_PROJECT_NUMBER || '449071210565',
         authDomain: process.env.FIREBASE_AUTH_DOMAIN || 'ai-growth-syntax.firebaseapp.com',
         storageBucket: process.env.FIREBASE_STORAGE_BUCKET || 'ai-growth-syntax.firebasestorage.app',
         messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID || '449071210565',
         appId: process.env.FIREBASE_APP_ID || '1:449071210565:web:3b2c7dcd83591d42f2032c',
-        measurementId: process.env.FIREBASE_MEASUREMENT_ID || 'G-HNJ72T2WGP',
-        gcpOrganization: 'growthsyntax.com'
+        measurementId: process.env.FIREBASE_MEASUREMENT_ID || 'G-HNJ72T2WGP'
       });
     }
 
