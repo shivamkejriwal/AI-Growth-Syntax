@@ -15,6 +15,7 @@ The MCP server exposes 5 specialized institutional investment tools:
 | `get_competitors` | `ticker` (required) | SEC SIC peer classification, direct rivals, and relative valuation comparison matrix. |
 | `get_macro_snapshot` | none | Live FRED macroeconomic context (10Y yield, CPI, Fed Funds, BBB spreads, Damodaran ERP). |
 | `simulate_trading_desk` | `ticker` (required) | 6-stage institutional desk debate: Specialist Analysts, Bull vs. Bear debate, Research Manager synthesis, Trader order proposal, Risk Committee, and PM sign-off. |
+| `get_seeking_alpha_news` | `ticker` (required), `limit` (optional) | Real-time Seeking Alpha analyst articles, rating revisions (Upgrades/Downgrades), price targets, and Form 4 insider transactions. |
 
 ---
 

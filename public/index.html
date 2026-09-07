@@ -690,6 +690,51 @@
           </div>
         </div>
 
+        <!-- Seeking Alpha RSS Intelligence Card -->
+        <div class="card mt-4 scuttlebutt-feature-card sa-feature-card" id="card-seeking-alpha-scuttlebutt">
+          <div class="card-header scuttlebutt-feature-header">
+            <div class="scuttlebutt-title-group">
+              <div class="scuttlebutt-icon-badge sa-icon-badge">📰</div>
+              <div>
+                <h3>Seeking Alpha • Analyst Research &amp; Insider Wire</h3>
+                <p class="text-sub">Real-time analyst rating revisions, price target changes, earnings reactions, and Form 4 insider transactions</p>
+              </div>
+            </div>
+            <div class="scuttlebutt-header-tags">
+              <span class="badge badge-accent sa-badge" id="sa-status-badge">RSS Feed Active</span>
+              <span class="badge" id="sa-consensus-badge">Consensus: Neutral</span>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- Sentiment Bar & Summary -->
+            <div class="sa-sentiment-bar-container" id="sa-summary-bar">
+              <div class="sa-summary-pill sa-pill-bullish"><span id="sa-count-bullish">0</span> Bullish / Upgrades</div>
+              <div class="sa-summary-pill sa-pill-bearish"><span id="sa-count-bearish">0</span> Bearish / Downgrades</div>
+              <div class="sa-summary-pill sa-pill-neutral"><span id="sa-count-neutral">0</span> Neutral / Market</div>
+            </div>
+
+            <!-- Category Filter Pills -->
+            <div class="sa-controls-bar mt-3">
+              <div class="sa-filter-pills">
+                <button class="sa-pill-btn active" data-sa-filter="all">All Items</button>
+                <button class="sa-pill-btn" data-sa-filter="Analyst Research">Analyst Research 📝</button>
+                <button class="sa-pill-btn" data-sa-filter="Breaking News">Breaking News ⚡</button>
+                <button class="sa-pill-btn" data-sa-filter="Insider Form 4">Insider Form 4 💼</button>
+                <button class="sa-pill-btn" data-sa-filter="Earnings &amp; Filings">Earnings &amp; Filings 📊</button>
+              </div>
+            </div>
+
+            <!-- Articles Feed Stream -->
+            <div class="sa-articles-stream mt-3" id="sa-articles-list">
+              <div class="scuttlebutt-loading-skeleton">
+                <div class="spinner-ring" style="width: 24px; height: 24px; border-width: 2px;"></div>
+                <span>Streaming Seeking Alpha analyst write-ups and news wire...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Fisher 15-Point Checklist -->
         <div class="card mt-4">
           <div class="card-header">

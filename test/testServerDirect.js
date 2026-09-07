@@ -176,6 +176,14 @@ async function runDirectTests() {
   assert.strictEqual(foddaEarningsRes.body.ticker, 'MSFT');
   console.log('✅ PASS: /api/fodda/earnings?ticker=MSFT returns structured earnings payload');
 
+  // Test /api/seeking-alpha?ticker=MSFT
+  const saRes = await executeRequest('GET', '/api/seeking-alpha?ticker=MSFT&limit=5');
+  assert.strictEqual(saRes.status, 200);
+  assert.strictEqual(saRes.body.success, true);
+  assert.strictEqual(saRes.body.ticker, 'MSFT');
+  assert.ok(Array.isArray(saRes.body.articles));
+  console.log('✅ PASS: /api/seeking-alpha?ticker=MSFT returns articles and sentiment summary');
+
   // 13. Test static file serving (index.html, styles.css, app.js)
   const indexRes = await executeRequest('GET', '/');
   assert.strictEqual(indexRes.status, 200);

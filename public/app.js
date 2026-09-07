@@ -94,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupDeskListeners();
   setupExpertsListeners();
   setupCompetitorListeners();
+  setupSeekingAlphaListeners();
   // Default to fast demo/cache mode initially for instant exploration
   modeToggle.checked = true;
   updateModeLabel();
@@ -493,7 +494,10 @@ async function startResearch(ticker) {
     // 5. Fetch Competitors & Peers in parallel
     fetchCompetitors(currentTicker);
 
-    // 6. Render Dashboard
+    // 6. Fetch Seeking Alpha RSS Intelligence in parallel
+    fetchSeekingAlpha(currentTicker);
+
+    // 7. Render Dashboard
     renderDashboard(currentDossier);
 
     loadingContainer.style.display = 'none';
@@ -3851,6 +3855,123 @@ function setupCompetitorListeners() {
         startResearch(ticker);
       }
     }
+  });
+}
+
+// =============================================================
+// SEEKING ALPHA RSS CLIENT CONTROLLER
+// =============================================================
+let currentSeekingAlphaData = null;
+let currentSeekingAlphaFilter = 'all';
+
+async function fetchSeekingAlpha(ticker) {
+  const sym = (ticker || currentTicker || 'MSFT').trim().toUpperCase();
+  const listEl = document.getElementById('sa-articles-list');
+  if (listEl) {
+    listEl.innerHTML = `
+      <div class="scuttlebutt-loading-skeleton">
+        <div class="spinner-ring" style="width: 24px; height: 24px; border-width: 2px;"></div>
+        <span>Streaming Seeking Alpha analyst write-ups and news wire for ${sym}...</span>
+      </div>
+    `;
+  }
+
+  try {
+    const data = await apiFetch(`/api/seeking-alpha?ticker=${encodeURIComponent(sym)}&limit=15`);
+    if (data && data.articles) {
+      currentSeekingAlphaData = data;
+      renderSeekingAlpha(data);
+    }
+  } catch (err) {
+    if (err.message === 'STATIC_HOSTING_MODE' || isStaticHostingMode) {
+      const bundle = await loadBundledDemo();
+      if (bundle?.dossiers?.[sym]?.pillar2_Fisher?.seekingAlphaIntel) {
+        const saData = bundle.dossiers[sym].pillar2_Fisher.seekingAlphaIntel;
+        currentSeekingAlphaData = saData;
+        renderSeekingAlpha(saData);
+        return;
+      }
+    }
+    console.warn('Seeking Alpha fetch failed:', err);
+    if (listEl) {
+      listEl.innerHTML = `<div class="text-muted p-3" style="font-size:12px;">Seeking Alpha feed offline or deferred. (Run in Local Mode for real-time RSS updates)</div>`;
+    }
+  }
+}
+
+function renderSeekingAlpha(data) {
+  if (!data || !Array.isArray(data.articles)) return;
+
+  const countBullish = document.getElementById('sa-count-bullish');
+  const countBearish = document.getElementById('sa-count-bearish');
+  const countNeutral = document.getElementById('sa-count-neutral');
+  const consensusBadge = document.getElementById('sa-consensus-badge');
+
+  const summary = data.sentimentSummary || {};
+  if (countBullish) countBullish.textContent = summary.bullish || 0;
+  if (countBearish) countBearish.textContent = summary.bearish || 0;
+  if (countNeutral) countNeutral.textContent = summary.neutral || 0;
+
+  if (consensusBadge) {
+    const cons = data.consensusSentiment || 'Neutral';
+    consensusBadge.textContent = `Consensus: ${cons}`;
+    consensusBadge.className = 'badge ' + (cons === 'Bullish' ? 'badge-success' : cons === 'Bearish' ? 'badge-danger' : 'badge-subtle');
+  }
+
+  filterAndRenderSeekingAlphaArticles();
+}
+
+function filterAndRenderSeekingAlphaArticles() {
+  const listEl = document.getElementById('sa-articles-list');
+  if (!listEl || !currentSeekingAlphaData) return;
+
+  const articles = currentSeekingAlphaData.articles || [];
+  const filtered = currentSeekingAlphaFilter === 'all'
+    ? articles
+    : articles.filter(a => a.category === currentSeekingAlphaFilter);
+
+  if (filtered.length === 0) {
+    listEl.innerHTML = `<div class="text-muted p-4 text-center" style="font-size: 13px;">No articles found in category "${currentSeekingAlphaFilter}".</div>`;
+    return;
+  }
+
+  listEl.innerHTML = filtered.map(item => {
+    let tagClass = 'sa-tag-news';
+    if (item.category === 'Analyst Research') tagClass = 'sa-tag-analysis';
+    else if (item.category === 'Insider Form 4') tagClass = 'sa-tag-insider';
+    else if (item.category === 'Earnings & Filings') tagClass = 'sa-tag-earnings';
+
+    const sentClass = (item.sentiment || 'Neutral').toLowerCase();
+
+    return `
+      <a href="${escapeHtml(item.link)}" target="_blank" rel="noopener" class="sa-article-row">
+        <div class="sa-article-main">
+          <h4 class="sa-article-title">${escapeHtml(item.title)}</h4>
+          <div class="sa-article-meta">
+            <span class="sa-author-tag">✍️ ${escapeHtml(item.author)}</span>
+            <span>•</span>
+            <span class="sa-tag ${tagClass}">${escapeHtml(item.category)}</span>
+            <span>•</span>
+            <span class="sa-sentiment-badge ${sentClass}">${escapeHtml(item.sentiment)}</span>
+            <span>•</span>
+            <span>⏱️ ${escapeHtml(item.timeAgo)}</span>
+            ${item.relatedTickers?.length > 1 ? `<span>• Tickers: ${item.relatedTickers.slice(0, 4).join(', ')}</span>` : ''}
+          </div>
+        </div>
+        <span class="sa-link-arrow">↗</span>
+      </a>
+    `;
+  }).join('');
+}
+
+function setupSeekingAlphaListeners() {
+  document.querySelectorAll('[data-sa-filter]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('[data-sa-filter]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentSeekingAlphaFilter = btn.dataset.saFilter;
+      filterAndRenderSeekingAlphaArticles();
+    });
   });
 }
 

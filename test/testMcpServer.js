@@ -130,8 +130,25 @@ async function runTests() {
     assert.ok(memoRes.result?.content?.[0]?.text.includes('Investment Decision Memorandum'));
     console.log('✅ PASS: MCP Server tools/call get_investment_memo returns markdown memo');
 
+    // 6. Test tools/call: get_seeking_alpha_news
+    const saRes = await sendRpc({
+      jsonrpc: '2.0',
+      id: 6,
+      method: 'tools/call',
+      params: {
+        name: 'get_seeking_alpha_news',
+        arguments: { ticker: 'MSFT', limit: 5 }
+      }
+    });
+    assert.strictEqual(saRes.id, 6);
+    assert.ok(saRes.result?.content?.[0]?.text);
+    const parsedSa = JSON.parse(saRes.result.content[0].text);
+    assert.strictEqual(parsedSa.ticker, 'MSFT');
+    assert.ok(Array.isArray(parsedSa.articles));
+    console.log('✅ PASS: MCP Server tools/call get_seeking_alpha_news returns parsed articles');
+
     console.log('\n====================================================');
-    console.log('ALL MCP SERVER TESTS PASSED (5/5)');
+    console.log('ALL MCP SERVER TESTS PASSED (6/6)');
     console.log('====================================================\n');
   } finally {
     child.kill();

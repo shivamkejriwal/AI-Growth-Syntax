@@ -20,6 +20,7 @@ import { InstitutionalDesk } from './lib/institutionalDesk.js';
 import { ExpertsDesk } from './lib/expertsDesk.js';
 import { EdgarClient } from './lib/edgarClient.js';
 import { FoddaClient } from './lib/foddaClient.js';
+import { SeekingAlphaClient } from './lib/seekingAlphaClient.js';
 import { DEMO_DATASETS } from './lib/demoData.js';
 
 const investor = new CompositeInvestor();
@@ -28,6 +29,7 @@ const desk = new InstitutionalDesk(investor);
 const expertsDesk = new ExpertsDesk(investor);
 const edgar = new EdgarClient();
 const fodda = new FoddaClient();
+const seekingAlpha = new SeekingAlphaClient();
 
 const SERVER_INFO = {
   name: 'ai-growth-syntax-mcp',
@@ -104,6 +106,24 @@ const TOOLS = [
         ticker: {
           type: 'string',
           description: 'Equity ticker symbol (e.g. MSFT, TSLA)'
+        }
+      },
+      required: ['ticker']
+    }
+  },
+  {
+    name: 'get_seeking_alpha_news',
+    description: 'Fetches real-time Seeking Alpha RSS intelligence: analyst rating revisions (Upgrades/Downgrades), price target changes, insider 10b5-1 transactions, and sentiment consensus.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        ticker: {
+          type: 'string',
+          description: 'Equity ticker symbol (e.g. MSFT, AAPL, NVDA, RKLB)'
+        },
+        limit: {
+          type: 'number',
+          description: 'Maximum number of articles to return (default: 15)'
         }
       },
       required: ['ticker']
@@ -198,6 +218,21 @@ async function handleToolCall(name, args = {}) {
           {
             type: 'text',
             text: JSON.stringify(simulation, null, 2)
+          }
+        ]
+      };
+    }
+
+    case 'get_seeking_alpha_news': {
+      const ticker = (args.ticker || '').toUpperCase().trim();
+      if (!ticker) throw new Error('ticker is required');
+      const limit = args.limit ? parseInt(args.limit, 10) : 15;
+      const feed = await seekingAlpha.getTickerFeed(ticker, limit);
+      return {
+        content: [
+          {
+            type: 'text',
+            text: JSON.stringify(feed, null, 2)
           }
         ]
       };

@@ -27,6 +27,7 @@ import { TechnicalAnalysis } from './lib/technicalAnalysis.js';
 import { DuckDuckGoClient } from './lib/duckduckgoClient.js';
 import { CompetitorEngine } from './lib/competitorEngine.js';
 import { FoddaClient } from './lib/foddaClient.js';
+import { SeekingAlphaClient } from './lib/seekingAlphaClient.js';
 import { getActiveMode, getModeConfig, APP_MODES } from './lib/modes.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -49,6 +50,7 @@ const techEngine = new TechnicalAnalysis();
 const duckduckgo = new DuckDuckGoClient();
 const competitorEngine = new CompetitorEngine();
 const fodda = new FoddaClient();
+const seekingAlpha = new SeekingAlphaClient();
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
@@ -416,6 +418,16 @@ export async function handleRequest(req, res) {
     }
 
     // -------------------------------------------------------------
+    // API: /api/seeking-alpha
+    // -------------------------------------------------------------
+    if (pathname === '/api/seeking-alpha' && req.method === 'GET') {
+      const ticker = (searchParams.get('ticker') || 'MSFT').toUpperCase();
+      const limit = parseInt(searchParams.get('limit') || '15', 10);
+      const feed = await seekingAlpha.getTickerFeed(ticker, limit);
+      return sendJson(res, 200, feed);
+    }
+
+    // -------------------------------------------------------------
     // API: /api/status
     // -------------------------------------------------------------
     if (pathname === '/api/status' && req.method === 'GET') {
@@ -430,6 +442,7 @@ export async function handleRequest(req, res) {
           yahooFinance: true,
           duckduckgo: true,
           competitorEngine: true,
+          seekingAlpha: true,
           fodda: fodda.isConfigured,
           firebase: !!process.env.FIREBASE_PROJECT_ID,
           fred: !!process.env.FRED_API_KEY && process.env.FRED_API_KEY !== 'demo',
