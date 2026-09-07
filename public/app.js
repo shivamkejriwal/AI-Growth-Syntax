@@ -3918,6 +3918,36 @@ function renderSeekingAlpha(data) {
     consensusBadge.className = 'badge ' + (cons === 'Bullish' ? 'badge-success' : cons === 'Bearish' ? 'badge-danger' : 'badge-subtle');
   }
 
+  // Render Co-Mentioned Peers & Competitor Network
+  const peersContainer = document.getElementById('sa-peers-container');
+  const peersChips = document.getElementById('sa-peers-chips');
+  if (peersContainer && peersChips) {
+    const peers = (data.coMentionedPeers || []).filter(p => p.symbol && p.symbol !== currentTicker);
+    if (peers.length > 0) {
+      peersContainer.style.display = 'block';
+      peersChips.innerHTML = peers.map(p => `
+        <button class="sa-peer-chip" data-peer-ticker="${escapeHtml(p.symbol)}" title="${escapeHtml(p.name)}: Mentioned in ${p.coOccurrencePercent}% of Seeking Alpha articles (${p.coOccurrenceCount} mentions)">
+          <span class="sa-peer-ticker">${escapeHtml(p.symbol)}</span>
+          <span class="sa-peer-name">${escapeHtml(p.name || p.symbol)}</span>
+          <span class="sa-peer-count">${p.coOccurrenceCount}× (${p.coOccurrencePercent}%)</span>
+        </button>
+      `).join('');
+
+      peersChips.querySelectorAll('.sa-peer-chip').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetSym = btn.dataset.peerTicker;
+          if (targetSym) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            startResearch(targetSym);
+          }
+        });
+      });
+    } else {
+      peersContainer.style.display = 'none';
+    }
+  }
+
   filterAndRenderSeekingAlphaArticles();
 }
 

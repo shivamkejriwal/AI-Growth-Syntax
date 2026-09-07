@@ -128,6 +128,24 @@ const TOOLS = [
       },
       required: ['ticker']
     }
+  },
+  {
+    name: 'get_related_companies',
+    description: 'Discovers related companies, industry peers, and competitor networks via Seeking Alpha RSS article co-occurrence tags (<sa:stock>).',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        ticker: {
+          type: 'string',
+          description: 'Target equity ticker symbol (e.g. MSFT, NVDA, TSLA)'
+        },
+        limit: {
+          type: 'number',
+          description: 'Maximum number of related companies to return (default: 10)'
+        }
+      },
+      required: ['ticker']
+    }
   }
 ];
 
@@ -233,6 +251,21 @@ async function handleToolCall(name, args = {}) {
           {
             type: 'text',
             text: JSON.stringify(feed, null, 2)
+          }
+        ]
+      };
+    }
+
+    case 'get_related_companies': {
+      const ticker = (args.ticker || '').toUpperCase().trim();
+      if (!ticker) throw new Error('ticker is required');
+      const limit = args.limit ? parseInt(args.limit, 10) : 10;
+      const peers = await seekingAlpha.extractRelatedCompanies(ticker, limit);
+      return {
+        content: [
+          {
+            type: 'text',
+            text: JSON.stringify({ ticker, count: peers.length, relatedCompanies: peers }, null, 2)
           }
         ]
       };

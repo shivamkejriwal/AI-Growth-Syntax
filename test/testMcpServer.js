@@ -147,8 +147,25 @@ async function runTests() {
     assert.ok(Array.isArray(parsedSa.articles));
     console.log('✅ PASS: MCP Server tools/call get_seeking_alpha_news returns parsed articles');
 
+    // 7. Test tools/call: get_related_companies
+    const peersRes = await sendRpc({
+      jsonrpc: '2.0',
+      id: 7,
+      method: 'tools/call',
+      params: {
+        name: 'get_related_companies',
+        arguments: { ticker: 'MSFT', limit: 5 }
+      }
+    });
+    assert.strictEqual(peersRes.id, 7);
+    assert.ok(peersRes.result?.content?.[0]?.text);
+    const parsedPeers = JSON.parse(peersRes.result.content[0].text);
+    assert.strictEqual(parsedPeers.ticker, 'MSFT');
+    assert.ok(Array.isArray(parsedPeers.relatedCompanies));
+    console.log(`✅ PASS: MCP Server tools/call get_related_companies returned ${parsedPeers.relatedCompanies.length} discovered peers`);
+
     console.log('\n====================================================');
-    console.log('ALL MCP SERVER TESTS PASSED (6/6)');
+    console.log('ALL MCP SERVER TESTS PASSED (7/7)');
     console.log('====================================================\n');
   } finally {
     child.kill();

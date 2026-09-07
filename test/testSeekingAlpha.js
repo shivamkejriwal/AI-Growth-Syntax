@@ -58,6 +58,18 @@ await testAsync('SeekingAlphaClient: Market-wide feed parsing', async () => {
   assert.ok(Array.isArray(market.articles));
 });
 
+await testAsync('SeekingAlphaClient: Extracts co-mentioned related companies/peers for MSFT', async () => {
+  const related = await client.extractRelatedCompanies('MSFT', 10);
+  assert.ok(Array.isArray(related), 'Should return array of related companies');
+  assert.ok(related.length > 0, 'Should have discovered at least 1 related peer/competitor');
+  const first = related[0];
+  assert.ok(first.symbol, 'Peer should have symbol');
+  assert.ok(first.name, 'Peer should have name');
+  assert.ok(typeof first.coOccurrenceCount === 'number');
+  assert.ok(typeof first.coOccurrencePercent === 'number');
+  console.log('   -> Discovered MSFT peers:', related.slice(0, 5).map(p => `${p.symbol} (${p.coOccurrenceCount} mentions)`).join(', '));
+});
+
 console.log(`\n====================================================`);
 console.log(`TEST RESULTS: ${passed}/${total} PASSED`);
 console.log('====================================================\n');
