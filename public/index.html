@@ -1,0 +1,2082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Composite Investment Terminal | Lynch • Fisher • Buffett • Damodaran</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- TOP NAVIGATION -->
+    <header class="app-header">
+      <div class="header-left">
+        <div class="logo-mark">⚡</div>
+        <div class="logo-text">
+          <span class="logo-title">COMPOSITE INVESTOR</span>
+          <span class="logo-subtitle">Institutional 4-Pillar Synthesis: Lynch • Fisher • Buffett • Damodaran</span>
+        </div>
+      </div>
+
+      <!-- PRIMARY RESEARCH MODE NAVIGATION -->
+      <div class="header-center">
+        <div class="nav-segment-group">
+          <button id="nav-btn-company" class="nav-segment active">
+            <span class="nav-icon">🏢</span> Company Research
+          </button>
+          <button id="nav-btn-macro" class="nav-segment">
+            <span class="nav-icon">🌐</span> Macro Economy Research
+          </button>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <div class="status-indicator">
+          <span class="status-dot"></span>
+          <span class="status-label" id="system-status-text">SEC EDGAR • FRED • Fodda MCP • Alpha Vantage Ready</span>
+        </div>
+        <button id="btn-view-memo" class="btn btn-secondary" style="display: none;">
+          📄 View Memorandum
+        </button>
+      </div>
+    </header>
+
+    <!-- ============================================================= -->
+    <!-- VIEW 1: COMPANY RESEARCH                                      -->
+    <!-- ============================================================= -->
+    <div id="view-company" class="app-view active">
+      <!-- SEARCH HERO -->
+      <section class="search-section">
+      <div class="search-box-wrapper">
+        <div class="search-input-group">
+          <span class="search-icon">🔍</span>
+          <input 
+            type="text" 
+            id="company-search-input" 
+            placeholder="Type company name (e.g. 'Apple', 'Microsoft', 'Nvidia') or ticker ('AAPL', 'MSFT', 'TSLA')..."
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <button id="search-clear-btn" class="search-clear-btn" style="display: none;">✕</button>
+          <button id="btn-start-research" class="btn btn-primary">
+            <span>Start Research</span>
+            <span class="btn-arrow">→</span>
+          </button>
+        </div>
+
+        <!-- AUTOCOMPLETE DROPDOWN -->
+        <div id="autocomplete-dropdown" class="autocomplete-dropdown" style="display: none;"></div>
+      </div>
+
+      <div class="search-options-row">
+        <div class="quick-chips-group">
+          <span class="chips-label">Quick Analyze:</span>
+          <button class="chip-btn" data-ticker="MSFT" data-name="Microsoft Corporation">MSFT <span class="chip-sub">Microsoft</span></button>
+          <button class="chip-btn" data-ticker="AAPL" data-name="Apple Inc.">AAPL <span class="chip-sub">Apple</span></button>
+          <button class="chip-btn" data-ticker="NVDA" data-name="NVIDIA Corporation">NVDA <span class="chip-sub">Nvidia</span></button>
+          <button class="chip-btn" data-ticker="TSLA" data-name="Tesla, Inc.">TSLA <span class="chip-sub">Tesla</span></button>
+          <button class="chip-btn" data-ticker="AMZN" data-name="Amazon.com Inc.">AMZN <span class="chip-sub">Amazon</span></button>
+        </div>
+
+        <div class="mode-toggle-group">
+          <label class="toggle-switch">
+            <input type="checkbox" id="mode-toggle">
+            <span class="toggle-slider"></span>
+          </label>
+          <span class="mode-label" id="mode-label-text">Fast Cache / Demo Data</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOADING & AUDIT PROGRESS BAR -->
+    <div id="loading-container" class="loading-container" style="display: none;">
+      <div class="spinner-ring"></div>
+      <div class="loading-details">
+        <h4 id="loading-stage-title">Ingesting Multi-Source Financial Architecture...</h4>
+        <p id="loading-stage-sub">Querying Alpha Vantage fundamentals, SEC EDGAR XBRL facts, and FRED macro benchmarks</p>
+      </div>
+    </div>
+
+    <!-- MAIN DASHBOARD CONTENT (Appears upon dossier load) -->
+    <main id="dashboard-content" class="dashboard-content" style="display: none;">
+      
+      <!-- COMPANY HEADER STRIP -->
+      <section class="company-header-card">
+        <div class="company-main-meta">
+          <div class="ticker-badge" id="company-ticker">AAPL</div>
+          <div>
+            <h1 class="company-name" id="company-title">Apple Inc.</h1>
+            <div class="company-tags">
+              <span class="tag" id="company-sector">Technology</span>
+              <span class="tag" id="company-industry">Consumer Electronics</span>
+              <span class="tag tag-cik" id="company-cik">CIK: 0000320193</span>
+              <span class="tag" id="company-data-source" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3);">Data: Live Feed</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="company-quick-stats">
+          <div class="stat-cell">
+            <div class="stat-label">MARKET PRICE</div>
+            <div class="stat-value" id="stat-price">$228.00</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-label">MARKET CAP</div>
+            <div class="stat-value" id="stat-mcap">$3.49T</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-label">P/E RATIO</div>
+            <div class="stat-value" id="stat-pe">33.5</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-label">PEG RATIO</div>
+            <div class="stat-value highlight" id="stat-peg">2.30</div>
+          </div>
+          <div class="stat-cell verdict-cell">
+            <div class="stat-label">LYNCH CATEGORY</div>
+            <div class="stat-badge" id="stat-lynch-cat">Stalwart</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NAVIGATION TABS -->
+      <nav class="dashboard-tabs">
+        <button class="tab-btn active" data-tab="tab-overview">📊 Visual Scorecard</button>
+        <button class="tab-btn" data-tab="tab-lynch">📈 Peter Lynch</button>
+        <button class="tab-btn" data-tab="tab-fisher">🔍 Philip Fisher (Scuttlebutt)</button>
+        <button class="tab-btn" data-tab="tab-buffett">🛡️ Warren Buffett</button>
+        <button class="tab-btn" data-tab="tab-damodaran">🏛️ Aswath Damodaran</button>
+        <button class="tab-btn" data-tab="tab-competitors">👥 Competitors &amp; Peers</button>
+        <button class="tab-btn" data-tab="tab-experts">🧠 Experts Desk</button>
+        <button class="tab-btn" data-tab="tab-desk">🏛️ Institutional Desk &amp; Debate</button>
+        <button class="tab-btn" data-tab="tab-memo">📄 Investment Memorandum</button>
+      </nav>
+
+      <!-- TAB 0: VISUAL SCORECARD (EQUITY DASHBOARD) -->
+      <section id="tab-overview" class="tab-panel active">
+        <!-- Row 1: Snowflake Overview & Share Price vs DCF Fair Value -->
+        <div class="equity-visuals-grid-2col">
+          <!-- Card 1: Snowflake Overview -->
+          <div class="card equity-card" id="card-snowflake">
+            <div class="card-header">
+              <div>
+                <h3>Snowflake Radar Overview</h3>
+                <p class="card-subtitle">Holistic 5-dimension quality assessment across Health, Value, Performance, Dividend & Management</p>
+              </div>
+              <span class="badge badge-accent" id="snowflake-total-badge">Score: -- / 50</span>
+            </div>
+            <div class="card-body">
+              <div class="snowflake-layout">
+                <div class="snowflake-chart-area" id="snowflake-chart-container">
+                  <!-- Dynamic SVG Snowflake -->
+                </div>
+                <div class="snowflake-legend" id="snowflake-legend">
+                  <!-- Dynamic Dimensions -->
+                </div>
+              </div>
+            </div>
+            <div class="chart-card-footer">
+              <button class="btn-card-action btn-more-details" data-chart="snowflake">
+                <span>📰</span> MORE DETAILS
+              </button>
+              <button class="btn-card-action btn-share-chart" data-chart="snowflake">
+                <span>🔗</span> SHARE
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2: Share Price vs DCF Fair Value -->
+          <div class="card equity-card" id="card-fairvalue">
+            <div class="card-header">
+              <div>
+                <h3>Share Price vs DCF Fair Value</h3>
+                <p class="card-subtitle">2-stage DCF intrinsic valuation vs current market price</p>
+              </div>
+              <span class="badge" id="fairvalue-status-badge">Calculating...</span>
+            </div>
+            <div class="card-body">
+              <div class="fairvalue-stat-summary">
+                <div class="fairvalue-big-percent" id="fairvalue-diff-percent">--%</div>
+                <div class="fairvalue-big-status" id="fairvalue-status-text">--</div>
+              </div>
+              <div class="fairvalue-track-container" id="fairvalue-track-container">
+                <!-- Dynamic DCF zones and bars -->
+              </div>
+              <div class="fairvalue-meta-grid">
+                <div class="meta-pill">
+                  <span class="meta-label">Current Price</span>
+                  <strong class="meta-val" id="fv-current-price">$0.00</strong>
+                </div>
+                <div class="meta-pill">
+                  <span class="meta-label">DCF Fair Value</span>
+                  <strong class="meta-val highlight" id="fv-fair-price">$0.00</strong>
+                </div>
+                <div class="meta-pill">
+                  <span class="meta-label">WACC Hurdle</span>
+                  <strong class="meta-val" id="fv-wacc">0.0%</strong>
+                </div>
+                <div class="meta-pill">
+                  <span class="meta-label">Terminal Growth</span>
+                  <strong class="meta-val" id="fv-terminal-growth">0.0%</strong>
+                </div>
+              </div>
+            </div>
+            <div class="chart-card-footer">
+              <button class="btn-card-action btn-more-details" data-chart="fairvalue">
+                <span>📰</span> MORE DETAILS
+              </button>
+              <button class="btn-card-action btn-share-chart" data-chart="fairvalue">
+                <span>🔗</span> SHARE
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Revenue & Expenses Flow (Sankey / Waterfall) -->
+        <div class="card equity-card mt-4" id="card-sankey">
+          <div class="card-header">
+            <div>
+              <h3>Revenue & Expenses Flow</h3>
+              <p class="card-subtitle">Capital waterfall breakdown from top-line revenue through operating costs to bottom-line net profit</p>
+            </div>
+            <div class="card-header-actions">
+              <div class="chart-select-wrapper">
+                <label for="sankey-year-select" class="chart-select-label">Fiscal Year:</label>
+                <select id="sankey-year-select" class="chart-year-select" aria-label="Select Fiscal Year">
+                  <!-- Populated dynamically -->
+                </select>
+              </div>
+              <span class="badge badge-accent" id="sankey-margin-badge">Net Margin: --%</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="sankey-container" id="sankey-container">
+              <!-- Dynamic SVG Sankey Flow -->
+            </div>
+          </div>
+          <div class="chart-card-footer">
+            <button class="btn-card-action btn-more-details" data-chart="sankey">
+              <span>📰</span> MORE DETAILS
+            </button>
+            <button class="btn-card-action btn-share-chart" data-chart="sankey">
+              <span>🔗</span> SHARE
+            </button>
+          </div>
+        </div>
+
+        <!-- Row 3: 2x2 Grid (Financial Health, Earnings Trend, Management Allocation, Dividend Analysis) -->
+        <div class="equity-visuals-grid-2col mt-4">
+          <!-- Card 4: Financial Health Trend -->
+          <div class="card equity-card" id="card-finhealth">
+            <div class="card-header">
+              <div>
+                <h3>Financial Health & Capital Structure</h3>
+                <p class="card-subtitle">Multi-year trajectory of Debt, Stockholders' Equity, and Cash Reserves</p>
+              </div>
+              <div class="health-badges-group">
+                <span class="badge badge-info" id="health-de-badge">D/E: --</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="chart-canvas-container" id="finhealth-chart-container">
+                <!-- Dynamic SVG Multi-Line Chart -->
+              </div>
+            </div>
+            <div class="chart-card-footer">
+              <button class="btn-card-action btn-more-details" data-chart="finhealth">
+                <span>📰</span> MORE DETAILS
+              </button>
+              <button class="btn-card-action btn-share-chart" data-chart="finhealth">
+                <span>🔗</span> SHARE
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 5: Earnings & Margin Conversion -->
+          <div class="card equity-card" id="card-earnings">
+            <div class="card-header">
+              <div>
+                <h3>Earnings & Margin Conversion</h3>
+                <p class="card-subtitle">Multi-year conversion of Revenue into Operating & Net Profit</p>
+              </div>
+              <span class="badge badge-accent" id="earnings-cagr-badge">CAGR: --%</span>
+            </div>
+            <div class="card-body">
+              <div class="chart-canvas-container" id="earnings-chart-container">
+                <!-- Dynamic SVG Bar Chart -->
+              </div>
+            </div>
+            <div class="chart-card-footer">
+              <button class="btn-card-action btn-more-details" data-chart="earnings">
+                <span>📰</span> MORE DETAILS
+              </button>
+              <button class="btn-card-action btn-share-chart" data-chart="earnings">
+                <span>🔗</span> SHARE
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 6: Management Capital Allocation -->
+          <div class="card equity-card" id="card-mgmt-alloc">
+            <div class="card-header">
+              <div>
+                <h3>Management Capital Allocation</h3>
+                <p class="card-subtitle">Stacked capital reinvestment into R&D, Production (Capex), and Acquisitions (M&A)</p>
+              </div>
+              <span class="badge badge-accent" id="mgmt-buffett-badge">Retained Test</span>
+            </div>
+            <div class="card-body">
+              <div class="chart-canvas-container" id="mgmt-alloc-chart-container">
+                <!-- Dynamic SVG Stacked Area Chart -->
+              </div>
+            </div>
+            <div class="chart-card-footer">
+              <button class="btn-card-action btn-more-details" data-chart="mgmt-alloc">
+                <span>📰</span> MORE DETAILS
+              </button>
+              <button class="btn-card-action btn-share-chart" data-chart="mgmt-alloc">
+                <span>🔗</span> SHARE
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 7: Dividend Analysis & Safety -->
+          <div class="card equity-card" id="card-dividend">
+            <div class="card-header">
+              <div>
+                <h3>Dividend Growth & Safety</h3>
+                <p class="card-subtitle">Dividends Per Share (DPS) history & coverage sustainability scorecard</p>
+              </div>
+              <span class="badge badge-accent" id="dividend-safety-badge">Safety Tier</span>
+            </div>
+            <div class="card-body">
+              <div class="chart-canvas-container" id="dividend-chart-container" style="height: 180px;">
+                <!-- Dynamic SVG DPS Line Chart -->
+              </div>
+              <div class="dividend-metrics-grid mt-3" id="dividend-metrics-grid">
+                <!-- Dynamic Dividend Badges -->
+              </div>
+            </div>
+            <div class="chart-card-footer">
+              <button class="btn-card-action btn-more-details" data-chart="dividend">
+                <span>📰</span> MORE DETAILS
+              </button>
+              <button class="btn-card-action btn-share-chart" data-chart="dividend">
+                <span>🔗</span> SHARE
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 1: PETER LYNCH -->
+      <section id="tab-lynch" class="tab-panel">
+        <div class="grid-2col">
+          <!-- Classification Card -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Category Classification & Thesis</h3>
+              <span class="badge badge-accent" id="lynch-category-badge">Fast Grower</span>
+            </div>
+            <div class="card-body">
+              <p class="description-text" id="lynch-strategy-desc">Loading classification...</p>
+              <div class="metrics-list">
+                <div class="metric-row">
+                  <span>Revenue CAGR:</span>
+                  <strong id="lynch-cagr">14.5%</strong>
+                </div>
+                <div class="metric-row">
+                  <span>PEG Valuation Verdict:</span>
+                  <strong id="lynch-peg-verdict">Fair Value</strong>
+                </div>
+                <div class="metric-row">
+                  <span>Net Cash per Share Cushion:</span>
+                  <strong id="lynch-net-cash">$4.85 / share</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inventory vs Sales Spread Card -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Inventory vs Sales Divergence Monitor</h3>
+              <span class="badge" id="inventory-flag-badge">Safe</span>
+            </div>
+            <div class="card-body">
+              <p class="description-text">
+                Peter Lynch's cardinal rule: When inventory growth significantly exceeds sales growth, it signals channel stuffing, unsold inventory, or imminent price cuts.
+              </p>
+              <div class="spread-box" id="inventory-spread-box">
+                <div class="spread-metric">
+                  <span class="label">Inventory Growth:</span>
+                  <span class="val" id="inv-growth">+4.2%</span>
+                </div>
+                <div class="spread-operator">-</div>
+                <div class="spread-metric">
+                  <span class="label">Sales Growth:</span>
+                  <span class="val" id="sales-growth">+12.5%</span>
+                </div>
+                <div class="spread-operator">=</div>
+                <div class="spread-result">
+                  <span class="label">Spread:</span>
+                  <span class="val-result" id="inv-spread">-8.3%</span>
+                </div>
+              </div>
+              <div class="callout" id="inventory-callout">
+                Healthy spread. Sales expanded faster than inventory buildup.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lynch Rules Checklist -->
+        <div class="card mt-4">
+          <div class="card-header">
+            <h3>Lynch Rules of Thumb Audit</h3>
+          </div>
+          <div class="card-body">
+            <div class="rules-grid" id="lynch-rules-list">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: PHILIP FISHER SCUTTLEBUTT -->
+      <section id="tab-fisher" class="tab-panel">
+        <div class="grid-3col">
+          <!-- Tech Moat / GitHub -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Tech Moat (GitHub)</h3>
+              <span class="badge badge-accent" id="gh-verdict-badge">Tier-1</span>
+            </div>
+            <div class="card-body">
+              <div class="stat-highlight">
+                <span class="stat-large" id="gh-score">85</span>
+                <span class="stat-unit">/ 100 Traction Score</span>
+              </div>
+              <div class="metrics-list mt-3">
+                <div class="metric-row">
+                  <span>Repository Target:</span>
+                  <code id="gh-repo">microsoft/vscode</code>
+                </div>
+                <div class="metric-row">
+                  <span>Stars:</span>
+                  <strong id="gh-stars">162,000+</strong>
+                </div>
+                <div class="metric-row">
+                  <span>Forks:</span>
+                  <strong id="gh-forks">28,000+</strong>
+                </div>
+                <div class="metric-row">
+                  <span>Open Issues:</span>
+                  <strong id="gh-issues">4,800</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Engineer Sentiment (Hacker News) -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Engineer Sentiment (Hacker News)</h3>
+              <span class="badge" id="hn-verdict-badge">Positive</span>
+            </div>
+            <div class="card-body">
+              <p class="description-text" id="hn-summary-text">
+                Real-time algorithmic sentiment analysis of top developer discourse.
+              </p>
+              <div class="sentiment-bar-container">
+                <div class="sentiment-bar">
+                  <div class="sentiment-fill positive" id="hn-pos-bar" style="width: 70%;"></div>
+                  <div class="sentiment-fill negative" id="hn-neg-bar" style="width: 30%;"></div>
+                </div>
+                <div class="sentiment-legend">
+                  <span id="hn-pos-count">7 Positive Stories</span>
+                  <span id="hn-neg-count">3 Negative Stories</span>
+                </div>
+              </div>
+              <div class="themes-container mt-3">
+                <span class="themes-label">Sample Discourse:</span>
+                <ul class="themes-list" id="hn-stories-list"></ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Crowd Sentiment & Supply Chain -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Supply Chain & Crowd Sentiment</h3>
+            </div>
+            <div class="card-body">
+              <div class="metric-row">
+                <span>Reddit Crowd Mood:</span>
+                <strong id="reddit-verdict">Bullish (stocks/investing)</strong>
+              </div>
+              <div class="metric-row mt-2">
+                <span>ImportYeti Customs:</span>
+                <a id="importyeti-link" href="#" target="_blank" class="link-btn">Open Bill of Lading Recon ↗</a>
+              </div>
+              <p class="description-text mt-3">
+                Cross-reference offshore suppliers, ocean freight bills of lading, and freight forwarder dependencies to detect logistics stress.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Perplexity AI Live Web-Grounded Scuttlebutt Intelligence Card -->
+        <div class="card mt-4 scuttlebutt-feature-card" id="card-perplexity-scuttlebutt">
+          <div class="card-header scuttlebutt-feature-header">
+            <div class="scuttlebutt-title-group">
+              <div class="scuttlebutt-icon-badge">⚡</div>
+              <div>
+                <h3>Perplexity AI Live 360° Field Scuttlebutt</h3>
+                <p class="text-sub">Real-time web-grounded qualitative reconnaissance across 5 primary dimensions</p>
+              </div>
+            </div>
+            <div class="scuttlebutt-header-tags">
+              <span class="badge badge-accent" id="perplexity-badge">Sonar Active</span>
+              <span class="badge" id="perplexity-timestamp-badge">Live Intel</span>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- Overall Health Verdict Banner -->
+            <div class="scuttlebutt-verdict-banner" id="perplexity-verdict-banner" style="display: none;">
+              <div class="verdict-icon" id="perplexity-verdict-icon">🛡️</div>
+              <div class="verdict-content">
+                <div class="verdict-title" id="perplexity-verdict-title">Overall Qualitative Health: Robust</div>
+                <div class="verdict-summary" id="perplexity-verdict-summary"></div>
+              </div>
+            </div>
+
+            <!-- 5-Dimension Modular Cards Grid -->
+            <div class="scuttlebutt-dimensions-grid mt-3" id="perplexity-dimensions-grid">
+              <div class="scuttlebutt-loading-skeleton">
+                <div class="spinner-ring" style="width: 24px; height: 24px; border-width: 2px;"></div>
+                <span>Synthesizing live employee reviews, customer feedback, and supply chain bottlenecks...</span>
+              </div>
+            </div>
+
+            <!-- Citations & Grounding Sources -->
+            <div class="scuttlebutt-citations-container mt-4" id="perplexity-citations-container" style="display: none;">
+              <div class="citations-header">
+                <span class="citations-title">🌐 Live Web Sources & Grounding Citations:</span>
+              </div>
+              <div class="citations-chips" id="perplexity-citations-area">
+                <!-- Clickable source chips -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DuckDuckGo Web & News Intelligence Card -->
+        <div class="card mt-4 scuttlebutt-feature-card ddg-feature-card" id="card-ddg-scuttlebutt">
+          <div class="card-header scuttlebutt-feature-header">
+            <div class="scuttlebutt-title-group">
+              <div class="scuttlebutt-icon-badge ddg-icon-badge">🦆</div>
+              <div>
+                <h3>DuckDuckGo Web & News Intelligence</h3>
+                <p class="text-sub">Keyless web reconnaissance across ecosystem moats, customer feedback, and supply chain logistics</p>
+              </div>
+            </div>
+            <div class="scuttlebutt-header-tags">
+              <span class="badge badge-accent ddg-badge" id="ddg-badge">Instant Answers + Web</span>
+              <span class="badge" id="ddg-timestamp-badge">Keyless Sourced</span>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- Company Knowledge / Instant Answer Box -->
+            <div class="ddg-instant-answer-box" id="ddg-instant-box" style="display: none;">
+              <div class="ddg-instant-header">
+                <div class="ddg-instant-heading" id="ddg-instant-heading"></div>
+                <span class="badge badge-subtle" id="ddg-instant-source"></span>
+              </div>
+              <p class="ddg-instant-abstract" id="ddg-instant-abstract"></p>
+              <div class="ddg-topics-list" id="ddg-topics-list"></div>
+            </div>
+
+            <!-- 4 Investigation Vectors -->
+            <div class="grid-2col mt-3" id="ddg-vectors-grid">
+              <div class="scuttlebutt-loading-skeleton">
+                <div class="spinner-ring" style="width: 24px; height: 24px; border-width: 2px;"></div>
+                <span>Gathering DuckDuckGo web results across moats, customers, and supply chains...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fodda AI MCP Earnings & Knowledge Graph Intelligence Card -->
+        <div class="card mt-4 scuttlebutt-feature-card fodda-feature-card" id="card-fodda-scuttlebutt">
+          <div class="card-header scuttlebutt-feature-header">
+            <div class="scuttlebutt-title-group">
+              <div class="scuttlebutt-icon-badge fodda-icon-badge">🧠</div>
+              <div>
+                <h3>Fodda AI MCP • Earnings &amp; Expert Knowledge Graph Intelligence</h3>
+                <p class="text-sub">Truth-layer quarterly earnings records, executive sentiment, Q&amp;A directness, and curated domain graphs via Model Context Protocol</p>
+              </div>
+            </div>
+            <div class="scuttlebutt-header-tags">
+              <span class="badge badge-accent fodda-badge" id="fodda-status-badge">Fodda MCP Connected</span>
+              <span class="badge" id="fodda-tools-badge">50 MCP Tools</span>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- Fodda Notice Box -->
+            <div class="fodda-notice-box" id="fodda-notice-box">
+              <div class="fodda-notice-header">
+                <span class="fodda-protocol-pill">MCP 2024-11-05</span>
+                <span id="fodda-session-display" class="fodda-session-label">Endpoint: https://mcp.fodda.ai/mcp</span>
+              </div>
+              <p class="fodda-notice-desc" id="fodda-notice-text">
+                Connected to Fodda AI MCP server. Unlocks canonical earnings-call analysis, analyst-management divergence detection, and 100+ expert domain graphs.
+              </p>
+            </div>
+
+            <!-- Fodda Multi-View Tabs / Controls -->
+            <div class="fodda-controls-bar mt-3">
+              <div class="fodda-view-pills">
+                <button class="fodda-pill-btn active" data-fodda-view="snapshot">Earnings Snapshot</button>
+                <button class="fodda-pill-btn" data-fodda-view="qa">Q&amp;A Directness</button>
+                <button class="fodda-pill-btn" data-fodda-view="brand">Brand Intelligence</button>
+                <button class="fodda-pill-btn" data-fodda-view="graph">Trends &amp; Graph</button>
+              </div>
+              <button class="btn btn-sm btn-outline" id="fodda-refresh-btn">🔄 Query Fodda MCP</button>
+            </div>
+
+            <!-- Content Area -->
+            <div class="fodda-content-panel mt-3" id="fodda-content-area">
+              <div class="fodda-placeholder">
+                <div class="fodda-metrics-preview">
+                  <div class="fodda-preview-cell">
+                    <span class="cell-label">Earnings Transcripts</span>
+                    <span class="cell-value" id="fodda-cell-earnings">Q&amp;A Directness &amp; Divergence</span>
+                  </div>
+                  <div class="fodda-preview-cell">
+                    <span class="cell-label">Executive Tone</span>
+                    <span class="cell-value" id="fodda-cell-tone">CEO / CFO Sentiment Scoring</span>
+                  </div>
+                  <div class="fodda-preview-cell">
+                    <span class="cell-label">Domain Graphs</span>
+                    <span class="cell-value" id="fodda-cell-graphs">Curated Expert Trend Signals</span>
+                  </div>
+                </div>
+                <div class="fodda-info-banner mt-3" id="fodda-auth-banner">
+                  <span>💡 Tip: Add <code>FODDA_API_KEY</code> from <a href="https://app.fodda.ai" target="_blank" style="color: var(--accent); text-decoration: underline;">app.fodda.ai</a> to <code>.env</code> to stream live quarterly truth layers into the Fisher Scuttlebutt engine.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fisher 5-Circles Fieldwork Scripts -->
+        <div class="card mt-4">
+          <div class="card-header">
+            <h3>Fisher 5-Circles Fieldwork Interview Scripts</h3>
+
+            <span class="badge">Primary Recon</span>
+          </div>
+          <div class="card-body">
+            <div class="circles-accordion" id="fisher-circles-accordion">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Fisher 15-Point Checklist -->
+        <div class="card mt-4">
+          <div class="card-header">
+            <h3>Fisher 15-Point Qualitative Checklist Audit</h3>
+          </div>
+          <div class="card-body">
+            <div class="checklist-grid" id="fisher-15points-grid">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 3: WARREN BUFFETT -->
+      <section id="tab-buffett" class="tab-panel">
+        <div class="grid-2col">
+          <!-- Owner Earnings Card -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Buffett Owner Earnings Formula</h3>
+              <span class="badge badge-accent">Economic Reality</span>
+            </div>
+            <div class="card-body">
+              <p class="description-text">
+                Buffett: <em>"Owner Earnings = Reported Net Income + D&A - Capital Expenditures (Maintenance Capex)"</em>
+              </p>
+              <div class="owner-earnings-flow">
+                <div class="flow-step">
+                  <span class="flow-label">Reported Net Income</span>
+                  <span class="flow-val" id="buffett-net-income">$88.14B</span>
+                </div>
+                <div class="flow-op">+</div>
+                <div class="flow-step">
+                  <span class="flow-label">D&A</span>
+                  <span class="flow-val" id="buffett-dna">$15.00B</span>
+                </div>
+                <div class="flow-op">-</div>
+                <div class="flow-step">
+                  <span class="flow-label">Estimated Capex</span>
+                  <span class="flow-val" id="buffett-capex">$44.43B</span>
+                </div>
+                <div class="flow-op">=</div>
+                <div class="flow-step highlight">
+                  <span class="flow-label">Owner Earnings</span>
+                  <span class="flow-val" id="buffett-owner-earnings">$58.71B</span>
+                </div>
+              </div>
+              <div class="metric-row mt-3">
+                <span>Free Cash Flow (FCF):</span>
+                <strong id="buffett-fcf">$74.07B</strong>
+              </div>
+              <div class="metric-row">
+                <span>Owner Earnings Yield:</span>
+                <strong id="buffett-oe-yield">2.8%</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Berkshire $1 Retained Earnings Test -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Berkshire $1 Retained Earnings Test</h3>
+              <span class="badge" id="retained-verdict-badge">Passing</span>
+            </div>
+            <div class="card-body">
+              <p class="description-text">
+                Every \$1 of retained earnings kept by management must generate at least \$1 of market value for shareholders over rolling 5-year periods.
+              </p>
+              <div class="spread-box">
+                <div class="spread-metric">
+                  <span class="label">Market Value Created:</span>
+                  <span class="val" id="retained-mv-created">$1,250B</span>
+                </div>
+                <div class="spread-operator">÷</div>
+                <div class="spread-metric">
+                  <span class="label">Cumulative Retained:</span>
+                  <span class="val" id="retained-cumulative">$75.46B</span>
+                </div>
+                <div class="spread-operator">=</div>
+                <div class="spread-result">
+                  <span class="label">Value per $1 Retained:</span>
+                  <span class="val-result" id="retained-ratio">$16.56</span>
+                </div>
+              </div>
+              <div class="callout" id="retained-callout">
+                Outstanding capital allocator. Every dollar reinvested generated multiple dollars in enterprise equity.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROIC & Solvency Grid -->
+        <div class="grid-2col mt-4">
+          <div class="card">
+            <div class="card-header">
+              <h3>Return on Invested Capital (ROIC) vs 15% Hurdle</h3>
+              <span class="badge" id="roic-badge">> 15% Moat</span>
+            </div>
+            <div class="card-body">
+              <table class="data-table" id="roic-history-table">
+                <thead>
+                  <tr>
+                    <th>Fiscal Year</th>
+                    <th>ROIC (%)</th>
+                    <th>Operating Margin</th>
+                    <th>Hurdle Status</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3>Solvency & Balance Sheet Cushion</h3>
+            </div>
+            <div class="card-body">
+              <div class="metrics-list">
+                <div class="metric-row">
+                  <span>Cash & Equivalents:</span>
+                  <strong id="buffett-cash">$111.00B</strong>
+                </div>
+                <div class="metric-row">
+                  <span>Total Long-Term Debt:</span>
+                  <strong id="buffett-debt">$75.00B</strong>
+                </div>
+                <div class="metric-row">
+                  <span>Debt / Equity:</span>
+                  <strong id="buffett-de">0.28x</strong>
+                </div>
+                <div class="metric-row">
+                  <span>Current Ratio:</span>
+                  <strong id="buffett-cr">1.45x</strong>
+                </div>
+                <div class="metric-row">
+                  <span>Years of Owner Earnings to Retire Debt:</span>
+                  <strong id="buffett-debt-years">1.28 Years</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 4: ASWATH DAMODARAN -->
+      <section id="tab-damodaran" class="tab-panel">
+        <div class="grid-3col">
+          <!-- Company Specific Cost of Capital -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Company Cost of Capital</h3>
+              <span class="badge badge-accent">Discount Rate</span>
+            </div>
+            <div class="card-body">
+              <div class="stat-highlight">
+                <span class="stat-large" id="damodaran-company-wacc">8.42%</span>
+                <span class="stat-unit">Synthetic WACC (Discount Hurdle)</span>
+              </div>
+              <div class="metrics-list mt-3">
+                <div class="metric-row">
+                  <span>Cost of Equity (Ke):</span>
+                  <strong id="company-cost-equity">9.55%</strong>
+                </div>
+                <div class="metric-row">
+                  <span>Pre-Tax Cost of Debt:</span>
+                  <strong id="company-cost-debt">5.50%</strong>
+                </div>
+                <div class="metric-row">
+                  <span>Effective Tax Rate:</span>
+                  <strong id="company-tax-rate">21.0%</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Industry Peer Benchmarks -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Industry Peers & Benchmarks</h3>
+              <span class="badge">Peer Comparison</span>
+            </div>
+            <div class="card-body">
+              <div class="metrics-list">
+                <div class="metric-row">
+                  <span>Industry Sector:</span>
+                  <strong id="damodaran-sector-name">Software</strong>
+                </div>
+                <div class="metric-row">
+                  <span>Industry Unlevered Beta:</span>
+                  <strong id="damodaran-unlevered-beta">1.15</strong>
+                </div>
+                <div class="metric-row">
+                  <span>Industry Benchmark WACC:</span>
+                  <strong id="damodaran-sector-wacc">8.25%</strong>
+                </div>
+                <div class="metric-row">
+                  <span>Target R&D Lifespan:</span>
+                  <strong id="industry-rnd-years">3 Years</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Synthetic Debt Rating -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Synthetic Credit Rating</h3>
+              <span class="badge" id="synthetic-rating-badge">AAA</span>
+            </div>
+            <div class="card-body">
+              <div class="stat-highlight">
+                <span class="stat-large" id="synthetic-rating-val">AAA</span>
+                <span class="stat-unit" id="synthetic-spread">+0.59% Default Spread</span>
+              </div>
+              <div class="metric-row mt-2">
+                <span>Interest Coverage Ratio:</span>
+                <strong id="interest-coverage-val">28.5x</strong>
+              </div>
+              <p class="description-text mt-2">
+                Synthetic rating derived from operating income coverage of annual interest obligations.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- R&D Capitalization Card -->
+        <div class="card mt-4">
+          <div class="card-header">
+            <h3>Modern R&D Asset Capitalization (Damodaran Correction)</h3>
+            <span class="badge">GAAP Correction</span>
+          </div>
+          <div class="card-body">
+            <p class="description-text">
+              Under US GAAP, R&D is expensed immediately. Damodaran treats R&D as a multi-year capital investment, capitalizing it as an intangible research asset and amortizing it over its economic life.
+            </p>
+            <div class="grid-2col mt-3">
+              <div class="metrics-list">
+                <div class="metric-row">
+                  <span>R&D Amortization Lifespan:</span>
+                  <strong id="rnd-lifespan">3 Years</strong>
+                </div>
+                <div class="metric-row">
+                  <span>Reported R&D Expense:</span>
+                  <strong id="rnd-expense">$29.50B</strong>
+                </div>
+                <div class="metric-row">
+                  <span>Amortization of Past R&D:</span>
+                  <strong id="rnd-amortization">$23.80B</strong>
+                </div>
+              </div>
+              <div class="metrics-list">
+                <div class="metric-row">
+                  <span>Capitalized Research Asset:</span>
+                  <strong id="rnd-asset-val" class="highlight">$48.20B</strong>
+                </div>
+                <div class="metric-row">
+                  <span>GAAP Operating Income:</span>
+                  <strong id="rnd-gaap-ebit">$109.43B</strong>
+                </div>
+                <div class="metric-row">
+                  <span>Adjusted Modern Operating Income:</span>
+                  <strong id="rnd-adj-ebit" class="highlight">$115.13B</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- The 3 Ps Reality Filter -->
+        <div class="card mt-4">
+          <div class="card-header">
+            <h3>The 3 P's Reality Filter (Possible • Plausible • Probable)</h3>
+          </div>
+          <div class="card-body">
+            <div class="ps-filter-container">
+              <div class="p-column">
+                <div class="p-header">1. IS IT POSSIBLE?</div>
+                <p id="p-possible">TAM and market constraints allow market share expansion without breaking mathematical laws.</p>
+              </div>
+              <div class="p-column">
+                <div class="p-header">2. IS IT PLAUSIBLE?</div>
+                <p id="p-plausible">Competitive moats, brand pricing power, and technology barriers defend unit economics from rivals.</p>
+              </div>
+              <div class="p-column">
+                <div class="p-header">3. IS IT PROBABLE?</div>
+                <p id="p-probable">Capital allocation track record and managerial focus confirm alignment with shareholder returns.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB: COMPETITORS & PEER BENCHMARKING -->
+      <section id="tab-competitors" class="tab-panel">
+        <!-- Competitors Industry & Regulatory Header -->
+        <div class="competitor-hero-card">
+          <div class="competitor-hero-header">
+            <div>
+              <div class="competitor-badge-group">
+                <span class="badge badge-accent" id="comp-sector-badge">Technology</span>
+                <span class="badge" id="comp-industry-badge">Services-Prepackaged Software</span>
+                <span class="badge badge-sic" id="comp-sic-badge">SEC SIC 7372</span>
+              </div>
+              <h2 class="competitor-hero-title">
+                Industry Peer Matrix: <span id="comp-target-name">Target Company</span> (<span id="comp-target-ticker">SYM</span>)
+              </h2>
+            </div>
+            <div class="competitor-header-actions">
+              <button class="btn btn-sm btn-outline" id="btn-refresh-competitors">🔄 Refresh Peers</button>
+            </div>
+          </div>
+
+          <!-- Executive Takeaway Banner -->
+          <div class="competitor-takeaway-banner" id="comp-takeaway-banner">
+            <div class="takeaway-icon">⚖️</div>
+            <div class="takeaway-content">
+              <div class="takeaway-title">Competitive Posture &amp; Relative Valuation Summary</div>
+              <p class="takeaway-text" id="comp-executive-takeaway">
+                Analyzing direct industry rivals and relative valuation metrics...
+              </p>
+            </div>
+          </div>
+
+          <!-- Benchmark Summary Pills -->
+          <div class="peer-benchmarks-row" id="comp-benchmarks-row">
+            <div class="benchmark-pill">
+              <span class="benchmark-label">Peer Median P/E</span>
+              <strong class="benchmark-val" id="comp-bm-pe">--</strong>
+            </div>
+            <div class="benchmark-pill">
+              <span class="benchmark-label">Peer Median PEG</span>
+              <strong class="benchmark-val" id="comp-bm-peg">--</strong>
+            </div>
+            <div class="benchmark-pill">
+              <span class="benchmark-label">Peer Median ROIC</span>
+              <strong class="benchmark-val" id="comp-bm-roic">--</strong>
+            </div>
+            <div class="benchmark-pill">
+              <span class="benchmark-label">Peer Median Margin</span>
+              <strong class="benchmark-val" id="comp-bm-margin">--</strong>
+            </div>
+            <div class="benchmark-pill">
+              <span class="benchmark-label">Peer Median Growth</span>
+              <strong class="benchmark-val" id="comp-bm-growth">--</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Top Competitor Scorecard Cards -->
+        <div class="mt-4">
+          <div class="section-title-row">
+            <h3>Direct Commercial Competitors &amp; Rivalry Vectors</h3>
+            <span class="text-muted" style="font-size: 13px;">Click "Deep Dive" to pivot full research to that competitor</span>
+          </div>
+          <div class="competitor-cards-grid mt-3" id="comp-cards-grid">
+            <div class="scuttlebutt-loading-skeleton">
+              <div class="spinner-ring" style="width: 24px; height: 24px; border-width: 2px;"></div>
+              <span>Discovering direct industry competitors...</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side-by-Side Financial Comparison Matrix Table -->
+        <div class="card mt-4">
+          <div class="card-header">
+            <div>
+              <h3>Side-by-Side Financial Comparison Matrix</h3>
+              <p class="card-subtitle">Comprehensive benchmarking across Valuation, Profitability, Growth, and Solvency</p>
+            </div>
+          </div>
+          <div class="card-body p-0">
+            <div class="table-responsive">
+              <table class="data-table competitor-matrix-table" id="competitor-matrix-table">
+                <thead>
+                  <tr>
+                    <th>Company</th>
+                    <th class="text-right">Price</th>
+                    <th class="text-right">Market Cap</th>
+                    <th class="text-right">P/E (TTM)</th>
+                    <th class="text-right">PEG</th>
+                    <th class="text-right">P/S</th>
+                    <th class="text-right">ROIC</th>
+                    <th class="text-right">Op. Margin</th>
+                    <th class="text-right">Rev. Growth</th>
+                    <th class="text-right">D/E</th>
+                    <th>Moat</th>
+                    <th class="text-center">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="competitor-matrix-tbody">
+                  <tr>
+                    <td colspan="12" class="text-center p-4 text-muted">Loading peer comparison matrix...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- CU BOULDER RESEARCH GUIDE: ACADEMIC METHODOLOGY BANNER -->
+        <div class="comp-cu-banner">
+          <span class="comp-cu-badge">Academic Framework</span>
+          <div class="comp-cu-text">
+            <strong>CU Boulder Competitor Research Methodology Incorporated:</strong> Synthesizes (1) SEC EDGAR 10-K Item 1 &amp; Item 1A regulatory risk disclosures, (2) Industry TAM &amp; HHI concentration (Gale / IBISWorld / Statista), (3) Product &amp; segment-level counter-offerings (Passport / Mintel), and (4) Fast-growing private disruptors (Inc. 5000 scale-up tracking).
+          </div>
+        </div>
+
+        <!-- 1. MARKET SHARE & INDUSTRY CONCENTRATION DASHBOARD (IBISWorld / Statista / Gale) -->
+        <div class="card mt-4" id="card-comp-market-share">
+          <div class="card-header">
+            <div>
+              <h3>Market Share, TAM &amp; Industry Concentration</h3>
+              <p class="card-subtitle">Industry Structure, Herfindahl-Hirschman Index (HHI), and Pricing Power Dynamics</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="comp-market-share-grid">
+              <div class="comp-share-box">
+                <span class="comp-share-lbl">Total Addressable Market (TAM)</span>
+                <div class="comp-share-val" id="comp-tam-val">--</div>
+                <div class="comp-share-sub" id="comp-tam-sub">Global Sector Expansion</div>
+              </div>
+              <div class="comp-share-box">
+                <span class="comp-share-lbl">Market Share &amp; Industry Standing</span>
+                <div class="comp-share-val" id="comp-target-share-val">--</div>
+                <div class="comp-share-sub" id="comp-target-ranking-sub">Target Ranking</div>
+              </div>
+              <div class="comp-share-box">
+                <span class="comp-share-lbl">Industry Structure &amp; HHI</span>
+                <div class="comp-share-val" id="comp-structure-val">--</div>
+                <div class="comp-share-sub" id="comp-hhi-sub">Concentration Regime</div>
+              </div>
+              <div class="comp-share-box">
+                <span class="comp-share-lbl">Primary Market Leader</span>
+                <div class="comp-share-val" id="comp-leader-val" style="color: #60a5fa;">--</div>
+                <div class="comp-share-sub" id="comp-pricing-power-sub">Pricing Power Assessment</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. PRODUCT-BY-PRODUCT & SEGMENT-LEVEL RIVALRY MATRIX (Passport / Mintel) -->
+        <div class="card mt-4" id="card-comp-product-segments">
+          <div class="card-header">
+            <div>
+              <h3>Product-Level &amp; Segment Rivalry Matchups</h3>
+              <p class="card-subtitle">Direct product line counter-offerings, substitute threats, and moat advantages</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="comp-segments-grid" id="comp-segments-grid">
+              <div class="scuttlebutt-loading-skeleton">
+                <div class="spinner-ring" style="width: 20px; height: 20px; border-width: 2px;"></div>
+                <span>Mapping product line rivalries...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. SEC FORM 10-K ITEM 1 & 1A REGULATORY COMPETITION & RISK DISCLOSURES (EDGAR) -->
+        <div class="card mt-4" id="card-comp-sec-disclosures">
+          <div class="card-header">
+            <div>
+              <h3>SEC Form 10-K Competition Disclosures (Item 1 &amp; Item 1A)</h3>
+              <p class="card-subtitle">Official regulatory filing statements, acknowledged competitor threats, and moat defenses</p>
+            </div>
+            <span class="badge badge-sic" id="comp-sec-source-badge">Form 10-K Part 1</span>
+          </div>
+          <div class="card-body">
+            <div class="comp-sec-10k-card">
+              <div>
+                <div class="comp-sec-item-title">Item 1: Business Competition Disclosure</div>
+                <div class="comp-sec-item-body" id="comp-sec-item1-text">
+                  Loading official SEC 10-K competition disclosure statement...
+                </div>
+              </div>
+
+              <div>
+                <div class="comp-sec-item-title" style="color: #f87171;">Item 1A: Specific Competitor Threats &amp; Risk Factors</div>
+                <ul class="comp-sec-risk-list" id="comp-sec-risk-list">
+                  <li>Loading acknowledged competitive threats from SEC Form 10-K...</li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="comp-sec-item-title" style="color: #34d399;">Management Moat Defense &amp; Capital Reinvestment Strategy</div>
+                <div class="comp-moat-defense-box" id="comp-sec-moat-defense">
+                  Analyzing proprietary IP, vertical integration, and distribution scale advantages...
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. PRIVATE DISRUPTORS & INC. 5000 SCALE-UP RADAR -->
+        <div class="card mt-4" id="card-comp-private-challengers">
+          <div class="card-header">
+            <div>
+              <h3>Private Disruptors &amp; Scale-Up Radar (Inc. 5000 Framework)</h3>
+              <p class="card-subtitle">Tracking unlisted competitors, venture-backed scale-ups, and sovereign private market leaders</p>
+            </div>
+            <span class="badge" style="background: rgba(255, 184, 0, 0.15); color: #ffb800;">Private Intelligence</span>
+          </div>
+          <div class="card-body">
+            <div class="comp-private-grid" id="comp-private-grid">
+              <div class="scuttlebutt-loading-skeleton">
+                <div class="spinner-ring" style="width: 20px; height: 20px; border-width: 2px;"></div>
+                <span>Scanning private challenger landscape...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB: EXPERTS DESK & MULTI-AGENT LEGENDS DEBATE -->
+      <section id="tab-experts" class="tab-panel">
+        <!-- Experts Hero / Header -->
+        <section class="experts-hero-section">
+          <div class="experts-hero-content">
+            <div class="experts-badge">
+              <span class="pulse-dot"></span> 4-LEGEND INVESTMENT COMMITTEE DEBATE
+            </div>
+            <h2 class="experts-title" id="experts-company-heading">Experts Desk: <span id="experts-ticker-badge">--</span></h2>
+            <p class="experts-subtitle" id="experts-company-sub">
+              Multi-agent debate clash among Warren Buffett, Peter Lynch, Philip Fisher, and Aswath Damodaran, arbitrated by Benjamin Graham.
+            </p>
+          </div>
+
+          <div class="experts-action-group mt-3" style="display: flex; justify-content: flex-end;">
+            <button id="btn-run-experts-debate" class="btn btn-primary">
+              <span>⚡ Re-Run Experts Debate for <span id="experts-btn-ticker">--</span></span>
+            </button>
+          </div>
+        </section>
+
+        <!-- BENJAMIN GRAHAM SENIOR ARBITER CARD -->
+        <div class="card graham-arbiter-card mt-4" id="card-graham-arbiter">
+          <div class="card-header">
+            <div class="arbiter-title-group">
+              <span class="arbiter-avatar">⚖️</span>
+              <div>
+                <h3>Benjamin Graham Consensus &amp; Margin of Safety</h3>
+                <p class="card-subtitle">Dean of Wall Street • Synthesis, Quality Grade &amp; Capital Allocation</p>
+              </div>
+            </div>
+            <span class="badge badge-accent" id="graham-grade-badge">Class A: Wide-Moat Compounder</span>
+          </div>
+          <div class="card-body">
+            <div class="graham-metrics-grid">
+              <div class="graham-metric-box">
+                <span class="graham-label">Consensus Score</span>
+                <span class="graham-val" id="graham-consensus-score">8.8 / 10</span>
+                <span class="graham-sub">Legend Alignment</span>
+              </div>
+              <div class="graham-metric-box">
+                <span class="graham-label">Margin of Safety</span>
+                <span class="graham-val text-success" id="graham-margin-safety">+15.2%</span>
+                <span class="graham-sub">Price vs. Fair Value</span>
+              </div>
+              <div class="graham-metric-box">
+                <span class="graham-label">Recommended Allocation</span>
+                <span class="graham-val text-accent" id="graham-alloc-val">4.0% - 5.0%</span>
+                <span class="graham-sub">Core Portfolio Weight</span>
+              </div>
+              <div class="graham-metric-box">
+                <span class="graham-label">Committee Stance</span>
+                <span class="graham-val text-warning" id="graham-verdict-val">BUY &amp; HOLD</span>
+                <span class="graham-sub">Composite Recommendation</span>
+              </div>
+            </div>
+
+            <div class="graham-summary-box mt-3">
+              <div class="graham-summary-title">Senior Arbiter Executive Synthesis:</div>
+              <p id="graham-summary-text" class="mb-2">Evaluating legend deliberations...</p>
+              <div class="graham-risks-title mt-2">Critical Invalidation Risks to Monitor:</div>
+              <ul id="graham-risks-list" class="graham-risks-list"></ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4-LEGEND SCORECARD MATRIX -->
+        <div class="experts-matrix-grid mt-4" id="experts-matrix-container">
+          <!-- Dynamically populated via renderExpertsMatrix -->
+        </div>
+
+        <!-- MULTI-TURN DEBATE ARENA -->
+        <div class="card experts-arena-card mt-4" id="card-experts-arena">
+          <div class="card-header">
+            <div class="arena-header-left">
+              <span class="arena-icon">🏛️</span>
+              <div>
+                <h3>Grand Legends Multi-Turn Debate Arena</h3>
+                <p class="card-subtitle">First principles, cross-examination, and final institutional allocations</p>
+              </div>
+            </div>
+            <div class="arena-filters-row">
+              <!-- Round Filters -->
+              <div class="nav-segment-group">
+                <button class="nav-segment active expert-round-filter" data-round="all">All Rounds</button>
+                <button class="nav-segment expert-round-filter" data-round="1">Round 1: First Principles</button>
+                <button class="nav-segment expert-round-filter" data-round="2">Round 2: Cross-Rebuttal</button>
+                <button class="nav-segment expert-round-filter" data-round="3">Round 3: Final Votes</button>
+              </div>
+              <!-- Legend Filters -->
+              <div class="nav-segment-group">
+                <button class="nav-segment active expert-speaker-filter" data-speaker="all">All Legends</button>
+                <button class="nav-segment expert-speaker-filter" data-speaker="buffett">🛡️ Buffett</button>
+                <button class="nav-segment expert-speaker-filter" data-speaker="lynch">📈 Lynch</button>
+                <button class="nav-segment expert-speaker-filter" data-speaker="fisher">🔍 Fisher</button>
+                <button class="nav-segment expert-speaker-filter" data-speaker="damodaran">🏛️ Damodaran</button>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="experts-debate-stream" id="experts-debate-stream">
+              <!-- Dynamically populated debate speech cards -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 6: INSTITUTIONAL TRADING DESK & MULTI-AGENT DEBATE -->
+      <section id="tab-desk" class="tab-panel">
+        <!-- Desk Hero / Header for Researched Company -->
+        <section class="desk-hero-section">
+          <div class="desk-hero-content">
+            <div class="desk-badge">
+              <span class="pulse-dot"></span> MULTI-AGENT INSTITUTIONAL TRADING DESK
+            </div>
+            <h2 class="desk-title" id="desk-company-heading">Institutional Desk Simulation: <span id="desk-ticker-badge">--</span></h2>
+            <p class="desk-subtitle" id="desk-company-sub">
+              Autonomous multi-agent pipeline executing specialized fundamental/technical intelligence, adversarial Bull vs. Bear debate, algorithmic trader order planning, and Tri-Party Risk Committee governance.
+            </p>
+          </div>
+
+          <div class="desk-action-group mt-3" style="display: flex; justify-content: flex-end;">
+            <button id="btn-run-desk-sim" class="btn btn-primary">
+              <span>⚡ Re-Run Simulation for <span id="desk-btn-ticker">--</span></span>
+            </button>
+          </div>
+        </section>
+
+        <!-- PIPELINE STEPPER -->
+        <div class="card desk-pipeline-card mt-4">
+          <div class="pipeline-stepper" id="desk-pipeline-stepper">
+            <div class="pipeline-step completed" id="step-analysts">
+              <div class="step-circle">1</div>
+              <div class="step-label">Specialist Analysts</div>
+              <div class="step-sub">Fundamentals &bull; Technicals</div>
+            </div>
+            <div class="pipeline-connector active"></div>
+            <div class="pipeline-step completed" id="step-debate">
+              <div class="step-circle">2</div>
+              <div class="step-label">Bull vs. Bear Debate</div>
+              <div class="step-sub">2 Adversarial Rounds</div>
+            </div>
+            <div class="pipeline-connector active"></div>
+            <div class="pipeline-step completed" id="step-research-mgr">
+              <div class="step-circle">3</div>
+              <div class="step-label">Research Manager</div>
+              <div class="step-sub">Investment Plan</div>
+            </div>
+            <div class="pipeline-connector active"></div>
+            <div class="pipeline-step completed" id="step-trader">
+              <div class="step-circle">4</div>
+              <div class="step-label">Trader Execution</div>
+              <div class="step-sub">Action &bull; ATR Stop-Loss</div>
+            </div>
+            <div class="pipeline-connector active"></div>
+            <div class="pipeline-step completed" id="step-risk">
+              <div class="step-circle">5</div>
+              <div class="step-label">Risk Committee</div>
+              <div class="step-sub">Aggressive vs. Conservative</div>
+            </div>
+            <div class="pipeline-connector active"></div>
+            <div class="pipeline-step completed" id="step-pm">
+              <div class="step-circle">6</div>
+              <div class="step-label">Portfolio Manager</div>
+              <div class="step-sub">Final Authorization</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 1: TRADER PROPOSAL TICKET & PORTFOLIO MANAGER AUTHORIZATION -->
+        <div class="desk-grid-2col mt-4">
+          <!-- Card 1: Trader Order Execution Ticket -->
+          <div class="card trade-ticket-card" id="card-trader-ticket">
+            <div class="card-header">
+              <div class="ticket-header-title">
+                <span class="ticket-icon">🎯</span>
+                <div>
+                  <h3>Trader Execution Ticket</h3>
+                  <p class="card-subtitle">Algorithmic order structure grounded in market volatility</p>
+                </div>
+              </div>
+              <span class="badge badge-success ticket-action-badge" id="ticket-action-badge">ACTION: BUY</span>
+            </div>
+            <div class="card-body">
+              <div class="ticket-metrics-grid">
+                <div class="ticket-metric-box">
+                  <span class="ticket-metric-label">Target Entry</span>
+                  <span class="ticket-metric-val" id="ticket-entry-price">$0.00</span>
+                  <span class="ticket-metric-sub" id="ticket-market-price">Market: $0.00</span>
+                </div>
+                <div class="ticket-metric-box stop-loss-box">
+                  <span class="ticket-metric-label">Dynamic Stop-Loss</span>
+                  <span class="ticket-metric-val text-danger" id="ticket-stop-loss">$0.00</span>
+                  <span class="ticket-metric-sub text-danger" id="ticket-atr-buffer">1.5x ATR Buffer</span>
+                </div>
+                <div class="ticket-metric-box">
+                  <span class="ticket-metric-label">Take Profit 1</span>
+                  <span class="ticket-metric-val text-success" id="ticket-tp1">$0.00</span>
+                  <span class="ticket-metric-sub text-success" id="ticket-rr-ratio">R:R 2.5:1</span>
+                </div>
+                <div class="ticket-metric-box">
+                  <span class="ticket-metric-label">Take Profit 2</span>
+                  <span class="ticket-metric-val text-accent" id="ticket-tp2">$0.00</span>
+                  <span class="ticket-metric-sub">Runner Target</span>
+                </div>
+              </div>
+
+              <div class="ticket-details-panel mt-3">
+                <div class="ticket-detail-row">
+                  <span class="detail-name">Position Sizing Guidance:</span>
+                  <strong id="ticket-position-size" class="text-warning">3.5% of Portfolio Equity</strong>
+                </div>
+                <div class="ticket-detail-row">
+                  <span class="detail-name">Order Execution Method:</span>
+                  <span id="ticket-exec-method">Limit Order at Market / Pullback</span>
+                </div>
+                <div class="ticket-rationale-box mt-2">
+                  <div class="rationale-heading">Desk Rationale:</div>
+                  <p id="ticket-reasoning" class="mb-0">Loading trader logic...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Portfolio Manager Final Authorization -->
+          <div class="card pm-authorization-card" id="card-pm-decision">
+            <div class="card-header">
+              <div class="ticket-header-title">
+                <span class="ticket-icon">✍️</span>
+                <div>
+                  <h3>Portfolio Manager Mandate</h3>
+                  <p class="card-subtitle">Final capital sign-off &amp; risk governance</p>
+                </div>
+              </div>
+              <span class="badge badge-accent" id="pm-decision-badge">APPROVED</span>
+            </div>
+            <div class="card-body">
+              <div class="pm-status-banner mb-3" id="pm-status-banner">
+                <div class="banner-icon">🛡️</div>
+                <div class="banner-text">
+                  <strong id="pm-banner-title">Allocation Authorized</strong>
+                  <p class="mb-0" id="pm-banner-sub">Trader proposal vetted through Tri-Party Risk Committee.</p>
+                </div>
+              </div>
+
+              <div class="pm-controls-grid">
+                <div class="pm-control-item">
+                  <span class="pm-control-label">Authorized Capital</span>
+                  <span class="pm-control-val" id="pm-authorized-cap">3.0% - 3.5%</span>
+                </div>
+                <div class="pm-control-item">
+                  <span class="pm-control-label">Max Drawdown Limit</span>
+                  <span class="pm-control-val text-danger" id="pm-max-dd">-6.5%</span>
+                </div>
+                <div class="pm-control-item">
+                  <span class="pm-control-label">Execution Status</span>
+                  <span class="pm-control-val text-success" id="pm-exec-status">Order Pending Limit</span>
+                </div>
+              </div>
+
+              <div class="pm-directive-box mt-3">
+                <div class="rationale-heading">Executive Sign-Off Directive:</div>
+                <p id="pm-executive-signoff" class="mb-2">Awaiting desk review...</p>
+                <div class="pm-instructions-box" id="pm-execution-instructions">
+                  <!-- Instructions -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 2: MULTI-AGENT BULL VS. BEAR DEBATE ARENA -->
+        <div class="card debate-arena-card mt-4" id="card-debate-arena">
+          <div class="card-header">
+            <div>
+              <div class="debate-title-wrapper">
+                <span class="debate-icon">⚔️</span>
+                <h3>Multi-Agent Bull vs. Bear Adversarial Debate</h3>
+              </div>
+              <p class="card-subtitle">Structured multi-turn clash between Bull Researcher and Bear Researcher</p>
+            </div>
+            <div class="debate-controls">
+              <div class="nav-segment-group">
+                <button class="nav-segment active debate-filter-btn" data-filter="all">All Turns</button>
+                <button class="nav-segment debate-filter-btn" data-filter="1">Round 1: Opening</button>
+                <button class="nav-segment debate-filter-btn" data-filter="2">Round 2: Rebuttal</button>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="debate-stream" id="debate-stream">
+              <!-- Dynamically populated debate speech cards -->
+            </div>
+
+            <!-- Research Manager Consensus Box -->
+            <div class="research-manager-box mt-4" id="research-manager-box">
+              <div class="rm-header">
+                <div class="rm-avatar">📋</div>
+                <div>
+                  <h4>Research Manager Synthesis &amp; Consensus Plan</h4>
+                  <span class="rm-badge" id="rm-recommendation-badge">Consensus: OVERWEIGHT (Conviction: 8.5/10)</span>
+                </div>
+              </div>
+              <div class="rm-body mt-2">
+                <p id="rm-rationale-text">Evaluating debate proceedings...</p>
+                <div class="rm-actions-list" id="rm-actions-list">
+                  <!-- Actions -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 3: TRI-PARTY RISK COMMITTEE & LIVE MARKET PULSE -->
+        <div class="desk-grid-2col mt-4">
+          <!-- Card 1: Tri-Party Risk Committee Debate -->
+          <div class="card risk-committee-card" id="card-risk-committee">
+            <div class="card-header">
+              <div>
+                <h3>Tri-Party Risk Committee</h3>
+                <p class="card-subtitle">Aggressive vs. Conservative vs. Neutral risk debate</p>
+              </div>
+              <span class="badge badge-accent" id="risk-score-badge">Risk Score: 4.2 / 10</span>
+            </div>
+            <div class="card-body">
+              <div class="risk-debater-cards" id="risk-debater-cards">
+                <!-- Dynamically rendered debater cards -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Live Market Pulse & Prediction Odds -->
+          <div class="card market-pulse-card" id="card-market-pulse">
+            <div class="card-header">
+              <div>
+                <h3>Live Market Pulse &amp; Prediction Odds</h3>
+                <p class="card-subtitle">Polymarket odds, StockTwits sentiment &amp; Technical signals</p>
+              </div>
+              <span class="badge badge-accent" id="technical-signal-badge">Signal: Neutral</span>
+            </div>
+            <div class="card-body">
+              <!-- Polymarket Contracts -->
+              <div class="pulse-subheading">🎲 Polymarket Macro Prediction Contracts</div>
+              <div class="polymarket-grid mb-3" id="polymarket-contracts-container">
+                <!-- Dynamically populated Polymarket cards -->
+              </div>
+
+              <!-- StockTwits Retail Sentiment -->
+              <div class="pulse-subheading mt-3">💬 StockTwits Retail Crowd Sentiment</div>
+              <div class="stocktwits-panel mb-3" id="stocktwits-container">
+                <!-- Dynamically populated StockTwits gauge & chatter -->
+              </div>
+
+              <!-- Technical Analysis Matrix -->
+              <div class="pulse-subheading mt-3">📈 Technical Analysis Matrix</div>
+              <div class="technical-matrix-grid" id="technical-matrix-container">
+                <!-- Dynamically populated Technical Indicator Pills -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 5: INVESTMENT DECISION MEMORANDUM -->
+      <section id="tab-memo" class="tab-panel">
+        <div class="memo-controls-bar">
+          <div class="memo-status-info">
+            <span class="badge badge-accent">Institutional Memorandum</span>
+            <span class="text-sub" id="memo-date-sub">Generated just now</span>
+          </div>
+          <div class="memo-actions">
+            <button id="btn-copy-memo" class="btn btn-secondary">📋 Copy Markdown</button>
+            <button id="btn-save-memo" class="btn btn-primary">💾 Save to Disk (decision_memos/)</button>
+          </div>
+        </div>
+
+        <!-- Google Gemini AI Executive Synthesis Highlight -->
+        <div class="card mt-3" id="card-gemini-synthesis" style="border-color: rgba(59, 130, 246, 0.4); background: linear-gradient(180deg, rgba(30, 41, 59, 0.6) 0%, rgba(14, 21, 38, 0.9) 100%);">
+          <div class="card-header">
+            <h3>Executive Investment Synthesis (Google Gemini AI)</h3>
+            <span class="badge badge-accent">CIO Reasoning</span>
+          </div>
+          <div class="card-body">
+            <div id="gemini-synthesis-text" class="description-text" style="font-size: 14px; line-height: 1.8; color: #f8fafc; white-space: pre-line;">
+              Synthesizing composite pillars...
+            </div>
+          </div>
+        </div>
+
+        <div class="card mt-3">
+          <div class="card-body">
+
+            <pre class="memo-preview" id="memo-content-box">Generating memorandum...</pre>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    </div> <!-- /#view-company -->
+
+    <!-- ============================================================= -->
+    <!-- VIEW 2: MACRO ECONOMY RESEARCH                                -->
+    <!-- ============================================================= -->
+    <div id="view-macro" class="app-view" style="display: none;">
+      <!-- MACRO HEADER STRIP -->
+      <section class="macro-header-card">
+        <div class="macro-header-meta">
+          <div class="macro-title-group">
+            <span class="macro-badge-pill">FRED • NYU STERN VALUATION BENCHMARKS</span>
+            <h1 class="macro-title">Macroeconomic Research & Monetary Climate</h1>
+            <p class="macro-subtitle">
+              Universal risk-free hurdles, Treasury term structure, credit spreads, inflation dynamics, and Aswath Damodaran market valuation benchmarks.
+            </p>
+          </div>
+          <div class="macro-header-actions">
+            <span class="macro-asof-date" id="macro-asof-display">As of: Live / Latest</span>
+            <button id="btn-refresh-macro" class="btn btn-secondary">
+              🔄 Refresh Macro Data
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TOP MARKET BAROMETER STAT CARDS -->
+      <section class="macro-barometer-grid mt-3">
+        <div class="card macro-stat-card">
+          <div class="stat-meta">
+            <span class="stat-label">GLOBAL MARKET CAP</span>
+            <span class="stat-sublabel">🌐 Equities Aggregate</span>
+          </div>
+          <div class="stat-large-val" id="macro-barometer-cap">$95.2T</div>
+          <div class="stat-desc text-success" id="macro-barometer-cap-change">+0.8% today</div>
+        </div>
+
+        <div class="card macro-stat-card">
+          <div class="stat-meta">
+            <span class="stat-label">S&P 500 INDEX</span>
+            <span class="stat-sublabel">🏛️ Broad US Large Cap</span>
+          </div>
+          <div class="stat-large-val highlight" id="macro-barometer-sp500">5,864.67</div>
+          <div class="stat-desc text-success" id="macro-barometer-sp500-change">+0.45% today</div>
+        </div>
+
+        <div class="card macro-stat-card">
+          <div class="stat-meta">
+            <span class="stat-label">NASDAQ 100</span>
+            <span class="stat-sublabel">⚡ Tech & Innovation</span>
+          </div>
+          <div class="stat-large-val highlight" id="macro-barometer-nasdaq">20,530.12</div>
+          <div class="stat-desc text-success" id="macro-barometer-nasdaq-change">+0.72% today</div>
+        </div>
+
+        <div class="card macro-stat-card">
+          <div class="stat-meta">
+            <span class="stat-label">10Y BENCHMARK YIELD (Rf)</span>
+            <span class="stat-sublabel">FRED: DGS10</span>
+          </div>
+          <div class="stat-large-val" id="macro-barometer-10y">4.25%</div>
+          <div class="stat-desc text-muted" id="macro-barometer-10y-sub">DCF Hurdle Benchmark</div>
+        </div>
+
+        <div class="card macro-stat-card">
+          <div class="stat-meta">
+            <span class="stat-label">MARKET BREADTH</span>
+            <span class="stat-sublabel">Advancers Ratio</span>
+          </div>
+          <div class="stat-large-val text-success" id="macro-barometer-breadth">54.7%</div>
+          <div class="stat-desc" id="macro-barometer-breadth-sub">Bullish Breadth (2,242 vs 1,856)</div>
+        </div>
+      </section>
+
+      <!-- ROW 1: MARKET MOVERS & ACTIVITY + SECTOR SEGMENTS -->
+      <section class="macro-row-grid mt-4">
+        <!-- Market Movers Card (2 cols) -->
+        <div class="card macro-movers-col">
+          <div class="card-header movers-header">
+            <div>
+              <h3>Market Movers & Activity</h3>
+              <p class="text-sub" id="movers-asof-text">Top gainers, decliners, and high volume momentum tickers</p>
+            </div>
+            <div class="movers-tabs-group">
+              <button class="btn-subtab active" data-mover-tab="gainers">📈 Gainers</button>
+              <button class="btn-subtab" data-mover-tab="losers">📉 Losers</button>
+              <button class="btn-subtab" data-mover-tab="active">🔥 Active</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="table-wrapper" style="min-height: 250px; max-height: 310px; overflow-y: auto;">
+              <table class="data-table" id="movers-table">
+                <thead>
+                  <tr>
+                    <th>Ticker</th>
+                    <th class="text-right">Price</th>
+                    <th class="text-right">Change</th>
+                    <th class="text-right">Volume</th>
+                    <th class="text-center">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="movers-tbody">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Breadth Progress Gauge -->
+            <div class="breadth-gauge-container mt-3">
+              <div class="breadth-gauge-meta">
+                <div class="breadth-meta-item text-success">
+                  <span class="breadth-icon">▲</span>
+                  <span>Advancers: <strong id="breadth-advancers-count">2,242</strong></span>
+                </div>
+                <div class="breadth-meta-ratio">
+                  <span id="breadth-ratio-text">54.7% Advancing</span>
+                </div>
+                <div class="breadth-meta-item text-danger">
+                  <span class="breadth-icon">▼</span>
+                  <span>Decliners: <strong id="breadth-decliners-count">1,856</strong></span>
+                </div>
+              </div>
+              <div class="breadth-bar-track">
+                <div class="breadth-bar-fill" id="breadth-bar-fill" style="width: 54.7%;"></div>
+                <div class="breadth-bar-marker" title="Midpoint 50%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Segments Card (Sectors vs Industries) (1 col) -->
+        <div class="card macro-segments-col">
+          <div class="card-header movers-header">
+            <div>
+              <h3>Sectors & Industries</h3>
+              <p class="text-sub">Performance across macro segments</p>
+            </div>
+            <div class="movers-tabs-group">
+              <button class="btn-subtab active" data-segment-tab="sectors">Sectors</button>
+              <button class="btn-subtab" data-segment-tab="industries">Industries</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="segments-list-wrapper" id="segments-list-container" style="max-height: 335px; overflow-y: auto;">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ROW 2: SECTOR PERFORMANCE HORIZONTAL BAR CHART -->
+      <section class="macro-section-card mt-4">
+        <div class="section-title-row">
+          <div>
+            <h2>Sector Performance & Relative Return Ranking</h2>
+            <p class="text-sub" id="sector-chart-sub">Ranked performance across 11 major market sectors (Technology to Utilities)</p>
+          </div>
+          <div class="sector-source-toggle">
+            <button class="btn-subtab active" data-sector-source="benchmark">📊 GICS Benchmark</button>
+            <button class="btn-subtab" data-sector-source="spdr">📈 SPDR ETFs (XLK, XLF...)</button>
+          </div>
+        </div>
+        <div class="card mt-3" style="padding: 16px;">
+          <div id="sector-performance-chart" class="sector-chart-container">
+            <!-- Native SVG Bar Chart dynamically generated -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ROW 3: INDUSTRY HEATMAP -->
+      <section class="macro-section-card mt-4">
+        <div class="section-title-row">
+          <div>
+            <h2>Industry Heatmap Matrix</h2>
+            <p class="text-sub">Granular performance visualization across sub-industries with sector filtering</p>
+          </div>
+          <div class="heatmap-filter-group" id="heatmap-filters">
+            <button class="btn-filter-tag active" data-filter="all">All</button>
+            <button class="btn-filter-tag" data-filter="Technology">Tech</button>
+            <button class="btn-filter-tag" data-filter="Financial Services">Financials</button>
+            <button class="btn-filter-tag" data-filter="Health Care">Healthcare</button>
+            <button class="btn-filter-tag" data-filter="Consumer Cyclical">Consumer</button>
+            <button class="btn-filter-tag" data-filter="Industrials">Industrials</button>
+            <button class="btn-filter-tag" data-filter="Energy">Energy</button>
+          </div>
+        </div>
+        <div class="card mt-3" style="padding: 16px;">
+          <div id="industry-heatmap-grid" class="industry-heatmap-grid">
+            <!-- Dynamically populated industry tiles -->
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 1: INTEREST RATES & TREASURY TERM STRUCTURE -->
+      <section class="macro-section-card mt-4">
+        <div class="section-title-row">
+          <div>
+            <h2>1. Interest Rates & Treasury Term Structure</h2>
+            <p class="text-sub">Baseline discount hurdles and recession warning signals (FRED DGS10, FEDFUNDS, T10Y2Y)</p>
+          </div>
+          <span class="badge badge-accent">Federal Reserve Economic Data</span>
+        </div>
+
+        <div class="grid-4col mt-3">
+          <div class="card macro-stat-card">
+            <div class="stat-meta">
+              <span class="stat-label">10-YEAR TREASURY YIELD (Rf)</span>
+              <span class="stat-sublabel">FRED: DGS10</span>
+            </div>
+            <div class="stat-large-val" id="macro-full-rf">4.25%</div>
+            <div class="stat-desc">Universal risk-free benchmark for DCF discounting and equity hurdle rates.</div>
+          </div>
+
+          <div class="card macro-stat-card">
+            <div class="stat-meta">
+              <span class="stat-label">EFFECTIVE FED FUNDS RATE</span>
+              <span class="stat-sublabel">FRED: FEDFUNDS</span>
+            </div>
+            <div class="stat-large-val" id="macro-full-ffr">5.33%</div>
+            <div class="stat-desc">Overnight interbank rate set by the FOMC; determines liquidity constraints.</div>
+          </div>
+
+          <div class="card macro-stat-card">
+            <div class="stat-meta">
+              <span class="stat-label">10Y - 2Y YIELD CURVE SPREAD</span>
+              <span class="stat-sublabel">FRED: T10Y2Y</span>
+            </div>
+            <div class="stat-large-val" id="macro-full-curve">+0.15%</div>
+            <div class="stat-desc" id="macro-full-curve-status">Normal Upward Sloping</div>
+          </div>
+
+          <div class="card macro-stat-card">
+            <div class="stat-meta">
+              <span class="stat-label">US NOMINAL GDP LEVEL</span>
+              <span class="stat-sublabel">FRED: GDP</span>
+            </div>
+            <div class="stat-large-val" id="macro-full-gdp">$28.6T</div>
+            <div class="stat-desc">Upper bound on long-term terminal economy-wide corporate growth.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: INFLATION, LABOR & CREDIT CONDITIONS -->
+      <section class="macro-section-card mt-4">
+        <div class="section-title-row">
+          <div>
+            <h2>2. Inflation, Labor & Financial Conditions</h2>
+            <p class="text-sub">Monetary tightness, cost pressures, and corporate borrowing risk premia</p>
+          </div>
+          <span class="badge badge-accent">Macro Stability</span>
+        </div>
+
+        <div class="grid-4col mt-3">
+          <div class="card macro-stat-card">
+            <div class="stat-meta">
+              <span class="stat-label">YOY CPI INFLATION</span>
+              <span class="stat-sublabel">FRED: CPIAUCSL</span>
+            </div>
+            <div class="stat-large-val" id="macro-full-cpi">2.70%</div>
+            <div class="stat-desc">Consumer price inflation; eroding real returns if pricing power is weak.</div>
+          </div>
+
+          <div class="card macro-stat-card">
+            <div class="stat-meta">
+              <span class="stat-label">CIVILIAN UNEMPLOYMENT</span>
+              <span class="stat-sublabel">FRED: UNRATE</span>
+            </div>
+            <div class="stat-large-val" id="macro-full-unrate">4.1%</div>
+            <div class="stat-desc">Labor market tightness indicator; drives wage push inflation vs slack.</div>
+          </div>
+
+          <div class="card macro-stat-card">
+            <div class="stat-meta">
+              <span class="stat-label">BBB CORPORATE CREDIT SPREAD</span>
+              <span class="stat-sublabel">ICE BofA OAS</span>
+            </div>
+            <div class="stat-large-val" id="macro-full-bbb">+1.18%</div>
+            <div class="stat-desc">Option-adjusted spread over Treasuries for investment-grade debt.</div>
+          </div>
+
+          <div class="card macro-stat-card">
+            <div class="stat-meta">
+              <span class="stat-label">EXPECTED MARKET RETURN</span>
+              <span class="stat-sublabel">Rf + Implied ERP</span>
+            </div>
+            <div class="stat-large-val highlight" id="macro-full-expected-return">8.85%</div>
+            <div class="stat-desc">Aggregate hurdle rate required for broad US equity index investment.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: NYU STERN VALUATION BENCHMARKS (DAMODARAN) -->
+      <section class="macro-section-card mt-4">
+        <div class="section-title-row">
+          <div>
+            <h2>3. NYU Stern Valuation Benchmarks (Aswath Damodaran)</h2>
+            <p class="text-sub">Forward-looking market risk premiums, sustainable growth ceilings, and default spreads</p>
+          </div>
+          <span class="badge">Aswath Damodaran Online</span>
+        </div>
+
+        <div class="grid-2col mt-3">
+          <!-- Forward Implied ERP -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Forward Implied Equity Risk Premium (ERP)</h3>
+              <span class="badge badge-success" id="macro-erp-badge">4.60%</span>
+            </div>
+            <div class="card-body">
+              <p class="description-text">
+                Unlike backward-looking 90-year historical averages that distort DCF valuation in shifting rate regimes, Damodaran’s Implied ERP is derived dynamically from current S&P 500 index levels, consensus earnings growth, and cash returned through dividends and net buybacks.
+              </p>
+              <div class="metrics-list mt-3">
+                <div class="metric-row">
+                  <span>Current Implied ERP:</span>
+                  <strong id="macro-implied-erp" class="highlight">4.60%</strong>
+                </div>
+                <div class="metric-row">
+                  <span>10-Year Trailing Average ERP:</span>
+                  <strong id="macro-ten-year-erp">4.72%</strong>
+                </div>
+                <div class="metric-row">
+                  <span>Sustainable Terminal Growth Cap (g):</span>
+                  <strong id="macro-terminal-cap">&le; 3.0%</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Synthetic Default Spread Schedule -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Corporate Bond Synthetic Default Spreads</h3>
+              <span class="badge">Rating Matrix</span>
+            </div>
+            <div class="card-body">
+              <div class="table-wrapper" style="max-height: 220px; overflow-y: auto;">
+                <table class="data-table" id="macro-rating-tiers-table">
+                  <thead>
+                    <tr>
+                      <th>Coverage</th>
+                      <th>Rating</th>
+                      <th>Default Spread</th>
+                      <th>Category</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Populated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: CROSS-INDUSTRY SECTOR BENCHMARKS -->
+      <section class="macro-section-card mt-4">
+        <div class="section-title-row">
+          <div>
+            <h2>4. Cross-Industry Cost of Capital & Beta Catalog</h2>
+            <p class="text-sub">NYU Stern sector unlevered betas, sector WACCs, and R&D amortization lifespans</p>
+          </div>
+          <span class="badge">95+ Industries Mapped</span>
+        </div>
+
+        <div class="card mt-3">
+          <div class="table-wrapper" style="max-height: 380px; overflow-y: auto;">
+            <table class="data-table" id="macro-sectors-table">
+              <thead>
+                <tr>
+                  <th>Sector / Industry</th>
+                  <th>Unlevered Beta</th>
+                  <th>Cost of Equity (Ke)</th>
+                  <th>Sector WACC</th>
+                  <th>R&D Lifespan</th>
+                  <th>Operating Margin</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: MACRO REGIME & PLAYBOOK GUIDANCE -->
+      <section class="macro-section-card mt-4">
+        <div class="section-title-row">
+          <div>
+            <h2>5. Macroeconomic Regime & Investor Positioning Playbook</h2>
+            <p class="text-sub">How to position portfolio capital based on current cycle conditions</p>
+          </div>
+          <span class="badge badge-accent">Strategic Action</span>
+        </div>
+
+        <div class="grid-3col mt-3">
+          <div class="card">
+            <div class="card-header">
+              <h3>Monetary Policy Climate</h3>
+            </div>
+            <div class="card-body">
+              <div class="stat-highlight">
+                <span class="stat-large" style="font-size: 20px;" id="playbook-monetary-stance">Restrictive Policy</span>
+              </div>
+              <p class="description-text mt-2" id="playbook-monetary-desc">
+                High policy rate increases discount hurdles for growth-heavy equities, elevating the importance of near-term Owner Earnings.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3>Peter Lynch Cyclical Rule</h3>
+            </div>
+            <div class="card-body">
+              <div class="stat-highlight">
+                <span class="stat-large" style="font-size: 20px;" id="playbook-lynch-status">Cyclical Caution</span>
+              </div>
+              <p class="description-text mt-2" id="playbook-lynch-desc">
+                Watch inventory-to-sales divergence closely. Do not mistake peak cyclical earnings for sustainable compounders.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3>Warren Buffett Hurdle</h3>
+            </div>
+            <div class="card-body">
+              <div class="stat-highlight">
+                <span class="stat-large" style="font-size: 20px;" id="playbook-buffett-hurdle">ROIC &gt; 15%</span>
+              </div>
+              <p class="description-text mt-2" id="playbook-buffett-desc">
+                Insist on a minimum 15% historical ROIC and positive owner earnings yield relative to the risk-free rate.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div> <!-- /#view-macro -->
+
+    <!-- EQUITY VISUALS FOCUS / MORE DETAILS MODAL -->
+    <div id="equity-modal" class="modal-overlay" style="display: none;">
+      <div class="modal-content equity-modal-card">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon" id="equity-modal-icon">📊</span>
+            <h2 id="equity-modal-title">Chart Deep-Dive Analysis</h2>
+          </div>
+          <button id="equity-modal-close" class="modal-close-btn">&times;</button>
+        </div>
+        <div class="modal-body" id="equity-modal-body">
+          <!-- Dynamic content loaded via app.js -->
+        </div>
+        <div class="modal-footer">
+          <button id="equity-modal-copy" class="btn btn-secondary">📋 Copy Data Summary</button>
+          <button id="equity-modal-dismiss" class="btn btn-primary">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="app-footer">
+      <div>AI-Growth-Syntax Terminal • Firebase Project: <strong>ai-growth-syntax</strong> (449071210565) • growthsyntax.com</div>
+      <div>Connected to Firebase Hosting, Fodda AI MCP, SEC EDGAR, FRED, Alpha Vantage & NYU Stern</div>
+    </footer>
+  </div>
+
+  <script type="module">
+    import { initFirebase } from './firebase-config.js';
+    initFirebase();
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
+

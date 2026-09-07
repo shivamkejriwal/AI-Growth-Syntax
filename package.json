@@ -1,0 +1,29 @@
+{
+  "name": "ai-growth-syntax",
+  "version": "1.0.0",
+  "description": "AI-First Equity and Market Research Terminal & Composite Investment Engine",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test/testServerDirect.js",
+    "test:all": "node test/testServerDirect.js && node test/testFoddaClient.js && node test/testCompetitorEngine.js",
+    "test:fodda": "node test/testFoddaClient.js",
+    "test:competitors": "node test/testCompetitorEngine.js",
+    "analyze": "node cli/analyze.js"
+  },
+  "keywords": [
+    "investing",
+    "value-investing",
+    "alpha-vantage",
+    "sec-edgar",
+    "fred",
+    "peter-lynch",
+    "warren-buffett",
+    "philip-fisher",
+    "aswath-damodaran"
+  ],
+  "author": "",
+  "license": "MIT"
+}
+

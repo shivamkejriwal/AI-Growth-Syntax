@@ -141,3 +141,10 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Application Caches & Local Artifacts
+*_cache/
+*.cache
+decision_memos/
+.DS_Store
+

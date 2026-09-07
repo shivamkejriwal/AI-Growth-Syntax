@@ -1,0 +1,47 @@
+{
+  "mcpServers": {
+    "perplexity": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@perplexity-ai/mcp-server"
+      ],
+      "env": {
+        "PERPLEXITY_API_KEY": "YOUR_PERPLEXITY_KEY_HERE"
+      }
+    },
+    "microsoft_markitdown": {
+      "command": "uvx",
+      "args": [
+        "markitdown-mcp@0.0.1a4"
+      ]
+    },
+    "alpha_vantage": {
+      "serverUrl": "https://mcp.alphavantage.co/mcp?apikey=YOUR_ALPHA_VANTAGE_KEY_HERE"
+    },
+    "wolfram_alpha": {
+      "serverUrl": "https://agenttools.wolfram.com/mcp"
+    },
+    "lune_research": {
+      "serverUrl": "https://mcp.luneresearch.com/mcp"
+    },
+    "consensus_research": {
+      "serverUrl": "https://mcp.consensus.app/mcp"
+    },
+    "scite_research": {
+      "serverUrl": "https://api.scite.ai/mcp"
+    },
+    "scholar_gateway": {
+      "serverUrl": "https://connector.scholargateway.ai/mcp"
+    },
+    "exa_search": {
+      "serverUrl": "https://mcp.exa.ai/mcp"
+    },
+    "nimble_search": {
+      "serverUrl": "https://mcp.nimbleway.com/mcp"
+    },
+    "fodda_ai": {
+      "serverUrl": "https://mcp.fodda.ai/mcp"
+    }
+  }
+}
