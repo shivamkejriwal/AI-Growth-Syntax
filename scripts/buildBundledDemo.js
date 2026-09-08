@@ -7,6 +7,7 @@ import { InstitutionalDesk } from '../lib/institutionalDesk.js';
 import { ExpertsDesk } from '../lib/expertsDesk.js';
 import { defaultMockDataManager } from '../lib/mockDataManager.js';
 import { DEMO_DATASETS } from '../lib/demoData.js';
+import { defaultCompanyAnalysisOrchestrator } from '../lib/companyAnalysisOrchestrator.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -28,6 +29,7 @@ async function build() {
   const fodda = {};
   const seekingAlpha = {};
   const ddg = {};
+  const companyAnalysis = {};
 
   for (const ticker of tickers) {
     console.log(`- Compiling ${ticker}...`);
@@ -60,6 +62,12 @@ async function build() {
       } catch {
         experts[ticker] = defaultMockDataManager._buildFallbackExpertsDebate(ticker);
       }
+
+      try {
+        companyAnalysis[ticker] = await defaultCompanyAnalysisOrchestrator.runAnalysis(ticker, { mode: 'demo' });
+      } catch (caErr) {
+        console.warn(`Error compiling company analysis for ${ticker}:`, caErr.message);
+      }
     } catch (e) {
       console.warn(`Error compiling ${ticker}:`, e.message);
     }
@@ -82,7 +90,8 @@ export const BUNDLED_DEMO = {
   experts: ${JSON.stringify(experts, null, 2)},
   fodda: ${JSON.stringify(fodda, null, 2)},
   seekingAlpha: ${JSON.stringify(seekingAlpha, null, 2)},
-  ddg: ${JSON.stringify(ddg, null, 2)}
+  ddg: ${JSON.stringify(ddg, null, 2)},
+  companyAnalysis: ${JSON.stringify(companyAnalysis, null, 2)}
 };
 
 export default BUNDLED_DEMO;

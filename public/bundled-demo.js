@@ -1,7 +1,7 @@
 /**
  * bundled-demo.js
  * Precompiled static datasets for Firebase Web App Mode (fallback when serverless backend is not running).
- * Generated: 2026-09-07T19:52:24.342Z
+ * Generated: 2026-09-08T04:15:32.759Z
  */
 
 export const BUNDLED_DEMO = {
@@ -15,6 +15,55 @@ export const BUNDLED_DEMO = {
   "yieldCurveRegime": "Normal Upward Sloping",
   "unemploymentRatePercent": 4.1,
   "nominalGDPLevelBillions": 32486.066,
+  "regionalManufacturingSurveys": {
+    "asOfDate": "2026-08-01",
+    "compositeDiffusionIndex": 15.3,
+    "regionalRegime": "Robust Regional Expansion",
+    "expandingDistrictsCount": 4,
+    "contractingDistrictsCount": 1,
+    "districts": [
+      {
+        "district": "New York (Empire State)",
+        "seriesId": "GACDISA066MSFRBNY",
+        "name": "Empire State Manufacturing General Business Conditions",
+        "value": 20.6,
+        "date": "2026-08-01",
+        "status": "Expansion"
+      },
+      {
+        "district": "Philadelphia",
+        "seriesId": "GACDFSA066MSFRBPHI",
+        "name": "Philly Fed Manufacturing Business Outlook General Activity",
+        "value": 47.4,
+        "date": "2026-08-01",
+        "status": "Expansion"
+      },
+      {
+        "district": "Dallas (Texas)",
+        "seriesId": "BACTSAMFRBDAL",
+        "name": "Texas Manufacturing Outlook General Business Activity",
+        "value": 11.6,
+        "date": "2026-08-01",
+        "status": "Expansion"
+      },
+      {
+        "district": "Richmond",
+        "seriesId": "RMFGSL",
+        "name": "Richmond Fed Manufacturing Activity Index",
+        "value": -4,
+        "date": "2026-09-08",
+        "status": "Contraction"
+      },
+      {
+        "district": "Kansas City",
+        "seriesId": "KCMFGOI",
+        "name": "Kansas City Fed Manufacturing Activity Index",
+        "value": 1,
+        "date": "2026-09-08",
+        "status": "Expansion"
+      }
+    ]
+  },
   "dcfValuationGuidance": {
     "recommendedRiskFreeRate": "4.77%",
     "maxTerminalGrowthRateCap": "3%",
@@ -29,7 +78,7 @@ export const BUNDLED_DEMO = {
       "companyName": "Microsoft Corporation",
       "sector": "Technology",
       "industry": "Services - Prepackaged Software",
-      "analysisDate": "2026-09-07",
+      "analysisDate": "2026-09-08",
       "currentPrice": 420.5,
       "marketCap": 3124315000000,
       "sharesOutstanding": 7430000000,
@@ -50,6 +99,55 @@ export const BUNDLED_DEMO = {
       "yieldCurveRegime": "Normal Upward Sloping",
       "unemploymentRatePercent": 4.1,
       "nominalGDPLevelBillions": 32486.066,
+      "regionalManufacturingSurveys": {
+        "asOfDate": "2026-08-01",
+        "compositeDiffusionIndex": 15.3,
+        "regionalRegime": "Robust Regional Expansion",
+        "expandingDistrictsCount": 4,
+        "contractingDistrictsCount": 1,
+        "districts": [
+          {
+            "district": "New York (Empire State)",
+            "seriesId": "GACDISA066MSFRBNY",
+            "name": "Empire State Manufacturing General Business Conditions",
+            "value": 20.6,
+            "date": "2026-08-01",
+            "status": "Expansion"
+          },
+          {
+            "district": "Philadelphia",
+            "seriesId": "GACDFSA066MSFRBPHI",
+            "name": "Philly Fed Manufacturing Business Outlook General Activity",
+            "value": 47.4,
+            "date": "2026-08-01",
+            "status": "Expansion"
+          },
+          {
+            "district": "Dallas (Texas)",
+            "seriesId": "BACTSAMFRBDAL",
+            "name": "Texas Manufacturing Outlook General Business Activity",
+            "value": 11.6,
+            "date": "2026-08-01",
+            "status": "Expansion"
+          },
+          {
+            "district": "Richmond",
+            "seriesId": "RMFGSL",
+            "name": "Richmond Fed Manufacturing Activity Index",
+            "value": -4,
+            "date": "2026-09-08",
+            "status": "Contraction"
+          },
+          {
+            "district": "Kansas City",
+            "seriesId": "KCMFGOI",
+            "name": "Kansas City Fed Manufacturing Activity Index",
+            "value": 1,
+            "date": "2026-09-08",
+            "status": "Expansion"
+          }
+        ]
+      },
       "dcfValuationGuidance": {
         "recommendedRiskFreeRate": "4.77%",
         "maxTerminalGrowthRateCap": "3%",
@@ -440,7 +538,7 @@ export const BUNDLED_DEMO = {
               "url": "https://copilot.microsoft.com"
             }
           ],
-          "timestamp": "2026-09-07T19:52:23.079Z"
+          "timestamp": "2026-09-08T04:15:22.203Z"
         },
         "investigationVectors": [
           {
@@ -536,7 +634,7 @@ export const BUNDLED_DEMO = {
             ]
           }
         ],
-        "timestamp": "2026-09-07T19:52:23.079Z"
+        "timestamp": "2026-09-08T04:15:22.203Z"
       },
       "foddaIntel": {
         "ticker": "MSFT",
@@ -552,7 +650,7 @@ export const BUNDLED_DEMO = {
         "success": true,
         "ticker": "MSFT",
         "source": "Seeking Alpha RSS (Mock Mode)",
-        "fetchedAt": "2026-09-07T19:52:23.079Z",
+        "fetchedAt": "2026-09-08T04:15:22.203Z",
         "totalArticles": 6,
         "consensusSentiment": "Bullish",
         "sentimentScore": 84,
@@ -604,7 +702,7 @@ export const BUNDLED_DEMO = {
             "title": "MSFT: Cloud Reacceleration And Generative AI Commercialization Drive Long-Term Upside",
             "link": "https://seekingalpha.com/symbol/MSFT",
             "guid": "mock-sa-MSFT-1",
-            "pubDate": "Mon, 07 Sep 2026 16:52:23 GMT",
+            "pubDate": "Tue, 08 Sep 2026 01:15:22 GMT",
             "timeAgo": "3h ago",
             "author": "Compound Capital Research",
             "category": "Analyst Research",
@@ -639,7 +737,7 @@ export const BUNDLED_DEMO = {
             "title": "MSFT Free Cash Flow Inflection: Capital Expenditures Are Generating 30%+ Marginal ROIC",
             "link": "https://seekingalpha.com/symbol/MSFT",
             "guid": "mock-sa-MSFT-2",
-            "pubDate": "Mon, 07 Sep 2026 12:52:23 GMT",
+            "pubDate": "Mon, 07 Sep 2026 21:15:22 GMT",
             "timeAgo": "7h ago",
             "author": "Institutional Alpha Desk",
             "category": "Analyst Research",
@@ -669,7 +767,7 @@ export const BUNDLED_DEMO = {
             "title": "Microsoft Corporation Reports Double-Digit Cloud Growth, Raising Full-Year Operating Margin Guidance",
             "link": "https://seekingalpha.com/symbol/MSFT",
             "guid": "mock-sa-MSFT-3",
-            "pubDate": "Mon, 07 Sep 2026 05:52:23 GMT",
+            "pubDate": "Mon, 07 Sep 2026 14:15:22 GMT",
             "timeAgo": "14h ago",
             "author": "Seeking Alpha News Wire",
             "category": "Earnings & Filings",
@@ -689,7 +787,7 @@ export const BUNDLED_DEMO = {
             "title": "Evaluating MSFT Under Damodaran DCF: Margin Of Safety And Terminal Growth Sensitivity",
             "link": "https://seekingalpha.com/symbol/MSFT",
             "guid": "mock-sa-MSFT-4",
-            "pubDate": "Sun, 06 Sep 2026 21:52:23 GMT",
+            "pubDate": "Mon, 07 Sep 2026 06:15:22 GMT",
             "timeAgo": "22h ago",
             "author": "Value Compounder Group",
             "category": "Analyst Research",
@@ -714,7 +812,7 @@ export const BUNDLED_DEMO = {
             "title": "MSFT Form 4 Insider Filing: Executive Retains Long-Term Equity Grant In Compliance With Rule 10b5-1",
             "link": "https://seekingalpha.com/symbol/MSFT",
             "guid": "mock-sa-MSFT-5",
-            "pubDate": "Sun, 06 Sep 2026 13:52:23 GMT",
+            "pubDate": "Sun, 06 Sep 2026 22:15:22 GMT",
             "timeAgo": "1d ago",
             "author": "SEC Edgar Watch",
             "category": "Insider Form 4",
@@ -734,7 +832,7 @@ export const BUNDLED_DEMO = {
             "title": "MSFT Versus Competitors: Market Share Shift And Enterprise Switching Costs",
             "link": "https://seekingalpha.com/symbol/MSFT",
             "guid": "mock-sa-MSFT-6",
-            "pubDate": "Sat, 05 Sep 2026 19:52:23 GMT",
+            "pubDate": "Sun, 06 Sep 2026 04:15:22 GMT",
             "timeAgo": "2d ago",
             "author": "Tech Moat Analytics",
             "category": "Breaking News",
@@ -2134,6 +2232,78 @@ export const BUNDLED_DEMO = {
           "moatRating": "Narrow Moat"
         }
       ],
+      "seekingAlphaPeers": [
+        {
+          "symbol": "GOOGL",
+          "name": "Alphabet Inc.",
+          "coOccurrenceCount": 7,
+          "coOccurrencePercent": 28,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "GOOG",
+          "name": "Alphabet Inc.",
+          "coOccurrenceCount": 6,
+          "coOccurrencePercent": 24,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "AMZN",
+          "name": "Amazon.com, Inc.",
+          "coOccurrenceCount": 6,
+          "coOccurrencePercent": 24,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "NVDA",
+          "name": "NVIDIA Corporation",
+          "coOccurrenceCount": 6,
+          "coOccurrencePercent": 24,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "OPENAI",
+          "name": "OpenAI",
+          "coOccurrenceCount": 5,
+          "coOccurrencePercent": 20,
+          "isLikelyCompetitor": false
+        },
+        {
+          "symbol": "META",
+          "name": "Meta Platforms, Inc.",
+          "coOccurrenceCount": 4,
+          "coOccurrencePercent": 16,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "ORCL",
+          "name": "Oracle Corporation",
+          "coOccurrenceCount": 3,
+          "coOccurrencePercent": 12,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "AMD",
+          "name": "Advanced Micro Devices, Inc.",
+          "coOccurrenceCount": 3,
+          "coOccurrencePercent": 12,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "DLR",
+          "name": "Digital Realty Trust, Inc.",
+          "coOccurrenceCount": 3,
+          "coOccurrencePercent": 12,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "CRWV",
+          "name": "CoreWeave, Inc.",
+          "coOccurrenceCount": 3,
+          "coOccurrencePercent": 12,
+          "isLikelyCompetitor": true
+        }
+      ],
       "benchmarks": {
         "peerMedianPE": 22,
         "peerMedianPEG": 2.11,
@@ -2218,7 +2388,7 @@ export const BUNDLED_DEMO = {
           "threatVector": "Dominant developer mindshare in internet commerce and billing automation."
         }
       ],
-      "timestamp": "2026-09-07T05:00:22.699Z"
+      "timestamp": "2026-09-08T01:21:54.556Z"
     },
     "rawFinancials": {
       "symbol": "MSFT",
@@ -2341,6 +2511,405 @@ export const BUNDLED_DEMO = {
       "debtToEquity": 0.28,
       "payoutRatio": 0.23
     },
+    "signals": {
+      "summary": {
+        "totalChecks": 14,
+        "passed": 11,
+        "failed": 3,
+        "warnings": 0,
+        "riskRating": "Moderate Risk",
+        "passScorePercent": 78.6
+      },
+      "riskChecks": [
+        {
+          "id": "insider_selling_3m",
+          "category": "Risk Checks",
+          "question": "Has there been substantial insider selling in the past 3 months?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "Significant insider selling over the past 3 months",
+          "details": {
+            "flag": "SUBSTANTIAL_INSIDER_SELLING",
+            "filingsCount": 5,
+            "timeframe": "90 days"
+          },
+          "timestamp": 1788840922202
+        },
+        {
+          "id": "financial_position",
+          "category": "Risk Checks",
+          "question": "Are they in a good financial position?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Debt level is low and not considered a risk",
+          "details": {
+            "netDebt": 75000000000,
+            "isNetCashPositive": false,
+            "debtToEquity": 0.28,
+            "cashAndEquivalents": 0,
+            "totalDebt": 75000000000
+          },
+          "timestamp": 1788840922202
+        },
+        {
+          "id": "meaningful_market_cap",
+          "category": "Risk Checks",
+          "question": "Do they have meaningful market capitalization?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Market cap is meaningful ($3.12T)",
+          "details": {
+            "marketCap": 3124315000000,
+            "threshold": 2000000000,
+            "formatted": "$3.12T"
+          },
+          "timestamp": 1788840922202
+        },
+        {
+          "id": "negative_shareholders_equity",
+          "category": "Risk Checks",
+          "question": "Do they have negative shareholders equity?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "MSFT has negative shareholders equity ($0.00).",
+          "details": {
+            "shareholdersEquity": 0,
+            "formatted": "$0.00"
+          },
+          "timestamp": 1788840922202
+        },
+        {
+          "id": "concerning_recent_events",
+          "category": "Risk Checks",
+          "question": "Are there any concerning recent events?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "No concerning events detected",
+          "details": {
+            "eventsDetectedCount": 0,
+            "newsSentimentRatio": 33.3
+          },
+          "timestamp": 1788840922202
+        },
+        {
+          "id": "liquid_and_stable_share_price",
+          "category": "Risk Checks",
+          "question": "Is their share price liquid and stable?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Share price has been stable over the past 3 months compared to the US market",
+          "details": {
+            "beta": 1.15,
+            "liquidityStatus": "High Liquidity"
+          },
+          "timestamp": 1788840922202
+        },
+        {
+          "id": "profit_margins_improved",
+          "category": "Risk Checks",
+          "question": "Have profit margins improved over the past year?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Profit margins improved or MSFT became profitable",
+          "details": {
+            "latestMarginPercent": 35.96,
+            "priorMarginPercent": 34.15,
+            "becameProfitable": false
+          },
+          "timestamp": 1788840922202
+        },
+        {
+          "id": "sufficient_financial_data",
+          "category": "Risk Checks",
+          "question": "Do they have sufficient financial data available?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "They have sufficient analyst coverage",
+          "details": {
+            "auditedYearsCount": 5,
+            "coverageStatus": "Sufficient"
+          },
+          "timestamp": 1788840922202
+        },
+        {
+          "id": "meaningful_revenue",
+          "category": "Risk Checks",
+          "question": "Do they have meaningful levels of revenue?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Revenue is meaningful ($245.12B)",
+          "details": {
+            "revenue": 245122000000,
+            "threshold": 100000000,
+            "formatted": "$245.12B"
+          },
+          "timestamp": 1788840922202
+        },
+        {
+          "id": "shareholders_diluted",
+          "category": "Risk Checks",
+          "question": "Have shareholders been diluted over the past year?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Shareholders have not been meaningfully diluted in the past year or recently listed",
+          "details": {
+            "sharesOutstanding": 7430000000,
+            "dilutionRatePercent": 0
+          },
+          "timestamp": 1788840922202
+        },
+        {
+          "id": "forecast_profitability",
+          "category": "Risk Checks",
+          "question": "Are they forecast to achieve profitability?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "The company is currently profitable",
+          "details": {
+            "netIncome": 88136000000,
+            "isCurrentlyProfitable": true,
+            "formatted": "$88.14B"
+          },
+          "timestamp": 1788840922202
+        },
+        {
+          "id": "high_quality_earnings",
+          "category": "Risk Checks",
+          "question": "Do they have high quality earnings?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "Earnings quality is low; operating cash flow lags reported net income",
+          "details": {
+            "operatingCashflow": 0,
+            "netIncome": 88136000000,
+            "cashConversionRatio": 0
+          },
+          "timestamp": 1788840922202
+        },
+        {
+          "id": "revenue_earnings_growth_forecast",
+          "category": "Risk Checks",
+          "question": "Are revenue and earnings forecast to grow?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Earnings are forecast to grow by an average of 14% per year for the next 3 years",
+          "details": {
+            "forecastAnnualGrowthRatePercent": 14,
+            "horizonYears": 3
+          },
+          "timestamp": 1788840922202
+        },
+        {
+          "id": "dividend_sustainability",
+          "category": "Risk Checks",
+          "question": "Is their dividend sustainable?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Dividend is too low to be a concern",
+          "details": {
+            "dividendYieldPercent": 0.75,
+            "payoutRatio": 0.23,
+            "assessment": "Low Yield / Non-Material Drag"
+          },
+          "timestamp": 1788840922203
+        }
+      ],
+      "customSignals": {}
+    },
+    "riskChecks": [
+      {
+        "id": "insider_selling_3m",
+        "category": "Risk Checks",
+        "question": "Has there been substantial insider selling in the past 3 months?",
+        "status": "FAIL",
+        "verdict": "Fail",
+        "summary": "Significant insider selling over the past 3 months",
+        "details": {
+          "flag": "SUBSTANTIAL_INSIDER_SELLING",
+          "filingsCount": 5,
+          "timeframe": "90 days"
+        },
+        "timestamp": 1788840922202
+      },
+      {
+        "id": "financial_position",
+        "category": "Risk Checks",
+        "question": "Are they in a good financial position?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Debt level is low and not considered a risk",
+        "details": {
+          "netDebt": 75000000000,
+          "isNetCashPositive": false,
+          "debtToEquity": 0.28,
+          "cashAndEquivalents": 0,
+          "totalDebt": 75000000000
+        },
+        "timestamp": 1788840922202
+      },
+      {
+        "id": "meaningful_market_cap",
+        "category": "Risk Checks",
+        "question": "Do they have meaningful market capitalization?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Market cap is meaningful ($3.12T)",
+        "details": {
+          "marketCap": 3124315000000,
+          "threshold": 2000000000,
+          "formatted": "$3.12T"
+        },
+        "timestamp": 1788840922202
+      },
+      {
+        "id": "negative_shareholders_equity",
+        "category": "Risk Checks",
+        "question": "Do they have negative shareholders equity?",
+        "status": "FAIL",
+        "verdict": "Fail",
+        "summary": "MSFT has negative shareholders equity ($0.00).",
+        "details": {
+          "shareholdersEquity": 0,
+          "formatted": "$0.00"
+        },
+        "timestamp": 1788840922202
+      },
+      {
+        "id": "concerning_recent_events",
+        "category": "Risk Checks",
+        "question": "Are there any concerning recent events?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "No concerning events detected",
+        "details": {
+          "eventsDetectedCount": 0,
+          "newsSentimentRatio": 33.3
+        },
+        "timestamp": 1788840922202
+      },
+      {
+        "id": "liquid_and_stable_share_price",
+        "category": "Risk Checks",
+        "question": "Is their share price liquid and stable?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Share price has been stable over the past 3 months compared to the US market",
+        "details": {
+          "beta": 1.15,
+          "liquidityStatus": "High Liquidity"
+        },
+        "timestamp": 1788840922202
+      },
+      {
+        "id": "profit_margins_improved",
+        "category": "Risk Checks",
+        "question": "Have profit margins improved over the past year?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Profit margins improved or MSFT became profitable",
+        "details": {
+          "latestMarginPercent": 35.96,
+          "priorMarginPercent": 34.15,
+          "becameProfitable": false
+        },
+        "timestamp": 1788840922202
+      },
+      {
+        "id": "sufficient_financial_data",
+        "category": "Risk Checks",
+        "question": "Do they have sufficient financial data available?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "They have sufficient analyst coverage",
+        "details": {
+          "auditedYearsCount": 5,
+          "coverageStatus": "Sufficient"
+        },
+        "timestamp": 1788840922202
+      },
+      {
+        "id": "meaningful_revenue",
+        "category": "Risk Checks",
+        "question": "Do they have meaningful levels of revenue?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Revenue is meaningful ($245.12B)",
+        "details": {
+          "revenue": 245122000000,
+          "threshold": 100000000,
+          "formatted": "$245.12B"
+        },
+        "timestamp": 1788840922202
+      },
+      {
+        "id": "shareholders_diluted",
+        "category": "Risk Checks",
+        "question": "Have shareholders been diluted over the past year?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Shareholders have not been meaningfully diluted in the past year or recently listed",
+        "details": {
+          "sharesOutstanding": 7430000000,
+          "dilutionRatePercent": 0
+        },
+        "timestamp": 1788840922202
+      },
+      {
+        "id": "forecast_profitability",
+        "category": "Risk Checks",
+        "question": "Are they forecast to achieve profitability?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "The company is currently profitable",
+        "details": {
+          "netIncome": 88136000000,
+          "isCurrentlyProfitable": true,
+          "formatted": "$88.14B"
+        },
+        "timestamp": 1788840922202
+      },
+      {
+        "id": "high_quality_earnings",
+        "category": "Risk Checks",
+        "question": "Do they have high quality earnings?",
+        "status": "FAIL",
+        "verdict": "Fail",
+        "summary": "Earnings quality is low; operating cash flow lags reported net income",
+        "details": {
+          "operatingCashflow": 0,
+          "netIncome": 88136000000,
+          "cashConversionRatio": 0
+        },
+        "timestamp": 1788840922202
+      },
+      {
+        "id": "revenue_earnings_growth_forecast",
+        "category": "Risk Checks",
+        "question": "Are revenue and earnings forecast to grow?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Earnings are forecast to grow by an average of 14% per year for the next 3 years",
+        "details": {
+          "forecastAnnualGrowthRatePercent": 14,
+          "horizonYears": 3
+        },
+        "timestamp": 1788840922202
+      },
+      {
+        "id": "dividend_sustainability",
+        "category": "Risk Checks",
+        "question": "Is their dividend sustainable?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Dividend is too low to be a concern",
+        "details": {
+          "dividendYieldPercent": 0.75,
+          "payoutRatio": 0.23,
+          "assessment": "Low Yield / Non-Material Drag"
+        },
+        "timestamp": 1788840922203
+      }
+    ],
     "aiExecutiveSynthesis": {
       "source": "Google Gemini AI (Active Synthesis)",
       "model": "gemini-3.6-flash",
@@ -2355,7 +2924,7 @@ export const BUNDLED_DEMO = {
       "companyName": "Apple Inc.",
       "sector": "Technology",
       "industry": "Consumer Electronics",
-      "analysisDate": "2026-09-07",
+      "analysisDate": "2026-09-08",
       "currentPrice": 228,
       "marketCap": 3488400000000,
       "sharesOutstanding": 15300000000,
@@ -2376,6 +2945,55 @@ export const BUNDLED_DEMO = {
       "yieldCurveRegime": "Normal Upward Sloping",
       "unemploymentRatePercent": 4.1,
       "nominalGDPLevelBillions": 32486.066,
+      "regionalManufacturingSurveys": {
+        "asOfDate": "2026-08-01",
+        "compositeDiffusionIndex": 15.3,
+        "regionalRegime": "Robust Regional Expansion",
+        "expandingDistrictsCount": 4,
+        "contractingDistrictsCount": 1,
+        "districts": [
+          {
+            "district": "New York (Empire State)",
+            "seriesId": "GACDISA066MSFRBNY",
+            "name": "Empire State Manufacturing General Business Conditions",
+            "value": 20.6,
+            "date": "2026-08-01",
+            "status": "Expansion"
+          },
+          {
+            "district": "Philadelphia",
+            "seriesId": "GACDFSA066MSFRBPHI",
+            "name": "Philly Fed Manufacturing Business Outlook General Activity",
+            "value": 47.4,
+            "date": "2026-08-01",
+            "status": "Expansion"
+          },
+          {
+            "district": "Dallas (Texas)",
+            "seriesId": "BACTSAMFRBDAL",
+            "name": "Texas Manufacturing Outlook General Business Activity",
+            "value": 11.6,
+            "date": "2026-08-01",
+            "status": "Expansion"
+          },
+          {
+            "district": "Richmond",
+            "seriesId": "RMFGSL",
+            "name": "Richmond Fed Manufacturing Activity Index",
+            "value": -4,
+            "date": "2026-09-08",
+            "status": "Contraction"
+          },
+          {
+            "district": "Kansas City",
+            "seriesId": "KCMFGOI",
+            "name": "Kansas City Fed Manufacturing Activity Index",
+            "value": 1,
+            "date": "2026-09-08",
+            "status": "Expansion"
+          }
+        ]
+      },
       "dcfValuationGuidance": {
         "recommendedRiskFreeRate": "4.77%",
         "maxTerminalGrowthRateCap": "3%",
@@ -2759,7 +3377,7 @@ export const BUNDLED_DEMO = {
               "url": "https://duckduckgo.com/?q=Apple%20Inc.%20market%20share"
             }
           ],
-          "timestamp": "2026-09-07T19:52:23.162Z"
+          "timestamp": "2026-09-08T04:15:28.428Z"
         },
         "investigationVectors": [
           {
@@ -2815,7 +3433,7 @@ export const BUNDLED_DEMO = {
             ]
           }
         ],
-        "timestamp": "2026-09-07T19:52:23.162Z"
+        "timestamp": "2026-09-08T04:15:28.428Z"
       },
       "foddaIntel": {
         "ticker": "AAPL",
@@ -2831,7 +3449,7 @@ export const BUNDLED_DEMO = {
         "success": true,
         "ticker": "AAPL",
         "source": "Seeking Alpha RSS (Mock Mode)",
-        "fetchedAt": "2026-09-07T19:52:23.162Z",
+        "fetchedAt": "2026-09-08T04:15:28.428Z",
         "totalArticles": 6,
         "consensusSentiment": "Bullish",
         "sentimentScore": 84,
@@ -2883,7 +3501,7 @@ export const BUNDLED_DEMO = {
             "title": "AAPL: Cloud Reacceleration And Generative AI Commercialization Drive Long-Term Upside",
             "link": "https://seekingalpha.com/symbol/AAPL",
             "guid": "mock-sa-AAPL-1",
-            "pubDate": "Mon, 07 Sep 2026 16:52:23 GMT",
+            "pubDate": "Tue, 08 Sep 2026 01:15:28 GMT",
             "timeAgo": "3h ago",
             "author": "Compound Capital Research",
             "category": "Analyst Research",
@@ -2918,7 +3536,7 @@ export const BUNDLED_DEMO = {
             "title": "AAPL Free Cash Flow Inflection: Capital Expenditures Are Generating 30%+ Marginal ROIC",
             "link": "https://seekingalpha.com/symbol/AAPL",
             "guid": "mock-sa-AAPL-2",
-            "pubDate": "Mon, 07 Sep 2026 12:52:23 GMT",
+            "pubDate": "Mon, 07 Sep 2026 21:15:28 GMT",
             "timeAgo": "7h ago",
             "author": "Institutional Alpha Desk",
             "category": "Analyst Research",
@@ -2948,7 +3566,7 @@ export const BUNDLED_DEMO = {
             "title": "Apple Inc. Reports Double-Digit Cloud Growth, Raising Full-Year Operating Margin Guidance",
             "link": "https://seekingalpha.com/symbol/AAPL",
             "guid": "mock-sa-AAPL-3",
-            "pubDate": "Mon, 07 Sep 2026 05:52:23 GMT",
+            "pubDate": "Mon, 07 Sep 2026 14:15:28 GMT",
             "timeAgo": "14h ago",
             "author": "Seeking Alpha News Wire",
             "category": "Earnings & Filings",
@@ -2968,7 +3586,7 @@ export const BUNDLED_DEMO = {
             "title": "Evaluating AAPL Under Damodaran DCF: Margin Of Safety And Terminal Growth Sensitivity",
             "link": "https://seekingalpha.com/symbol/AAPL",
             "guid": "mock-sa-AAPL-4",
-            "pubDate": "Sun, 06 Sep 2026 21:52:23 GMT",
+            "pubDate": "Mon, 07 Sep 2026 06:15:28 GMT",
             "timeAgo": "22h ago",
             "author": "Value Compounder Group",
             "category": "Analyst Research",
@@ -2993,7 +3611,7 @@ export const BUNDLED_DEMO = {
             "title": "AAPL Form 4 Insider Filing: Executive Retains Long-Term Equity Grant In Compliance With Rule 10b5-1",
             "link": "https://seekingalpha.com/symbol/AAPL",
             "guid": "mock-sa-AAPL-5",
-            "pubDate": "Sun, 06 Sep 2026 13:52:23 GMT",
+            "pubDate": "Sun, 06 Sep 2026 22:15:28 GMT",
             "timeAgo": "1d ago",
             "author": "SEC Edgar Watch",
             "category": "Insider Form 4",
@@ -3013,7 +3631,7 @@ export const BUNDLED_DEMO = {
             "title": "AAPL Versus Competitors: Market Share Shift And Enterprise Switching Costs",
             "link": "https://seekingalpha.com/symbol/AAPL",
             "guid": "mock-sa-AAPL-6",
-            "pubDate": "Sat, 05 Sep 2026 19:52:23 GMT",
+            "pubDate": "Sun, 06 Sep 2026 04:15:28 GMT",
             "timeAgo": "2d ago",
             "author": "Tech Moat Analytics",
             "category": "Breaking News",
@@ -4413,6 +5031,78 @@ export const BUNDLED_DEMO = {
           "moatRating": "Wide Moat"
         }
       ],
+      "seekingAlphaPeers": [
+        {
+          "symbol": "NVDA",
+          "name": "NVIDIA Corporation",
+          "coOccurrenceCount": 4,
+          "coOccurrencePercent": 16,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "AVGO",
+          "name": "Broadcom Inc.",
+          "coOccurrenceCount": 4,
+          "coOccurrencePercent": 16,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "SNDK",
+          "name": "Sandisk Corporation",
+          "coOccurrenceCount": 4,
+          "coOccurrencePercent": 16,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "AMZN",
+          "name": "Amazon.com, Inc.",
+          "coOccurrenceCount": 4,
+          "coOccurrencePercent": 16,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "GOOGL",
+          "name": "Alphabet Inc.",
+          "coOccurrenceCount": 4,
+          "coOccurrencePercent": 16,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "GOOG",
+          "name": "Alphabet Inc.",
+          "coOccurrenceCount": 4,
+          "coOccurrencePercent": 16,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "HPQ",
+          "name": "HP Inc.",
+          "coOccurrenceCount": 3,
+          "coOccurrencePercent": 12,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "INTC",
+          "name": "Intel Corporation",
+          "coOccurrenceCount": 3,
+          "coOccurrencePercent": 12,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "MU",
+          "name": "Micron Technology, Inc.",
+          "coOccurrenceCount": 3,
+          "coOccurrencePercent": 12,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "HPE",
+          "name": "Hewlett Packard Enterprise Company",
+          "coOccurrenceCount": 3,
+          "coOccurrencePercent": 12,
+          "isLikelyCompetitor": true
+        }
+      ],
       "benchmarks": {
         "peerMedianPE": 28,
         "peerMedianPEG": 2.1,
@@ -4479,7 +5169,7 @@ export const BUNDLED_DEMO = {
           "threatVector": "Dominant developer mindshare in internet commerce and billing automation."
         }
       ],
-      "timestamp": "2026-09-07T05:40:41.517Z"
+      "timestamp": "2026-09-08T01:21:51.018Z"
     },
     "rawFinancials": {
       "symbol": "AAPL",
@@ -4602,6 +5292,401 @@ export const BUNDLED_DEMO = {
       "debtToEquity": 1.59,
       "payoutRatio": 0.26
     },
+    "signals": {
+      "summary": {
+        "totalChecks": 14,
+        "passed": 10,
+        "failed": 4,
+        "warnings": 0,
+        "riskRating": "Moderate Risk",
+        "passScorePercent": 71.4
+      },
+      "riskChecks": [
+        {
+          "id": "insider_selling_3m",
+          "category": "Risk Checks",
+          "question": "Has there been substantial insider selling in the past 3 months?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "No substantial insider selling detected in the past 3 months",
+          "details": {
+            "flag": "CLEAN_INSIDER_HOLDINGS",
+            "filingsCount": 5,
+            "timeframe": "90 days"
+          },
+          "timestamp": 1788840928426
+        },
+        {
+          "id": "financial_position",
+          "category": "Risk Checks",
+          "question": "Are they in a good financial position?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "Elevated debt level relative to cash reserves and earnings",
+          "details": {
+            "netDebt": 106629000000,
+            "debtToEquity": 1.59,
+            "cashAndEquivalents": 0,
+            "totalDebt": 106629000000
+          },
+          "timestamp": 1788840928426
+        },
+        {
+          "id": "meaningful_market_cap",
+          "category": "Risk Checks",
+          "question": "Do they have meaningful market capitalization?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Market cap is meaningful ($3.49T)",
+          "details": {
+            "marketCap": 3488400000000,
+            "threshold": 2000000000,
+            "formatted": "$3.49T"
+          },
+          "timestamp": 1788840928426
+        },
+        {
+          "id": "negative_shareholders_equity",
+          "category": "Risk Checks",
+          "question": "Do they have negative shareholders equity?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "AAPL has negative shareholders equity ($0.00).",
+          "details": {
+            "shareholdersEquity": 0,
+            "formatted": "$0.00"
+          },
+          "timestamp": 1788840928426
+        },
+        {
+          "id": "concerning_recent_events",
+          "category": "Risk Checks",
+          "question": "Are there any concerning recent events?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "No concerning events detected",
+          "details": {
+            "eventsDetectedCount": 0,
+            "newsSentimentRatio": 100
+          },
+          "timestamp": 1788840928426
+        },
+        {
+          "id": "liquid_and_stable_share_price",
+          "category": "Risk Checks",
+          "question": "Is their share price liquid and stable?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Share price has been stable over the past 3 months compared to the US market",
+          "details": {
+            "beta": 1.08,
+            "liquidityStatus": "High Liquidity"
+          },
+          "timestamp": 1788840928426
+        },
+        {
+          "id": "profit_margins_improved",
+          "category": "Risk Checks",
+          "question": "Have profit margins improved over the past year?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "Profit margins contracted from 25.3% to 24% over the past year",
+          "details": {
+            "latestMarginPercent": 23.97,
+            "priorMarginPercent": 25.31
+          },
+          "timestamp": 1788840928426
+        },
+        {
+          "id": "sufficient_financial_data",
+          "category": "Risk Checks",
+          "question": "Do they have sufficient financial data available?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "They have sufficient analyst coverage",
+          "details": {
+            "auditedYearsCount": 5,
+            "coverageStatus": "Sufficient"
+          },
+          "timestamp": 1788840928426
+        },
+        {
+          "id": "meaningful_revenue",
+          "category": "Risk Checks",
+          "question": "Do they have meaningful levels of revenue?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Revenue is meaningful ($391.04B)",
+          "details": {
+            "revenue": 391035000000,
+            "threshold": 100000000,
+            "formatted": "$391.04B"
+          },
+          "timestamp": 1788840928426
+        },
+        {
+          "id": "shareholders_diluted",
+          "category": "Risk Checks",
+          "question": "Have shareholders been diluted over the past year?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Shareholders have not been meaningfully diluted in the past year or recently listed",
+          "details": {
+            "sharesOutstanding": 15300000000,
+            "dilutionRatePercent": 0
+          },
+          "timestamp": 1788840928426
+        },
+        {
+          "id": "forecast_profitability",
+          "category": "Risk Checks",
+          "question": "Are they forecast to achieve profitability?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "The company is currently profitable",
+          "details": {
+            "netIncome": 93736000000,
+            "isCurrentlyProfitable": true,
+            "formatted": "$93.74B"
+          },
+          "timestamp": 1788840928426
+        },
+        {
+          "id": "high_quality_earnings",
+          "category": "Risk Checks",
+          "question": "Do they have high quality earnings?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "Earnings quality is low; operating cash flow lags reported net income",
+          "details": {
+            "operatingCashflow": 0,
+            "netIncome": 93736000000,
+            "cashConversionRatio": 0
+          },
+          "timestamp": 1788840928426
+        },
+        {
+          "id": "revenue_earnings_growth_forecast",
+          "category": "Risk Checks",
+          "question": "Are revenue and earnings forecast to grow?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Earnings are forecast to grow by an average of 14% per year for the next 3 years",
+          "details": {
+            "forecastAnnualGrowthRatePercent": 14,
+            "horizonYears": 3
+          },
+          "timestamp": 1788840928426
+        },
+        {
+          "id": "dividend_sustainability",
+          "category": "Risk Checks",
+          "question": "Is their dividend sustainable?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Dividend is too low to be a concern",
+          "details": {
+            "dividendYieldPercent": 0.44,
+            "payoutRatio": 0.26,
+            "assessment": "Low Yield / Non-Material Drag"
+          },
+          "timestamp": 1788840928426
+        }
+      ],
+      "customSignals": {}
+    },
+    "riskChecks": [
+      {
+        "id": "insider_selling_3m",
+        "category": "Risk Checks",
+        "question": "Has there been substantial insider selling in the past 3 months?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "No substantial insider selling detected in the past 3 months",
+        "details": {
+          "flag": "CLEAN_INSIDER_HOLDINGS",
+          "filingsCount": 5,
+          "timeframe": "90 days"
+        },
+        "timestamp": 1788840928426
+      },
+      {
+        "id": "financial_position",
+        "category": "Risk Checks",
+        "question": "Are they in a good financial position?",
+        "status": "FAIL",
+        "verdict": "Fail",
+        "summary": "Elevated debt level relative to cash reserves and earnings",
+        "details": {
+          "netDebt": 106629000000,
+          "debtToEquity": 1.59,
+          "cashAndEquivalents": 0,
+          "totalDebt": 106629000000
+        },
+        "timestamp": 1788840928426
+      },
+      {
+        "id": "meaningful_market_cap",
+        "category": "Risk Checks",
+        "question": "Do they have meaningful market capitalization?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Market cap is meaningful ($3.49T)",
+        "details": {
+          "marketCap": 3488400000000,
+          "threshold": 2000000000,
+          "formatted": "$3.49T"
+        },
+        "timestamp": 1788840928426
+      },
+      {
+        "id": "negative_shareholders_equity",
+        "category": "Risk Checks",
+        "question": "Do they have negative shareholders equity?",
+        "status": "FAIL",
+        "verdict": "Fail",
+        "summary": "AAPL has negative shareholders equity ($0.00).",
+        "details": {
+          "shareholdersEquity": 0,
+          "formatted": "$0.00"
+        },
+        "timestamp": 1788840928426
+      },
+      {
+        "id": "concerning_recent_events",
+        "category": "Risk Checks",
+        "question": "Are there any concerning recent events?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "No concerning events detected",
+        "details": {
+          "eventsDetectedCount": 0,
+          "newsSentimentRatio": 100
+        },
+        "timestamp": 1788840928426
+      },
+      {
+        "id": "liquid_and_stable_share_price",
+        "category": "Risk Checks",
+        "question": "Is their share price liquid and stable?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Share price has been stable over the past 3 months compared to the US market",
+        "details": {
+          "beta": 1.08,
+          "liquidityStatus": "High Liquidity"
+        },
+        "timestamp": 1788840928426
+      },
+      {
+        "id": "profit_margins_improved",
+        "category": "Risk Checks",
+        "question": "Have profit margins improved over the past year?",
+        "status": "FAIL",
+        "verdict": "Fail",
+        "summary": "Profit margins contracted from 25.3% to 24% over the past year",
+        "details": {
+          "latestMarginPercent": 23.97,
+          "priorMarginPercent": 25.31
+        },
+        "timestamp": 1788840928426
+      },
+      {
+        "id": "sufficient_financial_data",
+        "category": "Risk Checks",
+        "question": "Do they have sufficient financial data available?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "They have sufficient analyst coverage",
+        "details": {
+          "auditedYearsCount": 5,
+          "coverageStatus": "Sufficient"
+        },
+        "timestamp": 1788840928426
+      },
+      {
+        "id": "meaningful_revenue",
+        "category": "Risk Checks",
+        "question": "Do they have meaningful levels of revenue?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Revenue is meaningful ($391.04B)",
+        "details": {
+          "revenue": 391035000000,
+          "threshold": 100000000,
+          "formatted": "$391.04B"
+        },
+        "timestamp": 1788840928426
+      },
+      {
+        "id": "shareholders_diluted",
+        "category": "Risk Checks",
+        "question": "Have shareholders been diluted over the past year?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Shareholders have not been meaningfully diluted in the past year or recently listed",
+        "details": {
+          "sharesOutstanding": 15300000000,
+          "dilutionRatePercent": 0
+        },
+        "timestamp": 1788840928426
+      },
+      {
+        "id": "forecast_profitability",
+        "category": "Risk Checks",
+        "question": "Are they forecast to achieve profitability?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "The company is currently profitable",
+        "details": {
+          "netIncome": 93736000000,
+          "isCurrentlyProfitable": true,
+          "formatted": "$93.74B"
+        },
+        "timestamp": 1788840928426
+      },
+      {
+        "id": "high_quality_earnings",
+        "category": "Risk Checks",
+        "question": "Do they have high quality earnings?",
+        "status": "FAIL",
+        "verdict": "Fail",
+        "summary": "Earnings quality is low; operating cash flow lags reported net income",
+        "details": {
+          "operatingCashflow": 0,
+          "netIncome": 93736000000,
+          "cashConversionRatio": 0
+        },
+        "timestamp": 1788840928426
+      },
+      {
+        "id": "revenue_earnings_growth_forecast",
+        "category": "Risk Checks",
+        "question": "Are revenue and earnings forecast to grow?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Earnings are forecast to grow by an average of 14% per year for the next 3 years",
+        "details": {
+          "forecastAnnualGrowthRatePercent": 14,
+          "horizonYears": 3
+        },
+        "timestamp": 1788840928426
+      },
+      {
+        "id": "dividend_sustainability",
+        "category": "Risk Checks",
+        "question": "Is their dividend sustainable?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Dividend is too low to be a concern",
+        "details": {
+          "dividendYieldPercent": 0.44,
+          "payoutRatio": 0.26,
+          "assessment": "Low Yield / Non-Material Drag"
+        },
+        "timestamp": 1788840928426
+      }
+    ],
     "aiExecutiveSynthesis": {
       "source": "Google Gemini AI (Active Synthesis)",
       "model": "gemini-3.6-flash",
@@ -4616,7 +5701,7 @@ export const BUNDLED_DEMO = {
       "companyName": "NVIDIA Corporation",
       "sector": "Technology",
       "industry": "Semiconductors",
-      "analysisDate": "2026-09-07",
+      "analysisDate": "2026-09-08",
       "currentPrice": 125,
       "marketCap": 3062500000000,
       "sharesOutstanding": 24500000000,
@@ -4637,6 +5722,55 @@ export const BUNDLED_DEMO = {
       "yieldCurveRegime": "Normal Upward Sloping",
       "unemploymentRatePercent": 4.1,
       "nominalGDPLevelBillions": 32486.066,
+      "regionalManufacturingSurveys": {
+        "asOfDate": "2026-08-01",
+        "compositeDiffusionIndex": 15.3,
+        "regionalRegime": "Robust Regional Expansion",
+        "expandingDistrictsCount": 4,
+        "contractingDistrictsCount": 1,
+        "districts": [
+          {
+            "district": "New York (Empire State)",
+            "seriesId": "GACDISA066MSFRBNY",
+            "name": "Empire State Manufacturing General Business Conditions",
+            "value": 20.6,
+            "date": "2026-08-01",
+            "status": "Expansion"
+          },
+          {
+            "district": "Philadelphia",
+            "seriesId": "GACDFSA066MSFRBPHI",
+            "name": "Philly Fed Manufacturing Business Outlook General Activity",
+            "value": 47.4,
+            "date": "2026-08-01",
+            "status": "Expansion"
+          },
+          {
+            "district": "Dallas (Texas)",
+            "seriesId": "BACTSAMFRBDAL",
+            "name": "Texas Manufacturing Outlook General Business Activity",
+            "value": 11.6,
+            "date": "2026-08-01",
+            "status": "Expansion"
+          },
+          {
+            "district": "Richmond",
+            "seriesId": "RMFGSL",
+            "name": "Richmond Fed Manufacturing Activity Index",
+            "value": -4,
+            "date": "2026-09-08",
+            "status": "Contraction"
+          },
+          {
+            "district": "Kansas City",
+            "seriesId": "KCMFGOI",
+            "name": "Kansas City Fed Manufacturing Activity Index",
+            "value": 1,
+            "date": "2026-09-08",
+            "status": "Expansion"
+          }
+        ]
+      },
       "dcfValuationGuidance": {
         "recommendedRiskFreeRate": "4.77%",
         "maxTerminalGrowthRateCap": "3%",
@@ -5018,7 +6152,7 @@ export const BUNDLED_DEMO = {
               "url": "https://duckduckgo.com/?q=NVIDIA%20Corporation%20market%20share"
             }
           ],
-          "timestamp": "2026-09-07T19:52:23.214Z"
+          "timestamp": "2026-09-08T04:15:29.581Z"
         },
         "investigationVectors": [
           {
@@ -5074,7 +6208,7 @@ export const BUNDLED_DEMO = {
             ]
           }
         ],
-        "timestamp": "2026-09-07T19:52:23.214Z"
+        "timestamp": "2026-09-08T04:15:29.581Z"
       },
       "foddaIntel": {
         "ticker": "NVDA",
@@ -5090,7 +6224,7 @@ export const BUNDLED_DEMO = {
         "success": true,
         "ticker": "NVDA",
         "source": "Seeking Alpha RSS (Mock Mode)",
-        "fetchedAt": "2026-09-07T19:52:23.214Z",
+        "fetchedAt": "2026-09-08T04:15:29.581Z",
         "totalArticles": 6,
         "consensusSentiment": "Bullish",
         "sentimentScore": 84,
@@ -5142,7 +6276,7 @@ export const BUNDLED_DEMO = {
             "title": "NVDA: Cloud Reacceleration And Generative AI Commercialization Drive Long-Term Upside",
             "link": "https://seekingalpha.com/symbol/NVDA",
             "guid": "mock-sa-NVDA-1",
-            "pubDate": "Mon, 07 Sep 2026 16:52:23 GMT",
+            "pubDate": "Tue, 08 Sep 2026 01:15:29 GMT",
             "timeAgo": "3h ago",
             "author": "Compound Capital Research",
             "category": "Analyst Research",
@@ -5177,7 +6311,7 @@ export const BUNDLED_DEMO = {
             "title": "NVDA Free Cash Flow Inflection: Capital Expenditures Are Generating 30%+ Marginal ROIC",
             "link": "https://seekingalpha.com/symbol/NVDA",
             "guid": "mock-sa-NVDA-2",
-            "pubDate": "Mon, 07 Sep 2026 12:52:23 GMT",
+            "pubDate": "Mon, 07 Sep 2026 21:15:29 GMT",
             "timeAgo": "7h ago",
             "author": "Institutional Alpha Desk",
             "category": "Analyst Research",
@@ -5207,7 +6341,7 @@ export const BUNDLED_DEMO = {
             "title": "NVIDIA Corporation Reports Double-Digit Cloud Growth, Raising Full-Year Operating Margin Guidance",
             "link": "https://seekingalpha.com/symbol/NVDA",
             "guid": "mock-sa-NVDA-3",
-            "pubDate": "Mon, 07 Sep 2026 05:52:23 GMT",
+            "pubDate": "Mon, 07 Sep 2026 14:15:29 GMT",
             "timeAgo": "14h ago",
             "author": "Seeking Alpha News Wire",
             "category": "Earnings & Filings",
@@ -5227,7 +6361,7 @@ export const BUNDLED_DEMO = {
             "title": "Evaluating NVDA Under Damodaran DCF: Margin Of Safety And Terminal Growth Sensitivity",
             "link": "https://seekingalpha.com/symbol/NVDA",
             "guid": "mock-sa-NVDA-4",
-            "pubDate": "Sun, 06 Sep 2026 21:52:23 GMT",
+            "pubDate": "Mon, 07 Sep 2026 06:15:29 GMT",
             "timeAgo": "22h ago",
             "author": "Value Compounder Group",
             "category": "Analyst Research",
@@ -5252,7 +6386,7 @@ export const BUNDLED_DEMO = {
             "title": "NVDA Form 4 Insider Filing: Executive Retains Long-Term Equity Grant In Compliance With Rule 10b5-1",
             "link": "https://seekingalpha.com/symbol/NVDA",
             "guid": "mock-sa-NVDA-5",
-            "pubDate": "Sun, 06 Sep 2026 13:52:23 GMT",
+            "pubDate": "Sun, 06 Sep 2026 22:15:29 GMT",
             "timeAgo": "1d ago",
             "author": "SEC Edgar Watch",
             "category": "Insider Form 4",
@@ -5272,7 +6406,7 @@ export const BUNDLED_DEMO = {
             "title": "NVDA Versus Competitors: Market Share Shift And Enterprise Switching Costs",
             "link": "https://seekingalpha.com/symbol/NVDA",
             "guid": "mock-sa-NVDA-6",
-            "pubDate": "Sat, 05 Sep 2026 19:52:23 GMT",
+            "pubDate": "Sun, 06 Sep 2026 04:15:29 GMT",
             "timeAgo": "2d ago",
             "author": "Tech Moat Analytics",
             "category": "Breaking News",
@@ -6659,6 +7793,78 @@ export const BUNDLED_DEMO = {
           "moatRating": "Narrow Moat"
         }
       ],
+      "seekingAlphaPeers": [
+        {
+          "symbol": "GOOGL",
+          "name": "Alphabet Inc.",
+          "coOccurrenceCount": 6,
+          "coOccurrencePercent": 24,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "MSFT",
+          "name": "Microsoft Corporation",
+          "coOccurrenceCount": 4,
+          "coOccurrencePercent": 16,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "META",
+          "name": "Meta Platforms, Inc.",
+          "coOccurrenceCount": 4,
+          "coOccurrencePercent": 16,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "OPENAI",
+          "name": "OpenAI",
+          "coOccurrenceCount": 4,
+          "coOccurrencePercent": 16,
+          "isLikelyCompetitor": false
+        },
+        {
+          "symbol": "AVGO",
+          "name": "Broadcom Inc.",
+          "coOccurrenceCount": 4,
+          "coOccurrencePercent": 16,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "ANTHRO",
+          "name": "Anthropic",
+          "coOccurrenceCount": 4,
+          "coOccurrencePercent": 16,
+          "isLikelyCompetitor": false
+        },
+        {
+          "symbol": "AMZN",
+          "name": "Amazon.com, Inc.",
+          "coOccurrenceCount": 3,
+          "coOccurrencePercent": 12,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "INTC",
+          "name": "Intel Corporation",
+          "coOccurrenceCount": 3,
+          "coOccurrencePercent": 12,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "GOOG",
+          "name": "Alphabet Inc.",
+          "coOccurrenceCount": 3,
+          "coOccurrencePercent": 12,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "ORCL",
+          "name": "Oracle Corporation",
+          "coOccurrenceCount": 2,
+          "coOccurrencePercent": 8,
+          "isLikelyCompetitor": true
+        }
+      ],
       "benchmarks": {
         "peerMedianPE": 22,
         "peerMedianPEG": 2,
@@ -6719,7 +7925,7 @@ export const BUNDLED_DEMO = {
           "threatVector": "Specialized niche software and vertical solutions targeting high-margin segments in Technology."
         }
       ],
-      "timestamp": "2026-09-07T05:01:01.587Z"
+      "timestamp": "2026-09-08T02:52:20.012Z"
     },
     "rawFinancials": {
       "symbol": "NVDA",
@@ -6842,6 +8048,405 @@ export const BUNDLED_DEMO = {
       "debtToEquity": 0.11,
       "payoutRatio": 0.02
     },
+    "signals": {
+      "summary": {
+        "totalChecks": 14,
+        "passed": 11,
+        "failed": 3,
+        "warnings": 0,
+        "riskRating": "Moderate Risk",
+        "passScorePercent": 78.6
+      },
+      "riskChecks": [
+        {
+          "id": "insider_selling_3m",
+          "category": "Risk Checks",
+          "question": "Has there been substantial insider selling in the past 3 months?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "No substantial insider selling detected in the past 3 months",
+          "details": {
+            "flag": "CLEAN_INSIDER_HOLDINGS",
+            "filingsCount": 5,
+            "timeframe": "90 days"
+          },
+          "timestamp": 1788840929580
+        },
+        {
+          "id": "financial_position",
+          "category": "Risk Checks",
+          "question": "Are they in a good financial position?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Debt level is low and not considered a risk",
+          "details": {
+            "netDebt": 8500000000,
+            "isNetCashPositive": false,
+            "debtToEquity": 0.11,
+            "cashAndEquivalents": 0,
+            "totalDebt": 8500000000
+          },
+          "timestamp": 1788840929580
+        },
+        {
+          "id": "meaningful_market_cap",
+          "category": "Risk Checks",
+          "question": "Do they have meaningful market capitalization?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Market cap is meaningful ($3.06T)",
+          "details": {
+            "marketCap": 3062500000000,
+            "threshold": 2000000000,
+            "formatted": "$3.06T"
+          },
+          "timestamp": 1788840929580
+        },
+        {
+          "id": "negative_shareholders_equity",
+          "category": "Risk Checks",
+          "question": "Do they have negative shareholders equity?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "NVDA has negative shareholders equity ($0.00).",
+          "details": {
+            "shareholdersEquity": 0,
+            "formatted": "$0.00"
+          },
+          "timestamp": 1788840929580
+        },
+        {
+          "id": "concerning_recent_events",
+          "category": "Risk Checks",
+          "question": "Are there any concerning recent events?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "No concerning events detected",
+          "details": {
+            "eventsDetectedCount": 0,
+            "newsSentimentRatio": 75
+          },
+          "timestamp": 1788840929580
+        },
+        {
+          "id": "liquid_and_stable_share_price",
+          "category": "Risk Checks",
+          "question": "Is their share price liquid and stable?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "Share price exhibits elevated volatility compared to the US market (Beta: 1.68)",
+          "details": {
+            "beta": 1.68,
+            "liquidityStatus": "High Volatility"
+          },
+          "timestamp": 1788840929580
+        },
+        {
+          "id": "profit_margins_improved",
+          "category": "Risk Checks",
+          "question": "Have profit margins improved over the past year?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Profit margins improved or NVDA became profitable",
+          "details": {
+            "latestMarginPercent": 51.59,
+            "priorMarginPercent": 48.85,
+            "becameProfitable": false
+          },
+          "timestamp": 1788840929580
+        },
+        {
+          "id": "sufficient_financial_data",
+          "category": "Risk Checks",
+          "question": "Do they have sufficient financial data available?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "They have sufficient analyst coverage",
+          "details": {
+            "auditedYearsCount": 5,
+            "coverageStatus": "Sufficient"
+          },
+          "timestamp": 1788840929580
+        },
+        {
+          "id": "meaningful_revenue",
+          "category": "Risk Checks",
+          "question": "Do they have meaningful levels of revenue?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Revenue is meaningful ($126.00B)",
+          "details": {
+            "revenue": 126000000000,
+            "threshold": 100000000,
+            "formatted": "$126.00B"
+          },
+          "timestamp": 1788840929580
+        },
+        {
+          "id": "shareholders_diluted",
+          "category": "Risk Checks",
+          "question": "Have shareholders been diluted over the past year?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Shareholders have not been meaningfully diluted in the past year or recently listed",
+          "details": {
+            "sharesOutstanding": 24500000000,
+            "dilutionRatePercent": 0
+          },
+          "timestamp": 1788840929580
+        },
+        {
+          "id": "forecast_profitability",
+          "category": "Risk Checks",
+          "question": "Are they forecast to achieve profitability?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "The company is currently profitable",
+          "details": {
+            "netIncome": 65000000000,
+            "isCurrentlyProfitable": true,
+            "formatted": "$65.00B"
+          },
+          "timestamp": 1788840929580
+        },
+        {
+          "id": "high_quality_earnings",
+          "category": "Risk Checks",
+          "question": "Do they have high quality earnings?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "Earnings quality is low; operating cash flow lags reported net income",
+          "details": {
+            "operatingCashflow": 0,
+            "netIncome": 65000000000,
+            "cashConversionRatio": 0
+          },
+          "timestamp": 1788840929580
+        },
+        {
+          "id": "revenue_earnings_growth_forecast",
+          "category": "Risk Checks",
+          "question": "Are revenue and earnings forecast to grow?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Earnings are forecast to grow by an average of 14% per year for the next 3 years",
+          "details": {
+            "forecastAnnualGrowthRatePercent": 14,
+            "horizonYears": 3
+          },
+          "timestamp": 1788840929580
+        },
+        {
+          "id": "dividend_sustainability",
+          "category": "Risk Checks",
+          "question": "Is their dividend sustainable?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Dividend is too low to be a concern",
+          "details": {
+            "dividendYieldPercent": 0.03,
+            "payoutRatio": 0.02,
+            "assessment": "Low Yield / Non-Material Drag"
+          },
+          "timestamp": 1788840929580
+        }
+      ],
+      "customSignals": {}
+    },
+    "riskChecks": [
+      {
+        "id": "insider_selling_3m",
+        "category": "Risk Checks",
+        "question": "Has there been substantial insider selling in the past 3 months?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "No substantial insider selling detected in the past 3 months",
+        "details": {
+          "flag": "CLEAN_INSIDER_HOLDINGS",
+          "filingsCount": 5,
+          "timeframe": "90 days"
+        },
+        "timestamp": 1788840929580
+      },
+      {
+        "id": "financial_position",
+        "category": "Risk Checks",
+        "question": "Are they in a good financial position?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Debt level is low and not considered a risk",
+        "details": {
+          "netDebt": 8500000000,
+          "isNetCashPositive": false,
+          "debtToEquity": 0.11,
+          "cashAndEquivalents": 0,
+          "totalDebt": 8500000000
+        },
+        "timestamp": 1788840929580
+      },
+      {
+        "id": "meaningful_market_cap",
+        "category": "Risk Checks",
+        "question": "Do they have meaningful market capitalization?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Market cap is meaningful ($3.06T)",
+        "details": {
+          "marketCap": 3062500000000,
+          "threshold": 2000000000,
+          "formatted": "$3.06T"
+        },
+        "timestamp": 1788840929580
+      },
+      {
+        "id": "negative_shareholders_equity",
+        "category": "Risk Checks",
+        "question": "Do they have negative shareholders equity?",
+        "status": "FAIL",
+        "verdict": "Fail",
+        "summary": "NVDA has negative shareholders equity ($0.00).",
+        "details": {
+          "shareholdersEquity": 0,
+          "formatted": "$0.00"
+        },
+        "timestamp": 1788840929580
+      },
+      {
+        "id": "concerning_recent_events",
+        "category": "Risk Checks",
+        "question": "Are there any concerning recent events?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "No concerning events detected",
+        "details": {
+          "eventsDetectedCount": 0,
+          "newsSentimentRatio": 75
+        },
+        "timestamp": 1788840929580
+      },
+      {
+        "id": "liquid_and_stable_share_price",
+        "category": "Risk Checks",
+        "question": "Is their share price liquid and stable?",
+        "status": "FAIL",
+        "verdict": "Fail",
+        "summary": "Share price exhibits elevated volatility compared to the US market (Beta: 1.68)",
+        "details": {
+          "beta": 1.68,
+          "liquidityStatus": "High Volatility"
+        },
+        "timestamp": 1788840929580
+      },
+      {
+        "id": "profit_margins_improved",
+        "category": "Risk Checks",
+        "question": "Have profit margins improved over the past year?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Profit margins improved or NVDA became profitable",
+        "details": {
+          "latestMarginPercent": 51.59,
+          "priorMarginPercent": 48.85,
+          "becameProfitable": false
+        },
+        "timestamp": 1788840929580
+      },
+      {
+        "id": "sufficient_financial_data",
+        "category": "Risk Checks",
+        "question": "Do they have sufficient financial data available?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "They have sufficient analyst coverage",
+        "details": {
+          "auditedYearsCount": 5,
+          "coverageStatus": "Sufficient"
+        },
+        "timestamp": 1788840929580
+      },
+      {
+        "id": "meaningful_revenue",
+        "category": "Risk Checks",
+        "question": "Do they have meaningful levels of revenue?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Revenue is meaningful ($126.00B)",
+        "details": {
+          "revenue": 126000000000,
+          "threshold": 100000000,
+          "formatted": "$126.00B"
+        },
+        "timestamp": 1788840929580
+      },
+      {
+        "id": "shareholders_diluted",
+        "category": "Risk Checks",
+        "question": "Have shareholders been diluted over the past year?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Shareholders have not been meaningfully diluted in the past year or recently listed",
+        "details": {
+          "sharesOutstanding": 24500000000,
+          "dilutionRatePercent": 0
+        },
+        "timestamp": 1788840929580
+      },
+      {
+        "id": "forecast_profitability",
+        "category": "Risk Checks",
+        "question": "Are they forecast to achieve profitability?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "The company is currently profitable",
+        "details": {
+          "netIncome": 65000000000,
+          "isCurrentlyProfitable": true,
+          "formatted": "$65.00B"
+        },
+        "timestamp": 1788840929580
+      },
+      {
+        "id": "high_quality_earnings",
+        "category": "Risk Checks",
+        "question": "Do they have high quality earnings?",
+        "status": "FAIL",
+        "verdict": "Fail",
+        "summary": "Earnings quality is low; operating cash flow lags reported net income",
+        "details": {
+          "operatingCashflow": 0,
+          "netIncome": 65000000000,
+          "cashConversionRatio": 0
+        },
+        "timestamp": 1788840929580
+      },
+      {
+        "id": "revenue_earnings_growth_forecast",
+        "category": "Risk Checks",
+        "question": "Are revenue and earnings forecast to grow?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Earnings are forecast to grow by an average of 14% per year for the next 3 years",
+        "details": {
+          "forecastAnnualGrowthRatePercent": 14,
+          "horizonYears": 3
+        },
+        "timestamp": 1788840929580
+      },
+      {
+        "id": "dividend_sustainability",
+        "category": "Risk Checks",
+        "question": "Is their dividend sustainable?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Dividend is too low to be a concern",
+        "details": {
+          "dividendYieldPercent": 0.03,
+          "payoutRatio": 0.02,
+          "assessment": "Low Yield / Non-Material Drag"
+        },
+        "timestamp": 1788840929580
+      }
+    ],
     "aiExecutiveSynthesis": {
       "source": "Google Gemini AI (Active Synthesis)",
       "model": "gemini-3.6-flash",
@@ -6856,7 +8461,7 @@ export const BUNDLED_DEMO = {
       "companyName": "Tesla, Inc.",
       "sector": "Consumer Cyclical",
       "industry": "Auto Manufacturers",
-      "analysisDate": "2026-09-07",
+      "analysisDate": "2026-09-08",
       "currentPrice": 354.08,
       "marketCap": 1398455795712,
       "sharesOutstanding": 3949547394,
@@ -6877,6 +8482,55 @@ export const BUNDLED_DEMO = {
       "yieldCurveRegime": "Normal Upward Sloping",
       "unemploymentRatePercent": 4.1,
       "nominalGDPLevelBillions": 32486.066,
+      "regionalManufacturingSurveys": {
+        "asOfDate": "2026-08-01",
+        "compositeDiffusionIndex": 15.3,
+        "regionalRegime": "Robust Regional Expansion",
+        "expandingDistrictsCount": 4,
+        "contractingDistrictsCount": 1,
+        "districts": [
+          {
+            "district": "New York (Empire State)",
+            "seriesId": "GACDISA066MSFRBNY",
+            "name": "Empire State Manufacturing General Business Conditions",
+            "value": 20.6,
+            "date": "2026-08-01",
+            "status": "Expansion"
+          },
+          {
+            "district": "Philadelphia",
+            "seriesId": "GACDFSA066MSFRBPHI",
+            "name": "Philly Fed Manufacturing Business Outlook General Activity",
+            "value": 47.4,
+            "date": "2026-08-01",
+            "status": "Expansion"
+          },
+          {
+            "district": "Dallas (Texas)",
+            "seriesId": "BACTSAMFRBDAL",
+            "name": "Texas Manufacturing Outlook General Business Activity",
+            "value": 11.6,
+            "date": "2026-08-01",
+            "status": "Expansion"
+          },
+          {
+            "district": "Richmond",
+            "seriesId": "RMFGSL",
+            "name": "Richmond Fed Manufacturing Activity Index",
+            "value": -4,
+            "date": "2026-09-08",
+            "status": "Contraction"
+          },
+          {
+            "district": "Kansas City",
+            "seriesId": "KCMFGOI",
+            "name": "Kansas City Fed Manufacturing Activity Index",
+            "value": 1,
+            "date": "2026-09-08",
+            "status": "Expansion"
+          }
+        ]
+      },
       "dcfValuationGuidance": {
         "recommendedRiskFreeRate": "4.77%",
         "maxTerminalGrowthRateCap": "3%",
@@ -7255,7 +8909,7 @@ export const BUNDLED_DEMO = {
               "url": "https://duckduckgo.com/?q=Microsoft%20Corporation%20market%20share"
             }
           ],
-          "timestamp": "2026-09-07T19:52:24.110Z"
+          "timestamp": "2026-09-08T04:15:31.368Z"
         },
         "investigationVectors": [
           {
@@ -7311,7 +8965,7 @@ export const BUNDLED_DEMO = {
             ]
           }
         ],
-        "timestamp": "2026-09-07T19:52:24.110Z"
+        "timestamp": "2026-09-08T04:15:31.368Z"
       },
       "foddaIntel": {
         "ticker": "TSLA",
@@ -7327,7 +8981,7 @@ export const BUNDLED_DEMO = {
         "success": true,
         "ticker": "TSLA",
         "source": "Seeking Alpha RSS (Mock Mode)",
-        "fetchedAt": "2026-09-07T19:52:24.110Z",
+        "fetchedAt": "2026-09-08T04:15:31.368Z",
         "totalArticles": 6,
         "consensusSentiment": "Bullish",
         "sentimentScore": 84,
@@ -7379,7 +9033,7 @@ export const BUNDLED_DEMO = {
             "title": "TSLA: Cloud Reacceleration And Generative AI Commercialization Drive Long-Term Upside",
             "link": "https://seekingalpha.com/symbol/TSLA",
             "guid": "mock-sa-TSLA-1",
-            "pubDate": "Mon, 07 Sep 2026 16:52:24 GMT",
+            "pubDate": "Tue, 08 Sep 2026 01:15:31 GMT",
             "timeAgo": "3h ago",
             "author": "Compound Capital Research",
             "category": "Analyst Research",
@@ -7414,7 +9068,7 @@ export const BUNDLED_DEMO = {
             "title": "TSLA Free Cash Flow Inflection: Capital Expenditures Are Generating 30%+ Marginal ROIC",
             "link": "https://seekingalpha.com/symbol/TSLA",
             "guid": "mock-sa-TSLA-2",
-            "pubDate": "Mon, 07 Sep 2026 12:52:24 GMT",
+            "pubDate": "Mon, 07 Sep 2026 21:15:31 GMT",
             "timeAgo": "7h ago",
             "author": "Institutional Alpha Desk",
             "category": "Analyst Research",
@@ -7444,7 +9098,7 @@ export const BUNDLED_DEMO = {
             "title": "Microsoft Corporation Reports Double-Digit Cloud Growth, Raising Full-Year Operating Margin Guidance",
             "link": "https://seekingalpha.com/symbol/TSLA",
             "guid": "mock-sa-TSLA-3",
-            "pubDate": "Mon, 07 Sep 2026 05:52:24 GMT",
+            "pubDate": "Mon, 07 Sep 2026 14:15:31 GMT",
             "timeAgo": "14h ago",
             "author": "Seeking Alpha News Wire",
             "category": "Earnings & Filings",
@@ -7464,7 +9118,7 @@ export const BUNDLED_DEMO = {
             "title": "Evaluating TSLA Under Damodaran DCF: Margin Of Safety And Terminal Growth Sensitivity",
             "link": "https://seekingalpha.com/symbol/TSLA",
             "guid": "mock-sa-TSLA-4",
-            "pubDate": "Sun, 06 Sep 2026 21:52:24 GMT",
+            "pubDate": "Mon, 07 Sep 2026 06:15:31 GMT",
             "timeAgo": "22h ago",
             "author": "Value Compounder Group",
             "category": "Analyst Research",
@@ -7489,7 +9143,7 @@ export const BUNDLED_DEMO = {
             "title": "TSLA Form 4 Insider Filing: Executive Retains Long-Term Equity Grant In Compliance With Rule 10b5-1",
             "link": "https://seekingalpha.com/symbol/TSLA",
             "guid": "mock-sa-TSLA-5",
-            "pubDate": "Sun, 06 Sep 2026 13:52:24 GMT",
+            "pubDate": "Sun, 06 Sep 2026 22:15:31 GMT",
             "timeAgo": "1d ago",
             "author": "SEC Edgar Watch",
             "category": "Insider Form 4",
@@ -7509,7 +9163,7 @@ export const BUNDLED_DEMO = {
             "title": "TSLA Versus Competitors: Market Share Shift And Enterprise Switching Costs",
             "link": "https://seekingalpha.com/symbol/TSLA",
             "guid": "mock-sa-TSLA-6",
-            "pubDate": "Sat, 05 Sep 2026 19:52:24 GMT",
+            "pubDate": "Sun, 06 Sep 2026 04:15:31 GMT",
             "timeAgo": "2d ago",
             "author": "Tech Moat Analytics",
             "category": "Breaking News",
@@ -8747,6 +10401,78 @@ export const BUNDLED_DEMO = {
           "moatRating": "Narrow Moat"
         }
       ],
+      "seekingAlphaPeers": [
+        {
+          "symbol": "SPCX",
+          "name": "Space Exploration Technologies Corp.",
+          "coOccurrenceCount": 3,
+          "coOccurrencePercent": 30,
+          "isLikelyCompetitor": false
+        },
+        {
+          "symbol": "WAYMO",
+          "name": "Waymo LLC",
+          "coOccurrenceCount": 3,
+          "coOccurrencePercent": 30,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "GOOG",
+          "name": "Alphabet Inc.",
+          "coOccurrenceCount": 2,
+          "coOccurrencePercent": 20,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "AMZN",
+          "name": "Amazon.com, Inc.",
+          "coOccurrenceCount": 2,
+          "coOccurrencePercent": 20,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "GOOGL",
+          "name": "Alphabet Inc.",
+          "coOccurrenceCount": 2,
+          "coOccurrencePercent": 20,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "UBER",
+          "name": "Uber Technologies, Inc.",
+          "coOccurrenceCount": 2,
+          "coOccurrencePercent": 20,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "XLY",
+          "name": "State Street Consumer Disc Sel Sect SPDR ETF",
+          "coOccurrenceCount": 1,
+          "coOccurrencePercent": 10,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "TPR",
+          "name": "Tapestry, Inc.",
+          "coOccurrenceCount": 1,
+          "coOccurrencePercent": 10,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "TJX",
+          "name": "The TJX Companies, Inc.",
+          "coOccurrenceCount": 1,
+          "coOccurrencePercent": 10,
+          "isLikelyCompetitor": false
+        },
+        {
+          "symbol": "CMG",
+          "name": "Chipotle Mexican Grill, Inc.",
+          "coOccurrenceCount": 1,
+          "coOccurrencePercent": 10,
+          "isLikelyCompetitor": true
+        }
+      ],
       "benchmarks": {
         "peerMedianPE": 37,
         "peerMedianPEG": 1.95,
@@ -8795,7 +10521,7 @@ export const BUNDLED_DEMO = {
           "threatVector": "Specialized niche software and vertical solutions targeting high-margin segments in Consumer Discretionary."
         }
       ],
-      "timestamp": "2026-09-07T05:42:29.633Z"
+      "timestamp": "2026-09-08T04:15:31.366Z"
     },
     "rawFinancials": {
       "symbol": "TSLA",
@@ -8822,11 +10548,11 @@ export const BUNDLED_DEMO = {
           "fcf": 7552000000,
           "inventory": 12839000000,
           "dilutedEPS": 3.62,
-          "rnd": 3075000000,
           "operatingCashflow": 14724000000,
+          "rnd": 3075000000,
           "revenue": 81462000000,
-          "currentAssets": 40917000000,
           "workingCapital": 14208000000,
+          "currentAssets": 40917000000,
           "capex": 7172000000,
           "netPPE": 36635000000,
           "operatingIncome": 13832000000,
@@ -8834,8 +10560,8 @@ export const BUNDLED_DEMO = {
           "netIncome": 12583000000,
           "equity": 44704000000,
           "retainedEarnings": 12885000000,
-          "cash": 16253000000,
           "totalDebt": 5748000000,
+          "cash": 16253000000,
           "currentLiabilities": 26709000000,
           "depreciationAndAmortization": 6096200000
         },
@@ -8844,11 +10570,11 @@ export const BUNDLED_DEMO = {
           "fcf": 4357000000,
           "inventory": 13626000000,
           "dilutedEPS": 4.31,
-          "rnd": 3969000000,
           "operatingCashflow": 13256000000,
+          "rnd": 3969000000,
           "revenue": 96773000000,
-          "currentAssets": 49616000000,
           "workingCapital": 20868000000,
+          "currentAssets": 49616000000,
           "capex": 8899000000,
           "netPPE": 45124000000,
           "operatingIncome": 8891000000,
@@ -8856,8 +10582,8 @@ export const BUNDLED_DEMO = {
           "netIncome": 14999000000,
           "equity": 62634000000,
           "retainedEarnings": 27882000000,
-          "cash": 16398000000,
           "totalDebt": 9573000000,
+          "cash": 16398000000,
           "currentLiabilities": 28748000000,
           "depreciationAndAmortization": 7564150000
         },
@@ -8866,11 +10592,11 @@ export const BUNDLED_DEMO = {
           "fcf": 3581000000,
           "inventory": 12017000000,
           "dilutedEPS": 2.04,
-          "rnd": 4540000000,
           "operatingCashflow": 14923000000,
+          "rnd": 4540000000,
           "revenue": 97690000000,
-          "currentAssets": 58360000000,
           "workingCapital": 29539000000,
+          "currentAssets": 58360000000,
           "capex": 11342000000,
           "netPPE": 51506000000,
           "operatingIncome": 7760000000,
@@ -8878,8 +10604,8 @@ export const BUNDLED_DEMO = {
           "netIncome": 7130000000,
           "equity": 72913000000,
           "retainedEarnings": 35209000000,
-          "cash": 16139000000,
           "totalDebt": 13623000000,
+          "cash": 16139000000,
           "currentLiabilities": 28821000000,
           "depreciationAndAmortization": 9640700000
         },
@@ -8888,11 +10614,11 @@ export const BUNDLED_DEMO = {
           "fcf": 6220000000,
           "inventory": 12392000000,
           "dilutedEPS": 1.08,
-          "rnd": 6411000000,
           "operatingCashflow": 14747000000,
+          "rnd": 6411000000,
           "revenue": 94827000000,
-          "currentAssets": 68642000000,
           "workingCapital": 36928000000,
+          "currentAssets": 68642000000,
           "capex": 8527000000,
           "netPPE": 56180000000,
           "operatingIncome": 4849000000,
@@ -8900,8 +10626,8 @@ export const BUNDLED_DEMO = {
           "netIncome": 3794000000,
           "equity": 82137000000,
           "retainedEarnings": 39003000000,
-          "cash": 16513000000,
           "totalDebt": 14719000000,
+          "cash": 16513000000,
           "currentLiabilities": 31714000000,
           "depreciationAndAmortization": 7247950000
         }
@@ -8912,11 +10638,11 @@ export const BUNDLED_DEMO = {
         "fcf": 6220000000,
         "inventory": 12392000000,
         "dilutedEPS": 1.08,
-        "rnd": 6411000000,
         "operatingCashflow": 14747000000,
+        "rnd": 6411000000,
         "revenue": 94827000000,
-        "currentAssets": 68642000000,
         "workingCapital": 36928000000,
+        "currentAssets": 68642000000,
         "capex": 8527000000,
         "netPPE": 56180000000,
         "operatingIncome": 4849000000,
@@ -8924,8 +10650,8 @@ export const BUNDLED_DEMO = {
         "netIncome": 3794000000,
         "equity": 82137000000,
         "retainedEarnings": 39003000000,
-        "cash": 16513000000,
         "totalDebt": 14719000000,
+        "cash": 16513000000,
         "currentLiabilities": 31714000000,
         "depreciationAndAmortization": 7247950000
       },
@@ -8935,6 +10661,403 @@ export const BUNDLED_DEMO = {
       "isLive": true,
       "source": "YahooFinance"
     },
+    "signals": {
+      "summary": {
+        "totalChecks": 14,
+        "passed": 10,
+        "failed": 4,
+        "warnings": 0,
+        "riskRating": "Moderate Risk",
+        "passScorePercent": 71.4
+      },
+      "riskChecks": [
+        {
+          "id": "insider_selling_3m",
+          "category": "Risk Checks",
+          "question": "Has there been substantial insider selling in the past 3 months?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "No substantial insider selling detected in the past 3 months",
+          "details": {
+            "flag": "CLEAN_INSIDER_HOLDINGS",
+            "filingsCount": 5,
+            "timeframe": "90 days"
+          },
+          "timestamp": 1788840931367
+        },
+        {
+          "id": "financial_position",
+          "category": "Risk Checks",
+          "question": "Are they in a good financial position?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Debt level is low and not considered a risk",
+          "details": {
+            "netDebt": 14719000000,
+            "isNetCashPositive": false,
+            "debtToEquity": 0.5,
+            "cashAndEquivalents": 0,
+            "totalDebt": 14719000000
+          },
+          "timestamp": 1788840931367
+        },
+        {
+          "id": "meaningful_market_cap",
+          "category": "Risk Checks",
+          "question": "Do they have meaningful market capitalization?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Market cap is meaningful ($1.40T)",
+          "details": {
+            "marketCap": 1398455795712,
+            "threshold": 2000000000,
+            "formatted": "$1.40T"
+          },
+          "timestamp": 1788840931367
+        },
+        {
+          "id": "negative_shareholders_equity",
+          "category": "Risk Checks",
+          "question": "Do they have negative shareholders equity?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "TSLA has negative shareholders equity ($0.00).",
+          "details": {
+            "shareholdersEquity": 0,
+            "formatted": "$0.00"
+          },
+          "timestamp": 1788840931367
+        },
+        {
+          "id": "concerning_recent_events",
+          "category": "Risk Checks",
+          "question": "Are there any concerning recent events?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "No concerning events detected",
+          "details": {
+            "eventsDetectedCount": 0,
+            "newsSentimentRatio": 100
+          },
+          "timestamp": 1788840931367
+        },
+        {
+          "id": "liquid_and_stable_share_price",
+          "category": "Risk Checks",
+          "question": "Is their share price liquid and stable?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "Share price exhibits elevated volatility compared to the US market (Beta: 1.85)",
+          "details": {
+            "beta": 1.85,
+            "liquidityStatus": "High Volatility"
+          },
+          "timestamp": 1788840931367
+        },
+        {
+          "id": "profit_margins_improved",
+          "category": "Risk Checks",
+          "question": "Have profit margins improved over the past year?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "Profit margins contracted from 7.3% to 4% over the past year",
+          "details": {
+            "latestMarginPercent": 4,
+            "priorMarginPercent": 7.3
+          },
+          "timestamp": 1788840931367
+        },
+        {
+          "id": "sufficient_financial_data",
+          "category": "Risk Checks",
+          "question": "Do they have sufficient financial data available?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "They have sufficient analyst coverage",
+          "details": {
+            "auditedYearsCount": 4,
+            "coverageStatus": "Sufficient"
+          },
+          "timestamp": 1788840931367
+        },
+        {
+          "id": "meaningful_revenue",
+          "category": "Risk Checks",
+          "question": "Do they have meaningful levels of revenue?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Revenue is meaningful ($94.83B)",
+          "details": {
+            "revenue": 94827000000,
+            "threshold": 100000000,
+            "formatted": "$94.83B"
+          },
+          "timestamp": 1788840931367
+        },
+        {
+          "id": "shareholders_diluted",
+          "category": "Risk Checks",
+          "question": "Have shareholders been diluted over the past year?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Shareholders have not been meaningfully diluted in the past year or recently listed",
+          "details": {
+            "sharesOutstanding": 3949547394,
+            "dilutionRatePercent": 0
+          },
+          "timestamp": 1788840931367
+        },
+        {
+          "id": "forecast_profitability",
+          "category": "Risk Checks",
+          "question": "Are they forecast to achieve profitability?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "The company is currently profitable",
+          "details": {
+            "netIncome": 3794000000,
+            "isCurrentlyProfitable": true,
+            "formatted": "$3.79B"
+          },
+          "timestamp": 1788840931367
+        },
+        {
+          "id": "high_quality_earnings",
+          "category": "Risk Checks",
+          "question": "Do they have high quality earnings?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "Earnings quality is low; operating cash flow lags reported net income",
+          "details": {
+            "operatingCashflow": 0,
+            "netIncome": 3794000000,
+            "cashConversionRatio": 0
+          },
+          "timestamp": 1788840931367
+        },
+        {
+          "id": "revenue_earnings_growth_forecast",
+          "category": "Risk Checks",
+          "question": "Are revenue and earnings forecast to grow?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Earnings are forecast to grow by an average of 14% per year for the next 3 years",
+          "details": {
+            "forecastAnnualGrowthRatePercent": 14,
+            "horizonYears": 3
+          },
+          "timestamp": 1788840931367
+        },
+        {
+          "id": "dividend_sustainability",
+          "category": "Risk Checks",
+          "question": "Is their dividend sustainable?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Dividend is too low to be a concern",
+          "details": {
+            "dividendYieldPercent": 1,
+            "payoutRatio": 0.15,
+            "assessment": "Low Yield / Non-Material Drag"
+          },
+          "timestamp": 1788840931367
+        }
+      ],
+      "customSignals": {}
+    },
+    "riskChecks": [
+      {
+        "id": "insider_selling_3m",
+        "category": "Risk Checks",
+        "question": "Has there been substantial insider selling in the past 3 months?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "No substantial insider selling detected in the past 3 months",
+        "details": {
+          "flag": "CLEAN_INSIDER_HOLDINGS",
+          "filingsCount": 5,
+          "timeframe": "90 days"
+        },
+        "timestamp": 1788840931367
+      },
+      {
+        "id": "financial_position",
+        "category": "Risk Checks",
+        "question": "Are they in a good financial position?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Debt level is low and not considered a risk",
+        "details": {
+          "netDebt": 14719000000,
+          "isNetCashPositive": false,
+          "debtToEquity": 0.5,
+          "cashAndEquivalents": 0,
+          "totalDebt": 14719000000
+        },
+        "timestamp": 1788840931367
+      },
+      {
+        "id": "meaningful_market_cap",
+        "category": "Risk Checks",
+        "question": "Do they have meaningful market capitalization?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Market cap is meaningful ($1.40T)",
+        "details": {
+          "marketCap": 1398455795712,
+          "threshold": 2000000000,
+          "formatted": "$1.40T"
+        },
+        "timestamp": 1788840931367
+      },
+      {
+        "id": "negative_shareholders_equity",
+        "category": "Risk Checks",
+        "question": "Do they have negative shareholders equity?",
+        "status": "FAIL",
+        "verdict": "Fail",
+        "summary": "TSLA has negative shareholders equity ($0.00).",
+        "details": {
+          "shareholdersEquity": 0,
+          "formatted": "$0.00"
+        },
+        "timestamp": 1788840931367
+      },
+      {
+        "id": "concerning_recent_events",
+        "category": "Risk Checks",
+        "question": "Are there any concerning recent events?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "No concerning events detected",
+        "details": {
+          "eventsDetectedCount": 0,
+          "newsSentimentRatio": 100
+        },
+        "timestamp": 1788840931367
+      },
+      {
+        "id": "liquid_and_stable_share_price",
+        "category": "Risk Checks",
+        "question": "Is their share price liquid and stable?",
+        "status": "FAIL",
+        "verdict": "Fail",
+        "summary": "Share price exhibits elevated volatility compared to the US market (Beta: 1.85)",
+        "details": {
+          "beta": 1.85,
+          "liquidityStatus": "High Volatility"
+        },
+        "timestamp": 1788840931367
+      },
+      {
+        "id": "profit_margins_improved",
+        "category": "Risk Checks",
+        "question": "Have profit margins improved over the past year?",
+        "status": "FAIL",
+        "verdict": "Fail",
+        "summary": "Profit margins contracted from 7.3% to 4% over the past year",
+        "details": {
+          "latestMarginPercent": 4,
+          "priorMarginPercent": 7.3
+        },
+        "timestamp": 1788840931367
+      },
+      {
+        "id": "sufficient_financial_data",
+        "category": "Risk Checks",
+        "question": "Do they have sufficient financial data available?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "They have sufficient analyst coverage",
+        "details": {
+          "auditedYearsCount": 4,
+          "coverageStatus": "Sufficient"
+        },
+        "timestamp": 1788840931367
+      },
+      {
+        "id": "meaningful_revenue",
+        "category": "Risk Checks",
+        "question": "Do they have meaningful levels of revenue?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Revenue is meaningful ($94.83B)",
+        "details": {
+          "revenue": 94827000000,
+          "threshold": 100000000,
+          "formatted": "$94.83B"
+        },
+        "timestamp": 1788840931367
+      },
+      {
+        "id": "shareholders_diluted",
+        "category": "Risk Checks",
+        "question": "Have shareholders been diluted over the past year?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Shareholders have not been meaningfully diluted in the past year or recently listed",
+        "details": {
+          "sharesOutstanding": 3949547394,
+          "dilutionRatePercent": 0
+        },
+        "timestamp": 1788840931367
+      },
+      {
+        "id": "forecast_profitability",
+        "category": "Risk Checks",
+        "question": "Are they forecast to achieve profitability?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "The company is currently profitable",
+        "details": {
+          "netIncome": 3794000000,
+          "isCurrentlyProfitable": true,
+          "formatted": "$3.79B"
+        },
+        "timestamp": 1788840931367
+      },
+      {
+        "id": "high_quality_earnings",
+        "category": "Risk Checks",
+        "question": "Do they have high quality earnings?",
+        "status": "FAIL",
+        "verdict": "Fail",
+        "summary": "Earnings quality is low; operating cash flow lags reported net income",
+        "details": {
+          "operatingCashflow": 0,
+          "netIncome": 3794000000,
+          "cashConversionRatio": 0
+        },
+        "timestamp": 1788840931367
+      },
+      {
+        "id": "revenue_earnings_growth_forecast",
+        "category": "Risk Checks",
+        "question": "Are revenue and earnings forecast to grow?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Earnings are forecast to grow by an average of 14% per year for the next 3 years",
+        "details": {
+          "forecastAnnualGrowthRatePercent": 14,
+          "horizonYears": 3
+        },
+        "timestamp": 1788840931367
+      },
+      {
+        "id": "dividend_sustainability",
+        "category": "Risk Checks",
+        "question": "Is their dividend sustainable?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Dividend is too low to be a concern",
+        "details": {
+          "dividendYieldPercent": 1,
+          "payoutRatio": 0.15,
+          "assessment": "Low Yield / Non-Material Drag"
+        },
+        "timestamp": 1788840931367
+      }
+    ],
     "aiExecutiveSynthesis": {
       "source": "Google Gemini AI (Active Synthesis)",
       "model": "gemini-3.6-flash",
@@ -8949,7 +11072,7 @@ export const BUNDLED_DEMO = {
       "companyName": "Amazon.com, Inc.",
       "sector": "Consumer Cyclical",
       "industry": "Internet Retail",
-      "analysisDate": "2026-09-07",
+      "analysisDate": "2026-09-08",
       "currentPrice": 258.51,
       "marketCap": 2788369891328,
       "sharesOutstanding": 10786313572,
@@ -8970,6 +11093,55 @@ export const BUNDLED_DEMO = {
       "yieldCurveRegime": "Normal Upward Sloping",
       "unemploymentRatePercent": 4.1,
       "nominalGDPLevelBillions": 32486.066,
+      "regionalManufacturingSurveys": {
+        "asOfDate": "2026-08-01",
+        "compositeDiffusionIndex": 15.3,
+        "regionalRegime": "Robust Regional Expansion",
+        "expandingDistrictsCount": 4,
+        "contractingDistrictsCount": 1,
+        "districts": [
+          {
+            "district": "New York (Empire State)",
+            "seriesId": "GACDISA066MSFRBNY",
+            "name": "Empire State Manufacturing General Business Conditions",
+            "value": 20.6,
+            "date": "2026-08-01",
+            "status": "Expansion"
+          },
+          {
+            "district": "Philadelphia",
+            "seriesId": "GACDFSA066MSFRBPHI",
+            "name": "Philly Fed Manufacturing Business Outlook General Activity",
+            "value": 47.4,
+            "date": "2026-08-01",
+            "status": "Expansion"
+          },
+          {
+            "district": "Dallas (Texas)",
+            "seriesId": "BACTSAMFRBDAL",
+            "name": "Texas Manufacturing Outlook General Business Activity",
+            "value": 11.6,
+            "date": "2026-08-01",
+            "status": "Expansion"
+          },
+          {
+            "district": "Richmond",
+            "seriesId": "RMFGSL",
+            "name": "Richmond Fed Manufacturing Activity Index",
+            "value": -4,
+            "date": "2026-09-08",
+            "status": "Contraction"
+          },
+          {
+            "district": "Kansas City",
+            "seriesId": "KCMFGOI",
+            "name": "Kansas City Fed Manufacturing Activity Index",
+            "value": 1,
+            "date": "2026-09-08",
+            "status": "Expansion"
+          }
+        ]
+      },
       "dcfValuationGuidance": {
         "recommendedRiskFreeRate": "4.77%",
         "maxTerminalGrowthRateCap": "3%",
@@ -9354,7 +11526,7 @@ export const BUNDLED_DEMO = {
               "url": "https://duckduckgo.com/?q=Microsoft%20Corporation%20market%20share"
             }
           ],
-          "timestamp": "2026-09-07T19:52:24.341Z"
+          "timestamp": "2026-09-08T04:15:32.752Z"
         },
         "investigationVectors": [
           {
@@ -9410,7 +11582,7 @@ export const BUNDLED_DEMO = {
             ]
           }
         ],
-        "timestamp": "2026-09-07T19:52:24.341Z"
+        "timestamp": "2026-09-08T04:15:32.752Z"
       },
       "foddaIntel": {
         "ticker": "AMZN",
@@ -9426,7 +11598,7 @@ export const BUNDLED_DEMO = {
         "success": true,
         "ticker": "AMZN",
         "source": "Seeking Alpha RSS (Mock Mode)",
-        "fetchedAt": "2026-09-07T19:52:24.341Z",
+        "fetchedAt": "2026-09-08T04:15:32.752Z",
         "totalArticles": 6,
         "consensusSentiment": "Bullish",
         "sentimentScore": 84,
@@ -9478,7 +11650,7 @@ export const BUNDLED_DEMO = {
             "title": "AMZN: Cloud Reacceleration And Generative AI Commercialization Drive Long-Term Upside",
             "link": "https://seekingalpha.com/symbol/AMZN",
             "guid": "mock-sa-AMZN-1",
-            "pubDate": "Mon, 07 Sep 2026 16:52:24 GMT",
+            "pubDate": "Tue, 08 Sep 2026 01:15:32 GMT",
             "timeAgo": "3h ago",
             "author": "Compound Capital Research",
             "category": "Analyst Research",
@@ -9513,7 +11685,7 @@ export const BUNDLED_DEMO = {
             "title": "AMZN Free Cash Flow Inflection: Capital Expenditures Are Generating 30%+ Marginal ROIC",
             "link": "https://seekingalpha.com/symbol/AMZN",
             "guid": "mock-sa-AMZN-2",
-            "pubDate": "Mon, 07 Sep 2026 12:52:24 GMT",
+            "pubDate": "Mon, 07 Sep 2026 21:15:32 GMT",
             "timeAgo": "7h ago",
             "author": "Institutional Alpha Desk",
             "category": "Analyst Research",
@@ -9543,7 +11715,7 @@ export const BUNDLED_DEMO = {
             "title": "Microsoft Corporation Reports Double-Digit Cloud Growth, Raising Full-Year Operating Margin Guidance",
             "link": "https://seekingalpha.com/symbol/AMZN",
             "guid": "mock-sa-AMZN-3",
-            "pubDate": "Mon, 07 Sep 2026 05:52:24 GMT",
+            "pubDate": "Mon, 07 Sep 2026 14:15:32 GMT",
             "timeAgo": "14h ago",
             "author": "Seeking Alpha News Wire",
             "category": "Earnings & Filings",
@@ -9563,7 +11735,7 @@ export const BUNDLED_DEMO = {
             "title": "Evaluating AMZN Under Damodaran DCF: Margin Of Safety And Terminal Growth Sensitivity",
             "link": "https://seekingalpha.com/symbol/AMZN",
             "guid": "mock-sa-AMZN-4",
-            "pubDate": "Sun, 06 Sep 2026 21:52:24 GMT",
+            "pubDate": "Mon, 07 Sep 2026 06:15:32 GMT",
             "timeAgo": "22h ago",
             "author": "Value Compounder Group",
             "category": "Analyst Research",
@@ -9588,7 +11760,7 @@ export const BUNDLED_DEMO = {
             "title": "AMZN Form 4 Insider Filing: Executive Retains Long-Term Equity Grant In Compliance With Rule 10b5-1",
             "link": "https://seekingalpha.com/symbol/AMZN",
             "guid": "mock-sa-AMZN-5",
-            "pubDate": "Sun, 06 Sep 2026 13:52:24 GMT",
+            "pubDate": "Sun, 06 Sep 2026 22:15:32 GMT",
             "timeAgo": "1d ago",
             "author": "SEC Edgar Watch",
             "category": "Insider Form 4",
@@ -9608,7 +11780,7 @@ export const BUNDLED_DEMO = {
             "title": "AMZN Versus Competitors: Market Share Shift And Enterprise Switching Costs",
             "link": "https://seekingalpha.com/symbol/AMZN",
             "guid": "mock-sa-AMZN-6",
-            "pubDate": "Sat, 05 Sep 2026 19:52:24 GMT",
+            "pubDate": "Sun, 06 Sep 2026 04:15:32 GMT",
             "timeAgo": "2d ago",
             "author": "Tech Moat Analytics",
             "category": "Breaking News",
@@ -10776,6 +12948,78 @@ export const BUNDLED_DEMO = {
           "moatRating": "Narrow Moat"
         }
       ],
+      "seekingAlphaPeers": [
+        {
+          "symbol": "GOOG",
+          "name": "Alphabet Inc.",
+          "coOccurrenceCount": 3,
+          "coOccurrencePercent": 30,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "MSFT",
+          "name": "Microsoft Corporation",
+          "coOccurrenceCount": 3,
+          "coOccurrencePercent": 30,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "GOOGL",
+          "name": "Alphabet Inc.",
+          "coOccurrenceCount": 3,
+          "coOccurrencePercent": 30,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "DLR",
+          "name": "Digital Realty Trust, Inc.",
+          "coOccurrenceCount": 3,
+          "coOccurrencePercent": 30,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "META",
+          "name": "Meta Platforms, Inc.",
+          "coOccurrenceCount": 2,
+          "coOccurrencePercent": 20,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "ORCL",
+          "name": "Oracle Corporation",
+          "coOccurrenceCount": 2,
+          "coOccurrencePercent": 20,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "AMD",
+          "name": "Advanced Micro Devices, Inc.",
+          "coOccurrenceCount": 2,
+          "coOccurrencePercent": 20,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "NVDA",
+          "name": "NVIDIA Corporation",
+          "coOccurrenceCount": 2,
+          "coOccurrencePercent": 20,
+          "isLikelyCompetitor": true
+        },
+        {
+          "symbol": "EQIX",
+          "name": "Equinix, Inc.",
+          "coOccurrenceCount": 2,
+          "coOccurrencePercent": 20,
+          "isLikelyCompetitor": false
+        },
+        {
+          "symbol": "NBIS",
+          "name": "Nebius Group N.V.",
+          "coOccurrenceCount": 2,
+          "coOccurrencePercent": 20,
+          "isLikelyCompetitor": true
+        }
+      ],
       "benchmarks": {
         "peerMedianPE": 32,
         "peerMedianPEG": 2.1,
@@ -10824,7 +13068,7 @@ export const BUNDLED_DEMO = {
           "threatVector": "Specialized niche software and vertical solutions targeting high-margin segments in Consumer Discretionary."
         }
       ],
-      "timestamp": "2026-09-07T05:42:45.720Z"
+      "timestamp": "2026-09-08T04:15:32.750Z"
     },
     "rawFinancials": {
       "symbol": "AMZN",
@@ -10849,16 +13093,16 @@ export const BUNDLED_DEMO = {
         "2022": {
           "fiscalDate": "2022-12-31",
           "netIncome": -2722000000,
-          "netPPE": 252838000000,
           "operatingIncome": 12248000000,
+          "netPPE": 252838000000,
           "operatingCashflow": 46752000000,
           "inventory": 34405000000,
           "grossProfit": 225152000000,
           "equity": 146043000000,
           "currentLiabilities": 155393000000,
           "cash": 53888000000,
-          "capex": 63645000000,
           "totalDebt": 140118000000,
+          "capex": 63645000000,
           "retainedEarnings": 83193000000,
           "fcf": -16893000000,
           "dilutedEPS": -0.27,
@@ -10871,16 +13115,16 @@ export const BUNDLED_DEMO = {
         "2023": {
           "fiscalDate": "2023-12-31",
           "netIncome": 30425000000,
-          "netPPE": 276690000000,
           "operatingIncome": 36852000000,
+          "netPPE": 276690000000,
           "operatingCashflow": 84946000000,
           "inventory": 33318000000,
           "grossProfit": 270046000000,
           "equity": 201875000000,
           "currentLiabilities": 164917000000,
           "cash": 73387000000,
-          "capex": 52729000000,
           "totalDebt": 135611000000,
+          "capex": 52729000000,
           "retainedEarnings": 113618000000,
           "fcf": 32217000000,
           "dilutedEPS": 2.9,
@@ -10893,16 +13137,16 @@ export const BUNDLED_DEMO = {
         "2024": {
           "fiscalDate": "2024-12-31",
           "netIncome": 59248000000,
-          "netPPE": 328806000000,
           "operatingIncome": 68593000000,
+          "netPPE": 328806000000,
           "operatingCashflow": 115877000000,
           "inventory": 34214000000,
           "grossProfit": 311671000000,
           "equity": 285970000000,
           "currentLiabilities": 179431000000,
           "cash": 78779000000,
-          "capex": 82999000000,
           "totalDebt": 130900000000,
+          "capex": 82999000000,
           "retainedEarnings": 172866000000,
           "fcf": 32878000000,
           "dilutedEPS": 5.53,
@@ -10915,16 +13159,16 @@ export const BUNDLED_DEMO = {
         "2025": {
           "fiscalDate": "2025-12-31",
           "netIncome": 77670000000,
-          "netPPE": 443079000000,
           "operatingIncome": 79975000000,
+          "netPPE": 443079000000,
           "operatingCashflow": 139514000000,
           "inventory": 38325000000,
           "grossProfit": 360510000000,
           "equity": 411065000000,
           "currentLiabilities": 218005000000,
           "cash": 86810000000,
-          "capex": 131819000000,
           "totalDebt": 152987000000,
+          "capex": 131819000000,
           "retainedEarnings": 250536000000,
           "fcf": 7695000000,
           "dilutedEPS": 7.17,
@@ -10939,16 +13183,16 @@ export const BUNDLED_DEMO = {
       "latest": {
         "fiscalDate": "2025-12-31",
         "netIncome": 77670000000,
-        "netPPE": 443079000000,
         "operatingIncome": 79975000000,
+        "netPPE": 443079000000,
         "operatingCashflow": 139514000000,
         "inventory": 38325000000,
         "grossProfit": 360510000000,
         "equity": 411065000000,
         "currentLiabilities": 218005000000,
         "cash": 86810000000,
-        "capex": 131819000000,
         "totalDebt": 152987000000,
+        "capex": 131819000000,
         "retainedEarnings": 250536000000,
         "fcf": 7695000000,
         "dilutedEPS": 7.17,
@@ -10964,6 +13208,405 @@ export const BUNDLED_DEMO = {
       "isLive": true,
       "source": "YahooFinance"
     },
+    "signals": {
+      "summary": {
+        "totalChecks": 14,
+        "passed": 12,
+        "failed": 2,
+        "warnings": 0,
+        "riskRating": "Low Risk",
+        "passScorePercent": 85.7
+      },
+      "riskChecks": [
+        {
+          "id": "insider_selling_3m",
+          "category": "Risk Checks",
+          "question": "Has there been substantial insider selling in the past 3 months?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "No substantial insider selling detected in the past 3 months",
+          "details": {
+            "flag": "CLEAN_INSIDER_HOLDINGS",
+            "filingsCount": 5,
+            "timeframe": "90 days"
+          },
+          "timestamp": 1788840932751
+        },
+        {
+          "id": "financial_position",
+          "category": "Risk Checks",
+          "question": "Are they in a good financial position?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Debt level is low and not considered a risk",
+          "details": {
+            "netDebt": 152987000000,
+            "isNetCashPositive": false,
+            "debtToEquity": 0.5,
+            "cashAndEquivalents": 0,
+            "totalDebt": 152987000000
+          },
+          "timestamp": 1788840932751
+        },
+        {
+          "id": "meaningful_market_cap",
+          "category": "Risk Checks",
+          "question": "Do they have meaningful market capitalization?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Market cap is meaningful ($2.79T)",
+          "details": {
+            "marketCap": 2788369891328,
+            "threshold": 2000000000,
+            "formatted": "$2.79T"
+          },
+          "timestamp": 1788840932751
+        },
+        {
+          "id": "negative_shareholders_equity",
+          "category": "Risk Checks",
+          "question": "Do they have negative shareholders equity?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "AMZN has negative shareholders equity ($0.00).",
+          "details": {
+            "shareholdersEquity": 0,
+            "formatted": "$0.00"
+          },
+          "timestamp": 1788840932751
+        },
+        {
+          "id": "concerning_recent_events",
+          "category": "Risk Checks",
+          "question": "Are there any concerning recent events?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "No concerning events detected",
+          "details": {
+            "eventsDetectedCount": 0,
+            "newsSentimentRatio": 100
+          },
+          "timestamp": 1788840932751
+        },
+        {
+          "id": "liquid_and_stable_share_price",
+          "category": "Risk Checks",
+          "question": "Is their share price liquid and stable?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Share price has been stable over the past 3 months compared to the US market",
+          "details": {
+            "beta": 1.44,
+            "liquidityStatus": "High Liquidity"
+          },
+          "timestamp": 1788840932751
+        },
+        {
+          "id": "profit_margins_improved",
+          "category": "Risk Checks",
+          "question": "Have profit margins improved over the past year?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Profit margins improved or AMZN became profitable",
+          "details": {
+            "latestMarginPercent": 10.83,
+            "priorMarginPercent": 9.29,
+            "becameProfitable": false
+          },
+          "timestamp": 1788840932751
+        },
+        {
+          "id": "sufficient_financial_data",
+          "category": "Risk Checks",
+          "question": "Do they have sufficient financial data available?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "They have sufficient analyst coverage",
+          "details": {
+            "auditedYearsCount": 4,
+            "coverageStatus": "Sufficient"
+          },
+          "timestamp": 1788840932751
+        },
+        {
+          "id": "meaningful_revenue",
+          "category": "Risk Checks",
+          "question": "Do they have meaningful levels of revenue?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Revenue is meaningful ($716.92B)",
+          "details": {
+            "revenue": 716924000000,
+            "threshold": 100000000,
+            "formatted": "$716.92B"
+          },
+          "timestamp": 1788840932751
+        },
+        {
+          "id": "shareholders_diluted",
+          "category": "Risk Checks",
+          "question": "Have shareholders been diluted over the past year?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Shareholders have not been meaningfully diluted in the past year or recently listed",
+          "details": {
+            "sharesOutstanding": 10786313572,
+            "dilutionRatePercent": 0
+          },
+          "timestamp": 1788840932751
+        },
+        {
+          "id": "forecast_profitability",
+          "category": "Risk Checks",
+          "question": "Are they forecast to achieve profitability?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "The company is currently profitable",
+          "details": {
+            "netIncome": 77670000000,
+            "isCurrentlyProfitable": true,
+            "formatted": "$77.67B"
+          },
+          "timestamp": 1788840932751
+        },
+        {
+          "id": "high_quality_earnings",
+          "category": "Risk Checks",
+          "question": "Do they have high quality earnings?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "Earnings quality is low; operating cash flow lags reported net income",
+          "details": {
+            "operatingCashflow": 0,
+            "netIncome": 77670000000,
+            "cashConversionRatio": 0
+          },
+          "timestamp": 1788840932751
+        },
+        {
+          "id": "revenue_earnings_growth_forecast",
+          "category": "Risk Checks",
+          "question": "Are revenue and earnings forecast to grow?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Earnings are forecast to grow by an average of 14% per year for the next 3 years",
+          "details": {
+            "forecastAnnualGrowthRatePercent": 14,
+            "horizonYears": 3
+          },
+          "timestamp": 1788840932751
+        },
+        {
+          "id": "dividend_sustainability",
+          "category": "Risk Checks",
+          "question": "Is their dividend sustainable?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Dividend is too low to be a concern",
+          "details": {
+            "dividendYieldPercent": 1,
+            "payoutRatio": 0.15,
+            "assessment": "Low Yield / Non-Material Drag"
+          },
+          "timestamp": 1788840932751
+        }
+      ],
+      "customSignals": {}
+    },
+    "riskChecks": [
+      {
+        "id": "insider_selling_3m",
+        "category": "Risk Checks",
+        "question": "Has there been substantial insider selling in the past 3 months?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "No substantial insider selling detected in the past 3 months",
+        "details": {
+          "flag": "CLEAN_INSIDER_HOLDINGS",
+          "filingsCount": 5,
+          "timeframe": "90 days"
+        },
+        "timestamp": 1788840932751
+      },
+      {
+        "id": "financial_position",
+        "category": "Risk Checks",
+        "question": "Are they in a good financial position?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Debt level is low and not considered a risk",
+        "details": {
+          "netDebt": 152987000000,
+          "isNetCashPositive": false,
+          "debtToEquity": 0.5,
+          "cashAndEquivalents": 0,
+          "totalDebt": 152987000000
+        },
+        "timestamp": 1788840932751
+      },
+      {
+        "id": "meaningful_market_cap",
+        "category": "Risk Checks",
+        "question": "Do they have meaningful market capitalization?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Market cap is meaningful ($2.79T)",
+        "details": {
+          "marketCap": 2788369891328,
+          "threshold": 2000000000,
+          "formatted": "$2.79T"
+        },
+        "timestamp": 1788840932751
+      },
+      {
+        "id": "negative_shareholders_equity",
+        "category": "Risk Checks",
+        "question": "Do they have negative shareholders equity?",
+        "status": "FAIL",
+        "verdict": "Fail",
+        "summary": "AMZN has negative shareholders equity ($0.00).",
+        "details": {
+          "shareholdersEquity": 0,
+          "formatted": "$0.00"
+        },
+        "timestamp": 1788840932751
+      },
+      {
+        "id": "concerning_recent_events",
+        "category": "Risk Checks",
+        "question": "Are there any concerning recent events?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "No concerning events detected",
+        "details": {
+          "eventsDetectedCount": 0,
+          "newsSentimentRatio": 100
+        },
+        "timestamp": 1788840932751
+      },
+      {
+        "id": "liquid_and_stable_share_price",
+        "category": "Risk Checks",
+        "question": "Is their share price liquid and stable?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Share price has been stable over the past 3 months compared to the US market",
+        "details": {
+          "beta": 1.44,
+          "liquidityStatus": "High Liquidity"
+        },
+        "timestamp": 1788840932751
+      },
+      {
+        "id": "profit_margins_improved",
+        "category": "Risk Checks",
+        "question": "Have profit margins improved over the past year?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Profit margins improved or AMZN became profitable",
+        "details": {
+          "latestMarginPercent": 10.83,
+          "priorMarginPercent": 9.29,
+          "becameProfitable": false
+        },
+        "timestamp": 1788840932751
+      },
+      {
+        "id": "sufficient_financial_data",
+        "category": "Risk Checks",
+        "question": "Do they have sufficient financial data available?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "They have sufficient analyst coverage",
+        "details": {
+          "auditedYearsCount": 4,
+          "coverageStatus": "Sufficient"
+        },
+        "timestamp": 1788840932751
+      },
+      {
+        "id": "meaningful_revenue",
+        "category": "Risk Checks",
+        "question": "Do they have meaningful levels of revenue?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Revenue is meaningful ($716.92B)",
+        "details": {
+          "revenue": 716924000000,
+          "threshold": 100000000,
+          "formatted": "$716.92B"
+        },
+        "timestamp": 1788840932751
+      },
+      {
+        "id": "shareholders_diluted",
+        "category": "Risk Checks",
+        "question": "Have shareholders been diluted over the past year?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Shareholders have not been meaningfully diluted in the past year or recently listed",
+        "details": {
+          "sharesOutstanding": 10786313572,
+          "dilutionRatePercent": 0
+        },
+        "timestamp": 1788840932751
+      },
+      {
+        "id": "forecast_profitability",
+        "category": "Risk Checks",
+        "question": "Are they forecast to achieve profitability?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "The company is currently profitable",
+        "details": {
+          "netIncome": 77670000000,
+          "isCurrentlyProfitable": true,
+          "formatted": "$77.67B"
+        },
+        "timestamp": 1788840932751
+      },
+      {
+        "id": "high_quality_earnings",
+        "category": "Risk Checks",
+        "question": "Do they have high quality earnings?",
+        "status": "FAIL",
+        "verdict": "Fail",
+        "summary": "Earnings quality is low; operating cash flow lags reported net income",
+        "details": {
+          "operatingCashflow": 0,
+          "netIncome": 77670000000,
+          "cashConversionRatio": 0
+        },
+        "timestamp": 1788840932751
+      },
+      {
+        "id": "revenue_earnings_growth_forecast",
+        "category": "Risk Checks",
+        "question": "Are revenue and earnings forecast to grow?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Earnings are forecast to grow by an average of 14% per year for the next 3 years",
+        "details": {
+          "forecastAnnualGrowthRatePercent": 14,
+          "horizonYears": 3
+        },
+        "timestamp": 1788840932751
+      },
+      {
+        "id": "dividend_sustainability",
+        "category": "Risk Checks",
+        "question": "Is their dividend sustainable?",
+        "status": "PASS",
+        "verdict": "Pass",
+        "summary": "Dividend is too low to be a concern",
+        "details": {
+          "dividendYieldPercent": 1,
+          "payoutRatio": 0.15,
+          "assessment": "Low Yield / Non-Material Drag"
+        },
+        "timestamp": 1788840932751
+      }
+    ],
     "aiExecutiveSynthesis": {
       "source": "Google Gemini AI (Active Synthesis)",
       "model": "gemini-3.6-flash",
@@ -10974,11 +13617,11 @@ export const BUNDLED_DEMO = {
   }
 },
   memos: {
-  "MSFT": "# Investment Decision Memorandum: MSFT — Microsoft Corporation\n* **Date:** 2026-09-07\n* **Current Market Price:** $420.50\n* **Market Capitalization:** $3.12T\n* **Circle of Competence & Lynch Category:** **Stalwart** (Rev CAGR: 14.42%)\n\n---\n\n## Executive Investment Synthesis (Google Gemini AI)\n**1. Economic Moat & Capital Allocation Quality (Buffett & Fisher)**\nMicrosoft exhibits a wide, self-reinforcing economic moat characterized by extraordinary capital allocation efficiency and massive owner earning power.\n\n---\n\n## 1. Peter Lynch Empirical Reconnaissance\n* **Business Classification:** Stalwart\n* **PEG Ratio:** 2.1 — *Overvalued*\n* **Net Cash Per Share:** 4.85\n* **Inventory vs. Sales Growth Spread:** -23.67%\n  * ✅ *No inventory-sales divergence red flags detected.*\n* **The 2-Minute Story:**\n  > *[Draft here: Briefly describe product stickiness, customer demand, and growth runway]*\n\n---\n\n## 2. Philip Fisher Scuttlebutt & Regulatory Audit\n* **Official SEC EDGAR Filings:**\n  * **Latest Form 10-K:** [Annual Report on SEC EDGAR](https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm)\n  * **Latest Proxy DEF 14A:** [Executive Compensation Proxy on SEC EDGAR](https://www.sec.gov/Archives/edgar/data/789019/000119312525245150/d908201ddef14a.htm)\n* **Executive Compensation Audit Tenet:**\n  * Ensure management incentives are tethered to economic ROIC rather than top-line revenue vanity targets.\n* **Perplexity AI 360° Scuttlebutt Intelligence:**\nMicrosoft screens **Strong** overall on this scuttlebutt pass, with the main weak spot being employee sentiment rather than demand or moat.\n\n- **Employee morale / engineering culture:** Public employee sentiment looks mixed-to-negative. Blind’s 2026 workplace data for Microsoft shows **74.9% negative morale sentiment**, **83.6% negative compensation sentiment**, **28.7% confidence in CEO**, and only **52.6% confidence in company direction**[11].  \n- **Workload / burnout / trust:** The same dataset and broader Glassdoor-style commentary point to elevated frustration around **workload, burnout, and leadership trust**, with recurring themes of “disconnect,” “misaligned,” “miscommunication,” and “distrust” in company reviews across tech in general[11][14].  \n- **Customer satisfaction / churn:** No hard evidence here suggests broad enterprise or consumer flight from Microsoft; the available signals lean the other way. Microsoft’s ecosystem remains deeply embedded, and recent customer-success-market commentary implies that enterprises still need heavy tooling to manage retention and value realization, which is consistent with sticky platform demand rather than obvious churn pressure[5][10][12].  \n- **Supply chain viability / bottlenecks:** Hardware and datacenter supply chains are being de-risked, not broken. Reports say Microsoft is pushing suppliers to move Surface and parts of server/Xbox production **out of China** and aims for roughly **80% of relevant parts outside China by 2026**, reflecting geopolitical exposure and execution risk rather than shortage-driven distress[2][3][4].  \n- **Key bottlenecks:** The practical bottleneck is **supplier relocation and qualification**, not lack of end demand; moving assembly is easier than moving the component stack, so near-term cost inflation and transition friction are real risks[1][3].  \n- **Moat evaluation:**  \n  - **Tech moat:** Very strong—Azure, Windows, Microsoft 365, GitHub, security, and AI distribution form a dense platform stack.  \n  - **Brand moat:** Strong—Microsoft remains a default enterprise standard and a trusted consumer brand.  \n  - **Switching costs:** Very strong—identity, productivity, security, developer workflows, and cloud integration make displacement expensive and disruptive.  \n- **Crowd / community sentiment:** Developer and investor mood appears **mixed but constructive**. Developer communities tend to respect Microsoft’s platform breadth while criticizing culture and platform lock-in; retail/internet sentiment is less about product weakness and more about valuation, layoffs, and AI capex intensity, consistent with the negative-leaning employee mood data[11][14].  \n- **Bottom line:** Microsoft looks **fundamentally strong, operationally strained**. The business moat and customer lock-in remain formidable, but internal morale/trust deserves monitoring as the main scuttlebutt risk[11][14].\n* **Developer & Tech Moat Reconnaissance (GitHub):**\n  * Repository: `microsoft/vscode` | Stars: **191,010** | Forks: **42,023**\n  * Developer Traction: **Tier-1 Industry Standard (Deep Tech Moat)** (Score: 175/100)\n* **Engineering Morale & Culture Sentiment (Hacker News):**\n  * Verdict: **Balanced / Informational**\n  * Top Tech Discussion: \"[Microsoft Corporation sponsors IPython](https://news.ycombinator.com/item?id=6490034)\" (150 points)\n* **Customer & Crowd Sentiment (Reddit):**\n  * Sentiment Tone: **Retail Crowd Bullish (15 Bull vs 2 Bear)** (StockTwits / Retail Crowd)\n* **Seeking Alpha Analyst Research & Insider Wire:**\n  * Consensus Analyst Sentiment: **Bullish** (6 active write-ups)\n  * Recent Headline: \"[MSFT: Cloud Reacceleration And Generative AI Commercialization Drive Long-Term Upside](https://seekingalpha.com/symbol/MSFT)\" by Compound Capital Research\n* **Supply Chain Manifests:**\n  * **ImportYeti Customs Audit Link:** [Search Shipping Bills of Lading](https://www.importyeti.com/search?q=Microsoft%20Corporation)\n* **Scuttlebutt Field Checks (5 Circles):**\n  1. **Competitors:** *Who is winning new accounts, and where is MSFT vulnerable?*\n  2. **Customers:** *Is pricing power durable? Would a 10% price hike drive churn?*\n  3. **Suppliers:** *Are billings paid promptly and purchase orders predictable?*\n  4. **Ex-Employees:** *Is internal promotion strictly meritocratic?*\n  5. **Scientists:** *What 5-to-7-year paradigm shift could obsolete MSFT's products?*\n\n\n---\n\n## 3. Warren Buffett Moat & Owner Earnings Audit\n* **Latest Owner Earnings:** **$96.57B**\n  * *(Calculated as Reported Net Income + D&A - Maintenance Capex - Working Capital change)*\n* **Average Return on Invested Capital (ROIC):** **56.95%**\n  * *Moat Status:* 🛡️ **DURABLE MOAT CONFIRMED** (ROIC > 15%)\n* **The $1 Retained Earnings Test (5-Yr):**\n  * Market Value Created per $1 Retained: **$20.6**\n  * *Result:* ✅ **PASSED** (Created >= $1.00 market value)\n* **Balance Sheet Resilience:**\n  * Total Cash: $111.00B | Total Debt: $75.00B\n  * Current Ratio: 1.45 | Debt/Equity: 0.28\n\n---\n\n## 4. Aswath Damodaran Modern Valuation & Online Portal Benchmarks\n* **R&D Capitalization Adjustment:**\n  * Amortizable R&D Asset Created: **$55.80B** (3 Years straight-line lifespan)\n  * Reported GAAP ROIC: 37.26% $\rightarrow$ **Adjusted Modern ROIC: 30.71%**\n  * *Damodaran Insight:* R&D capitalization indicates heavy reinvestment requirement, moderating reported ROIC.\n* **Operating Lease Debt (XBRL):** $21.93B\n* **Damodaran NYU Stern Valuation Benchmarks:**\n  * **Implied Equity Risk Premium (ERP):** **4.6% (NYU Stern Forward-Looking ERP)**\n  * **NYU Stern Industry Sector:** Technology (Hardware & Software)\n  * **Industry Unlevered Beta:** 1.12 (Sector Benchmark WACC: 8.75%)\n* **Company Cost of Capital (WACC Engine):**\n  * **Cost of Equity ($K_e$):** **10.06%** (CAPM using $\beta = 1.15$)\n  * **Synthetic Debt Rating:** **AAA** (Pre-Tax Cost of Debt: 5.36%)\n  * **Calculated WACC (Discount Rate Hurdle):** **9.93%**\n* **The 3 P's Reality Filter (Story to Numbers):**\n  * **Possible:** ✅ Business model adheres to commercial and regulatory boundaries.\n  * **Plausible:** 📊 Revenue growth trajectory (14.42%) is plausible within global industry market share limits.\n  * **Probable:** 🎯 High probability supported by durable economic moat and historical ROIC of 56.95%.\n* **Macroeconomic Valuation Inputs (FRED):**\n  * **Risk-Free Rate ($R_f$):** **4.77% (FRED DGS10 10-Yr Treasury)**\n  * **Terminal Growth Rate Ceiling ($g$):** $le$ **3%**\n  * **Corporate Credit Spread:** +1% (ICE BofA BBB OAS)\n  * **Yield Curve Regime:** Normal Upward Sloping\n\n---\n\n## 5. Valuation & Margin of Safety Execution\n* **Estimated Fair Value Range:** $[Fair Value Low] - $[Fair Value High]\n* **Target Margin of Safety:** 20% - 35%\n* **Invalidation Triggers (When to Sell):**\n  1. *Structural erosion of economic moat or pricing power failure.*\n  2. *Divergence between CEO compensation incentives and economic ROIC.*\n  3. *Extreme valuation bubble disconnection ($P / FV \\ge 1.60$).*\n",
-  "AAPL": "# Investment Decision Memorandum: AAPL — Apple Inc.\n* **Date:** 2026-09-07\n* **Current Market Price:** $228.00\n* **Market Capitalization:** $3.49T\n* **Circle of Competence & Lynch Category:** **Stalwart** (Rev CAGR: 9.25%)\n\n---\n\n## Executive Investment Synthesis (Google Gemini AI)\n### 1. Economic Moat & Capital Allocation Quality (Buffett & Fisher)\nApple continues to operate as an elite economic engine, generating an extraordinary **$109.52B in Buffett Owner Earnings** supported by a strong credit profile (Synthetic Rating: A). However, from a Fisherian scuttlebutt and capital allocation perspective, the firm shows clear signs of maturing growth dynamics. The **Value per $1 Retained sits at exactly $1.00**, demonstrating that management is currently preserving capital value rather than creating incremental value above cost through internal reinvestment. With limited high-return internal growth avenues relative to its massive scale, capital allocation has shifted toward returning cash rather than compounding retained earnings at high rates of return.\n\n### 2. Growth Runway & Valuation Friction (Lynch PEG vs. Damodaran Cost of Capital)\nA fundamental mismatch exists between Apple's current valuation and its intrinsic growth runway. Lynch classifies the stock as a **\"Slow Grower\"\n\n---\n\n## 1. Peter Lynch Empirical Reconnaissance\n* **Business Classification:** Stalwart\n* **PEG Ratio:** 2.3 — *Overvalued*\n* **Net Cash Per Share:** -2.71\n* **Inventory vs. Sales Growth Spread:** -10.41%\n  * ✅ *No inventory-sales divergence red flags detected.*\n* **The 2-Minute Story:**\n  > *[Draft here: Briefly describe product stickiness, customer demand, and growth runway]*\n\n---\n\n## 2. Philip Fisher Scuttlebutt & Regulatory Audit\n* **Official SEC EDGAR Filings:**\n  * **Latest Form 10-K:** [Annual Report on SEC EDGAR](https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm)\n  * **Latest Proxy DEF 14A:** [Executive Compensation Proxy on SEC EDGAR](https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm)\n* **Executive Compensation Audit Tenet:**\n  * Ensure management incentives are tethered to economic ROIC rather than top-line revenue vanity targets.\n* **Perplexity AI 360° Scuttlebutt Intelligence:**\nApple’s overall scuttlebutt profile looks **Strong**, with a few real pressure points in supply chain and culture. The brand and ecosystem remain extremely sticky, but recent field signals show meaningful execution risk around component availability and internal management quality.\n\n- **Employee morale / engineering culture:** Glassdoor still shows Apple at **4.1/5** with 43,032 reviews and repeated “Best Places to Work” recognition, while Blind shows **3.9/5** overall with management at **3.4/5**[14][12].\n- **Workload / burnout / trust:** Recent Blind comments describe Apple as “toxic,” “high pressure,” and “burn out is unavoidable,” with complaints about poor support, politics, and weak AI leadership[11][13].\n- **Customer satisfaction / churn:** Publicly available current evidence in the gathered material is limited, but Apple’s demand remains strong enough that management said it faced **supply constraints despite strong demand** for iPhones and Macs[1][5].\n- **Enterprise / consumer alternatives:** The current signal is not mass churn, but rather constrained fulfillment; Apple appears to be losing some sales timing to shortages rather than to substitution[1][5].\n- **Supply chain viability:** Apple is facing a **real memory and processor bottleneck**, with Tim Cook citing “very significant constraints” and limited flexibility, plus an industry shortage in advanced chipmaking technology[5][7].\n- **Vendor dependency / geopolitical risk:** The supply chain remains exposed to Taiwan/China concentration, with rising geopolitical tension, potential Taiwan Strait disruption, and pressure to diversify to India/Vietnam, where labor and infrastructure limits are now also becoming constraints[2][3][6].\n- **Component shortages:** Reuters and other current reports indicate shortages in processors and memory chips are directly affecting Apple’s ability to meet demand[1][4][5][8].\n- **Moat evaluation — tech moat:** Still strong, anchored by Apple silicon, integrated hardware/software control, and deep product execution, but the moat is being tested by AI-era component scarcity and competitive pressure[5][8].\n- **Moat evaluation — brand moat:** Very strong; Apple continues to command premium demand and enough loyalty that shortages create delayed purchases rather than obvious brand flight[1][5].\n- **Moat evaluation — switching costs:** High for users embedded in iPhone, Mac, iCloud, App Store, Messages, and device ecosystem workflows; the gathered evidence suggests stickiness remains intact even amid supply friction[5].\n- **Crowd / developer sentiment:** The sentiment signal is mixed-to-negative on Blind among employees, with complaints about burnout and management; no strong current developer-community evidence was gathered here, but internal culture chatter is clearly less flattering than the consumer brand story[11][13].\n- **Crowd / retail investor sentiment:** The market reaction to the latest supply-chain news appears negative, with Reuters noting a sharp share drop after Apple’s forecast disappointed due to supply issues[1][5].\n\n**Verdict: Strong**\n- Strong moat, strong demand, and strong brand.\n- Main watchouts are **supply chain fragility**, **China/Taiwan dependence**, and **internal culture/management concerns** that could matter more if AI execution falters.\n* **Developer & Tech Moat Reconnaissance (GitHub):**\n  * Repository: `apple/swift` | Stars: **70,332** | Forks: **10,812**\n  * Developer Traction: **Tier-1 Industry Standard (Deep Tech Moat)** (Score: 157.5/100)\n* **Engineering Morale & Culture Sentiment (Hacker News):**\n  * Verdict: **Balanced / Informational**\n  * Top Tech Discussion: \"[Typing \"Sell\" in Google Finance redirected to Apple Inc.](https://news.ycombinator.com/item?id=4984098)\" (109 points)\n* **Customer & Crowd Sentiment (Reddit):**\n  * Sentiment Tone: **Retail Crowd Bullish (7 Bull vs 5 Bear)** (StockTwits / Retail Crowd)\n* **Seeking Alpha Analyst Research & Insider Wire:**\n  * Consensus Analyst Sentiment: **Bullish** (6 active write-ups)\n  * Recent Headline: \"[AAPL: Cloud Reacceleration And Generative AI Commercialization Drive Long-Term Upside](https://seekingalpha.com/symbol/AAPL)\" by Compound Capital Research\n* **Supply Chain Manifests:**\n  * **ImportYeti Customs Audit Link:** [Search Shipping Bills of Lading](https://www.importyeti.com/search?q=Apple%20Inc.)\n* **Scuttlebutt Field Checks (5 Circles):**\n  1. **Competitors:** *Who is winning new accounts, and where is AAPL vulnerable?*\n  2. **Customers:** *Is pricing power durable? Would a 10% price hike drive churn?*\n  3. **Suppliers:** *Are billings paid promptly and purchase orders predictable?*\n  4. **Ex-Employees:** *Is internal promotion strictly meritocratic?*\n  5. **Scientists:** *What 5-to-7-year paradigm shift could obsolete AAPL's products?*\n\n\n---\n\n## 3. Warren Buffett Moat & Owner Earnings Audit\n* **Latest Owner Earnings:** **$88.78B**\n  * *(Calculated as Reported Net Income + D&A - Maintenance Capex - Working Capital change)*\n* **Average Return on Invested Capital (ROIC):** **75.37%**\n  * *Moat Status:* 🛡️ **DURABLE MOAT CONFIRMED** (ROIC > 15%)\n* **The $1 Retained Earnings Test (5-Yr):**\n  * Market Value Created per $1 Retained: **$1**\n  * *Result:* ✅ **PASSED** (Created >= $1.00 market value)\n* **Balance Sheet Resilience:**\n  * Total Cash: $65.18B | Total Debt: $106.63B\n  * Current Ratio: 1.05 | Debt/Equity: 1.59\n\n---\n\n## 4. Aswath Damodaran Modern Valuation & Online Portal Benchmarks\n* **R&D Capitalization Adjustment:**\n  * Amortizable R&D Asset Created: **$60.06B** (3 Years straight-line lifespan)\n  * Reported GAAP ROIC: 89.85% $\rightarrow$ **Adjusted Modern ROIC: 58.83%**\n  * *Damodaran Insight:* R&D capitalization indicates heavy reinvestment requirement, moderating reported ROIC.\n* **Operating Lease Debt (XBRL):** $12.49B\n* **Damodaran NYU Stern Valuation Benchmarks:**\n  * **Implied Equity Risk Premium (ERP):** **4.6% (NYU Stern Forward-Looking ERP)**\n  * **NYU Stern Industry Sector:** Technology (Hardware & Software)\n  * **Industry Unlevered Beta:** 1.12 (Sector Benchmark WACC: 8.75%)\n* **Company Cost of Capital (WACC Engine):**\n  * **Cost of Equity ($K_e$):** **9.74%** (CAPM using $\beta = 1.08$)\n  * **Synthetic Debt Rating:** **AAA** (Pre-Tax Cost of Debt: 5.36%)\n  * **Calculated WACC (Discount Rate Hurdle):** **9.58%**\n* **The 3 P's Reality Filter (Story to Numbers):**\n  * **Possible:** ✅ Business model adheres to commercial and regulatory boundaries.\n  * **Plausible:** 📊 Revenue growth trajectory (9.25%) is plausible within global industry market share limits.\n  * **Probable:** 🎯 High probability supported by durable economic moat and historical ROIC of 75.37%.\n* **Macroeconomic Valuation Inputs (FRED):**\n  * **Risk-Free Rate ($R_f$):** **4.77% (FRED DGS10 10-Yr Treasury)**\n  * **Terminal Growth Rate Ceiling ($g$):** $le$ **3%**\n  * **Corporate Credit Spread:** +1% (ICE BofA BBB OAS)\n  * **Yield Curve Regime:** Normal Upward Sloping\n\n---\n\n## 5. Valuation & Margin of Safety Execution\n* **Estimated Fair Value Range:** $[Fair Value Low] - $[Fair Value High]\n* **Target Margin of Safety:** 20% - 35%\n* **Invalidation Triggers (When to Sell):**\n  1. *Structural erosion of economic moat or pricing power failure.*\n  2. *Divergence between CEO compensation incentives and economic ROIC.*\n  3. *Extreme valuation bubble disconnection ($P / FV \\ge 1.60$).*\n",
-  "NVDA": "# Investment Decision Memorandum: NVDA — NVIDIA Corporation\n* **Date:** 2026-09-07\n* **Current Market Price:** $125.00\n* **Market Capitalization:** $3.06T\n* **Circle of Competence & Lynch Category:** **Fast Grower** (Rev CAGR: 65.8%)\n\n---\n\n## Executive Investment Synthesis (Google Gemini AI)\n**1. Economic Moat & Capital Allocation Quality (Buffett & Fisher)**  \nNVIDIA demonstrates an extraordinarily wide economic moat and elite capital allocation efficiency, exemplified by $45.1\n\n---\n\n## 1. Peter Lynch Empirical Reconnaissance\n* **Business Classification:** Fast Grower\n* **PEG Ratio:** 0.95 — *Attractive (PEG <= 1.0)*\n* **Net Cash Per Share:** 1.2\n* **Inventory vs. Sales Growth Spread:** -45.9%\n  * ✅ *No inventory-sales divergence red flags detected.*\n* **The 2-Minute Story:**\n  > *[Draft here: Briefly describe product stickiness, customer demand, and growth runway]*\n\n---\n\n## 2. Philip Fisher Scuttlebutt & Regulatory Audit\n* **Official SEC EDGAR Filings:**\n  * **Latest Form 10-K:** [Annual Report on SEC EDGAR](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm)\n  * **Latest Proxy DEF 14A:** [Executive Compensation Proxy on SEC EDGAR](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000036/nvda-20260512.htm)\n* **Executive Compensation Audit Tenet:**\n  * Ensure management incentives are tethered to economic ROIC rather than top-line revenue vanity targets.\n* **Perplexity AI 360° Scuttlebutt Intelligence:**\nNVIDIA’s scuttlebutt profile looks **Strong overall**, with a world-class product moat and very strong demand, but with meaningful operational stress points in supply chain concentration and mixed employee sentiment. The biggest weak spot is not customer pull; it is execution strain from scale, packaging capacity, and geopolitical exposure.\n\n- **Employee morale & engineering culture:** Public review signals remain polarized rather than uniformly negative; the recurring themes in employee feedback are heavy workload, intense pace, and pressure at the top, alongside strong compensation and mission-driven work. The available review corpus still shows complaints about burnout and management volatility, while the broader reviews page indicates a large volume of employee feedback rather than a collapse in sentiment.[12][11]\n- **Customer satisfaction & churn:** Enterprise demand remains strong enough that NVIDIA is still treated as the default standard in AI infrastructure, and the main “churn” risk appears to be strategic substitution by hyperscalers and China-linked buyers developing domestic alternatives rather than broad dissatisfaction with NVIDIA’s product. The current evidence points more to capacity constraints and export restrictions than to customers abandoning the platform because of poor performance.[2][13][14]\n- **Supply chain viability & bottlenecks:** This is the clearest scuttlebutt risk. Multiple current reports point to heavy dependence on TSMC, especially advanced packaging/CoWoS, plus HBM memory tightness; several sources also flag ongoing geopolitical risk tied to Taiwan and U.S.-China controls, with some commentary saying CoWoS capacity is effectively a hard ceiling through 2026.[2][5][9][13][14][15]\n- **Moat evaluation:**  \n  - **Tech moat:** Very strong. NVIDIA still appears to hold the leading AI accelerator stack, with integrated hardware/software/ecosystem advantages that are hard to replicate.[2][13]  \n  - **Brand moat:** Strong. NVIDIA remains the default name in AI compute for developers, enterprises, and investors.[2][13]  \n  - **Switching costs:** High in practice. Training/inference stacks, CUDA familiarity, tooling, and deployment inertia make migration costly even when alternatives exist.[2][13]  \n- **Crowd & community sentiment:** Developer sentiment is generally constructive-to-bullish because NVIDIA remains the standard platform for AI work, while retail sentiment is exuberant but increasingly divided between “AI monopoly” bulls and valuation/supply skeptics. The prevailing mood is admiration for execution, coupled with anxiety about whether the supply chain and capex cycle can sustain expectations.[2][13][14]\n\n**Overall qualitative health verdict: Strong** — with the caveat that the company’s main vulnerability is not demand, but concentrated manufacturing dependencies and geopolitical exposure.\n* **Developer & Tech Moat Reconnaissance (GitHub):**\n  * Repository: `NVIDIA/cuda-samples` | Stars: **9,597** | Forks: **2,420**\n  * Developer Traction: **Tier-1 Industry Standard (Deep Tech Moat)** (Score: 130.4/100)\n* **Engineering Morale & Culture Sentiment (Hacker News):**\n  * Verdict: **Balanced / Informational**\n  * Top Tech Discussion: \"[Nvidia Corporation (NVDA) Q4 2024 Earnings Call Transcript](https://news.ycombinator.com/item?id=39481950)\" (1 points)\n* **Customer & Crowd Sentiment (Reddit):**\n  * Sentiment Tone: **Retail Crowd Bullish (17 Bull vs 2 Bear)** (StockTwits / Retail Crowd)\n* **Seeking Alpha Analyst Research & Insider Wire:**\n  * Consensus Analyst Sentiment: **Bullish** (6 active write-ups)\n  * Recent Headline: \"[NVDA: Cloud Reacceleration And Generative AI Commercialization Drive Long-Term Upside](https://seekingalpha.com/symbol/NVDA)\" by Compound Capital Research\n* **Supply Chain Manifests:**\n  * **ImportYeti Customs Audit Link:** [Search Shipping Bills of Lading](https://www.importyeti.com/search?q=NVIDIA%20Corporation)\n* **Scuttlebutt Field Checks (5 Circles):**\n  1. **Competitors:** *Who is winning new accounts, and where is NVDA vulnerable?*\n  2. **Customers:** *Is pricing power durable? Would a 10% price hike drive churn?*\n  3. **Suppliers:** *Are billings paid promptly and purchase orders predictable?*\n  4. **Ex-Employees:** *Is internal promotion strictly meritocratic?*\n  5. **Scientists:** *What 5-to-7-year paradigm shift could obsolete NVDA's products?*\n\n\n---\n\n## 3. Warren Buffett Moat & Owner Earnings Audit\n* **Latest Owner Earnings:** **$45.15B**\n  * *(Calculated as Reported Net Income + D&A - Maintenance Capex - Working Capital change)*\n* **Average Return on Invested Capital (ROIC):** **64.78%**\n  * *Moat Status:* 🛡️ **DURABLE MOAT CONFIRMED** (ROIC > 15%)\n* **The $1 Retained Earnings Test (5-Yr):**\n  * Market Value Created per $1 Retained: **$41.91**\n  * *Result:* ✅ **PASSED** (Created >= $1.00 market value)\n* **Balance Sheet Resilience:**\n  * Total Cash: $38.00B | Total Debt: $8.50B\n  * Current Ratio: 4.17 | Debt/Equity: 0.11\n\n---\n\n## 4. Aswath Damodaran Modern Valuation & Online Portal Benchmarks\n* **R&D Capitalization Adjustment:**\n  * Amortizable R&D Asset Created: **$20.23B** (3 Years straight-line lifespan)\n  * Reported GAAP ROIC: 135.43% $\rightarrow$ **Adjusted Modern ROIC: 96.95%**\n  * *Damodaran Insight:* R&D capitalization indicates heavy reinvestment requirement, moderating reported ROIC.\n* **Operating Lease Debt (XBRL):** $5.49B\n* **Damodaran NYU Stern Valuation Benchmarks:**\n  * **Implied Equity Risk Premium (ERP):** **4.6% (NYU Stern Forward-Looking ERP)**\n  * **NYU Stern Industry Sector:** Technology (Hardware & Software)\n  * **Industry Unlevered Beta:** 1.12 (Sector Benchmark WACC: 8.75%)\n* **Company Cost of Capital (WACC Engine):**\n  * **Cost of Equity ($K_e$):** **12.5%** (CAPM using $\beta = 1.68$)\n  * **Synthetic Debt Rating:** **AAA** (Pre-Tax Cost of Debt: 5.36%)\n  * **Calculated WACC (Discount Rate Hurdle):** **12.48%**\n* **The 3 P's Reality Filter (Story to Numbers):**\n  * **Possible:** ✅ Business model adheres to commercial and regulatory boundaries.\n  * **Plausible:** 📊 Revenue growth trajectory (65.8%) is plausible within global industry market share limits.\n  * **Probable:** 🎯 High probability supported by durable economic moat and historical ROIC of 64.78%.\n* **Macroeconomic Valuation Inputs (FRED):**\n  * **Risk-Free Rate ($R_f$):** **4.77% (FRED DGS10 10-Yr Treasury)**\n  * **Terminal Growth Rate Ceiling ($g$):** $le$ **3%**\n  * **Corporate Credit Spread:** +1% (ICE BofA BBB OAS)\n  * **Yield Curve Regime:** Normal Upward Sloping\n\n---\n\n## 5. Valuation & Margin of Safety Execution\n* **Estimated Fair Value Range:** $[Fair Value Low] - $[Fair Value High]\n* **Target Margin of Safety:** 20% - 35%\n* **Invalidation Triggers (When to Sell):**\n  1. *Structural erosion of economic moat or pricing power failure.*\n  2. *Divergence between CEO compensation incentives and economic ROIC.*\n  3. *Extreme valuation bubble disconnection ($P / FV \\ge 1.60$).*\n",
-  "TSLA": "# Investment Decision Memorandum: TSLA — Tesla, Inc.\n* **Date:** 2026-09-07\n* **Current Market Price:** $354.08\n* **Market Capitalization:** $1.40T\n* **Circle of Competence & Lynch Category:** **Slow Grower** (Rev CAGR: 5.19%)\n\n---\n\n## Executive Investment Synthesis (Google Gemini AI)\n**Executive Investment Synthesis: Tesla, Inc. (TSLA)**\n\n**1. Economic Moat & Capital Allocation Quality (Buffett & Fisher)**  \nFrom a Buffett and Fisher perspective, Tesla\n\n---\n\n## 1. Peter Lynch Empirical Reconnaissance\n* **Business Classification:** Slow Grower\n* **PEG Ratio:** 4.23 — *Overvalued*\n* **Net Cash Per Share:** 0.45\n* **Inventory vs. Sales Growth Spread:** 6.05%\n  * ⚠️ **RED FLAG: Inventory growth (+3.12%) exceeded revenue growth (+-2.93%) by 6.05%**\n* **The 2-Minute Story:**\n  > *[Draft here: Briefly describe product stickiness, customer demand, and growth runway]*\n\n---\n\n## 2. Philip Fisher Scuttlebutt & Regulatory Audit\n* **Official SEC EDGAR Filings:**\n  * **Latest Form 10-K:** [Annual Report on SEC EDGAR](https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm)\n  * **Latest Proxy DEF 14A:** [Executive Compensation Proxy on SEC EDGAR](https://www.sec.gov/Archives/edgar/data/1318605/000110465925090866/tm252289-12_def14a.htm)\n* **Executive Compensation Audit Tenet:**\n  * Ensure management incentives are tethered to economic ROIC rather than top-line revenue vanity targets.\n* **Perplexity AI 360° Scuttlebutt Intelligence:**\nTesla’s field intelligence looks **Neutral to Fragile**: the company still has strong brand pull and engineering capability, but there are clear signs of supply-chain stress, customer defection risk, and persistent cultural strain.\n\n- **Employee morale & engineering culture**\n- Public review signals are not directly accessible here, but the available current intelligence points to a high-pressure, execution-heavy culture with meaningful supply-chain and product deadlines, which usually correlates with burnout risk rather than calm operating cadence.\n- The most credible current evidence suggests Tesla is forcing a major supplier retooling away from China-made parts in the U.S., which implies intense internal coordination pressure and management scrutiny on engineering and sourcing teams[7][15].\n- The absence of fresh, verifiable Glassdoor/Blind excerpts in the gathered material means the best current inference is: **workload likely remains heavy, trust in leadership is polarizing, and burnout risk is elevated**, but this is an inference rather than a direct review quote.\n\n- **Customer satisfaction & churn**\n- Tesla no longer appears to enjoy uncontested customer-satisfaction leadership; a recent survey summary says rivals have surpassed Tesla in customer satisfaction[14].\n- That implies growing churn/alternative-seeking behavior, especially where customers can substitute with competitive EVs offering comparable range, software, or lower drama.\n- The company still retains a strong fan base, but the current signal is that **satisfaction is no longer uniformly premium** and switching away is becoming more plausible for mainstream buyers[14].\n\n- **Supply chain viability & bottlenecks**\n- Tesla is actively trying to de-risk U.S. manufacturing by requiring suppliers to remove China-made components, showing real concern about geopolitical exposure rather than confidence in the existing chain[7][15].\n- Current reports point to **battery-pack capacity** as a near-term production bottleneck, with Tesla itself described as calling it the main limiting factor to volume growth[2].\n- Rare-earth and magnet exposure remains a major structural risk because China still dominates refining and magnet production, and export controls remain a live threat through late 2026[2][13].\n- Additional risk comes from semiconductor and input inflation pressures tied to gallium and broader geopolitics, suggesting Tesla’s upstream chain is still vulnerable to shocks[3][13].\n- Net: the supply chain is **functional but fragile**, with active mitigation underway rather than fully solved.\n\n- **Moat evaluation**\n- **Tech moat:** Still real, but narrower than before. Tesla remains strong in EV integration, software, manufacturing scale, and energy ecosystem execution, but competitors have closed much of the gap in core EV features.\n- **Brand moat:** Still strong among enthusiasts and many retail holders, but brand polarization is higher now, and survey data suggest customer experience leadership has weakened[14].\n- **Switching costs:** Low for most consumers. EV buyers can switch brands at the next purchase with limited friction, so Tesla’s moat is more about brand preference and ecosystem familiarity than true lock-in.\n- Overall, the moat looks **meaningful but not impregnable**: strongest in execution and ecosystem, weaker in customer lock-in and exclusivity.\n\n- **Crowd & community sentiment**\n- The prevailing retail-investor mood remains emotionally strong and highly polarized: Tesla still commands a passionate base, but sentiment is more divided than in earlier cycles.\n- Developer/engineering community sentiment is likely mixed-to-negative around execution pressure and supply-chain rearchitecture, given the visible sourcing constraints and production bottlenecks[7][15].\n- The current market narrative has shifted from “Tesla always wins” to “Tesla is still exceptional, but not uniquely insulated,” which is a less euphoric community backdrop[14].\n\n**Overall qualitative health verdict: _Neutral_ leaning _Fragile_**\n- Strong brand and substantial engineering capability remain intact.\n- But customer satisfaction is no longer clearly best-in-class, supply-chain risk is elevated, and the moat is less exclusive than it once was.\n- If you want, the next step can be a true Fisher-style memo with a **bull case / bear case / red flags / go-forward checklist** format.\n* **Developer & Tech Moat Reconnaissance (GitHub):**\n  * Repository: `teslamotors/undefined` | Stars: **0** | Forks: **0**\n  * Developer Traction: **Offline / Rate Limited** (Score: 0/100)\n* **Engineering Morale & Culture Sentiment (Hacker News):**\n  * Verdict: **Critical / Technical Skepticism Noted**\n  * Top Tech Discussion: \"[Tesla Motors, Inc. Is Now Officially Tesla, Inc](https://news.ycombinator.com/item?id=13541544)\" (214 points)\n* **Customer & Crowd Sentiment (Reddit):**\n  * Sentiment Tone: **Retail Mixed Sentiment (8 Bull vs 10 Bear)** (StockTwits / Retail Crowd)\n* **Seeking Alpha Analyst Research & Insider Wire:**\n  * Consensus Analyst Sentiment: **Bullish** (6 active write-ups)\n  * Recent Headline: \"[TSLA: Cloud Reacceleration And Generative AI Commercialization Drive Long-Term Upside](https://seekingalpha.com/symbol/TSLA)\" by Compound Capital Research\n* **Supply Chain Manifests:**\n  * **ImportYeti Customs Audit Link:** [Search Shipping Bills of Lading](https://www.importyeti.com/search?q=Tesla%2C%20Inc.)\n* **Scuttlebutt Field Checks (5 Circles):**\n  1. **Competitors:** *Who is winning new accounts, and where is TSLA vulnerable?*\n  2. **Customers:** *Is pricing power durable? Would a 10% price hike drive churn?*\n  3. **Suppliers:** *Are billings paid promptly and purchase orders predictable?*\n  4. **Ex-Employees:** *Is internal promotion strictly meritocratic?*\n  5. **Scientists:** *What 5-to-7-year paradigm shift could obsolete TSLA's products?*\n\n\n---\n\n## 3. Warren Buffett Moat & Owner Earnings Audit\n* **Latest Owner Earnings:** **$-1.42B**\n  * *(Calculated as Reported Net Income + D&A - Maintenance Capex - Working Capital change)*\n* **Average Return on Invested Capital (ROIC):** **14.51%**\n  * *Moat Status:* ⚠️ **MODERATE / COMMODITIZED MOAT** (ROIC < 15%)\n* **The $1 Retained Earnings Test (5-Yr):**\n  * Market Value Created per $1 Retained: **$-124.04**\n  * *Result:* ⚠️ **FAILED** (Capital allocation value destructive)\n* **Balance Sheet Resilience:**\n  * Total Cash: $16.51B | Total Debt: $14.72B\n  * Current Ratio: 1.94 | Debt/Equity: 0.50\n\n---\n\n## 4. Aswath Damodaran Modern Valuation & Online Portal Benchmarks\n* **R&D Capitalization Adjustment:**\n  * Amortizable R&D Asset Created: **$10.76B** (3 Years straight-line lifespan)\n  * Reported GAAP ROIC: 4.77% $\rightarrow$ **Adjusted Modern ROIC: 5.45%**\n  * *Damodaran Insight:* R&D capitalization reveals higher true underlying operating profitability than reported GAAP.\n* **Operating Lease Debt (XBRL):** $6.34B\n* **Damodaran NYU Stern Valuation Benchmarks:**\n  * **Implied Equity Risk Premium (ERP):** **4.6% (NYU Stern Forward-Looking ERP)**\n  * **NYU Stern Industry Sector:** Consumer Goods (Food & Beverage)\n  * **Industry Unlevered Beta:** 0.65 (Sector Benchmark WACC: 6.45%)\n* **Company Cost of Capital (WACC Engine):**\n  * **Cost of Equity ($K_e$):** **13.26%** (CAPM using $\beta = 1.845$)\n  * **Synthetic Debt Rating:** **AA** (Pre-Tax Cost of Debt: 5.47%)\n  * **Calculated WACC (Discount Rate Hurdle):** **13.17%**\n* **The 3 P's Reality Filter (Story to Numbers):**\n  * **Possible:** ✅ Business model adheres to commercial and regulatory boundaries.\n  * **Plausible:** 📊 Revenue growth trajectory (5.19%) is plausible within global industry market share limits.\n  * **Probable:** 🎯 Execution requires ongoing monitoring; historical ROIC (14.51%) provides moderate margin of error.\n* **Macroeconomic Valuation Inputs (FRED):**\n  * **Risk-Free Rate ($R_f$):** **4.77% (FRED DGS10 10-Yr Treasury)**\n  * **Terminal Growth Rate Ceiling ($g$):** $le$ **3%**\n  * **Corporate Credit Spread:** +1% (ICE BofA BBB OAS)\n  * **Yield Curve Regime:** Normal Upward Sloping\n\n---\n\n## 5. Valuation & Margin of Safety Execution\n* **Estimated Fair Value Range:** $[Fair Value Low] - $[Fair Value High]\n* **Target Margin of Safety:** 20% - 35%\n* **Invalidation Triggers (When to Sell):**\n  1. *Structural erosion of economic moat or pricing power failure.*\n  2. *Divergence between CEO compensation incentives and economic ROIC.*\n  3. *Extreme valuation bubble disconnection ($P / FV \\ge 1.60$).*\n",
-  "AMZN": "# Investment Decision Memorandum: AMZN — Amazon.com, Inc.\n* **Date:** 2026-09-07\n* **Current Market Price:** $258.51\n* **Market Capitalization:** $2.79T\n* **Circle of Competence & Lynch Category:** **Stalwart** (Rev CAGR: 11.73%)\n\n---\n\n## Executive Investment Synthesis (Google Gemini AI)\n**1. Economic Moat & Capital Allocation Quality (Buffett & Fisher)**\nAmazon demonstrates an elite economic moat fortified by network effects across e-commerce, cloud computing (AWS), and high-\n\n---\n\n## 1. Peter Lynch Empirical Reconnaissance\n* **Business Classification:** Stalwart\n* **PEG Ratio:** 1.51 — *Overvalued*\n* **Net Cash Per Share:** -6.14\n* **Inventory vs. Sales Growth Spread:** -0.36%\n  * ✅ *No inventory-sales divergence red flags detected.*\n* **The 2-Minute Story:**\n  > *[Draft here: Briefly describe product stickiness, customer demand, and growth runway]*\n\n---\n\n## 2. Philip Fisher Scuttlebutt & Regulatory Audit\n* **Official SEC EDGAR Filings:**\n  * **Latest Form 10-K:** [Annual Report on SEC EDGAR](https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm)\n  * **Latest Proxy DEF 14A:** [Executive Compensation Proxy on SEC EDGAR](https://www.sec.gov/Archives/edgar/data/1018724/000110465926041026/tm261382-1_def14a.htm)\n* **Executive Compensation Audit Tenet:**\n  * Ensure management incentives are tethered to economic ROIC rather than top-line revenue vanity targets.\n* **Perplexity AI 360° Scuttlebutt Intelligence:**\nAmazon’s overall field-intelligence profile looks **Strong**, with the main weakness being persistent employee strain rather than evidence of customer or platform deterioration.\n\n- **Employee morale / engineering culture:** Current employee reviews remain mixed-to-negative on workload and trust. Glassdoor shows Amazon at **3.6/5** overall, but only **3.1/5 for work-life balance** and **3.4/5 for culture/values**, with recurring complaints about long hours, demanding shifts, and burnout[1]. Blind is harsher: Amazon is rated **3.2/5 overall**, with **2.7/5 for work-life balance** and **2.7/5 for management**, and reviews repeatedly cite “relentless” pace, burnout, politics, and declining trust in leadership[2][3].  \n- **Customer satisfaction / churn:** The available current signals do **not** show broad customer defection; in fact, recent coverage points to Amazon benefiting from AI-driven shopping behavior and strong investor expectations around AWS and capex execution[4]. I did not find fresh evidence here of large-scale enterprise churn or a consumer exodus to alternatives.  \n- **Supply chain viability / bottlenecks:** No current evidence surfaced of a single critical tier-1 vendor dependency or acute component shortage in the available results. The more visible risk remains Amazon’s own operating intensity and capital allocation, not a confirmed supply-chain breakage.  \n- **Moat evaluation:** Amazon’s moat still looks **durable**: massive scale in logistics and marketplace, strong consumer brand, and high switching costs in AWS and the broader seller/advertiser ecosystem. The current results reinforce that Wall Street still treats Amazon as a core platform with upside tied to AI and cloud execution[4].  \n- **Crowd / community sentiment:** Developer/employee community sentiment skews **bearish on culture**, with consistent complaints about burnout, politics, and management quality on Blind[2][3]. Retail-investor sentiment appears **mixed to mildly bullish** depending on the time window, with some recent articles describing a bullish flip into earnings, though other coverage notes bearish spells around selling and capex concerns[5][6].  \n\n**Bottom line:** Amazon looks like a **Strong** business with a **fragile internal culture signal**. The scuttlebutt says the moat is intact, customers are not obviously fleeing, and the real issue is employee exhaustion and trust, not competitive collapse.\n* **Developer & Tech Moat Reconnaissance (GitHub):**\n  * Repository: `aws/aws-cli` | Stars: **17,236** | Forks: **4,641**\n  * Developer Traction: **Tier-1 Industry Standard (Deep Tech Moat)** (Score: 139.7/100)\n* **Engineering Morale & Culture Sentiment (Hacker News):**\n  * Verdict: **Balanced / Informational**\n  * Top Tech Discussion: \"[State of Arizona vs. Amazon.com, Inc. Buy Box Parirty [pdf]](https://news.ycombinator.com/item?id=45099291)\" (2 points)\n* **Customer & Crowd Sentiment (Reddit):**\n  * Sentiment Tone: **Retail Crowd Bullish (8 Bull vs 2 Bear)** (StockTwits / Retail Crowd)\n* **Seeking Alpha Analyst Research & Insider Wire:**\n  * Consensus Analyst Sentiment: **Bullish** (6 active write-ups)\n  * Recent Headline: \"[AMZN: Cloud Reacceleration And Generative AI Commercialization Drive Long-Term Upside](https://seekingalpha.com/symbol/AMZN)\" by Compound Capital Research\n* **Supply Chain Manifests:**\n  * **ImportYeti Customs Audit Link:** [Search Shipping Bills of Lading](https://www.importyeti.com/search?q=Amazon.com%2C%20Inc.)\n* **Scuttlebutt Field Checks (5 Circles):**\n  1. **Competitors:** *Who is winning new accounts, and where is AMZN vulnerable?*\n  2. **Customers:** *Is pricing power durable? Would a 10% price hike drive churn?*\n  3. **Suppliers:** *Are billings paid promptly and purchase orders predictable?*\n  4. **Ex-Employees:** *Is internal promotion strictly meritocratic?*\n  5. **Scientists:** *What 5-to-7-year paradigm shift could obsolete AMZN's products?*\n\n\n---\n\n## 3. Warren Buffett Moat & Owner Earnings Audit\n* **Latest Owner Earnings:** **$111.64B**\n  * *(Calculated as Reported Net Income + D&A - Maintenance Capex - Working Capital change)*\n* **Average Return on Invested Capital (ROIC):** **11.12%**\n  * *Moat Status:* ⚠️ **MODERATE / COMMODITIZED MOAT** (ROIC < 15%)\n* **The $1 Retained Earnings Test (5-Yr):**\n  * Market Value Created per $1 Retained: **$17.25**\n  * *Result:* ✅ **PASSED** (Created >= $1.00 market value)\n* **Balance Sheet Resilience:**\n  * Total Cash: $86.81B | Total Debt: $152.99B\n  * Current Ratio: 1.03 | Debt/Equity: 0.50\n\n---\n\n## 4. Aswath Damodaran Modern Valuation & Online Portal Benchmarks\n* **R&D Capitalization Adjustment:**\n  * Amortizable R&D Asset Created: **$0.00** (3 Years straight-line lifespan)\n  * Reported GAAP ROIC: N/A% $\rightarrow$ **Adjusted Modern ROIC: N/A%**\n  * *Damodaran Insight:* N/A\n* **Operating Lease Debt (XBRL):** $96.32B\n* **Damodaran NYU Stern Valuation Benchmarks:**\n  * **Implied Equity Risk Premium (ERP):** **4.6% (NYU Stern Forward-Looking ERP)**\n  * **NYU Stern Industry Sector:** Consumer Goods (Food & Beverage)\n  * **Industry Unlevered Beta:** 0.65 (Sector Benchmark WACC: 6.45%)\n* **Company Cost of Capital (WACC Engine):**\n  * **Cost of Equity ($K_e$):** **11.41%** (CAPM using $\beta = 1.443$)\n  * **Synthetic Debt Rating:** **AAA** (Pre-Tax Cost of Debt: 5.36%)\n  * **Calculated WACC (Discount Rate Hurdle):** **11.04%**\n* **The 3 P's Reality Filter (Story to Numbers):**\n  * **Possible:** ✅ Business model adheres to commercial and regulatory boundaries.\n  * **Plausible:** 📊 Revenue growth trajectory (11.73%) is plausible within global industry market share limits.\n  * **Probable:** 🎯 Execution requires ongoing monitoring; historical ROIC (11.12%) provides moderate margin of error.\n* **Macroeconomic Valuation Inputs (FRED):**\n  * **Risk-Free Rate ($R_f$):** **4.77% (FRED DGS10 10-Yr Treasury)**\n  * **Terminal Growth Rate Ceiling ($g$):** $le$ **3%**\n  * **Corporate Credit Spread:** +1% (ICE BofA BBB OAS)\n  * **Yield Curve Regime:** Normal Upward Sloping\n\n---\n\n## 5. Valuation & Margin of Safety Execution\n* **Estimated Fair Value Range:** $[Fair Value Low] - $[Fair Value High]\n* **Target Margin of Safety:** 20% - 35%\n* **Invalidation Triggers (When to Sell):**\n  1. *Structural erosion of economic moat or pricing power failure.*\n  2. *Divergence between CEO compensation incentives and economic ROIC.*\n  3. *Extreme valuation bubble disconnection ($P / FV \\ge 1.60$).*\n"
+  "MSFT": "# Investment Decision Memorandum: MSFT — Microsoft Corporation\n* **Date:** 2026-09-08\n* **Current Market Price:** $420.50\n* **Market Capitalization:** $3.12T\n* **Circle of Competence & Lynch Category:** **Stalwart** (Rev CAGR: 14.42%)\n\n---\n\n## Executive Investment Synthesis (Google Gemini AI)\n**1. Economic Moat & Capital Allocation Quality (Buffett & Fisher)**\nMicrosoft exhibits a wide, self-reinforcing economic moat characterized by extraordinary capital allocation efficiency and massive owner earning power.\n\n---\n\n## 1. Peter Lynch Empirical Reconnaissance\n* **Business Classification:** Stalwart\n* **PEG Ratio:** 2.1 — *Overvalued*\n* **Net Cash Per Share:** 4.85\n* **Inventory vs. Sales Growth Spread:** -23.67%\n  * ✅ *No inventory-sales divergence red flags detected.*\n* **The 2-Minute Story:**\n  > *[Draft here: Briefly describe product stickiness, customer demand, and growth runway]*\n\n---\n\n## 2. Philip Fisher Scuttlebutt & Regulatory Audit\n* **Official SEC EDGAR Filings:**\n  * **Latest Form 10-K:** [Annual Report on SEC EDGAR](https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm)\n  * **Latest Proxy DEF 14A:** [Executive Compensation Proxy on SEC EDGAR](https://www.sec.gov/Archives/edgar/data/789019/000119312525245150/d908201ddef14a.htm)\n* **Executive Compensation Audit Tenet:**\n  * Ensure management incentives are tethered to economic ROIC rather than top-line revenue vanity targets.\n* **Perplexity AI 360° Scuttlebutt Intelligence:**\nMicrosoft screens **Strong** overall on this scuttlebutt pass, with the main weak spot being employee sentiment rather than demand or moat.\n\n- **Employee morale / engineering culture:** Public employee sentiment looks mixed-to-negative. Blind’s 2026 workplace data for Microsoft shows **74.9% negative morale sentiment**, **83.6% negative compensation sentiment**, **28.7% confidence in CEO**, and only **52.6% confidence in company direction**[11].  \n- **Workload / burnout / trust:** The same dataset and broader Glassdoor-style commentary point to elevated frustration around **workload, burnout, and leadership trust**, with recurring themes of “disconnect,” “misaligned,” “miscommunication,” and “distrust” in company reviews across tech in general[11][14].  \n- **Customer satisfaction / churn:** No hard evidence here suggests broad enterprise or consumer flight from Microsoft; the available signals lean the other way. Microsoft’s ecosystem remains deeply embedded, and recent customer-success-market commentary implies that enterprises still need heavy tooling to manage retention and value realization, which is consistent with sticky platform demand rather than obvious churn pressure[5][10][12].  \n- **Supply chain viability / bottlenecks:** Hardware and datacenter supply chains are being de-risked, not broken. Reports say Microsoft is pushing suppliers to move Surface and parts of server/Xbox production **out of China** and aims for roughly **80% of relevant parts outside China by 2026**, reflecting geopolitical exposure and execution risk rather than shortage-driven distress[2][3][4].  \n- **Key bottlenecks:** The practical bottleneck is **supplier relocation and qualification**, not lack of end demand; moving assembly is easier than moving the component stack, so near-term cost inflation and transition friction are real risks[1][3].  \n- **Moat evaluation:**  \n  - **Tech moat:** Very strong—Azure, Windows, Microsoft 365, GitHub, security, and AI distribution form a dense platform stack.  \n  - **Brand moat:** Strong—Microsoft remains a default enterprise standard and a trusted consumer brand.  \n  - **Switching costs:** Very strong—identity, productivity, security, developer workflows, and cloud integration make displacement expensive and disruptive.  \n- **Crowd / community sentiment:** Developer and investor mood appears **mixed but constructive**. Developer communities tend to respect Microsoft’s platform breadth while criticizing culture and platform lock-in; retail/internet sentiment is less about product weakness and more about valuation, layoffs, and AI capex intensity, consistent with the negative-leaning employee mood data[11][14].  \n- **Bottom line:** Microsoft looks **fundamentally strong, operationally strained**. The business moat and customer lock-in remain formidable, but internal morale/trust deserves monitoring as the main scuttlebutt risk[11][14].\n* **Developer & Tech Moat Reconnaissance (GitHub):**\n  * Repository: `microsoft/vscode` | Stars: **191,010** | Forks: **42,023**\n  * Developer Traction: **Tier-1 Industry Standard (Deep Tech Moat)** (Score: 175/100)\n* **Engineering Morale & Culture Sentiment (Hacker News):**\n  * Verdict: **Balanced / Informational**\n  * Top Tech Discussion: \"[Microsoft Corporation sponsors IPython](https://news.ycombinator.com/item?id=6490034)\" (150 points)\n* **Customer & Crowd Sentiment (Reddit):**\n  * Sentiment Tone: **Retail Crowd Bullish (15 Bull vs 2 Bear)** (StockTwits / Retail Crowd)\n* **Seeking Alpha Analyst Research & Insider Wire:**\n  * Consensus Analyst Sentiment: **Bullish** (6 active write-ups)\n  * Recent Headline: \"[MSFT: Cloud Reacceleration And Generative AI Commercialization Drive Long-Term Upside](https://seekingalpha.com/symbol/MSFT)\" by Compound Capital Research\n* **Supply Chain Manifests:**\n  * **ImportYeti Customs Audit Link:** [Search Shipping Bills of Lading](https://www.importyeti.com/search?q=Microsoft%20Corporation)\n* **Scuttlebutt Field Checks (5 Circles):**\n  1. **Competitors:** *Who is winning new accounts, and where is MSFT vulnerable?*\n  2. **Customers:** *Is pricing power durable? Would a 10% price hike drive churn?*\n  3. **Suppliers:** *Are billings paid promptly and purchase orders predictable?*\n  4. **Ex-Employees:** *Is internal promotion strictly meritocratic?*\n  5. **Scientists:** *What 5-to-7-year paradigm shift could obsolete MSFT's products?*\n\n\n---\n\n## 3. Warren Buffett Moat & Owner Earnings Audit\n* **Latest Owner Earnings:** **$96.57B**\n  * *(Calculated as Reported Net Income + D&A - Maintenance Capex - Working Capital change)*\n* **Average Return on Invested Capital (ROIC):** **56.95%**\n  * *Moat Status:* 🛡️ **DURABLE MOAT CONFIRMED** (ROIC > 15%)\n* **The $1 Retained Earnings Test (5-Yr):**\n  * Market Value Created per $1 Retained: **$20.6**\n  * *Result:* ✅ **PASSED** (Created >= $1.00 market value)\n* **Balance Sheet Resilience:**\n  * Total Cash: $111.00B | Total Debt: $75.00B\n  * Current Ratio: 1.45 | Debt/Equity: 0.28\n\n---\n\n## 4. Aswath Damodaran Modern Valuation & Online Portal Benchmarks\n* **R&D Capitalization Adjustment:**\n  * Amortizable R&D Asset Created: **$55.80B** (3 Years straight-line lifespan)\n  * Reported GAAP ROIC: 37.26% $\rightarrow$ **Adjusted Modern ROIC: 30.71%**\n  * *Damodaran Insight:* R&D capitalization indicates heavy reinvestment requirement, moderating reported ROIC.\n* **Operating Lease Debt (XBRL):** $21.93B\n* **Damodaran NYU Stern Valuation Benchmarks:**\n  * **Implied Equity Risk Premium (ERP):** **4.6% (NYU Stern Forward-Looking ERP)**\n  * **NYU Stern Industry Sector:** Technology (Hardware & Software)\n  * **Industry Unlevered Beta:** 1.12 (Sector Benchmark WACC: 8.75%)\n* **Company Cost of Capital (WACC Engine):**\n  * **Cost of Equity ($K_e$):** **10.06%** (CAPM using $\beta = 1.15$)\n  * **Synthetic Debt Rating:** **AAA** (Pre-Tax Cost of Debt: 5.36%)\n  * **Calculated WACC (Discount Rate Hurdle):** **9.93%**\n* **The 3 P's Reality Filter (Story to Numbers):**\n  * **Possible:** ✅ Business model adheres to commercial and regulatory boundaries.\n  * **Plausible:** 📊 Revenue growth trajectory (14.42%) is plausible within global industry market share limits.\n  * **Probable:** 🎯 High probability supported by durable economic moat and historical ROIC of 56.95%.\n* **Macroeconomic Valuation Inputs (FRED):**\n  * **Risk-Free Rate ($R_f$):** **4.77% (FRED DGS10 10-Yr Treasury)**\n  * **Terminal Growth Rate Ceiling ($g$):** $le$ **3%**\n  * **Corporate Credit Spread:** +1% (ICE BofA BBB OAS)\n  * **Yield Curve Regime:** Normal Upward Sloping\n\n---\n\n## 5. Valuation & Margin of Safety Execution\n* **Estimated Fair Value Range:** $[Fair Value Low] - $[Fair Value High]\n* **Target Margin of Safety:** 20% - 35%\n* **Invalidation Triggers (When to Sell):**\n  1. *Structural erosion of economic moat or pricing power failure.*\n  2. *Divergence between CEO compensation incentives and economic ROIC.*\n  3. *Extreme valuation bubble disconnection ($P / FV \\ge 1.60$).*\n",
+  "AAPL": "# Investment Decision Memorandum: AAPL — Apple Inc.\n* **Date:** 2026-09-08\n* **Current Market Price:** $228.00\n* **Market Capitalization:** $3.49T\n* **Circle of Competence & Lynch Category:** **Stalwart** (Rev CAGR: 9.25%)\n\n---\n\n## Executive Investment Synthesis (Google Gemini AI)\n### 1. Economic Moat & Capital Allocation Quality (Buffett & Fisher)\nApple continues to operate as an elite economic engine, generating an extraordinary **$109.52B in Buffett Owner Earnings** supported by a strong credit profile (Synthetic Rating: A). However, from a Fisherian scuttlebutt and capital allocation perspective, the firm shows clear signs of maturing growth dynamics. The **Value per $1 Retained sits at exactly $1.00**, demonstrating that management is currently preserving capital value rather than creating incremental value above cost through internal reinvestment. With limited high-return internal growth avenues relative to its massive scale, capital allocation has shifted toward returning cash rather than compounding retained earnings at high rates of return.\n\n### 2. Growth Runway & Valuation Friction (Lynch PEG vs. Damodaran Cost of Capital)\nA fundamental mismatch exists between Apple's current valuation and its intrinsic growth runway. Lynch classifies the stock as a **\"Slow Grower\"\n\n---\n\n## 1. Peter Lynch Empirical Reconnaissance\n* **Business Classification:** Stalwart\n* **PEG Ratio:** 2.3 — *Overvalued*\n* **Net Cash Per Share:** -2.71\n* **Inventory vs. Sales Growth Spread:** -10.41%\n  * ✅ *No inventory-sales divergence red flags detected.*\n* **The 2-Minute Story:**\n  > *[Draft here: Briefly describe product stickiness, customer demand, and growth runway]*\n\n---\n\n## 2. Philip Fisher Scuttlebutt & Regulatory Audit\n* **Official SEC EDGAR Filings:**\n  * **Latest Form 10-K:** [Annual Report on SEC EDGAR](https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm)\n  * **Latest Proxy DEF 14A:** [Executive Compensation Proxy on SEC EDGAR](https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm)\n* **Executive Compensation Audit Tenet:**\n  * Ensure management incentives are tethered to economic ROIC rather than top-line revenue vanity targets.\n* **Perplexity AI 360° Scuttlebutt Intelligence:**\nApple’s overall scuttlebutt profile looks **Strong**, with a few real pressure points in supply chain and culture. The brand and ecosystem remain extremely sticky, but recent field signals show meaningful execution risk around component availability and internal management quality.\n\n- **Employee morale / engineering culture:** Glassdoor still shows Apple at **4.1/5** with 43,032 reviews and repeated “Best Places to Work” recognition, while Blind shows **3.9/5** overall with management at **3.4/5**[14][12].\n- **Workload / burnout / trust:** Recent Blind comments describe Apple as “toxic,” “high pressure,” and “burn out is unavoidable,” with complaints about poor support, politics, and weak AI leadership[11][13].\n- **Customer satisfaction / churn:** Publicly available current evidence in the gathered material is limited, but Apple’s demand remains strong enough that management said it faced **supply constraints despite strong demand** for iPhones and Macs[1][5].\n- **Enterprise / consumer alternatives:** The current signal is not mass churn, but rather constrained fulfillment; Apple appears to be losing some sales timing to shortages rather than to substitution[1][5].\n- **Supply chain viability:** Apple is facing a **real memory and processor bottleneck**, with Tim Cook citing “very significant constraints” and limited flexibility, plus an industry shortage in advanced chipmaking technology[5][7].\n- **Vendor dependency / geopolitical risk:** The supply chain remains exposed to Taiwan/China concentration, with rising geopolitical tension, potential Taiwan Strait disruption, and pressure to diversify to India/Vietnam, where labor and infrastructure limits are now also becoming constraints[2][3][6].\n- **Component shortages:** Reuters and other current reports indicate shortages in processors and memory chips are directly affecting Apple’s ability to meet demand[1][4][5][8].\n- **Moat evaluation — tech moat:** Still strong, anchored by Apple silicon, integrated hardware/software control, and deep product execution, but the moat is being tested by AI-era component scarcity and competitive pressure[5][8].\n- **Moat evaluation — brand moat:** Very strong; Apple continues to command premium demand and enough loyalty that shortages create delayed purchases rather than obvious brand flight[1][5].\n- **Moat evaluation — switching costs:** High for users embedded in iPhone, Mac, iCloud, App Store, Messages, and device ecosystem workflows; the gathered evidence suggests stickiness remains intact even amid supply friction[5].\n- **Crowd / developer sentiment:** The sentiment signal is mixed-to-negative on Blind among employees, with complaints about burnout and management; no strong current developer-community evidence was gathered here, but internal culture chatter is clearly less flattering than the consumer brand story[11][13].\n- **Crowd / retail investor sentiment:** The market reaction to the latest supply-chain news appears negative, with Reuters noting a sharp share drop after Apple’s forecast disappointed due to supply issues[1][5].\n\n**Verdict: Strong**\n- Strong moat, strong demand, and strong brand.\n- Main watchouts are **supply chain fragility**, **China/Taiwan dependence**, and **internal culture/management concerns** that could matter more if AI execution falters.\n* **Developer & Tech Moat Reconnaissance (GitHub):**\n  * Repository: `apple/swift` | Stars: **70,332** | Forks: **10,812**\n  * Developer Traction: **Tier-1 Industry Standard (Deep Tech Moat)** (Score: 157.5/100)\n* **Engineering Morale & Culture Sentiment (Hacker News):**\n  * Verdict: **Balanced / Informational**\n  * Top Tech Discussion: \"[Typing \"Sell\" in Google Finance redirected to Apple Inc.](https://news.ycombinator.com/item?id=4984098)\" (109 points)\n* **Customer & Crowd Sentiment (Reddit):**\n  * Sentiment Tone: **Retail Crowd Bullish (7 Bull vs 5 Bear)** (StockTwits / Retail Crowd)\n* **Seeking Alpha Analyst Research & Insider Wire:**\n  * Consensus Analyst Sentiment: **Bullish** (6 active write-ups)\n  * Recent Headline: \"[AAPL: Cloud Reacceleration And Generative AI Commercialization Drive Long-Term Upside](https://seekingalpha.com/symbol/AAPL)\" by Compound Capital Research\n* **Supply Chain Manifests:**\n  * **ImportYeti Customs Audit Link:** [Search Shipping Bills of Lading](https://www.importyeti.com/search?q=Apple%20Inc.)\n* **Scuttlebutt Field Checks (5 Circles):**\n  1. **Competitors:** *Who is winning new accounts, and where is AAPL vulnerable?*\n  2. **Customers:** *Is pricing power durable? Would a 10% price hike drive churn?*\n  3. **Suppliers:** *Are billings paid promptly and purchase orders predictable?*\n  4. **Ex-Employees:** *Is internal promotion strictly meritocratic?*\n  5. **Scientists:** *What 5-to-7-year paradigm shift could obsolete AAPL's products?*\n\n\n---\n\n## 3. Warren Buffett Moat & Owner Earnings Audit\n* **Latest Owner Earnings:** **$88.78B**\n  * *(Calculated as Reported Net Income + D&A - Maintenance Capex - Working Capital change)*\n* **Average Return on Invested Capital (ROIC):** **75.37%**\n  * *Moat Status:* 🛡️ **DURABLE MOAT CONFIRMED** (ROIC > 15%)\n* **The $1 Retained Earnings Test (5-Yr):**\n  * Market Value Created per $1 Retained: **$1**\n  * *Result:* ✅ **PASSED** (Created >= $1.00 market value)\n* **Balance Sheet Resilience:**\n  * Total Cash: $65.18B | Total Debt: $106.63B\n  * Current Ratio: 1.05 | Debt/Equity: 1.59\n\n---\n\n## 4. Aswath Damodaran Modern Valuation & Online Portal Benchmarks\n* **R&D Capitalization Adjustment:**\n  * Amortizable R&D Asset Created: **$60.06B** (3 Years straight-line lifespan)\n  * Reported GAAP ROIC: 89.85% $\rightarrow$ **Adjusted Modern ROIC: 58.83%**\n  * *Damodaran Insight:* R&D capitalization indicates heavy reinvestment requirement, moderating reported ROIC.\n* **Operating Lease Debt (XBRL):** $12.49B\n* **Damodaran NYU Stern Valuation Benchmarks:**\n  * **Implied Equity Risk Premium (ERP):** **4.6% (NYU Stern Forward-Looking ERP)**\n  * **NYU Stern Industry Sector:** Technology (Hardware & Software)\n  * **Industry Unlevered Beta:** 1.12 (Sector Benchmark WACC: 8.75%)\n* **Company Cost of Capital (WACC Engine):**\n  * **Cost of Equity ($K_e$):** **9.74%** (CAPM using $\beta = 1.08$)\n  * **Synthetic Debt Rating:** **AAA** (Pre-Tax Cost of Debt: 5.36%)\n  * **Calculated WACC (Discount Rate Hurdle):** **9.58%**\n* **The 3 P's Reality Filter (Story to Numbers):**\n  * **Possible:** ✅ Business model adheres to commercial and regulatory boundaries.\n  * **Plausible:** 📊 Revenue growth trajectory (9.25%) is plausible within global industry market share limits.\n  * **Probable:** 🎯 High probability supported by durable economic moat and historical ROIC of 75.37%.\n* **Macroeconomic Valuation Inputs (FRED):**\n  * **Risk-Free Rate ($R_f$):** **4.77% (FRED DGS10 10-Yr Treasury)**\n  * **Terminal Growth Rate Ceiling ($g$):** $le$ **3%**\n  * **Corporate Credit Spread:** +1% (ICE BofA BBB OAS)\n  * **Yield Curve Regime:** Normal Upward Sloping\n\n---\n\n## 5. Valuation & Margin of Safety Execution\n* **Estimated Fair Value Range:** $[Fair Value Low] - $[Fair Value High]\n* **Target Margin of Safety:** 20% - 35%\n* **Invalidation Triggers (When to Sell):**\n  1. *Structural erosion of economic moat or pricing power failure.*\n  2. *Divergence between CEO compensation incentives and economic ROIC.*\n  3. *Extreme valuation bubble disconnection ($P / FV \\ge 1.60$).*\n",
+  "NVDA": "# Investment Decision Memorandum: NVDA — NVIDIA Corporation\n* **Date:** 2026-09-08\n* **Current Market Price:** $125.00\n* **Market Capitalization:** $3.06T\n* **Circle of Competence & Lynch Category:** **Fast Grower** (Rev CAGR: 65.8%)\n\n---\n\n## Executive Investment Synthesis (Google Gemini AI)\n**1. Economic Moat & Capital Allocation Quality (Buffett & Fisher)**  \nNVIDIA demonstrates an extraordinarily wide economic moat and elite capital allocation efficiency, exemplified by $45.1\n\n---\n\n## 1. Peter Lynch Empirical Reconnaissance\n* **Business Classification:** Fast Grower\n* **PEG Ratio:** 0.95 — *Attractive (PEG <= 1.0)*\n* **Net Cash Per Share:** 1.2\n* **Inventory vs. Sales Growth Spread:** -45.9%\n  * ✅ *No inventory-sales divergence red flags detected.*\n* **The 2-Minute Story:**\n  > *[Draft here: Briefly describe product stickiness, customer demand, and growth runway]*\n\n---\n\n## 2. Philip Fisher Scuttlebutt & Regulatory Audit\n* **Official SEC EDGAR Filings:**\n  * **Latest Form 10-K:** [Annual Report on SEC EDGAR](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm)\n  * **Latest Proxy DEF 14A:** [Executive Compensation Proxy on SEC EDGAR](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000036/nvda-20260512.htm)\n* **Executive Compensation Audit Tenet:**\n  * Ensure management incentives are tethered to economic ROIC rather than top-line revenue vanity targets.\n* **Perplexity AI 360° Scuttlebutt Intelligence:**\nNVIDIA’s scuttlebutt profile looks **Strong overall**, with a world-class product moat and very strong demand, but with meaningful operational stress points in supply chain concentration and mixed employee sentiment. The biggest weak spot is not customer pull; it is execution strain from scale, packaging capacity, and geopolitical exposure.\n\n- **Employee morale & engineering culture:** Public review signals remain polarized rather than uniformly negative; the recurring themes in employee feedback are heavy workload, intense pace, and pressure at the top, alongside strong compensation and mission-driven work. The available review corpus still shows complaints about burnout and management volatility, while the broader reviews page indicates a large volume of employee feedback rather than a collapse in sentiment.[12][11]\n- **Customer satisfaction & churn:** Enterprise demand remains strong enough that NVIDIA is still treated as the default standard in AI infrastructure, and the main “churn” risk appears to be strategic substitution by hyperscalers and China-linked buyers developing domestic alternatives rather than broad dissatisfaction with NVIDIA’s product. The current evidence points more to capacity constraints and export restrictions than to customers abandoning the platform because of poor performance.[2][13][14]\n- **Supply chain viability & bottlenecks:** This is the clearest scuttlebutt risk. Multiple current reports point to heavy dependence on TSMC, especially advanced packaging/CoWoS, plus HBM memory tightness; several sources also flag ongoing geopolitical risk tied to Taiwan and U.S.-China controls, with some commentary saying CoWoS capacity is effectively a hard ceiling through 2026.[2][5][9][13][14][15]\n- **Moat evaluation:**  \n  - **Tech moat:** Very strong. NVIDIA still appears to hold the leading AI accelerator stack, with integrated hardware/software/ecosystem advantages that are hard to replicate.[2][13]  \n  - **Brand moat:** Strong. NVIDIA remains the default name in AI compute for developers, enterprises, and investors.[2][13]  \n  - **Switching costs:** High in practice. Training/inference stacks, CUDA familiarity, tooling, and deployment inertia make migration costly even when alternatives exist.[2][13]  \n- **Crowd & community sentiment:** Developer sentiment is generally constructive-to-bullish because NVIDIA remains the standard platform for AI work, while retail sentiment is exuberant but increasingly divided between “AI monopoly” bulls and valuation/supply skeptics. The prevailing mood is admiration for execution, coupled with anxiety about whether the supply chain and capex cycle can sustain expectations.[2][13][14]\n\n**Overall qualitative health verdict: Strong** — with the caveat that the company’s main vulnerability is not demand, but concentrated manufacturing dependencies and geopolitical exposure.\n* **Developer & Tech Moat Reconnaissance (GitHub):**\n  * Repository: `NVIDIA/cuda-samples` | Stars: **9,597** | Forks: **2,420**\n  * Developer Traction: **Tier-1 Industry Standard (Deep Tech Moat)** (Score: 130.4/100)\n* **Engineering Morale & Culture Sentiment (Hacker News):**\n  * Verdict: **Balanced / Informational**\n  * Top Tech Discussion: \"[Nvidia Corporation (NVDA) Q4 2024 Earnings Call Transcript](https://news.ycombinator.com/item?id=39481950)\" (1 points)\n* **Customer & Crowd Sentiment (Reddit):**\n  * Sentiment Tone: **Retail Crowd Bullish (17 Bull vs 2 Bear)** (StockTwits / Retail Crowd)\n* **Seeking Alpha Analyst Research & Insider Wire:**\n  * Consensus Analyst Sentiment: **Bullish** (6 active write-ups)\n  * Recent Headline: \"[NVDA: Cloud Reacceleration And Generative AI Commercialization Drive Long-Term Upside](https://seekingalpha.com/symbol/NVDA)\" by Compound Capital Research\n* **Supply Chain Manifests:**\n  * **ImportYeti Customs Audit Link:** [Search Shipping Bills of Lading](https://www.importyeti.com/search?q=NVIDIA%20Corporation)\n* **Scuttlebutt Field Checks (5 Circles):**\n  1. **Competitors:** *Who is winning new accounts, and where is NVDA vulnerable?*\n  2. **Customers:** *Is pricing power durable? Would a 10% price hike drive churn?*\n  3. **Suppliers:** *Are billings paid promptly and purchase orders predictable?*\n  4. **Ex-Employees:** *Is internal promotion strictly meritocratic?*\n  5. **Scientists:** *What 5-to-7-year paradigm shift could obsolete NVDA's products?*\n\n\n---\n\n## 3. Warren Buffett Moat & Owner Earnings Audit\n* **Latest Owner Earnings:** **$45.15B**\n  * *(Calculated as Reported Net Income + D&A - Maintenance Capex - Working Capital change)*\n* **Average Return on Invested Capital (ROIC):** **64.78%**\n  * *Moat Status:* 🛡️ **DURABLE MOAT CONFIRMED** (ROIC > 15%)\n* **The $1 Retained Earnings Test (5-Yr):**\n  * Market Value Created per $1 Retained: **$41.91**\n  * *Result:* ✅ **PASSED** (Created >= $1.00 market value)\n* **Balance Sheet Resilience:**\n  * Total Cash: $38.00B | Total Debt: $8.50B\n  * Current Ratio: 4.17 | Debt/Equity: 0.11\n\n---\n\n## 4. Aswath Damodaran Modern Valuation & Online Portal Benchmarks\n* **R&D Capitalization Adjustment:**\n  * Amortizable R&D Asset Created: **$20.23B** (3 Years straight-line lifespan)\n  * Reported GAAP ROIC: 135.43% $\rightarrow$ **Adjusted Modern ROIC: 96.95%**\n  * *Damodaran Insight:* R&D capitalization indicates heavy reinvestment requirement, moderating reported ROIC.\n* **Operating Lease Debt (XBRL):** $5.49B\n* **Damodaran NYU Stern Valuation Benchmarks:**\n  * **Implied Equity Risk Premium (ERP):** **4.6% (NYU Stern Forward-Looking ERP)**\n  * **NYU Stern Industry Sector:** Technology (Hardware & Software)\n  * **Industry Unlevered Beta:** 1.12 (Sector Benchmark WACC: 8.75%)\n* **Company Cost of Capital (WACC Engine):**\n  * **Cost of Equity ($K_e$):** **12.5%** (CAPM using $\beta = 1.68$)\n  * **Synthetic Debt Rating:** **AAA** (Pre-Tax Cost of Debt: 5.36%)\n  * **Calculated WACC (Discount Rate Hurdle):** **12.48%**\n* **The 3 P's Reality Filter (Story to Numbers):**\n  * **Possible:** ✅ Business model adheres to commercial and regulatory boundaries.\n  * **Plausible:** 📊 Revenue growth trajectory (65.8%) is plausible within global industry market share limits.\n  * **Probable:** 🎯 High probability supported by durable economic moat and historical ROIC of 64.78%.\n* **Macroeconomic Valuation Inputs (FRED):**\n  * **Risk-Free Rate ($R_f$):** **4.77% (FRED DGS10 10-Yr Treasury)**\n  * **Terminal Growth Rate Ceiling ($g$):** $le$ **3%**\n  * **Corporate Credit Spread:** +1% (ICE BofA BBB OAS)\n  * **Yield Curve Regime:** Normal Upward Sloping\n\n---\n\n## 5. Valuation & Margin of Safety Execution\n* **Estimated Fair Value Range:** $[Fair Value Low] - $[Fair Value High]\n* **Target Margin of Safety:** 20% - 35%\n* **Invalidation Triggers (When to Sell):**\n  1. *Structural erosion of economic moat or pricing power failure.*\n  2. *Divergence between CEO compensation incentives and economic ROIC.*\n  3. *Extreme valuation bubble disconnection ($P / FV \\ge 1.60$).*\n",
+  "TSLA": "# Investment Decision Memorandum: TSLA — Tesla, Inc.\n* **Date:** 2026-09-08\n* **Current Market Price:** $354.08\n* **Market Capitalization:** $1.40T\n* **Circle of Competence & Lynch Category:** **Slow Grower** (Rev CAGR: 5.19%)\n\n---\n\n## Executive Investment Synthesis (Google Gemini AI)\n**Executive Investment Synthesis: Tesla, Inc. (TSLA)**\n\n**1. Economic Moat & Capital Allocation Quality (Buffett & Fisher)**  \nFrom a Buffett and Fisher perspective, Tesla\n\n---\n\n## 1. Peter Lynch Empirical Reconnaissance\n* **Business Classification:** Slow Grower\n* **PEG Ratio:** 4.23 — *Overvalued*\n* **Net Cash Per Share:** 0.45\n* **Inventory vs. Sales Growth Spread:** 6.05%\n  * ⚠️ **RED FLAG: Inventory growth (+3.12%) exceeded revenue growth (+-2.93%) by 6.05%**\n* **The 2-Minute Story:**\n  > *[Draft here: Briefly describe product stickiness, customer demand, and growth runway]*\n\n---\n\n## 2. Philip Fisher Scuttlebutt & Regulatory Audit\n* **Official SEC EDGAR Filings:**\n  * **Latest Form 10-K:** [Annual Report on SEC EDGAR](https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm)\n  * **Latest Proxy DEF 14A:** [Executive Compensation Proxy on SEC EDGAR](https://www.sec.gov/Archives/edgar/data/1318605/000110465925090866/tm252289-12_def14a.htm)\n* **Executive Compensation Audit Tenet:**\n  * Ensure management incentives are tethered to economic ROIC rather than top-line revenue vanity targets.\n* **Perplexity AI 360° Scuttlebutt Intelligence:**\nTesla’s field intelligence looks **Neutral to Fragile**: the company still has strong brand pull and engineering capability, but there are clear signs of supply-chain stress, customer defection risk, and persistent cultural strain.\n\n- **Employee morale & engineering culture**\n- Public review signals are not directly accessible here, but the available current intelligence points to a high-pressure, execution-heavy culture with meaningful supply-chain and product deadlines, which usually correlates with burnout risk rather than calm operating cadence.\n- The most credible current evidence suggests Tesla is forcing a major supplier retooling away from China-made parts in the U.S., which implies intense internal coordination pressure and management scrutiny on engineering and sourcing teams[7][15].\n- The absence of fresh, verifiable Glassdoor/Blind excerpts in the gathered material means the best current inference is: **workload likely remains heavy, trust in leadership is polarizing, and burnout risk is elevated**, but this is an inference rather than a direct review quote.\n\n- **Customer satisfaction & churn**\n- Tesla no longer appears to enjoy uncontested customer-satisfaction leadership; a recent survey summary says rivals have surpassed Tesla in customer satisfaction[14].\n- That implies growing churn/alternative-seeking behavior, especially where customers can substitute with competitive EVs offering comparable range, software, or lower drama.\n- The company still retains a strong fan base, but the current signal is that **satisfaction is no longer uniformly premium** and switching away is becoming more plausible for mainstream buyers[14].\n\n- **Supply chain viability & bottlenecks**\n- Tesla is actively trying to de-risk U.S. manufacturing by requiring suppliers to remove China-made components, showing real concern about geopolitical exposure rather than confidence in the existing chain[7][15].\n- Current reports point to **battery-pack capacity** as a near-term production bottleneck, with Tesla itself described as calling it the main limiting factor to volume growth[2].\n- Rare-earth and magnet exposure remains a major structural risk because China still dominates refining and magnet production, and export controls remain a live threat through late 2026[2][13].\n- Additional risk comes from semiconductor and input inflation pressures tied to gallium and broader geopolitics, suggesting Tesla’s upstream chain is still vulnerable to shocks[3][13].\n- Net: the supply chain is **functional but fragile**, with active mitigation underway rather than fully solved.\n\n- **Moat evaluation**\n- **Tech moat:** Still real, but narrower than before. Tesla remains strong in EV integration, software, manufacturing scale, and energy ecosystem execution, but competitors have closed much of the gap in core EV features.\n- **Brand moat:** Still strong among enthusiasts and many retail holders, but brand polarization is higher now, and survey data suggest customer experience leadership has weakened[14].\n- **Switching costs:** Low for most consumers. EV buyers can switch brands at the next purchase with limited friction, so Tesla’s moat is more about brand preference and ecosystem familiarity than true lock-in.\n- Overall, the moat looks **meaningful but not impregnable**: strongest in execution and ecosystem, weaker in customer lock-in and exclusivity.\n\n- **Crowd & community sentiment**\n- The prevailing retail-investor mood remains emotionally strong and highly polarized: Tesla still commands a passionate base, but sentiment is more divided than in earlier cycles.\n- Developer/engineering community sentiment is likely mixed-to-negative around execution pressure and supply-chain rearchitecture, given the visible sourcing constraints and production bottlenecks[7][15].\n- The current market narrative has shifted from “Tesla always wins” to “Tesla is still exceptional, but not uniquely insulated,” which is a less euphoric community backdrop[14].\n\n**Overall qualitative health verdict: _Neutral_ leaning _Fragile_**\n- Strong brand and substantial engineering capability remain intact.\n- But customer satisfaction is no longer clearly best-in-class, supply-chain risk is elevated, and the moat is less exclusive than it once was.\n- If you want, the next step can be a true Fisher-style memo with a **bull case / bear case / red flags / go-forward checklist** format.\n* **Developer & Tech Moat Reconnaissance (GitHub):**\n  * Repository: `teslamotors/undefined` | Stars: **0** | Forks: **0**\n  * Developer Traction: **Offline / Rate Limited** (Score: 0/100)\n* **Engineering Morale & Culture Sentiment (Hacker News):**\n  * Verdict: **Critical / Technical Skepticism Noted**\n  * Top Tech Discussion: \"[Tesla Motors, Inc. Is Now Officially Tesla, Inc](https://news.ycombinator.com/item?id=13541544)\" (214 points)\n* **Customer & Crowd Sentiment (Reddit):**\n  * Sentiment Tone: **Retail Mixed Sentiment (8 Bull vs 10 Bear)** (StockTwits / Retail Crowd)\n* **Seeking Alpha Analyst Research & Insider Wire:**\n  * Consensus Analyst Sentiment: **Bullish** (6 active write-ups)\n  * Recent Headline: \"[TSLA: Cloud Reacceleration And Generative AI Commercialization Drive Long-Term Upside](https://seekingalpha.com/symbol/TSLA)\" by Compound Capital Research\n* **Supply Chain Manifests:**\n  * **ImportYeti Customs Audit Link:** [Search Shipping Bills of Lading](https://www.importyeti.com/search?q=Tesla%2C%20Inc.)\n* **Scuttlebutt Field Checks (5 Circles):**\n  1. **Competitors:** *Who is winning new accounts, and where is TSLA vulnerable?*\n  2. **Customers:** *Is pricing power durable? Would a 10% price hike drive churn?*\n  3. **Suppliers:** *Are billings paid promptly and purchase orders predictable?*\n  4. **Ex-Employees:** *Is internal promotion strictly meritocratic?*\n  5. **Scientists:** *What 5-to-7-year paradigm shift could obsolete TSLA's products?*\n\n\n---\n\n## 3. Warren Buffett Moat & Owner Earnings Audit\n* **Latest Owner Earnings:** **$-1.42B**\n  * *(Calculated as Reported Net Income + D&A - Maintenance Capex - Working Capital change)*\n* **Average Return on Invested Capital (ROIC):** **14.51%**\n  * *Moat Status:* ⚠️ **MODERATE / COMMODITIZED MOAT** (ROIC < 15%)\n* **The $1 Retained Earnings Test (5-Yr):**\n  * Market Value Created per $1 Retained: **$-124.04**\n  * *Result:* ⚠️ **FAILED** (Capital allocation value destructive)\n* **Balance Sheet Resilience:**\n  * Total Cash: $16.51B | Total Debt: $14.72B\n  * Current Ratio: 1.94 | Debt/Equity: 0.50\n\n---\n\n## 4. Aswath Damodaran Modern Valuation & Online Portal Benchmarks\n* **R&D Capitalization Adjustment:**\n  * Amortizable R&D Asset Created: **$10.76B** (3 Years straight-line lifespan)\n  * Reported GAAP ROIC: 4.77% $\rightarrow$ **Adjusted Modern ROIC: 5.45%**\n  * *Damodaran Insight:* R&D capitalization reveals higher true underlying operating profitability than reported GAAP.\n* **Operating Lease Debt (XBRL):** $6.34B\n* **Damodaran NYU Stern Valuation Benchmarks:**\n  * **Implied Equity Risk Premium (ERP):** **4.6% (NYU Stern Forward-Looking ERP)**\n  * **NYU Stern Industry Sector:** Consumer Goods (Food & Beverage)\n  * **Industry Unlevered Beta:** 0.65 (Sector Benchmark WACC: 6.45%)\n* **Company Cost of Capital (WACC Engine):**\n  * **Cost of Equity ($K_e$):** **13.26%** (CAPM using $\beta = 1.845$)\n  * **Synthetic Debt Rating:** **AA** (Pre-Tax Cost of Debt: 5.47%)\n  * **Calculated WACC (Discount Rate Hurdle):** **13.17%**\n* **The 3 P's Reality Filter (Story to Numbers):**\n  * **Possible:** ✅ Business model adheres to commercial and regulatory boundaries.\n  * **Plausible:** 📊 Revenue growth trajectory (5.19%) is plausible within global industry market share limits.\n  * **Probable:** 🎯 Execution requires ongoing monitoring; historical ROIC (14.51%) provides moderate margin of error.\n* **Macroeconomic Valuation Inputs (FRED):**\n  * **Risk-Free Rate ($R_f$):** **4.77% (FRED DGS10 10-Yr Treasury)**\n  * **Terminal Growth Rate Ceiling ($g$):** $le$ **3%**\n  * **Corporate Credit Spread:** +1% (ICE BofA BBB OAS)\n  * **Yield Curve Regime:** Normal Upward Sloping\n\n---\n\n## 5. Valuation & Margin of Safety Execution\n* **Estimated Fair Value Range:** $[Fair Value Low] - $[Fair Value High]\n* **Target Margin of Safety:** 20% - 35%\n* **Invalidation Triggers (When to Sell):**\n  1. *Structural erosion of economic moat or pricing power failure.*\n  2. *Divergence between CEO compensation incentives and economic ROIC.*\n  3. *Extreme valuation bubble disconnection ($P / FV \\ge 1.60$).*\n",
+  "AMZN": "# Investment Decision Memorandum: AMZN — Amazon.com, Inc.\n* **Date:** 2026-09-08\n* **Current Market Price:** $258.51\n* **Market Capitalization:** $2.79T\n* **Circle of Competence & Lynch Category:** **Stalwart** (Rev CAGR: 11.73%)\n\n---\n\n## Executive Investment Synthesis (Google Gemini AI)\n**1. Economic Moat & Capital Allocation Quality (Buffett & Fisher)**\nAmazon demonstrates an elite economic moat fortified by network effects across e-commerce, cloud computing (AWS), and high-\n\n---\n\n## 1. Peter Lynch Empirical Reconnaissance\n* **Business Classification:** Stalwart\n* **PEG Ratio:** 1.51 — *Overvalued*\n* **Net Cash Per Share:** -6.14\n* **Inventory vs. Sales Growth Spread:** -0.36%\n  * ✅ *No inventory-sales divergence red flags detected.*\n* **The 2-Minute Story:**\n  > *[Draft here: Briefly describe product stickiness, customer demand, and growth runway]*\n\n---\n\n## 2. Philip Fisher Scuttlebutt & Regulatory Audit\n* **Official SEC EDGAR Filings:**\n  * **Latest Form 10-K:** [Annual Report on SEC EDGAR](https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm)\n  * **Latest Proxy DEF 14A:** [Executive Compensation Proxy on SEC EDGAR](https://www.sec.gov/Archives/edgar/data/1018724/000110465926041026/tm261382-1_def14a.htm)\n* **Executive Compensation Audit Tenet:**\n  * Ensure management incentives are tethered to economic ROIC rather than top-line revenue vanity targets.\n* **Perplexity AI 360° Scuttlebutt Intelligence:**\nAmazon’s overall field-intelligence profile looks **Strong**, with the main weakness being persistent employee strain rather than evidence of customer or platform deterioration.\n\n- **Employee morale / engineering culture:** Current employee reviews remain mixed-to-negative on workload and trust. Glassdoor shows Amazon at **3.6/5** overall, but only **3.1/5 for work-life balance** and **3.4/5 for culture/values**, with recurring complaints about long hours, demanding shifts, and burnout[1]. Blind is harsher: Amazon is rated **3.2/5 overall**, with **2.7/5 for work-life balance** and **2.7/5 for management**, and reviews repeatedly cite “relentless” pace, burnout, politics, and declining trust in leadership[2][3].  \n- **Customer satisfaction / churn:** The available current signals do **not** show broad customer defection; in fact, recent coverage points to Amazon benefiting from AI-driven shopping behavior and strong investor expectations around AWS and capex execution[4]. I did not find fresh evidence here of large-scale enterprise churn or a consumer exodus to alternatives.  \n- **Supply chain viability / bottlenecks:** No current evidence surfaced of a single critical tier-1 vendor dependency or acute component shortage in the available results. The more visible risk remains Amazon’s own operating intensity and capital allocation, not a confirmed supply-chain breakage.  \n- **Moat evaluation:** Amazon’s moat still looks **durable**: massive scale in logistics and marketplace, strong consumer brand, and high switching costs in AWS and the broader seller/advertiser ecosystem. The current results reinforce that Wall Street still treats Amazon as a core platform with upside tied to AI and cloud execution[4].  \n- **Crowd / community sentiment:** Developer/employee community sentiment skews **bearish on culture**, with consistent complaints about burnout, politics, and management quality on Blind[2][3]. Retail-investor sentiment appears **mixed to mildly bullish** depending on the time window, with some recent articles describing a bullish flip into earnings, though other coverage notes bearish spells around selling and capex concerns[5][6].  \n\n**Bottom line:** Amazon looks like a **Strong** business with a **fragile internal culture signal**. The scuttlebutt says the moat is intact, customers are not obviously fleeing, and the real issue is employee exhaustion and trust, not competitive collapse.\n* **Developer & Tech Moat Reconnaissance (GitHub):**\n  * Repository: `aws/aws-cli` | Stars: **17,236** | Forks: **4,641**\n  * Developer Traction: **Tier-1 Industry Standard (Deep Tech Moat)** (Score: 139.7/100)\n* **Engineering Morale & Culture Sentiment (Hacker News):**\n  * Verdict: **Balanced / Informational**\n  * Top Tech Discussion: \"[State of Arizona vs. Amazon.com, Inc. Buy Box Parirty [pdf]](https://news.ycombinator.com/item?id=45099291)\" (2 points)\n* **Customer & Crowd Sentiment (Reddit):**\n  * Sentiment Tone: **Retail Crowd Bullish (8 Bull vs 2 Bear)** (StockTwits / Retail Crowd)\n* **Seeking Alpha Analyst Research & Insider Wire:**\n  * Consensus Analyst Sentiment: **Bullish** (6 active write-ups)\n  * Recent Headline: \"[AMZN: Cloud Reacceleration And Generative AI Commercialization Drive Long-Term Upside](https://seekingalpha.com/symbol/AMZN)\" by Compound Capital Research\n* **Supply Chain Manifests:**\n  * **ImportYeti Customs Audit Link:** [Search Shipping Bills of Lading](https://www.importyeti.com/search?q=Amazon.com%2C%20Inc.)\n* **Scuttlebutt Field Checks (5 Circles):**\n  1. **Competitors:** *Who is winning new accounts, and where is AMZN vulnerable?*\n  2. **Customers:** *Is pricing power durable? Would a 10% price hike drive churn?*\n  3. **Suppliers:** *Are billings paid promptly and purchase orders predictable?*\n  4. **Ex-Employees:** *Is internal promotion strictly meritocratic?*\n  5. **Scientists:** *What 5-to-7-year paradigm shift could obsolete AMZN's products?*\n\n\n---\n\n## 3. Warren Buffett Moat & Owner Earnings Audit\n* **Latest Owner Earnings:** **$111.64B**\n  * *(Calculated as Reported Net Income + D&A - Maintenance Capex - Working Capital change)*\n* **Average Return on Invested Capital (ROIC):** **11.12%**\n  * *Moat Status:* ⚠️ **MODERATE / COMMODITIZED MOAT** (ROIC < 15%)\n* **The $1 Retained Earnings Test (5-Yr):**\n  * Market Value Created per $1 Retained: **$17.25**\n  * *Result:* ✅ **PASSED** (Created >= $1.00 market value)\n* **Balance Sheet Resilience:**\n  * Total Cash: $86.81B | Total Debt: $152.99B\n  * Current Ratio: 1.03 | Debt/Equity: 0.50\n\n---\n\n## 4. Aswath Damodaran Modern Valuation & Online Portal Benchmarks\n* **R&D Capitalization Adjustment:**\n  * Amortizable R&D Asset Created: **$0.00** (3 Years straight-line lifespan)\n  * Reported GAAP ROIC: N/A% $\rightarrow$ **Adjusted Modern ROIC: N/A%**\n  * *Damodaran Insight:* N/A\n* **Operating Lease Debt (XBRL):** $96.32B\n* **Damodaran NYU Stern Valuation Benchmarks:**\n  * **Implied Equity Risk Premium (ERP):** **4.6% (NYU Stern Forward-Looking ERP)**\n  * **NYU Stern Industry Sector:** Consumer Goods (Food & Beverage)\n  * **Industry Unlevered Beta:** 0.65 (Sector Benchmark WACC: 6.45%)\n* **Company Cost of Capital (WACC Engine):**\n  * **Cost of Equity ($K_e$):** **11.41%** (CAPM using $\beta = 1.443$)\n  * **Synthetic Debt Rating:** **AAA** (Pre-Tax Cost of Debt: 5.36%)\n  * **Calculated WACC (Discount Rate Hurdle):** **11.04%**\n* **The 3 P's Reality Filter (Story to Numbers):**\n  * **Possible:** ✅ Business model adheres to commercial and regulatory boundaries.\n  * **Plausible:** 📊 Revenue growth trajectory (11.73%) is plausible within global industry market share limits.\n  * **Probable:** 🎯 Execution requires ongoing monitoring; historical ROIC (11.12%) provides moderate margin of error.\n* **Macroeconomic Valuation Inputs (FRED):**\n  * **Risk-Free Rate ($R_f$):** **4.77% (FRED DGS10 10-Yr Treasury)**\n  * **Terminal Growth Rate Ceiling ($g$):** $le$ **3%**\n  * **Corporate Credit Spread:** +1% (ICE BofA BBB OAS)\n  * **Yield Curve Regime:** Normal Upward Sloping\n\n---\n\n## 5. Valuation & Margin of Safety Execution\n* **Estimated Fair Value Range:** $[Fair Value Low] - $[Fair Value High]\n* **Target Margin of Safety:** 20% - 35%\n* **Invalidation Triggers (When to Sell):**\n  1. *Structural erosion of economic moat or pricing power failure.*\n  2. *Divergence between CEO compensation incentives and economic ROIC.*\n  3. *Extreme valuation bubble disconnection ($P / FV \\ge 1.60$).*\n"
 },
   competitors: {
   "MSFT": {
@@ -11080,6 +13723,78 @@ export const BUNDLED_DEMO = {
         "moatRating": "Narrow Moat"
       }
     ],
+    "seekingAlphaPeers": [
+      {
+        "symbol": "GOOGL",
+        "name": "Alphabet Inc.",
+        "coOccurrenceCount": 7,
+        "coOccurrencePercent": 28,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "GOOG",
+        "name": "Alphabet Inc.",
+        "coOccurrenceCount": 6,
+        "coOccurrencePercent": 24,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "AMZN",
+        "name": "Amazon.com, Inc.",
+        "coOccurrenceCount": 6,
+        "coOccurrencePercent": 24,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "NVDA",
+        "name": "NVIDIA Corporation",
+        "coOccurrenceCount": 6,
+        "coOccurrencePercent": 24,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "OPENAI",
+        "name": "OpenAI",
+        "coOccurrenceCount": 5,
+        "coOccurrencePercent": 20,
+        "isLikelyCompetitor": false
+      },
+      {
+        "symbol": "META",
+        "name": "Meta Platforms, Inc.",
+        "coOccurrenceCount": 4,
+        "coOccurrencePercent": 16,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "ORCL",
+        "name": "Oracle Corporation",
+        "coOccurrenceCount": 3,
+        "coOccurrencePercent": 12,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "AMD",
+        "name": "Advanced Micro Devices, Inc.",
+        "coOccurrenceCount": 3,
+        "coOccurrencePercent": 12,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "DLR",
+        "name": "Digital Realty Trust, Inc.",
+        "coOccurrenceCount": 3,
+        "coOccurrencePercent": 12,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "CRWV",
+        "name": "CoreWeave, Inc.",
+        "coOccurrenceCount": 3,
+        "coOccurrencePercent": 12,
+        "isLikelyCompetitor": true
+      }
+    ],
     "benchmarks": {
       "peerMedianPE": 22,
       "peerMedianPEG": 2.11,
@@ -11164,7 +13879,7 @@ export const BUNDLED_DEMO = {
         "threatVector": "Dominant developer mindshare in internet commerce and billing automation."
       }
     ],
-    "timestamp": "2026-09-07T05:00:22.699Z"
+    "timestamp": "2026-09-08T01:21:54.556Z"
   },
   "AAPL": {
     "targetSymbol": "AAPL",
@@ -11265,6 +13980,78 @@ export const BUNDLED_DEMO = {
         "moatRating": "Wide Moat"
       }
     ],
+    "seekingAlphaPeers": [
+      {
+        "symbol": "NVDA",
+        "name": "NVIDIA Corporation",
+        "coOccurrenceCount": 4,
+        "coOccurrencePercent": 16,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "AVGO",
+        "name": "Broadcom Inc.",
+        "coOccurrenceCount": 4,
+        "coOccurrencePercent": 16,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "SNDK",
+        "name": "Sandisk Corporation",
+        "coOccurrenceCount": 4,
+        "coOccurrencePercent": 16,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "AMZN",
+        "name": "Amazon.com, Inc.",
+        "coOccurrenceCount": 4,
+        "coOccurrencePercent": 16,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "GOOGL",
+        "name": "Alphabet Inc.",
+        "coOccurrenceCount": 4,
+        "coOccurrencePercent": 16,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "GOOG",
+        "name": "Alphabet Inc.",
+        "coOccurrenceCount": 4,
+        "coOccurrencePercent": 16,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "HPQ",
+        "name": "HP Inc.",
+        "coOccurrenceCount": 3,
+        "coOccurrencePercent": 12,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "INTC",
+        "name": "Intel Corporation",
+        "coOccurrenceCount": 3,
+        "coOccurrencePercent": 12,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "MU",
+        "name": "Micron Technology, Inc.",
+        "coOccurrenceCount": 3,
+        "coOccurrencePercent": 12,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "HPE",
+        "name": "Hewlett Packard Enterprise Company",
+        "coOccurrenceCount": 3,
+        "coOccurrencePercent": 12,
+        "isLikelyCompetitor": true
+      }
+    ],
     "benchmarks": {
       "peerMedianPE": 28,
       "peerMedianPEG": 2.1,
@@ -11331,7 +14118,7 @@ export const BUNDLED_DEMO = {
         "threatVector": "Dominant developer mindshare in internet commerce and billing automation."
       }
     ],
-    "timestamp": "2026-09-07T05:40:41.517Z"
+    "timestamp": "2026-09-08T01:21:51.018Z"
   },
   "NVDA": {
     "targetSymbol": "NVDA",
@@ -11432,6 +14219,78 @@ export const BUNDLED_DEMO = {
         "moatRating": "Narrow Moat"
       }
     ],
+    "seekingAlphaPeers": [
+      {
+        "symbol": "GOOGL",
+        "name": "Alphabet Inc.",
+        "coOccurrenceCount": 6,
+        "coOccurrencePercent": 24,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "MSFT",
+        "name": "Microsoft Corporation",
+        "coOccurrenceCount": 4,
+        "coOccurrencePercent": 16,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "META",
+        "name": "Meta Platforms, Inc.",
+        "coOccurrenceCount": 4,
+        "coOccurrencePercent": 16,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "OPENAI",
+        "name": "OpenAI",
+        "coOccurrenceCount": 4,
+        "coOccurrencePercent": 16,
+        "isLikelyCompetitor": false
+      },
+      {
+        "symbol": "AVGO",
+        "name": "Broadcom Inc.",
+        "coOccurrenceCount": 4,
+        "coOccurrencePercent": 16,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "ANTHRO",
+        "name": "Anthropic",
+        "coOccurrenceCount": 4,
+        "coOccurrencePercent": 16,
+        "isLikelyCompetitor": false
+      },
+      {
+        "symbol": "AMZN",
+        "name": "Amazon.com, Inc.",
+        "coOccurrenceCount": 3,
+        "coOccurrencePercent": 12,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "INTC",
+        "name": "Intel Corporation",
+        "coOccurrenceCount": 3,
+        "coOccurrencePercent": 12,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "GOOG",
+        "name": "Alphabet Inc.",
+        "coOccurrenceCount": 3,
+        "coOccurrencePercent": 12,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "ORCL",
+        "name": "Oracle Corporation",
+        "coOccurrenceCount": 2,
+        "coOccurrencePercent": 8,
+        "isLikelyCompetitor": true
+      }
+    ],
     "benchmarks": {
       "peerMedianPE": 22,
       "peerMedianPEG": 2,
@@ -11492,7 +14351,7 @@ export const BUNDLED_DEMO = {
         "threatVector": "Specialized niche software and vertical solutions targeting high-margin segments in Technology."
       }
     ],
-    "timestamp": "2026-09-07T05:01:01.587Z"
+    "timestamp": "2026-09-08T02:52:20.012Z"
   },
   "TSLA": {
     "targetSymbol": "TSLA",
@@ -11593,6 +14452,78 @@ export const BUNDLED_DEMO = {
         "moatRating": "Narrow Moat"
       }
     ],
+    "seekingAlphaPeers": [
+      {
+        "symbol": "SPCX",
+        "name": "Space Exploration Technologies Corp.",
+        "coOccurrenceCount": 3,
+        "coOccurrencePercent": 30,
+        "isLikelyCompetitor": false
+      },
+      {
+        "symbol": "WAYMO",
+        "name": "Waymo LLC",
+        "coOccurrenceCount": 3,
+        "coOccurrencePercent": 30,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "GOOG",
+        "name": "Alphabet Inc.",
+        "coOccurrenceCount": 2,
+        "coOccurrencePercent": 20,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "AMZN",
+        "name": "Amazon.com, Inc.",
+        "coOccurrenceCount": 2,
+        "coOccurrencePercent": 20,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "GOOGL",
+        "name": "Alphabet Inc.",
+        "coOccurrenceCount": 2,
+        "coOccurrencePercent": 20,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "UBER",
+        "name": "Uber Technologies, Inc.",
+        "coOccurrenceCount": 2,
+        "coOccurrencePercent": 20,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "XLY",
+        "name": "State Street Consumer Disc Sel Sect SPDR ETF",
+        "coOccurrenceCount": 1,
+        "coOccurrencePercent": 10,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "TPR",
+        "name": "Tapestry, Inc.",
+        "coOccurrenceCount": 1,
+        "coOccurrencePercent": 10,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "TJX",
+        "name": "The TJX Companies, Inc.",
+        "coOccurrenceCount": 1,
+        "coOccurrencePercent": 10,
+        "isLikelyCompetitor": false
+      },
+      {
+        "symbol": "CMG",
+        "name": "Chipotle Mexican Grill, Inc.",
+        "coOccurrenceCount": 1,
+        "coOccurrencePercent": 10,
+        "isLikelyCompetitor": true
+      }
+    ],
     "benchmarks": {
       "peerMedianPE": 37,
       "peerMedianPEG": 1.95,
@@ -11641,7 +14572,7 @@ export const BUNDLED_DEMO = {
         "threatVector": "Specialized niche software and vertical solutions targeting high-margin segments in Consumer Discretionary."
       }
     ],
-    "timestamp": "2026-09-07T05:42:29.633Z"
+    "timestamp": "2026-09-08T04:15:31.366Z"
   },
   "AMZN": {
     "targetSymbol": "AMZN",
@@ -11742,6 +14673,78 @@ export const BUNDLED_DEMO = {
         "moatRating": "Narrow Moat"
       }
     ],
+    "seekingAlphaPeers": [
+      {
+        "symbol": "GOOG",
+        "name": "Alphabet Inc.",
+        "coOccurrenceCount": 3,
+        "coOccurrencePercent": 30,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "MSFT",
+        "name": "Microsoft Corporation",
+        "coOccurrenceCount": 3,
+        "coOccurrencePercent": 30,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "GOOGL",
+        "name": "Alphabet Inc.",
+        "coOccurrenceCount": 3,
+        "coOccurrencePercent": 30,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "DLR",
+        "name": "Digital Realty Trust, Inc.",
+        "coOccurrenceCount": 3,
+        "coOccurrencePercent": 30,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "META",
+        "name": "Meta Platforms, Inc.",
+        "coOccurrenceCount": 2,
+        "coOccurrencePercent": 20,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "ORCL",
+        "name": "Oracle Corporation",
+        "coOccurrenceCount": 2,
+        "coOccurrencePercent": 20,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "AMD",
+        "name": "Advanced Micro Devices, Inc.",
+        "coOccurrenceCount": 2,
+        "coOccurrencePercent": 20,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "NVDA",
+        "name": "NVIDIA Corporation",
+        "coOccurrenceCount": 2,
+        "coOccurrencePercent": 20,
+        "isLikelyCompetitor": true
+      },
+      {
+        "symbol": "EQIX",
+        "name": "Equinix, Inc.",
+        "coOccurrenceCount": 2,
+        "coOccurrencePercent": 20,
+        "isLikelyCompetitor": false
+      },
+      {
+        "symbol": "NBIS",
+        "name": "Nebius Group N.V.",
+        "coOccurrenceCount": 2,
+        "coOccurrencePercent": 20,
+        "isLikelyCompetitor": true
+      }
+    ],
     "benchmarks": {
       "peerMedianPE": 32,
       "peerMedianPEG": 2.1,
@@ -11790,392 +14793,39 @@ export const BUNDLED_DEMO = {
         "threatVector": "Specialized niche software and vertical solutions targeting high-margin segments in Consumer Discretionary."
       }
     ],
-    "timestamp": "2026-09-07T05:42:45.720Z"
+    "timestamp": "2026-09-08T04:15:32.750Z"
   }
 },
   desk: {
   "MSFT": {
     "success": true,
     "ticker": "MSFT",
-    "companyName": "Microsoft Corporation",
-    "timestamp": "2026-09-07T19:51:45.006Z",
-    "pipelineStatus": "COMPLETED",
-    "marketData": {
-      "currentPrice": 200,
-      "fairValue": 230.11,
-      "technicals": {
-        "success": true,
-        "symbol": "MSFT",
-        "isLive": false,
-        "currentPrice": 200,
-        "barsCount": 252,
-        "rsi": {
-          "value": 58.4,
-          "period": 14,
-          "status": "Neutral (30-70)",
-          "sentiment": "neutral"
-        },
-        "macd": {
-          "macdLine": 3.45,
-          "signalLine": 2.1,
-          "histogram": 1.35,
-          "crossover": "Bullish (Above Signal)",
-          "sentiment": "bullish"
-        },
-        "bollingerBands": {
-          "upper": 212,
-          "middle": 200,
-          "lower": 188,
-          "bandwidthPercent": 12,
-          "percentB": 0.62
-        },
-        "atr": {
-          "value": 4.4,
-          "period": 14,
-          "stopLossBuffer1_5x": 6.6,
-          "stopLossBuffer2x": 8.8
-        },
-        "movingAverages": {
-          "sma50": 192,
-          "sma200": 176,
-          "isAbove50": true,
-          "isAbove200": true,
-          "regime": "Golden Cross (50 DMA > 200 DMA)",
-          "regimeSentiment": "bullish"
-        },
-        "pivots": {
-          "support": 182,
-          "resistance": 216,
-          "rangePct": 18.7
-        },
-        "overallSignal": "Bullish / Accumulation",
-        "timestamp": "2026-09-07T19:51:44.723Z"
-      },
-      "retailSentiment": {
-        "success": true,
-        "ticker": "MSFT",
-        "isLive": true,
-        "totalMessages": 30,
-        "bullishCount": 14,
-        "bearishCount": 3,
-        "neutralCount": 13,
-        "bullRatio": 82,
-        "bearRatio": 18,
-        "sentimentVerdict": "Extremely Bullish",
-        "messages": [
-          {
-            "id": 663751758,
-            "body": "$MSFT $497 on hyper not seeing $500 again",
-            "createdAt": "2026-09-07T19:38:14Z",
-            "username": "NetflixUser",
-            "sentiment": "Bearish",
-            "likes": 0
-          },
-          {
-            "id": 663750449,
-            "body": "Microsoft’s revenue over the last 10 fiscal years:\n\n2017: $96.6B\n2018: $110.4B\n2019: $125.8B\n2020: $143.0B\n2021: $168.1B\n2022: $198.3B\n2023: $211.9B\n2024: $245.1B\n2025: $281.7B\n2026: $331.8B\n\nThat represents a 14.7% revenue CAGR.\n\n$MSFT has more than tripled its annual revenue while operating at an already enormous scale.",
-            "createdAt": "2026-09-07T18:39:30Z",
-            "username": "Dividendology",
-            "sentiment": "Bullish",
-            "likes": 1
-          },
-          {
-            "id": 663748502,
-            "body": "$AMFN I saw that movie regarding $BB .  Not sure why $MSFT cannot figure out how to be competitive with $AAPL and $NOK. \nWe are the next best thing, like Brent said; we could be the next BTC.",
-            "createdAt": "2026-09-07T17:17:26Z",
-            "username": "spql8r",
-            "sentiment": "Bullish",
-            "likes": 7
-          },
-          {
-            "id": 663746347,
-            "body": "$MSFT if your bearish on MSFT your just plain…….",
-            "createdAt": "2026-09-07T15:50:35Z",
-            "username": "bluenormas",
-            "sentiment": "Bullish",
-            "likes": 1
-          },
-          {
-            "id": 663744698,
-            "body": "$MSFT Summer of Softy continues next week ! 💥☀️",
-            "createdAt": "2026-09-07T14:44:59Z",
-            "username": "Achandler787",
-            "sentiment": "Bullish",
-            "likes": 1
-          },
-          {
-            "id": 663741958,
-            "body": "$QQQ $SPY $NVDA $MU $MSFT  \nIf it&#39;s twice as powerful it loses 4X as much money. The math is clear. If it&#39;s 4X more powerful then it loses 16x as much money.",
-            "createdAt": "2026-09-07T12:36:45Z",
-            "username": "Whodo_Voodoo_Ido",
-            "sentiment": "Neutral",
-            "likes": 1
-          },
-          {
-            "id": 663740910,
-            "body": "$MSFT $498 on hyper. Never seeing $500 again.",
-            "createdAt": "2026-09-07T11:23:48Z",
-            "username": "NetflixUser",
-            "sentiment": "Bearish",
-            "likes": 0
-          },
-          {
-            "id": 663740198,
-            "body": "$QQQ $SPY $NVDA $MU $MSFT",
-            "createdAt": "2026-09-07T09:56:27Z",
-            "username": "TurboSix",
-            "sentiment": "Neutral",
-            "likes": 2
-          },
-          {
-            "id": 663739603,
-            "body": "$LINK.X $BTC.X  $AMZN  $NVDA \n\n$MSFT",
-            "createdAt": "2026-09-07T08:23:30Z",
-            "username": "TheOne_24",
-            "sentiment": "Bullish",
-            "likes": 2
-          },
-          {
-            "id": 663738286,
-            "body": "$MSFT $MU $NVDA $QQQ $SPY it’s not.  Probably will get a pump followed by a massive sell off after it’s labeled a huge disappointment by the public when they use it and Jensen labeling it AGI is the biggest red flag of all so for him.  Very desperate attempt to keep the circular financing ponzi floating along.  Will be funny to see the negative reaction in a few weeks.",
-            "createdAt": "2026-09-07T05:26:55Z",
-            "username": "Stonethrower2",
-            "sentiment": "Neutral",
-            "likes": 1
-          }
-        ],
-        "timestamp": "2026-09-07T19:51:45.006Z"
-      },
-      "predictionMarkets": {
-        "rateCuts": [
-          {
-            "id": "616902",
-            "question": "Will no Fed rate cuts happen in 2026?",
-            "slug": "will-no-fed-rate-cuts-happen-in-2026",
-            "url": "https://polymarket.com/event/will-no-fed-rate-cuts-happen-in-2026",
-            "endDate": "2026-12-31",
-            "volume": 8152066,
-            "volumeFormatted": "$8.2M",
-            "mainProbabilityPercent": 93,
-            "outcomes": [
-              {
-                "name": "Yes",
-                "probabilityPercent": 93,
-                "rawPrice": 0.9265
-              },
-              {
-                "name": "No",
-                "probabilityPercent": 7,
-                "rawPrice": 0.0735
-              }
-            ]
-          },
-          {
-            "id": "616913",
-            "question": "Will 11 Fed rate cuts happen in 2026?",
-            "slug": "will-11-fed-rate-cuts-happen-in-2026",
-            "url": "https://polymarket.com/event/will-11-fed-rate-cuts-happen-in-2026",
-            "endDate": "2026-12-31",
-            "volume": 5258799,
-            "volumeFormatted": "$5.3M",
-            "mainProbabilityPercent": 0,
-            "outcomes": [
-              {
-                "name": "Yes",
-                "probabilityPercent": 0,
-                "rawPrice": 0.0005
-              },
-              {
-                "name": "No",
-                "probabilityPercent": 100,
-                "rawPrice": 0.9995
-              }
-            ]
-          },
-          {
-            "id": "616912",
-            "question": "Will 10 Fed rate cuts happen in 2026?",
-            "slug": "will-10-fed-rate-cuts-happen-in-2026",
-            "url": "https://polymarket.com/event/will-10-fed-rate-cuts-happen-in-2026",
-            "endDate": "2026-12-31",
-            "volume": 4941749,
-            "volumeFormatted": "$4.9M",
-            "mainProbabilityPercent": 0,
-            "outcomes": [
-              {
-                "name": "Yes",
-                "probabilityPercent": 0,
-                "rawPrice": 0.0005
-              },
-              {
-                "name": "No",
-                "probabilityPercent": 100,
-                "rawPrice": 0.9995
-              }
-            ]
-          }
-        ],
-        "recession": [
-          {
-            "id": "609655",
-            "question": "US recession by end of 2026?",
-            "slug": "us-recession-by-end-of-2026",
-            "url": "https://polymarket.com/event/us-recession-by-end-of-2026",
-            "endDate": "2027-01-31",
-            "volume": 1738313,
-            "volumeFormatted": "$1.7M",
-            "mainProbabilityPercent": 7,
-            "outcomes": [
-              {
-                "name": "Yes",
-                "probabilityPercent": 7,
-                "rawPrice": 0.07
-              },
-              {
-                "name": "No",
-                "probabilityPercent": 93,
-                "rawPrice": 0.93
-              }
-            ]
-          },
-          {
-            "id": "2061857",
-            "question": "UK Recession in 2026?",
-            "slug": "uk-recession-in-2026",
-            "url": "https://polymarket.com/event/uk-recession-in-2026",
-            "endDate": "2027-03-31",
-            "volume": 10331,
-            "volumeFormatted": "$10K",
-            "mainProbabilityPercent": 8,
-            "outcomes": [
-              {
-                "name": "Yes",
-                "probabilityPercent": 8,
-                "rawPrice": 0.075
-              },
-              {
-                "name": "No",
-                "probabilityPercent": 93,
-                "rawPrice": 0.925
-              }
-            ]
-          },
-          {
-            "id": "3407418",
-            "question": "US recession by end of 2027?",
-            "slug": "us-recession-by-end-of-2027-20260807185409760",
-            "url": "https://polymarket.com/event/us-recession-by-end-of-2027-20260807185409760",
-            "endDate": "2027-12-31",
-            "volume": 7210,
-            "volumeFormatted": "$7K",
-            "mainProbabilityPercent": 28,
-            "outcomes": [
-              {
-                "name": "Yes",
-                "probabilityPercent": 28,
-                "rawPrice": 0.275
-              },
-              {
-                "name": "No",
-                "probabilityPercent": 73,
-                "rawPrice": 0.725
-              }
-            ]
-          }
-        ]
-      }
-    },
-    "researchDebate": {
-      "rounds": 2,
-      "turns": [
-        {
-          "round": 1,
-          "speaker": "Bull Researcher",
-          "role": "bull",
-          "badge": "🟢 Growth, Moat & Catalysts",
-          "argument": "As the Bull Researcher for Microsoft Corporation (MSFT), the fundamental and structural thesis is exceptionally strong. First, our DCF valuation models indicate an intrinsic fair value of $230.11, representing a +15.1% margin of safety against the current market price of $200. Categorized under Peter Lynch's framework as a premier 'Stalwart', the company compounds capital with a high-hurdle ROIC of 16.5%, easily beating the cost of capital. Technically, the stock is underpinned by a bullish Golden Cross (50 DMA > 200 DMA) with RSI at 58.4 (sustainable accumulation, not overbought). Furthermore, retail sentiment on StockTwits is running at 82% bullish conviction with strong institutional accumulation. The risk/reward heavily favors entry."
-        },
-        {
-          "round": 1,
-          "speaker": "Bear Researcher",
-          "role": "bear",
-          "badge": "🔴 Downside, Valuation & Risk",
-          "argument": "As the Bear Researcher, the bull thesis ignores critical macroeconomic headwinds and valuation compression risks. While the DCF claims an upside of $230.11, that projection relies on optimistic terminal growth assumptions that fail to price in rising cost-of-capital realities and margin friction. With a PEG ratio of 2.1, the stock is hardly a bargain; any deceleration in quarterly top-line run rate will trigger severe multiple re-rating. On the technical front, MSFT faces stiff overhead resistance at $216. Moreover, retail euphoria (82% bullish) is a classic contrarian indicator of late-cycle retail crowding. We urge extreme caution against chasing at these levels."
-        },
-        {
-          "round": 2,
-          "speaker": "Bull Researcher",
-          "role": "bull",
-          "badge": "🟢 Moat Durability & Counter",
-          "argument": "The Bear's concerns around multiple compression fail to acknowledge Microsoft Corporation's fortress balance sheet and pricing power. With a conservative Debt-to-Equity ratio of only 0.28, MSFT is entirely immune to liquidity distress and comfortably funds its own high-margin R&D organic reinvestment. Furthermore, average true range (ATR) volatility is contained at $4.4, and current prices sit comfortably above the 50-day moving average ($192). This is not an overextended bubble—it is an institutional compounder consolidating for its next upward leg. The evidence overwhelmingly supports building exposure."
-        },
-        {
-          "round": 2,
-          "speaker": "Bear Researcher",
-          "role": "bear",
-          "badge": "🔴 Asymmetric Downside Warning",
-          "argument": "Fortress balance sheet or not, the Bull Analyst cannot handwave away the law of large numbers. Customer concentration, enterprise IT budget scrutiny, and geopolitical supply chain bottlenecks present tangible downside risks that could shave 15-20% off near-term earnings power. If support at $182 is breached, stop-loss cascades will accelerate selling pressure down to the 200 DMA ($176). Risk-adjusted expected value dictates that we either trim existing holdings or demand a deeper margin of safety before deploying incremental capital."
-        }
-      ]
-    },
-    "researchPlan": {
-      "recommendation": "Buy",
-      "consensusVerdict": "BUY — Bull Case Prevails with Risk Guardrails",
-      "convictionScore": 8.5,
-      "rationale": "After evaluating the 2 rounds of adversarial debate, the Bull Researcher's evidence regarding Microsoft Corporation's durable economic moat (ROIC > 15%), DCF discount, and constructive technical trend carrying above the 50 DMA is more grounded than the Bear's speculative multiple compression warnings. However, the Bear's identification of overhead resistance at $216 is valid and must be respected in execution.",
-      "strategicActions": "1. Authorize the trading desk to initiate/expand long exposure via limit orders near current support.\n2. Enforce strict ATR-based stop-loss discipline to defend against the Bear's breakdown scenario.\n3. Scale position into two tranches to optimize cost-basis."
-    },
+    "status": "success",
+    "mode": "mock",
     "traderProposal": {
-      "action": "Buy",
-      "symbol": "MSFT",
-      "currentMarketPrice": 200,
-      "entryPrice": 200,
-      "stopLoss": 193.4,
-      "takeProfit1": 211,
-      "takeProfit2": 217.6,
-      "riskRewardRatio": "1.67:1",
-      "atrValue": 4.4,
-      "atrStopBuffer": "1.5x ATR ($6.60)",
-      "positionSizing": "3.5% of Portfolio Equity",
-      "executionMethod": "Limit Order at Market / Pullback",
-      "reasoning": "Technical market structure confirms Buy signal. Entry is grounded near $200 with dynamic stop-loss at $193.4 calibrated strictly via 1.5x ATR volatility buffer to eliminate market noise. Target 1 offers an attractive 1.67:1 asymmetric reward-to-risk ratio."
-    },
-    "riskDebate": {
-      "consensus": "Approved with Strict ATR Stop-Loss Mandate",
-      "riskScore": 4.2,
-      "debators": [
-        {
-          "speaker": "Aggressive Risk Debater",
-          "role": "aggressive",
-          "stance": "Upsize Exposure & Maximize Alpha",
-          "badge": "⚡ High Reward Focus",
-          "argument": "⚡ Aggressive Risk Debater: The Trader's proposal to Buy $MSFT is sound, but overly timid on position sizing. With favorable risk/reward (1.67:1) and strong momentum, limiting allocation to 3.5% of Portfolio Equity leaves alpha on the table. We should increase exposure to at least 5.0% and trail the stop-loss more aggressively to ride the trend to Take Profit 2 ($217.6)."
-        },
-        {
-          "speaker": "Conservative Risk Debater",
-          "role": "conservative",
-          "stance": "Enforce Strict Capital Preservation & Drawdown Limits",
-          "badge": "🛡️ Capital Preservation",
-          "argument": "🛡️ Conservative Risk Debater: I strongly oppose upsizing. Prediction markets price a 7% chance of recessionary friction, and macro credit conditions remain sensitive. The Trader's 1.5x ATR stop-loss at $193.4 is mandatory and non-negotiable. If volatility spikes and closes below this threshold, the position must be liquidated immediately with zero discretionary hesitation."
-        },
-        {
-          "speaker": "Neutral Risk Arbiter",
-          "role": "neutral",
-          "stance": "Mathematical Expected Value & Sizing Compromise",
-          "badge": "⚖️ Objective Balance",
-          "argument": "⚖️ Neutral Risk Arbiter: Both perspectives highlight valid boundaries. Upsizing to 5% creates excessive single-stock idiosyncratic risk, while exiting completely forfeits asymmetric upside. The Trader's sizing of 3.5% of Portfolio Equity with a hard stop-loss at $193.4 represents the optimal mathematically calibrated Kelly criterion compromise."
-        }
-      ]
+      "conviction": "High",
+      "action": "ACCUMULATE",
+      "allocationPercent": 4.5
     },
     "portfolioDecision": {
-      "status": "APPROVED",
-      "decisionBadge": "APPROVED: BUY MSFT",
-      "finalRating": "Buy",
-      "authorizedAllocation": "3.0% - 3.5% of Portfolio",
-      "maxAllowedDrawdown": "-6.5%",
-      "executionInstructions": "Submit limit order for MSFT at $200. Hard stop-loss registered at $193.4. Take-profit limit set at $211 for 50% scale-out, with remainder trailing to $217.6.",
-      "executiveSignOff": "As Portfolio Manager, I have reviewed the Bull/Bear research debate, the Research Manager's investment plan, and the Tri-Party Risk Committee deliberation. The execution ticket for Microsoft Corporation (MSFT) is formally APPROVED. All risk constraints and ATR-based drawdown stops are actively enforced."
-    }
+      "approved": true,
+      "allocation": "4.5%"
+    },
+    "researchDebate": [
+      {
+        "speaker": "Bull Researcher",
+        "text": "MSFT exhibits persistent competitive advantages and pricing durability."
+      }
+    ],
+    "researchPlan": {
+      "focus": "Capital Allocation and ROIC"
+    },
+    "riskDebate": [
+      {
+        "speaker": "Chief Risk Officer",
+        "text": "Downside risk contained by robust free cash flow and conservative balance sheet."
+      }
+    ]
   },
   "AAPL": {
     "success": true,
@@ -12303,7 +14953,7 @@ export const BUNDLED_DEMO = {
     "success": true,
     "ticker": "MSFT",
     "companyName": "MSFT",
-    "generatedAt": "2026-09-07T19:51:31.637Z",
+    "generatedAt": "2026-09-08T04:15:22.214Z",
     "arbiterSynthesis": {
       "arbiterName": "Benjamin Graham",
       "arbiterTitle": "The Father of Value Investing • Senior Arbiter",
@@ -12517,7 +15167,7 @@ export const BUNDLED_DEMO = {
     "success": true,
     "ticker": "AAPL",
     "companyName": "AAPL",
-    "generatedAt": "2026-09-07T19:51:31.638Z",
+    "generatedAt": "2026-09-08T04:15:28.428Z",
     "arbiterSynthesis": {
       "arbiterName": "Benjamin Graham",
       "arbiterTitle": "The Father of Value Investing • Senior Arbiter",
@@ -12731,7 +15381,7 @@ export const BUNDLED_DEMO = {
     "success": true,
     "ticker": "NVDA",
     "companyName": "NVDA",
-    "generatedAt": "2026-09-07T19:51:31.640Z",
+    "generatedAt": "2026-09-08T04:15:29.582Z",
     "arbiterSynthesis": {
       "arbiterName": "Benjamin Graham",
       "arbiterTitle": "The Father of Value Investing • Senior Arbiter",
@@ -12945,7 +15595,7 @@ export const BUNDLED_DEMO = {
     "success": true,
     "ticker": "TSLA",
     "companyName": "TSLA",
-    "generatedAt": "2026-09-07T19:52:24.111Z",
+    "generatedAt": "2026-09-08T04:15:31.369Z",
     "arbiterSynthesis": {
       "arbiterName": "Benjamin Graham",
       "arbiterTitle": "The Father of Value Investing • Senior Arbiter",
@@ -13159,7 +15809,7 @@ export const BUNDLED_DEMO = {
     "success": true,
     "ticker": "AMZN",
     "companyName": "AMZN",
-    "generatedAt": "2026-09-07T19:52:24.341Z",
+    "generatedAt": "2026-09-08T04:15:32.753Z",
     "arbiterSynthesis": {
       "arbiterName": "Benjamin Graham",
       "arbiterTitle": "The Father of Value Investing • Senior Arbiter",
@@ -13427,7 +16077,7 @@ export const BUNDLED_DEMO = {
     "success": true,
     "ticker": "MSFT",
     "source": "Seeking Alpha RSS (Mock Mode)",
-    "fetchedAt": "2026-09-07T19:52:23.079Z",
+    "fetchedAt": "2026-09-08T04:15:22.203Z",
     "totalArticles": 6,
     "consensusSentiment": "Bullish",
     "sentimentScore": 84,
@@ -13479,7 +16129,7 @@ export const BUNDLED_DEMO = {
         "title": "MSFT: Cloud Reacceleration And Generative AI Commercialization Drive Long-Term Upside",
         "link": "https://seekingalpha.com/symbol/MSFT",
         "guid": "mock-sa-MSFT-1",
-        "pubDate": "Mon, 07 Sep 2026 16:52:23 GMT",
+        "pubDate": "Tue, 08 Sep 2026 01:15:22 GMT",
         "timeAgo": "3h ago",
         "author": "Compound Capital Research",
         "category": "Analyst Research",
@@ -13514,7 +16164,7 @@ export const BUNDLED_DEMO = {
         "title": "MSFT Free Cash Flow Inflection: Capital Expenditures Are Generating 30%+ Marginal ROIC",
         "link": "https://seekingalpha.com/symbol/MSFT",
         "guid": "mock-sa-MSFT-2",
-        "pubDate": "Mon, 07 Sep 2026 12:52:23 GMT",
+        "pubDate": "Mon, 07 Sep 2026 21:15:22 GMT",
         "timeAgo": "7h ago",
         "author": "Institutional Alpha Desk",
         "category": "Analyst Research",
@@ -13544,7 +16194,7 @@ export const BUNDLED_DEMO = {
         "title": "Microsoft Corporation Reports Double-Digit Cloud Growth, Raising Full-Year Operating Margin Guidance",
         "link": "https://seekingalpha.com/symbol/MSFT",
         "guid": "mock-sa-MSFT-3",
-        "pubDate": "Mon, 07 Sep 2026 05:52:23 GMT",
+        "pubDate": "Mon, 07 Sep 2026 14:15:22 GMT",
         "timeAgo": "14h ago",
         "author": "Seeking Alpha News Wire",
         "category": "Earnings & Filings",
@@ -13564,7 +16214,7 @@ export const BUNDLED_DEMO = {
         "title": "Evaluating MSFT Under Damodaran DCF: Margin Of Safety And Terminal Growth Sensitivity",
         "link": "https://seekingalpha.com/symbol/MSFT",
         "guid": "mock-sa-MSFT-4",
-        "pubDate": "Sun, 06 Sep 2026 21:52:23 GMT",
+        "pubDate": "Mon, 07 Sep 2026 06:15:22 GMT",
         "timeAgo": "22h ago",
         "author": "Value Compounder Group",
         "category": "Analyst Research",
@@ -13589,7 +16239,7 @@ export const BUNDLED_DEMO = {
         "title": "MSFT Form 4 Insider Filing: Executive Retains Long-Term Equity Grant In Compliance With Rule 10b5-1",
         "link": "https://seekingalpha.com/symbol/MSFT",
         "guid": "mock-sa-MSFT-5",
-        "pubDate": "Sun, 06 Sep 2026 13:52:23 GMT",
+        "pubDate": "Sun, 06 Sep 2026 22:15:22 GMT",
         "timeAgo": "1d ago",
         "author": "SEC Edgar Watch",
         "category": "Insider Form 4",
@@ -13609,7 +16259,7 @@ export const BUNDLED_DEMO = {
         "title": "MSFT Versus Competitors: Market Share Shift And Enterprise Switching Costs",
         "link": "https://seekingalpha.com/symbol/MSFT",
         "guid": "mock-sa-MSFT-6",
-        "pubDate": "Sat, 05 Sep 2026 19:52:23 GMT",
+        "pubDate": "Sun, 06 Sep 2026 04:15:22 GMT",
         "timeAgo": "2d ago",
         "author": "Tech Moat Analytics",
         "category": "Breaking News",
@@ -13641,7 +16291,7 @@ export const BUNDLED_DEMO = {
     "success": true,
     "ticker": "AAPL",
     "source": "Seeking Alpha RSS (Mock Mode)",
-    "fetchedAt": "2026-09-07T19:52:23.162Z",
+    "fetchedAt": "2026-09-08T04:15:28.428Z",
     "totalArticles": 6,
     "consensusSentiment": "Bullish",
     "sentimentScore": 84,
@@ -13693,7 +16343,7 @@ export const BUNDLED_DEMO = {
         "title": "AAPL: Cloud Reacceleration And Generative AI Commercialization Drive Long-Term Upside",
         "link": "https://seekingalpha.com/symbol/AAPL",
         "guid": "mock-sa-AAPL-1",
-        "pubDate": "Mon, 07 Sep 2026 16:52:23 GMT",
+        "pubDate": "Tue, 08 Sep 2026 01:15:28 GMT",
         "timeAgo": "3h ago",
         "author": "Compound Capital Research",
         "category": "Analyst Research",
@@ -13728,7 +16378,7 @@ export const BUNDLED_DEMO = {
         "title": "AAPL Free Cash Flow Inflection: Capital Expenditures Are Generating 30%+ Marginal ROIC",
         "link": "https://seekingalpha.com/symbol/AAPL",
         "guid": "mock-sa-AAPL-2",
-        "pubDate": "Mon, 07 Sep 2026 12:52:23 GMT",
+        "pubDate": "Mon, 07 Sep 2026 21:15:28 GMT",
         "timeAgo": "7h ago",
         "author": "Institutional Alpha Desk",
         "category": "Analyst Research",
@@ -13758,7 +16408,7 @@ export const BUNDLED_DEMO = {
         "title": "Apple Inc. Reports Double-Digit Cloud Growth, Raising Full-Year Operating Margin Guidance",
         "link": "https://seekingalpha.com/symbol/AAPL",
         "guid": "mock-sa-AAPL-3",
-        "pubDate": "Mon, 07 Sep 2026 05:52:23 GMT",
+        "pubDate": "Mon, 07 Sep 2026 14:15:28 GMT",
         "timeAgo": "14h ago",
         "author": "Seeking Alpha News Wire",
         "category": "Earnings & Filings",
@@ -13778,7 +16428,7 @@ export const BUNDLED_DEMO = {
         "title": "Evaluating AAPL Under Damodaran DCF: Margin Of Safety And Terminal Growth Sensitivity",
         "link": "https://seekingalpha.com/symbol/AAPL",
         "guid": "mock-sa-AAPL-4",
-        "pubDate": "Sun, 06 Sep 2026 21:52:23 GMT",
+        "pubDate": "Mon, 07 Sep 2026 06:15:28 GMT",
         "timeAgo": "22h ago",
         "author": "Value Compounder Group",
         "category": "Analyst Research",
@@ -13803,7 +16453,7 @@ export const BUNDLED_DEMO = {
         "title": "AAPL Form 4 Insider Filing: Executive Retains Long-Term Equity Grant In Compliance With Rule 10b5-1",
         "link": "https://seekingalpha.com/symbol/AAPL",
         "guid": "mock-sa-AAPL-5",
-        "pubDate": "Sun, 06 Sep 2026 13:52:23 GMT",
+        "pubDate": "Sun, 06 Sep 2026 22:15:28 GMT",
         "timeAgo": "1d ago",
         "author": "SEC Edgar Watch",
         "category": "Insider Form 4",
@@ -13823,7 +16473,7 @@ export const BUNDLED_DEMO = {
         "title": "AAPL Versus Competitors: Market Share Shift And Enterprise Switching Costs",
         "link": "https://seekingalpha.com/symbol/AAPL",
         "guid": "mock-sa-AAPL-6",
-        "pubDate": "Sat, 05 Sep 2026 19:52:23 GMT",
+        "pubDate": "Sun, 06 Sep 2026 04:15:28 GMT",
         "timeAgo": "2d ago",
         "author": "Tech Moat Analytics",
         "category": "Breaking News",
@@ -13855,7 +16505,7 @@ export const BUNDLED_DEMO = {
     "success": true,
     "ticker": "NVDA",
     "source": "Seeking Alpha RSS (Mock Mode)",
-    "fetchedAt": "2026-09-07T19:52:23.214Z",
+    "fetchedAt": "2026-09-08T04:15:29.581Z",
     "totalArticles": 6,
     "consensusSentiment": "Bullish",
     "sentimentScore": 84,
@@ -13907,7 +16557,7 @@ export const BUNDLED_DEMO = {
         "title": "NVDA: Cloud Reacceleration And Generative AI Commercialization Drive Long-Term Upside",
         "link": "https://seekingalpha.com/symbol/NVDA",
         "guid": "mock-sa-NVDA-1",
-        "pubDate": "Mon, 07 Sep 2026 16:52:23 GMT",
+        "pubDate": "Tue, 08 Sep 2026 01:15:29 GMT",
         "timeAgo": "3h ago",
         "author": "Compound Capital Research",
         "category": "Analyst Research",
@@ -13942,7 +16592,7 @@ export const BUNDLED_DEMO = {
         "title": "NVDA Free Cash Flow Inflection: Capital Expenditures Are Generating 30%+ Marginal ROIC",
         "link": "https://seekingalpha.com/symbol/NVDA",
         "guid": "mock-sa-NVDA-2",
-        "pubDate": "Mon, 07 Sep 2026 12:52:23 GMT",
+        "pubDate": "Mon, 07 Sep 2026 21:15:29 GMT",
         "timeAgo": "7h ago",
         "author": "Institutional Alpha Desk",
         "category": "Analyst Research",
@@ -13972,7 +16622,7 @@ export const BUNDLED_DEMO = {
         "title": "NVIDIA Corporation Reports Double-Digit Cloud Growth, Raising Full-Year Operating Margin Guidance",
         "link": "https://seekingalpha.com/symbol/NVDA",
         "guid": "mock-sa-NVDA-3",
-        "pubDate": "Mon, 07 Sep 2026 05:52:23 GMT",
+        "pubDate": "Mon, 07 Sep 2026 14:15:29 GMT",
         "timeAgo": "14h ago",
         "author": "Seeking Alpha News Wire",
         "category": "Earnings & Filings",
@@ -13992,7 +16642,7 @@ export const BUNDLED_DEMO = {
         "title": "Evaluating NVDA Under Damodaran DCF: Margin Of Safety And Terminal Growth Sensitivity",
         "link": "https://seekingalpha.com/symbol/NVDA",
         "guid": "mock-sa-NVDA-4",
-        "pubDate": "Sun, 06 Sep 2026 21:52:23 GMT",
+        "pubDate": "Mon, 07 Sep 2026 06:15:29 GMT",
         "timeAgo": "22h ago",
         "author": "Value Compounder Group",
         "category": "Analyst Research",
@@ -14017,7 +16667,7 @@ export const BUNDLED_DEMO = {
         "title": "NVDA Form 4 Insider Filing: Executive Retains Long-Term Equity Grant In Compliance With Rule 10b5-1",
         "link": "https://seekingalpha.com/symbol/NVDA",
         "guid": "mock-sa-NVDA-5",
-        "pubDate": "Sun, 06 Sep 2026 13:52:23 GMT",
+        "pubDate": "Sun, 06 Sep 2026 22:15:29 GMT",
         "timeAgo": "1d ago",
         "author": "SEC Edgar Watch",
         "category": "Insider Form 4",
@@ -14037,7 +16687,7 @@ export const BUNDLED_DEMO = {
         "title": "NVDA Versus Competitors: Market Share Shift And Enterprise Switching Costs",
         "link": "https://seekingalpha.com/symbol/NVDA",
         "guid": "mock-sa-NVDA-6",
-        "pubDate": "Sat, 05 Sep 2026 19:52:23 GMT",
+        "pubDate": "Sun, 06 Sep 2026 04:15:29 GMT",
         "timeAgo": "2d ago",
         "author": "Tech Moat Analytics",
         "category": "Breaking News",
@@ -14069,7 +16719,7 @@ export const BUNDLED_DEMO = {
     "success": true,
     "ticker": "TSLA",
     "source": "Seeking Alpha RSS (Mock Mode)",
-    "fetchedAt": "2026-09-07T19:52:24.110Z",
+    "fetchedAt": "2026-09-08T04:15:31.368Z",
     "totalArticles": 6,
     "consensusSentiment": "Bullish",
     "sentimentScore": 84,
@@ -14121,7 +16771,7 @@ export const BUNDLED_DEMO = {
         "title": "TSLA: Cloud Reacceleration And Generative AI Commercialization Drive Long-Term Upside",
         "link": "https://seekingalpha.com/symbol/TSLA",
         "guid": "mock-sa-TSLA-1",
-        "pubDate": "Mon, 07 Sep 2026 16:52:24 GMT",
+        "pubDate": "Tue, 08 Sep 2026 01:15:31 GMT",
         "timeAgo": "3h ago",
         "author": "Compound Capital Research",
         "category": "Analyst Research",
@@ -14156,7 +16806,7 @@ export const BUNDLED_DEMO = {
         "title": "TSLA Free Cash Flow Inflection: Capital Expenditures Are Generating 30%+ Marginal ROIC",
         "link": "https://seekingalpha.com/symbol/TSLA",
         "guid": "mock-sa-TSLA-2",
-        "pubDate": "Mon, 07 Sep 2026 12:52:24 GMT",
+        "pubDate": "Mon, 07 Sep 2026 21:15:31 GMT",
         "timeAgo": "7h ago",
         "author": "Institutional Alpha Desk",
         "category": "Analyst Research",
@@ -14186,7 +16836,7 @@ export const BUNDLED_DEMO = {
         "title": "Microsoft Corporation Reports Double-Digit Cloud Growth, Raising Full-Year Operating Margin Guidance",
         "link": "https://seekingalpha.com/symbol/TSLA",
         "guid": "mock-sa-TSLA-3",
-        "pubDate": "Mon, 07 Sep 2026 05:52:24 GMT",
+        "pubDate": "Mon, 07 Sep 2026 14:15:31 GMT",
         "timeAgo": "14h ago",
         "author": "Seeking Alpha News Wire",
         "category": "Earnings & Filings",
@@ -14206,7 +16856,7 @@ export const BUNDLED_DEMO = {
         "title": "Evaluating TSLA Under Damodaran DCF: Margin Of Safety And Terminal Growth Sensitivity",
         "link": "https://seekingalpha.com/symbol/TSLA",
         "guid": "mock-sa-TSLA-4",
-        "pubDate": "Sun, 06 Sep 2026 21:52:24 GMT",
+        "pubDate": "Mon, 07 Sep 2026 06:15:31 GMT",
         "timeAgo": "22h ago",
         "author": "Value Compounder Group",
         "category": "Analyst Research",
@@ -14231,7 +16881,7 @@ export const BUNDLED_DEMO = {
         "title": "TSLA Form 4 Insider Filing: Executive Retains Long-Term Equity Grant In Compliance With Rule 10b5-1",
         "link": "https://seekingalpha.com/symbol/TSLA",
         "guid": "mock-sa-TSLA-5",
-        "pubDate": "Sun, 06 Sep 2026 13:52:24 GMT",
+        "pubDate": "Sun, 06 Sep 2026 22:15:31 GMT",
         "timeAgo": "1d ago",
         "author": "SEC Edgar Watch",
         "category": "Insider Form 4",
@@ -14251,7 +16901,7 @@ export const BUNDLED_DEMO = {
         "title": "TSLA Versus Competitors: Market Share Shift And Enterprise Switching Costs",
         "link": "https://seekingalpha.com/symbol/TSLA",
         "guid": "mock-sa-TSLA-6",
-        "pubDate": "Sat, 05 Sep 2026 19:52:24 GMT",
+        "pubDate": "Sun, 06 Sep 2026 04:15:31 GMT",
         "timeAgo": "2d ago",
         "author": "Tech Moat Analytics",
         "category": "Breaking News",
@@ -14283,7 +16933,7 @@ export const BUNDLED_DEMO = {
     "success": true,
     "ticker": "AMZN",
     "source": "Seeking Alpha RSS (Mock Mode)",
-    "fetchedAt": "2026-09-07T19:52:24.341Z",
+    "fetchedAt": "2026-09-08T04:15:32.752Z",
     "totalArticles": 6,
     "consensusSentiment": "Bullish",
     "sentimentScore": 84,
@@ -14335,7 +16985,7 @@ export const BUNDLED_DEMO = {
         "title": "AMZN: Cloud Reacceleration And Generative AI Commercialization Drive Long-Term Upside",
         "link": "https://seekingalpha.com/symbol/AMZN",
         "guid": "mock-sa-AMZN-1",
-        "pubDate": "Mon, 07 Sep 2026 16:52:24 GMT",
+        "pubDate": "Tue, 08 Sep 2026 01:15:32 GMT",
         "timeAgo": "3h ago",
         "author": "Compound Capital Research",
         "category": "Analyst Research",
@@ -14370,7 +17020,7 @@ export const BUNDLED_DEMO = {
         "title": "AMZN Free Cash Flow Inflection: Capital Expenditures Are Generating 30%+ Marginal ROIC",
         "link": "https://seekingalpha.com/symbol/AMZN",
         "guid": "mock-sa-AMZN-2",
-        "pubDate": "Mon, 07 Sep 2026 12:52:24 GMT",
+        "pubDate": "Mon, 07 Sep 2026 21:15:32 GMT",
         "timeAgo": "7h ago",
         "author": "Institutional Alpha Desk",
         "category": "Analyst Research",
@@ -14400,7 +17050,7 @@ export const BUNDLED_DEMO = {
         "title": "Microsoft Corporation Reports Double-Digit Cloud Growth, Raising Full-Year Operating Margin Guidance",
         "link": "https://seekingalpha.com/symbol/AMZN",
         "guid": "mock-sa-AMZN-3",
-        "pubDate": "Mon, 07 Sep 2026 05:52:24 GMT",
+        "pubDate": "Mon, 07 Sep 2026 14:15:32 GMT",
         "timeAgo": "14h ago",
         "author": "Seeking Alpha News Wire",
         "category": "Earnings & Filings",
@@ -14420,7 +17070,7 @@ export const BUNDLED_DEMO = {
         "title": "Evaluating AMZN Under Damodaran DCF: Margin Of Safety And Terminal Growth Sensitivity",
         "link": "https://seekingalpha.com/symbol/AMZN",
         "guid": "mock-sa-AMZN-4",
-        "pubDate": "Sun, 06 Sep 2026 21:52:24 GMT",
+        "pubDate": "Mon, 07 Sep 2026 06:15:32 GMT",
         "timeAgo": "22h ago",
         "author": "Value Compounder Group",
         "category": "Analyst Research",
@@ -14445,7 +17095,7 @@ export const BUNDLED_DEMO = {
         "title": "AMZN Form 4 Insider Filing: Executive Retains Long-Term Equity Grant In Compliance With Rule 10b5-1",
         "link": "https://seekingalpha.com/symbol/AMZN",
         "guid": "mock-sa-AMZN-5",
-        "pubDate": "Sun, 06 Sep 2026 13:52:24 GMT",
+        "pubDate": "Sun, 06 Sep 2026 22:15:32 GMT",
         "timeAgo": "1d ago",
         "author": "SEC Edgar Watch",
         "category": "Insider Form 4",
@@ -14465,7 +17115,7 @@ export const BUNDLED_DEMO = {
         "title": "AMZN Versus Competitors: Market Share Shift And Enterprise Switching Costs",
         "link": "https://seekingalpha.com/symbol/AMZN",
         "guid": "mock-sa-AMZN-6",
-        "pubDate": "Sat, 05 Sep 2026 19:52:24 GMT",
+        "pubDate": "Sun, 06 Sep 2026 04:15:32 GMT",
         "timeAgo": "2d ago",
         "author": "Tech Moat Analytics",
         "category": "Breaking News",
@@ -14523,7 +17173,7 @@ export const BUNDLED_DEMO = {
           "url": "https://copilot.microsoft.com"
         }
       ],
-      "timestamp": "2026-09-07T19:52:23.079Z"
+      "timestamp": "2026-09-08T04:15:22.203Z"
     },
     "investigationVectors": [
       {
@@ -14619,7 +17269,7 @@ export const BUNDLED_DEMO = {
         ]
       }
     ],
-    "timestamp": "2026-09-07T19:52:23.079Z"
+    "timestamp": "2026-09-08T04:15:22.203Z"
   },
   "AAPL": {
     "source": "DuckDuckGo Web & Instant Intelligence (Mock Mode)",
@@ -14641,7 +17291,7 @@ export const BUNDLED_DEMO = {
           "url": "https://duckduckgo.com/?q=Apple%20Inc.%20market%20share"
         }
       ],
-      "timestamp": "2026-09-07T19:52:23.162Z"
+      "timestamp": "2026-09-08T04:15:28.428Z"
     },
     "investigationVectors": [
       {
@@ -14697,7 +17347,7 @@ export const BUNDLED_DEMO = {
         ]
       }
     ],
-    "timestamp": "2026-09-07T19:52:23.162Z"
+    "timestamp": "2026-09-08T04:15:28.428Z"
   },
   "NVDA": {
     "source": "DuckDuckGo Web & Instant Intelligence (Mock Mode)",
@@ -14719,7 +17369,7 @@ export const BUNDLED_DEMO = {
           "url": "https://duckduckgo.com/?q=NVIDIA%20Corporation%20market%20share"
         }
       ],
-      "timestamp": "2026-09-07T19:52:23.214Z"
+      "timestamp": "2026-09-08T04:15:29.581Z"
     },
     "investigationVectors": [
       {
@@ -14775,7 +17425,7 @@ export const BUNDLED_DEMO = {
         ]
       }
     ],
-    "timestamp": "2026-09-07T19:52:23.214Z"
+    "timestamp": "2026-09-08T04:15:29.581Z"
   },
   "TSLA": {
     "source": "DuckDuckGo Web & Instant Intelligence (Mock Mode)",
@@ -14797,7 +17447,7 @@ export const BUNDLED_DEMO = {
           "url": "https://duckduckgo.com/?q=Microsoft%20Corporation%20market%20share"
         }
       ],
-      "timestamp": "2026-09-07T19:52:24.110Z"
+      "timestamp": "2026-09-08T04:15:31.368Z"
     },
     "investigationVectors": [
       {
@@ -14853,7 +17503,7 @@ export const BUNDLED_DEMO = {
         ]
       }
     ],
-    "timestamp": "2026-09-07T19:52:24.110Z"
+    "timestamp": "2026-09-08T04:15:31.368Z"
   },
   "AMZN": {
     "source": "DuckDuckGo Web & Instant Intelligence (Mock Mode)",
@@ -14875,7 +17525,7 @@ export const BUNDLED_DEMO = {
           "url": "https://duckduckgo.com/?q=Microsoft%20Corporation%20market%20share"
         }
       ],
-      "timestamp": "2026-09-07T19:52:24.341Z"
+      "timestamp": "2026-09-08T04:15:32.752Z"
     },
     "investigationVectors": [
       {
@@ -14931,7 +17581,2986 @@ export const BUNDLED_DEMO = {
         ]
       }
     ],
-    "timestamp": "2026-09-07T19:52:24.341Z"
+    "timestamp": "2026-09-08T04:15:32.752Z"
+  }
+},
+  companyAnalysis: {
+  "MSFT": {
+    "_meta": {
+      "schemaVersion": "1.1.0",
+      "ticker": "MSFT",
+      "companyName": "Microsoft Corporation",
+      "timestamp": 1788840922219,
+      "isoDate": "2026-09-08T04:15:22.219Z",
+      "mode": "demo",
+      "aiAugmented": false,
+      "aiProvider": "deterministic_baseline",
+      "aiModel": null,
+      "stages": 5
+    },
+    "companyContext": {
+      "ticker": "MSFT",
+      "name": "Microsoft Corporation",
+      "sector": "Technology",
+      "industry": "Services - Prepackaged Software",
+      "currentPrice": 420.5,
+      "marketCap": 3124315000000,
+      "marketCapFormatted": "$3.12T",
+      "peRatio": 34.2,
+      "pegRatio": 2.1,
+      "revenue": 245122000000,
+      "revenueFormatted": "$245.12B",
+      "netIncome": 88136000000,
+      "netIncomeFormatted": "$88.14B",
+      "operatingCashFlow": 118500000000,
+      "operatingCashFlowFormatted": "$118.50B",
+      "totalDebt": 75000000000,
+      "totalDebtFormatted": "$75.00B",
+      "cash": 111000000000,
+      "cashFormatted": "$111.00B",
+      "equity": 268000000000,
+      "equityFormatted": "$268.00B",
+      "debtToEquity": 0.28,
+      "netMargin": 36,
+      "fairValue": 462.55,
+      "valuationStatus": "Overvalued",
+      "riskScore": "13/14",
+      "riskRating": "Low Risk",
+      "riskPassPercent": 92.9,
+      "failedChecks": [
+        {
+          "id": "insider_selling_3m",
+          "category": "Risk Checks",
+          "question": "Has there been substantial insider selling in the past 3 months?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "Significant insider selling over the past 3 months",
+          "details": {
+            "flag": "SUBSTANTIAL_INSIDER_SELLING",
+            "filingsCount": 5,
+            "timeframe": "90 days"
+          },
+          "timestamp": 1788840922218
+        }
+      ]
+    },
+    "stage1_DossierSummary": {
+      "ticker": "MSFT",
+      "name": "Microsoft Corporation",
+      "sector": "Technology",
+      "currentPrice": 420.5,
+      "marketCapFormatted": "$3.12T",
+      "valuationStatus": "Overvalued",
+      "riskScore": "13/14",
+      "riskRating": "Low Risk",
+      "riskPassPercent": 92.9,
+      "signalsSummary": {
+        "totalChecks": 14,
+        "passed": 13,
+        "failed": 1,
+        "warnings": 0,
+        "riskRating": "Low Risk",
+        "passScorePercent": 92.9
+      },
+      "riskChecks": [
+        {
+          "id": "insider_selling_3m",
+          "category": "Risk Checks",
+          "question": "Has there been substantial insider selling in the past 3 months?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "Significant insider selling over the past 3 months",
+          "details": {
+            "flag": "SUBSTANTIAL_INSIDER_SELLING",
+            "filingsCount": 5,
+            "timeframe": "90 days"
+          },
+          "timestamp": 1788840922218
+        },
+        {
+          "id": "financial_position",
+          "category": "Risk Checks",
+          "question": "Are they in a good financial position?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Debt level is low and not considered a risk",
+          "details": {
+            "netDebt": -36000000000,
+            "isNetCashPositive": true,
+            "debtToEquity": 0.28,
+            "cashAndEquivalents": 111000000000,
+            "totalDebt": 75000000000
+          },
+          "timestamp": 1788840922218
+        },
+        {
+          "id": "meaningful_market_cap",
+          "category": "Risk Checks",
+          "question": "Do they have meaningful market capitalization?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Market cap is meaningful ($3.12T)",
+          "details": {
+            "marketCap": 3124315000000,
+            "threshold": 2000000000,
+            "formatted": "$3.12T"
+          },
+          "timestamp": 1788840922218
+        },
+        {
+          "id": "negative_shareholders_equity",
+          "category": "Risk Checks",
+          "question": "Do they have negative shareholders equity?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "MSFT does not have negative shareholders equity.",
+          "details": {
+            "shareholdersEquity": 268000000000,
+            "formatted": "$268.00B"
+          },
+          "timestamp": 1788840922218
+        },
+        {
+          "id": "concerning_recent_events",
+          "category": "Risk Checks",
+          "question": "Are there any concerning recent events?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "No concerning events detected",
+          "details": {
+            "eventsDetectedCount": 0,
+            "newsSentimentRatio": 33.3
+          },
+          "timestamp": 1788840922218
+        },
+        {
+          "id": "liquid_and_stable_share_price",
+          "category": "Risk Checks",
+          "question": "Is their share price liquid and stable?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Share price has been stable over the past 3 months compared to the US market",
+          "details": {
+            "beta": 1.15,
+            "liquidityStatus": "High Liquidity"
+          },
+          "timestamp": 1788840922218
+        },
+        {
+          "id": "profit_margins_improved",
+          "category": "Risk Checks",
+          "question": "Have profit margins improved over the past year?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Profit margins improved or MSFT became profitable",
+          "details": {
+            "latestMarginPercent": 35.96,
+            "priorMarginPercent": 34.15,
+            "becameProfitable": false
+          },
+          "timestamp": 1788840922218
+        },
+        {
+          "id": "sufficient_financial_data",
+          "category": "Risk Checks",
+          "question": "Do they have sufficient financial data available?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "They have sufficient analyst coverage",
+          "details": {
+            "auditedYearsCount": 5,
+            "coverageStatus": "Sufficient"
+          },
+          "timestamp": 1788840922218
+        },
+        {
+          "id": "meaningful_revenue",
+          "category": "Risk Checks",
+          "question": "Do they have meaningful levels of revenue?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Revenue is meaningful ($245.12B)",
+          "details": {
+            "revenue": 245122000000,
+            "threshold": 100000000,
+            "formatted": "$245.12B"
+          },
+          "timestamp": 1788840922218
+        },
+        {
+          "id": "shareholders_diluted",
+          "category": "Risk Checks",
+          "question": "Have shareholders been diluted over the past year?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Shareholders have not been meaningfully diluted in the past year or recently listed",
+          "details": {
+            "sharesOutstanding": 7430000000,
+            "dilutionRatePercent": 0
+          },
+          "timestamp": 1788840922218
+        },
+        {
+          "id": "forecast_profitability",
+          "category": "Risk Checks",
+          "question": "Are they forecast to achieve profitability?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "The company is currently profitable",
+          "details": {
+            "netIncome": 88136000000,
+            "isCurrentlyProfitable": true,
+            "formatted": "$88.14B"
+          },
+          "timestamp": 1788840922218
+        },
+        {
+          "id": "high_quality_earnings",
+          "category": "Risk Checks",
+          "question": "Do they have high quality earnings?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "The company’s earnings are high quality",
+          "details": {
+            "operatingCashflow": 118500000000,
+            "netIncome": 88136000000,
+            "cashConversionRatio": 1.34
+          },
+          "timestamp": 1788840922218
+        },
+        {
+          "id": "revenue_earnings_growth_forecast",
+          "category": "Risk Checks",
+          "question": "Are revenue and earnings forecast to grow?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Earnings are forecast to grow by an average of 14% per year for the next 3 years",
+          "details": {
+            "forecastAnnualGrowthRatePercent": 14,
+            "horizonYears": 3
+          },
+          "timestamp": 1788840922218
+        },
+        {
+          "id": "dividend_sustainability",
+          "category": "Risk Checks",
+          "question": "Is their dividend sustainable?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Dividend is too low to be a concern",
+          "details": {
+            "dividendYieldPercent": 0.75,
+            "payoutRatio": 0.23,
+            "assessment": "Low Yield / Non-Material Drag"
+          },
+          "timestamp": 1788840922218
+        }
+      ]
+    },
+    "stage2_AnalysisPersonas": {
+      "personas": {
+        "bullResearcher": {
+          "id": "bull_researcher",
+          "title": "Bull Researcher",
+          "badge": "Growth & Moats",
+          "stance": "BULLISH",
+          "verdict": "Strong Buy / Accumulate",
+          "coreCase": [
+            "Monolithic market position with massive scale ($$245.12B revenue) and high recurring free cash conversion.",
+            "Fortress balance sheet featuring $$111.00B in liquid cash against low leverage (Debt/Equity: 0.28x).",
+            "Robust net profit margin of 36% demonstrating strong pricing power and enterprise switching moats.",
+            "Intrinsic fair value estimated at $462.55 (+10.0% upside)."
+          ],
+          "opinionatedSummary": "Microsoft Corporation is an elite capital compounding machine. With gross margins exceeding peer benchmarks and aggressive secular positioning in modern enterprise tech, temporary valuation premiums or insider selling noise are insignificant compared to its 5-year compounding durability. Accumulate aggressively on any market dip."
+        },
+        "bearResearcher": {
+          "id": "bear_researcher",
+          "title": "Bear Researcher",
+          "badge": "Risk & Friction",
+          "stance": "BEARISH",
+          "verdict": "Underweight / Caution",
+          "coreCase": [
+            "Elevated valuation multiple (P/E: 34.2x, PEG: 2.1x) leaves zero room for operational slip-ups or macroeconomic contraction.",
+            "Flagged risk checks: Has there been substantial insider selling in the past 3 months?. Heavy executive insider selling indicates smart insiders are locking in gains rather than accumulating.",
+            "Diminishing marginal returns on gargantuan capex cycles; future top-line growth is mathematically bound to decelerate due to the law of large numbers.",
+            "Antitrust and regulatory scrutiny threatens bundling power and enterprise software margins."
+          ],
+          "opinionatedSummary": "The risk/reward asymmetry is unfavorable at current price levels ($420.50). Markets are pricing in perfection for Microsoft Corporation while ignoring persistent insider selling and ballooning infrastructure capital intensity. Capital is better preserved on the sidelines or rotated into cheaper defensive value."
+        },
+        "aggressiveRiskDebater": {
+          "id": "aggressive_risk_debater",
+          "title": "Aggressive Risk Debater",
+          "badge": "Asymmetric Upside",
+          "stance": "VERY BULLISH",
+          "verdict": "Max Allocation",
+          "coreCase": [
+            "Asymmetric upside profile: Microsoft Corporation is the undisputed foundational platform of the next decade's computing wave.",
+            "Operating cash flow of $$118.50B gives management infinite optionality to acquire disruptors or buy back shares.",
+            "Insider sales are routine pre-scheduled 10b5-1 tax events; treating them as structural red flags is classic market overthinking.",
+            "In a bull regime, premium franchises deservedly command premium multiples. Momentum favors the bold."
+          ],
+          "opinionatedSummary": "Bet on the generational platform champion. Risk in Microsoft Corporation is largely academic—when a company generates $$118.50B in cash, downside is strictly cushioned by buyback capacity and enterprise ubiquity. Maximize portfolio allocation to growth."
+        },
+        "conservativeRiskDebater": {
+          "id": "conservative_risk_debater",
+          "title": "Conservative Risk Debater",
+          "badge": "Capital Preservation",
+          "stance": "DEFENSIVE / NEUTRAL",
+          "verdict": "Wait for Margin of Safety",
+          "coreCase": [
+            "Primary fiduciary duty is capital preservation: At a 34.2x P/E, an investor is paying $34.2 for every $1 of earnings, requiring decades to recoup under adverse market regimes.",
+            "Net debt and total obligations ($$75.00B) must be rigorously scrutinized against potential liquidity shocks.",
+            "Insider selling cannot be cavalierly dismissed—leadership is actively cashing out while retail takes on high-multiple duration risk.",
+            "Demands a minimum 25% Margin of Safety before committing client capital."
+          ],
+          "opinionatedSummary": "Prudence dictates caution. While Microsoft Corporation possesses undeniable balance sheet strength, paying historically elevated multiples exposes investors to severe multiple compression if interest rates remain elevated or growth slows by even 200 basis points. Hold existing positions, but do not initiate fresh capital without a margin of safety."
+        },
+        "neutralRiskArbiter": {
+          "id": "neutral_risk_arbiter",
+          "title": "Neutral Risk Arbiter",
+          "badge": "Objective Adjudicator",
+          "stance": "BALANCED",
+          "verdict": "Strategic Hold / Phased Accumulation",
+          "coreCase": [
+            "Factual balance sheet score: 13/14 Risk Checks Passed (92.9%), denoting a fundamentally pristine financial condition.",
+            "Valuation status is Overvalued: Intrinsic DCF value lands at $462.55 vs market price of $420.50.",
+            "Bull thesis on cash flow conversion and Bear thesis on multiple duration risk are both quantitatively sound.",
+            "Net position: Risk/reward is balanced; suitable for core strategic holding with staggered accumulation rather than binary all-in bets."
+          ],
+          "opinionatedSummary": "Synthesizing objective financial signals, Microsoft Corporation qualifies as a tier-1 institutional compounder. The downside is structurally protected by $$111.00B in liquidity, while upside is moderated by its 34.2x valuation multiple. The optimal strategy is systematic, phased dollar-cost averaging."
+        }
+      },
+      "debate": {
+        "rounds": [
+          {
+            "roundNumber": 1,
+            "title": "Round 1: Opening Theses Clash (Growth vs Multiple Risk)",
+            "turns": [
+              {
+                "speaker": "Bull Researcher",
+                "role": "Bullish Growth Advocate",
+                "argument": "Microsoft Corporation is firing on all cylinders with $$245.12B in revenue and 36% net margins. There is no viable substitute for their core enterprise ecosystem, making revenue growth durable and recurring."
+              },
+              {
+                "speaker": "Bear Researcher",
+                "role": "Bearish Risk Analyst",
+                "rebuttalTo": "Bull Researcher",
+                "argument": "Durability does not justify paying 34.2x earnings! At this multiple, you are discounting perfection 10 years into the future. Furthermore, our risk checks flag substantial insider selling over the past 3 months. If the future is so radiant, why are company executives cashing out tens of millions in shares?"
+              },
+              {
+                "speaker": "Neutral Risk Arbiter",
+                "role": "Objective Fact-Checker",
+                "ruling": "Fact-check on the record: Microsoft Corporation indeed generated $$88.14B in net income, and 13 out of 14 risk checks passed with zero balance sheet stress. However, the Bear is correct that the P/E ratio of 34.2x leaves minimal margin for error."
+              }
+            ]
+          },
+          {
+            "roundNumber": 2,
+            "title": "Round 2: Risk Tolerance Duel (Aggressive vs Conservative)",
+            "turns": [
+              {
+                "speaker": "Aggressive Risk Debater",
+                "role": "High-Tolerance Momentum Seeker",
+                "rebuttalTo": "Bear Researcher",
+                "argument": "The Bear is obsessing over pennies while missing the generational platform shift! Insider selling on pre-planned 10b5-1 schedules is routine executive liquidity, not a structural panic. Look at the cash conversion—$$118.50B in operating cash flow! That is a fortress that incinerates short theses."
+              },
+              {
+                "speaker": "Conservative Risk Debater",
+                "role": "Downside Protection Advocate",
+                "rebuttalTo": "Aggressive Risk Debater",
+                "argument": "Cavalier attitudes toward valuation always end in tears when the macro tide turns. You cannot buy a business simply because its operating cash flow is large; you must evaluate what you pay for that cash flow. If terminal discount rates rise by even 100 bps, this stock drops 20% overnight. Capital preservation must come before euphoria."
+              },
+              {
+                "speaker": "Neutral Risk Arbiter",
+                "role": "Risk-Adjusted Synthesis",
+                "ruling": "Both debaters raise valid structural mechanics. Aggressive rightly points to uncontested cash flow scale ($$118.50B); Conservative rightly warns of duration vulnerability given the 34.2x multiple."
+              }
+            ]
+          },
+          {
+            "roundNumber": 3,
+            "title": "Round 3: Direct Closing Rebuttals",
+            "turns": [
+              {
+                "speaker": "Bear Researcher",
+                "role": "Bearish Risk Analyst",
+                "rebuttalTo": "Aggressive Risk Debater",
+                "argument": "To the Aggressive Debater: If cloud growth rates normalize or enterprise software budgets compress, what is your downside floor? You have no tangible margin of safety other than hope."
+              },
+              {
+                "speaker": "Bull Researcher",
+                "role": "Bullish Growth Advocate",
+                "rebuttalTo": "Bear Researcher",
+                "argument": "The downside floor is $$111.00B in cash, high ROIC, and massive share repurchase capacity that protects earnings per share even in slower top-line environments. Bet on compounding quality, not cyclical paralysis."
+              }
+            ]
+          }
+        ],
+        "conclusion": {
+          "consensusPoints": [
+            "Microsoft Corporation possesses exceptional balance sheet health, zero solvency risk, and elite cash generation ($$118.50B).",
+            "Core financial quality is confirmed by passing 13 of 14 objective risk checks (92.9% pass score)."
+          ],
+          "contestedBattleground": "The debate hinges strictly on Valuation Multiple Friction (34.2x P/E) and insider selling vs Generational Platform Durability and Buyback Cushion.",
+          "verdictToExperts": "Microsoft Corporation is a pristine enterprise trading at a full valuation. The 5 Analysis Personas refer this file to the 4 Legendary Experts to determine if the moat, return on capital, scuttlebutt, and DCF justify entering at current market prices."
+        }
+      }
+    },
+    "stage3_ExpertPersonas": {
+      "debateFedToExperts": {
+        "consensusPoints": [
+          "Microsoft Corporation possesses exceptional balance sheet health, zero solvency risk, and elite cash generation ($$118.50B).",
+          "Core financial quality is confirmed by passing 13 of 14 objective risk checks (92.9% pass score)."
+        ],
+        "contestedBattleground": "The debate hinges strictly on Valuation Multiple Friction (34.2x P/E) and insider selling vs Generational Platform Durability and Buyback Cushion.",
+        "verdictToExperts": "Microsoft Corporation is a pristine enterprise trading at a full valuation. The 5 Analysis Personas refer this file to the 4 Legendary Experts to determine if the moat, return on capital, scuttlebutt, and DCF justify entering at current market prices."
+      },
+      "experts": {
+        "warrenBuffett": {
+          "id": "warren_buffett",
+          "name": "Warren Buffett",
+          "role": "Chairman & CEO, Berkshire Hathaway",
+          "philosophy": "Economic Moats, Owner Earnings & Capital Discipline",
+          "stance": "BULLISH ON MOAT",
+          "verdict": "Accumulate High-Quality Compounder",
+          "caseAnalysis": [
+            "Economic Moat Audit: Average ROIC of 56.95%% clears our 15% hurdle with ease, proving a wide enterprise moat and high pricing power.",
+            "Owner Earnings: Generating $79.25B in true spendable cash for owners after real capital maintenance.",
+            "Solvency Fortress: $$111.00B in cash vs $$75.00B in debt demonstrates pristine financial resilience.",
+            "Debate Rebuttal: The Bear is right to be skeptical of high multiples, but as I learned from Charlie Munger: It's far better to buy a wonderful company at a fair price than a fair company at a wonderful price."
+          ],
+          "opinionatedSummary": "Microsoft Corporation is a textbook wonderful business with an enduring moat. While it is not a 50-cent dollar cigar butt, its ability to redeploy capital at high rates of return makes it an exceptional candidate for long-term holding. My verdict: ACCUMULATE ON QUALITY."
+        },
+        "peterLynch": {
+          "id": "peter_lynch",
+          "name": "Peter Lynch",
+          "role": "Former Manager, Fidelity Magellan Fund",
+          "philosophy": "Circle of Competence, PEG Ratio & Company Taxonomy",
+          "stance": "COMPOUNDING STALWART",
+          "verdict": "Buy on Cyclical Pullbacks",
+          "caseAnalysis": [
+            "Taxonomy Classification: Classified as a \"Stalwart\". It is a multibillion-dollar blue-chip engine that offers defensive resilience and consistent double-digit growth.",
+            "PEG Ratio Check: PEG stands at 2.1x. While our favorite hunting ground is PEG < 1.0, a Stalwart with this level of recurring cash flow is reasonable up to 1.5x - 2.0x.",
+            "Street-Level Edge: Ubiquitous across Fortune 500 enterprises and developer workflows. Switching costs are extraordinarily high.",
+            "Debate Rebuttal: I agree with the Bull that you don't sell a champion simply because it had a good run, but watch the inventory/sales growth spread and enterprise budget slowdowns closely."
+          ],
+          "opinionatedSummary": "As a Stalwart, Microsoft Corporation won't double overnight, but it will protect you in downturns and compound steadily. Don't let the noise scare you out of a winning position. My verdict: SOLID STALWART HOLD / BUY ON DIPS."
+        },
+        "philipFisher": {
+          "id": "philip_fisher",
+          "name": "Philip Fisher",
+          "role": "Pioneer of Growth Investing & Scuttlebutt",
+          "philosophy": "360° Scuttlebutt, R&D Productivity & Management Integrity",
+          "stance": "EXCEPTIONAL QUALITY",
+          "verdict": "Long-Term Hold & Grow",
+          "caseAnalysis": [
+            "Scuttlebutt & Tech Moat: Developer momentum is high; engineering sentiment is \"Bullish & Highly Motivated\".",
+            "R&D Productivity: Reinvestment into core cloud and intelligent systems is yielding tangible enterprise customer lock-in.",
+            "Management & Integrity Audit: While insider selling was flagged in the risk checks, Form 4 disclosures show long-tenured leadership retains enormous personal equity stakes.",
+            "Debate Rebuttal: The Bear complains about large capex. I disagree—aggressive R&D and capital spending to build proprietary competitive lead is exactly what I look for in a 15-Point company."
+          ],
+          "opinionatedSummary": "Field intelligence confirms high customer retention and superior engineering discipline. When a company dominates its technological ecosystem with high switching friction, you stay invested for the compounding decade. My verdict: EXCEPTIONAL FRANCHISE QUALITY."
+        },
+        "aswathDamodaran": {
+          "id": "aswath_damodaran",
+          "name": "Aswath Damodaran",
+          "role": "Professor of Finance, NYU Stern",
+          "philosophy": "DCF Intrinsic Fair Value, WACC & Narrative-to-Numbers",
+          "stance": "FAIRLY VALUED",
+          "verdict": "Disciplined DCF Entry Only",
+          "caseAnalysis": [
+            "Valuation Mechanics: Cost of capital (synthetic WACC) is calculated at 9.93%.",
+            "Intrinsic Fair Value: Multi-stage DCF yields an intrinsic equity value of $462.55 per share vs current price of $420.50.",
+            "Narrative-to-Numbers Reality Filter: The Bull's story of enterprise dominance is Possible and Plausible. However, the Probable path suggests modest multiple compression over time.",
+            "Debate Rebuttal: Both Bull and Bear make emotional appeals. The math indicates the stock is Overvalued. Do not chase at peak multiples, but accumulate when priced below intrinsic DCF."
+          ],
+          "opinionatedSummary": "The market price is closely anchored to its intrinsic discounted cash flow fair value ($462.55). The narrative of durable enterprise cloud leadership holds up under accounting normalization, but upside is constrained by current valuation. My verdict: NEUTRAL / FAIRLY VALUED."
+        }
+      }
+    },
+    "stage4_ExpertsDebate": {
+      "rounds": [
+        {
+          "roundNumber": 1,
+          "title": "Round 1: Economic Moats vs DCF Multiple (Buffett vs Damodaran)",
+          "turns": [
+            {
+              "speaker": "Warren Buffett",
+              "role": "Chairman & CEO, Berkshire Hathaway",
+              "argument": "It is far better to buy a wonderful business like Microsoft Corporation at a fair price than a fair business at a wonderful price. The high return on invested capital and sticky customer ecosystem mean this moat compounds steadily through all macro cycles."
+            },
+            {
+              "speaker": "Aswath Damodaran",
+              "role": "Professor of Finance, NYU Stern",
+              "rebuttalTo": "Warren Buffett",
+              "argument": "Warren, even the most durable moat has a finite intrinsic cash flow value. At 34.2x earnings, the market is pricing in flawless execution. My multi-stage DCF yields an intrinsic fair value of $462.55—paying a multiple premium above intrinsic cash flow erodes expected return."
+            }
+          ]
+        },
+        {
+          "roundNumber": 2,
+          "title": "Round 2: R&D Reinvestment Velocity vs Stalwart Taxonomy (Fisher vs Lynch)",
+          "turns": [
+            {
+              "speaker": "Philip Fisher",
+              "role": "Pioneer of Growth & Scuttlebutt",
+              "argument": "Quantitative multiple screens miss what 360° scuttlebutt reveals: Microsoft Corporation reinvests aggressively into high-margin platform initiatives with superior R&D productivity. You cannot evaluate a generational tech compounder with static backward-looking PE filters."
+            },
+            {
+              "speaker": "Peter Lynch",
+              "role": "Former Manager, Fidelity Magellan Fund",
+              "rebuttalTo": "Philip Fisher",
+              "argument": "Philip, I love quality businesses, but at over $3.12T market cap, this is clearly a Stalwart, not a Fast Grower. A PEG ratio of 2.1x dictates patience: do not chase at peak multiples, but accumulate aggressively on cyclical 15-20% pullbacks."
+            }
+          ]
+        },
+        {
+          "roundNumber": 3,
+          "title": "Round 3: Final Doctrinal Clash & Committee Mandate",
+          "turns": [
+            {
+              "speaker": "Warren Buffett",
+              "role": "Chairman & CEO, Berkshire Hathaway",
+              "rebuttalTo": "Aswath Damodaran",
+              "argument": "When you possess a wide moat with low debt ($$75.00B) and high liquid reserves ($$111.00B), time is the friend of the wonderful business. But I agree with Aswath: price discipline is essential."
+            },
+            {
+              "speaker": "Aswath Damodaran",
+              "role": "Professor of Finance, NYU Stern",
+              "rebuttalTo": "Warren Buffett",
+              "argument": "Consensus is reached on business quality. The file now passes to Ben Graham with our key question: does current market price offer an adequate Margin of Safety, or must investors hold limit orders?"
+            }
+          ]
+        }
+      ],
+      "conclusion": {
+        "expertConsensusPoints": [
+          "Microsoft Corporation possesses pristine balance sheet health, verified by 13/14 passed risk checks and $$111.00B in liquid cash.",
+          "Economic moat and high return on capital provide durable franchise pricing power over economic cycles.",
+          "Valuation multiple (34.2x P/E) is trading near or slightly above intrinsic DCF fair value ($462.55), making disciplined entry thresholds imperative."
+        ],
+        "contestedBattleground": "Doctrinal Friction: Whether Microsoft Corporation's generational platform moat justifies buying at full valuation multiples (Buffett/Fisher) vs demanding a classical discount to DCF fair value (Damodaran/Lynch).",
+        "irreconcilableDifferences": "Buffett and Fisher are willing to hold through multiple compression for compounding franchise quality, whereas Damodaran and Lynch demand price pullback to intrinsic fair value before deploying fresh capital.",
+        "verdictToSeniorArbiter": "The 4 Experts unanimously validate the exceptional franchise caliber and solvency of Microsoft Corporation, but stand divided on multiple entry tolerance. Transmitted exclusively to Senior Arbiter Benjamin Graham to adjudicate the definitive Margin of Safety and maximum prudent entry price."
+      }
+    },
+    "stage5_SeniorArbiterGraham": {
+      "arbiterName": "Benjamin Graham",
+      "title": "Senior Arbiter & Dean of Wall Street",
+      "compositeGrade": "A-",
+      "recommendation": "PRUDENT ACCUMULATION ON RETRACEMENT",
+      "marginOfSafetyStatus": "MARGIN OF SAFETY COMPRESSED (9.1% discount to DCF fair value)",
+      "maxPrudentEntryPrice": 425.55,
+      "targetFairValue": 462.55,
+      "suggestedPortfolioAllocationPercent": "4.0% - 7.5% (Core Tier-1 Compounder)",
+      "masterOpinionatedSummary": "Having received the objective Company Dossier alongside the Final Conclusion transmitted from the Legendary Experts Debate (Buffett, Lynch, Fisher, Damodaran), my Senior Arbiter adjudication on Microsoft Corporation (MSFT) is unequivocal:\n\n1. Financial Fortress Integrity: Microsoft Corporation meets the strictest standards of quantitative solvency. It passes 13/14 risk checks (92.9%), possesses $$111.00B in liquid cash reserves, and produces consistent operating cash flow ($$118.50B). Net shareholders equity is positive and robust ($$268.00B). The 4 experts unanimously confirmed quantitative solvency.\n\n2. Adjudication of the Expert Debate: The core contested battleground—\"Doctrinal Friction: Whether Microsoft Corporation's generational platform moat justifies buying at full valuation multiples (Buffett/Fisher) vs demanding a classical discount to DCF fair value (Damodaran/Lynch).\"—reflects the timeless tension between price paid and value received. Damodaran and Lynch have legitimately established that purchasing at 34.2x P/E exposes an investor to duration risk and multiple compression. However, Buffett and Fisher have decisively demonstrated that Microsoft Corporation's economic moat (56.95%% ROIC) and switching costs provide a rare structural defense against inflation and competitive disruption.\n\n3. The Margin of Safety Mandate: An investment operation is one which, upon thorough analysis, promises safety of principal and an adequate return. Operations not meeting these requirements are speculative. At $420.50, Microsoft Corporation is trading near its intrinsic DCF fair value ($462.55). While it does not offer the classic 33% discount to tangible liquidation value that I favored in the 1930s, its extraordinary franchise earnings power replaces physical liquidation value. \n\nMy final counsel: Exercise price discipline. Do not chase momentum at peak multiples. Initiate or maintain a core strategic position with limit orders placed on market pullbacks below $439.42.",
+      "criticalInvalidationTriggers": [
+        "Commercial operating margins compressing below 32% for two consecutive quarters.",
+        "Net cash conversion falling below 80% of reported GAAP net income.",
+        "Enterprise switching moats eroding due to regulatory antitrust mandated unbundling.",
+        "Sustained debt-to-equity expansion above 0.85x without corresponding cash accumulation."
+      ]
+    },
+    "stage4_SeniorArbiterGraham": {
+      "arbiterName": "Benjamin Graham",
+      "title": "Senior Arbiter & Dean of Wall Street",
+      "compositeGrade": "A-",
+      "recommendation": "PRUDENT ACCUMULATION ON RETRACEMENT",
+      "marginOfSafetyStatus": "MARGIN OF SAFETY COMPRESSED (9.1% discount to DCF fair value)",
+      "maxPrudentEntryPrice": 425.55,
+      "targetFairValue": 462.55,
+      "suggestedPortfolioAllocationPercent": "4.0% - 7.5% (Core Tier-1 Compounder)",
+      "masterOpinionatedSummary": "Having received the objective Company Dossier alongside the Final Conclusion transmitted from the Legendary Experts Debate (Buffett, Lynch, Fisher, Damodaran), my Senior Arbiter adjudication on Microsoft Corporation (MSFT) is unequivocal:\n\n1. Financial Fortress Integrity: Microsoft Corporation meets the strictest standards of quantitative solvency. It passes 13/14 risk checks (92.9%), possesses $$111.00B in liquid cash reserves, and produces consistent operating cash flow ($$118.50B). Net shareholders equity is positive and robust ($$268.00B). The 4 experts unanimously confirmed quantitative solvency.\n\n2. Adjudication of the Expert Debate: The core contested battleground—\"Doctrinal Friction: Whether Microsoft Corporation's generational platform moat justifies buying at full valuation multiples (Buffett/Fisher) vs demanding a classical discount to DCF fair value (Damodaran/Lynch).\"—reflects the timeless tension between price paid and value received. Damodaran and Lynch have legitimately established that purchasing at 34.2x P/E exposes an investor to duration risk and multiple compression. However, Buffett and Fisher have decisively demonstrated that Microsoft Corporation's economic moat (56.95%% ROIC) and switching costs provide a rare structural defense against inflation and competitive disruption.\n\n3. The Margin of Safety Mandate: An investment operation is one which, upon thorough analysis, promises safety of principal and an adequate return. Operations not meeting these requirements are speculative. At $420.50, Microsoft Corporation is trading near its intrinsic DCF fair value ($462.55). While it does not offer the classic 33% discount to tangible liquidation value that I favored in the 1930s, its extraordinary franchise earnings power replaces physical liquidation value. \n\nMy final counsel: Exercise price discipline. Do not chase momentum at peak multiples. Initiate or maintain a core strategic position with limit orders placed on market pullbacks below $439.42.",
+      "criticalInvalidationTriggers": [
+        "Commercial operating margins compressing below 32% for two consecutive quarters.",
+        "Net cash conversion falling below 80% of reported GAAP net income.",
+        "Enterprise switching moats eroding due to regulatory antitrust mandated unbundling.",
+        "Sustained debt-to-equity expansion above 0.85x without corresponding cash accumulation."
+      ]
+    }
+  },
+  "AAPL": {
+    "_meta": {
+      "schemaVersion": "1.1.0",
+      "ticker": "AAPL",
+      "companyName": "Apple Inc.",
+      "timestamp": 1788840928430,
+      "isoDate": "2026-09-08T04:15:28.430Z",
+      "mode": "demo",
+      "aiAugmented": false,
+      "aiProvider": "deterministic_baseline",
+      "aiModel": null,
+      "stages": 5
+    },
+    "companyContext": {
+      "ticker": "AAPL",
+      "name": "Apple Inc.",
+      "sector": "Technology",
+      "industry": "Consumer Electronics",
+      "currentPrice": 228,
+      "marketCap": 3488400000000,
+      "marketCapFormatted": "$3.49T",
+      "peRatio": 33.5,
+      "pegRatio": 2.3,
+      "revenue": 391035000000,
+      "revenueFormatted": "$391.04B",
+      "netIncome": 93736000000,
+      "netIncomeFormatted": "$93.74B",
+      "operatingCashFlow": 118254000000,
+      "operatingCashFlowFormatted": "$118.25B",
+      "totalDebt": 106629000000,
+      "totalDebtFormatted": "$106.63B",
+      "cash": 65180000000,
+      "cashFormatted": "$65.18B",
+      "equity": 66885000000,
+      "equityFormatted": "$66.89B",
+      "debtToEquity": 1.59,
+      "netMargin": 24,
+      "fairValue": 250.8,
+      "valuationStatus": "Overvalued",
+      "riskScore": "12/14",
+      "riskRating": "Low Risk",
+      "riskPassPercent": 85.7,
+      "failedChecks": [
+        {
+          "id": "financial_position",
+          "category": "Risk Checks",
+          "question": "Are they in a good financial position?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "Elevated debt level relative to cash reserves and earnings",
+          "details": {
+            "netDebt": 41449000000,
+            "debtToEquity": 1.59,
+            "cashAndEquivalents": 65180000000,
+            "totalDebt": 106629000000
+          },
+          "timestamp": 1788840928430
+        },
+        {
+          "id": "profit_margins_improved",
+          "category": "Risk Checks",
+          "question": "Have profit margins improved over the past year?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "Profit margins contracted from 25.3% to 24% over the past year",
+          "details": {
+            "latestMarginPercent": 23.97,
+            "priorMarginPercent": 25.31
+          },
+          "timestamp": 1788840928430
+        }
+      ]
+    },
+    "stage1_DossierSummary": {
+      "ticker": "AAPL",
+      "name": "Apple Inc.",
+      "sector": "Technology",
+      "currentPrice": 228,
+      "marketCapFormatted": "$3.49T",
+      "valuationStatus": "Overvalued",
+      "riskScore": "12/14",
+      "riskRating": "Low Risk",
+      "riskPassPercent": 85.7,
+      "signalsSummary": {
+        "totalChecks": 14,
+        "passed": 12,
+        "failed": 2,
+        "warnings": 0,
+        "riskRating": "Low Risk",
+        "passScorePercent": 85.7
+      },
+      "riskChecks": [
+        {
+          "id": "insider_selling_3m",
+          "category": "Risk Checks",
+          "question": "Has there been substantial insider selling in the past 3 months?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "No substantial insider selling detected in the past 3 months",
+          "details": {
+            "flag": "CLEAN_INSIDER_HOLDINGS",
+            "filingsCount": 5,
+            "timeframe": "90 days"
+          },
+          "timestamp": 1788840928430
+        },
+        {
+          "id": "financial_position",
+          "category": "Risk Checks",
+          "question": "Are they in a good financial position?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "Elevated debt level relative to cash reserves and earnings",
+          "details": {
+            "netDebt": 41449000000,
+            "debtToEquity": 1.59,
+            "cashAndEquivalents": 65180000000,
+            "totalDebt": 106629000000
+          },
+          "timestamp": 1788840928430
+        },
+        {
+          "id": "meaningful_market_cap",
+          "category": "Risk Checks",
+          "question": "Do they have meaningful market capitalization?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Market cap is meaningful ($3.49T)",
+          "details": {
+            "marketCap": 3488400000000,
+            "threshold": 2000000000,
+            "formatted": "$3.49T"
+          },
+          "timestamp": 1788840928430
+        },
+        {
+          "id": "negative_shareholders_equity",
+          "category": "Risk Checks",
+          "question": "Do they have negative shareholders equity?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "AAPL does not have negative shareholders equity.",
+          "details": {
+            "shareholdersEquity": 66885000000,
+            "formatted": "$66.89B"
+          },
+          "timestamp": 1788840928430
+        },
+        {
+          "id": "concerning_recent_events",
+          "category": "Risk Checks",
+          "question": "Are there any concerning recent events?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "No concerning events detected",
+          "details": {
+            "eventsDetectedCount": 0,
+            "newsSentimentRatio": 100
+          },
+          "timestamp": 1788840928430
+        },
+        {
+          "id": "liquid_and_stable_share_price",
+          "category": "Risk Checks",
+          "question": "Is their share price liquid and stable?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Share price has been stable over the past 3 months compared to the US market",
+          "details": {
+            "beta": 1.08,
+            "liquidityStatus": "High Liquidity"
+          },
+          "timestamp": 1788840928430
+        },
+        {
+          "id": "profit_margins_improved",
+          "category": "Risk Checks",
+          "question": "Have profit margins improved over the past year?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "Profit margins contracted from 25.3% to 24% over the past year",
+          "details": {
+            "latestMarginPercent": 23.97,
+            "priorMarginPercent": 25.31
+          },
+          "timestamp": 1788840928430
+        },
+        {
+          "id": "sufficient_financial_data",
+          "category": "Risk Checks",
+          "question": "Do they have sufficient financial data available?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "They have sufficient analyst coverage",
+          "details": {
+            "auditedYearsCount": 5,
+            "coverageStatus": "Sufficient"
+          },
+          "timestamp": 1788840928430
+        },
+        {
+          "id": "meaningful_revenue",
+          "category": "Risk Checks",
+          "question": "Do they have meaningful levels of revenue?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Revenue is meaningful ($391.04B)",
+          "details": {
+            "revenue": 391035000000,
+            "threshold": 100000000,
+            "formatted": "$391.04B"
+          },
+          "timestamp": 1788840928430
+        },
+        {
+          "id": "shareholders_diluted",
+          "category": "Risk Checks",
+          "question": "Have shareholders been diluted over the past year?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Shareholders have not been meaningfully diluted in the past year or recently listed",
+          "details": {
+            "sharesOutstanding": 15300000000,
+            "dilutionRatePercent": 0
+          },
+          "timestamp": 1788840928430
+        },
+        {
+          "id": "forecast_profitability",
+          "category": "Risk Checks",
+          "question": "Are they forecast to achieve profitability?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "The company is currently profitable",
+          "details": {
+            "netIncome": 93736000000,
+            "isCurrentlyProfitable": true,
+            "formatted": "$93.74B"
+          },
+          "timestamp": 1788840928430
+        },
+        {
+          "id": "high_quality_earnings",
+          "category": "Risk Checks",
+          "question": "Do they have high quality earnings?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "The company’s earnings are high quality",
+          "details": {
+            "operatingCashflow": 118254000000,
+            "netIncome": 93736000000,
+            "cashConversionRatio": 1.26
+          },
+          "timestamp": 1788840928430
+        },
+        {
+          "id": "revenue_earnings_growth_forecast",
+          "category": "Risk Checks",
+          "question": "Are revenue and earnings forecast to grow?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Earnings are forecast to grow by an average of 14% per year for the next 3 years",
+          "details": {
+            "forecastAnnualGrowthRatePercent": 14,
+            "horizonYears": 3
+          },
+          "timestamp": 1788840928430
+        },
+        {
+          "id": "dividend_sustainability",
+          "category": "Risk Checks",
+          "question": "Is their dividend sustainable?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Dividend is too low to be a concern",
+          "details": {
+            "dividendYieldPercent": 0.44,
+            "payoutRatio": 0.26,
+            "assessment": "Low Yield / Non-Material Drag"
+          },
+          "timestamp": 1788840928430
+        }
+      ]
+    },
+    "stage2_AnalysisPersonas": {
+      "personas": {
+        "bullResearcher": {
+          "id": "bull_researcher",
+          "title": "Bull Researcher",
+          "badge": "Growth & Moats",
+          "stance": "BULLISH",
+          "verdict": "Strong Buy / Accumulate",
+          "coreCase": [
+            "Monolithic market position with massive scale ($$391.04B revenue) and high recurring free cash conversion.",
+            "Fortress balance sheet featuring $$65.18B in liquid cash against low leverage (Debt/Equity: 1.59x).",
+            "Robust net profit margin of 24% demonstrating strong pricing power and enterprise switching moats.",
+            "Intrinsic fair value estimated at $250.80 (+10.0% upside)."
+          ],
+          "opinionatedSummary": "Apple Inc. is an elite capital compounding machine. With gross margins exceeding peer benchmarks and aggressive secular positioning in modern enterprise tech, temporary valuation premiums or insider selling noise are insignificant compared to its 5-year compounding durability. Accumulate aggressively on any market dip."
+        },
+        "bearResearcher": {
+          "id": "bear_researcher",
+          "title": "Bear Researcher",
+          "badge": "Risk & Friction",
+          "stance": "BEARISH",
+          "verdict": "Underweight / Caution",
+          "coreCase": [
+            "Elevated valuation multiple (P/E: 33.5x, PEG: 2.3x) leaves zero room for operational slip-ups or macroeconomic contraction.",
+            "Flagged risk checks: Are they in a good financial position?, Have profit margins improved over the past year?. Heavy executive insider selling indicates smart insiders are locking in gains rather than accumulating.",
+            "Diminishing marginal returns on gargantuan capex cycles; future top-line growth is mathematically bound to decelerate due to the law of large numbers.",
+            "Antitrust and regulatory scrutiny threatens bundling power and enterprise software margins."
+          ],
+          "opinionatedSummary": "The risk/reward asymmetry is unfavorable at current price levels ($228.00). Markets are pricing in perfection for Apple Inc. while ignoring persistent insider selling and ballooning infrastructure capital intensity. Capital is better preserved on the sidelines or rotated into cheaper defensive value."
+        },
+        "aggressiveRiskDebater": {
+          "id": "aggressive_risk_debater",
+          "title": "Aggressive Risk Debater",
+          "badge": "Asymmetric Upside",
+          "stance": "VERY BULLISH",
+          "verdict": "Max Allocation",
+          "coreCase": [
+            "Asymmetric upside profile: Apple Inc. is the undisputed foundational platform of the next decade's computing wave.",
+            "Operating cash flow of $$118.25B gives management infinite optionality to acquire disruptors or buy back shares.",
+            "Insider sales are routine pre-scheduled 10b5-1 tax events; treating them as structural red flags is classic market overthinking.",
+            "In a bull regime, premium franchises deservedly command premium multiples. Momentum favors the bold."
+          ],
+          "opinionatedSummary": "Bet on the generational platform champion. Risk in Apple Inc. is largely academic—when a company generates $$118.25B in cash, downside is strictly cushioned by buyback capacity and enterprise ubiquity. Maximize portfolio allocation to growth."
+        },
+        "conservativeRiskDebater": {
+          "id": "conservative_risk_debater",
+          "title": "Conservative Risk Debater",
+          "badge": "Capital Preservation",
+          "stance": "DEFENSIVE / NEUTRAL",
+          "verdict": "Wait for Margin of Safety",
+          "coreCase": [
+            "Primary fiduciary duty is capital preservation: At a 33.5x P/E, an investor is paying $33.5 for every $1 of earnings, requiring decades to recoup under adverse market regimes.",
+            "Net debt and total obligations ($$106.63B) must be rigorously scrutinized against potential liquidity shocks.",
+            "Insider selling cannot be cavalierly dismissed—leadership is actively cashing out while retail takes on high-multiple duration risk.",
+            "Demands a minimum 25% Margin of Safety before committing client capital."
+          ],
+          "opinionatedSummary": "Prudence dictates caution. While Apple Inc. possesses undeniable balance sheet strength, paying historically elevated multiples exposes investors to severe multiple compression if interest rates remain elevated or growth slows by even 200 basis points. Hold existing positions, but do not initiate fresh capital without a margin of safety."
+        },
+        "neutralRiskArbiter": {
+          "id": "neutral_risk_arbiter",
+          "title": "Neutral Risk Arbiter",
+          "badge": "Objective Adjudicator",
+          "stance": "BALANCED",
+          "verdict": "Strategic Hold / Phased Accumulation",
+          "coreCase": [
+            "Factual balance sheet score: 12/14 Risk Checks Passed (85.7%), denoting a fundamentally pristine financial condition.",
+            "Valuation status is Overvalued: Intrinsic DCF value lands at $250.80 vs market price of $228.00.",
+            "Bull thesis on cash flow conversion and Bear thesis on multiple duration risk are both quantitatively sound.",
+            "Net position: Risk/reward is balanced; suitable for core strategic holding with staggered accumulation rather than binary all-in bets."
+          ],
+          "opinionatedSummary": "Synthesizing objective financial signals, Apple Inc. qualifies as a tier-1 institutional compounder. The downside is structurally protected by $$65.18B in liquidity, while upside is moderated by its 33.5x valuation multiple. The optimal strategy is systematic, phased dollar-cost averaging."
+        }
+      },
+      "debate": {
+        "rounds": [
+          {
+            "roundNumber": 1,
+            "title": "Round 1: Opening Theses Clash (Growth vs Multiple Risk)",
+            "turns": [
+              {
+                "speaker": "Bull Researcher",
+                "role": "Bullish Growth Advocate",
+                "argument": "Apple Inc. is firing on all cylinders with $$391.04B in revenue and 24% net margins. There is no viable substitute for their core enterprise ecosystem, making revenue growth durable and recurring."
+              },
+              {
+                "speaker": "Bear Researcher",
+                "role": "Bearish Risk Analyst",
+                "rebuttalTo": "Bull Researcher",
+                "argument": "Durability does not justify paying 33.5x earnings! At this multiple, you are discounting perfection 10 years into the future. Furthermore, our risk checks flag substantial insider selling over the past 3 months. If the future is so radiant, why are company executives cashing out tens of millions in shares?"
+              },
+              {
+                "speaker": "Neutral Risk Arbiter",
+                "role": "Objective Fact-Checker",
+                "ruling": "Fact-check on the record: Apple Inc. indeed generated $$93.74B in net income, and 13 out of 14 risk checks passed with zero balance sheet stress. However, the Bear is correct that the P/E ratio of 33.5x leaves minimal margin for error."
+              }
+            ]
+          },
+          {
+            "roundNumber": 2,
+            "title": "Round 2: Risk Tolerance Duel (Aggressive vs Conservative)",
+            "turns": [
+              {
+                "speaker": "Aggressive Risk Debater",
+                "role": "High-Tolerance Momentum Seeker",
+                "rebuttalTo": "Bear Researcher",
+                "argument": "The Bear is obsessing over pennies while missing the generational platform shift! Insider selling on pre-planned 10b5-1 schedules is routine executive liquidity, not a structural panic. Look at the cash conversion—$$118.25B in operating cash flow! That is a fortress that incinerates short theses."
+              },
+              {
+                "speaker": "Conservative Risk Debater",
+                "role": "Downside Protection Advocate",
+                "rebuttalTo": "Aggressive Risk Debater",
+                "argument": "Cavalier attitudes toward valuation always end in tears when the macro tide turns. You cannot buy a business simply because its operating cash flow is large; you must evaluate what you pay for that cash flow. If terminal discount rates rise by even 100 bps, this stock drops 20% overnight. Capital preservation must come before euphoria."
+              },
+              {
+                "speaker": "Neutral Risk Arbiter",
+                "role": "Risk-Adjusted Synthesis",
+                "ruling": "Both debaters raise valid structural mechanics. Aggressive rightly points to uncontested cash flow scale ($$118.25B); Conservative rightly warns of duration vulnerability given the 33.5x multiple."
+              }
+            ]
+          },
+          {
+            "roundNumber": 3,
+            "title": "Round 3: Direct Closing Rebuttals",
+            "turns": [
+              {
+                "speaker": "Bear Researcher",
+                "role": "Bearish Risk Analyst",
+                "rebuttalTo": "Aggressive Risk Debater",
+                "argument": "To the Aggressive Debater: If cloud growth rates normalize or enterprise software budgets compress, what is your downside floor? You have no tangible margin of safety other than hope."
+              },
+              {
+                "speaker": "Bull Researcher",
+                "role": "Bullish Growth Advocate",
+                "rebuttalTo": "Bear Researcher",
+                "argument": "The downside floor is $$65.18B in cash, high ROIC, and massive share repurchase capacity that protects earnings per share even in slower top-line environments. Bet on compounding quality, not cyclical paralysis."
+              }
+            ]
+          }
+        ],
+        "conclusion": {
+          "consensusPoints": [
+            "Apple Inc. possesses exceptional balance sheet health, zero solvency risk, and elite cash generation ($$118.25B).",
+            "Core financial quality is confirmed by passing 13 of 14 objective risk checks (85.7% pass score)."
+          ],
+          "contestedBattleground": "The debate hinges strictly on Valuation Multiple Friction (33.5x P/E) and insider selling vs Generational Platform Durability and Buyback Cushion.",
+          "verdictToExperts": "Apple Inc. is a pristine enterprise trading at a full valuation. The 5 Analysis Personas refer this file to the 4 Legendary Experts to determine if the moat, return on capital, scuttlebutt, and DCF justify entering at current market prices."
+        }
+      }
+    },
+    "stage3_ExpertPersonas": {
+      "debateFedToExperts": {
+        "consensusPoints": [
+          "Apple Inc. possesses exceptional balance sheet health, zero solvency risk, and elite cash generation ($$118.25B).",
+          "Core financial quality is confirmed by passing 13 of 14 objective risk checks (85.7% pass score)."
+        ],
+        "contestedBattleground": "The debate hinges strictly on Valuation Multiple Friction (33.5x P/E) and insider selling vs Generational Platform Durability and Buyback Cushion.",
+        "verdictToExperts": "Apple Inc. is a pristine enterprise trading at a full valuation. The 5 Analysis Personas refer this file to the 4 Legendary Experts to determine if the moat, return on capital, scuttlebutt, and DCF justify entering at current market prices."
+      },
+      "experts": {
+        "warrenBuffett": {
+          "id": "warren_buffett",
+          "name": "Warren Buffett",
+          "role": "Chairman & CEO, Berkshire Hathaway",
+          "philosophy": "Economic Moats, Owner Earnings & Capital Discipline",
+          "stance": "BULLISH ON MOAT",
+          "verdict": "Accumulate High-Quality Compounder",
+          "caseAnalysis": [
+            "Economic Moat Audit: Average ROIC of 75.37%% clears our 15% hurdle with ease, proving a wide enterprise moat and high pricing power.",
+            "Owner Earnings: Generating $91.85B in true spendable cash for owners after real capital maintenance.",
+            "Solvency Fortress: $$65.18B in cash vs $$106.63B in debt demonstrates pristine financial resilience.",
+            "Debate Rebuttal: The Bear is right to be skeptical of high multiples, but as I learned from Charlie Munger: It's far better to buy a wonderful company at a fair price than a fair company at a wonderful price."
+          ],
+          "opinionatedSummary": "Apple Inc. is a textbook wonderful business with an enduring moat. While it is not a 50-cent dollar cigar butt, its ability to redeploy capital at high rates of return makes it an exceptional candidate for long-term holding. My verdict: ACCUMULATE ON QUALITY."
+        },
+        "peterLynch": {
+          "id": "peter_lynch",
+          "name": "Peter Lynch",
+          "role": "Former Manager, Fidelity Magellan Fund",
+          "philosophy": "Circle of Competence, PEG Ratio & Company Taxonomy",
+          "stance": "COMPOUNDING STALWART",
+          "verdict": "Buy on Cyclical Pullbacks",
+          "caseAnalysis": [
+            "Taxonomy Classification: Classified as a \"Slow Grower\". It is a multibillion-dollar blue-chip engine that offers defensive resilience and consistent double-digit growth.",
+            "PEG Ratio Check: PEG stands at 2.3x. While our favorite hunting ground is PEG < 1.0, a Stalwart with this level of recurring cash flow is reasonable up to 1.5x - 2.0x.",
+            "Street-Level Edge: Ubiquitous across Fortune 500 enterprises and developer workflows. Switching costs are extraordinarily high.",
+            "Debate Rebuttal: I agree with the Bull that you don't sell a champion simply because it had a good run, but watch the inventory/sales growth spread and enterprise budget slowdowns closely."
+          ],
+          "opinionatedSummary": "As a Slow Grower, Apple Inc. won't double overnight, but it will protect you in downturns and compound steadily. Don't let the noise scare you out of a winning position. My verdict: SOLID STALWART HOLD / BUY ON DIPS."
+        },
+        "philipFisher": {
+          "id": "philip_fisher",
+          "name": "Philip Fisher",
+          "role": "Pioneer of Growth Investing & Scuttlebutt",
+          "philosophy": "360° Scuttlebutt, R&D Productivity & Management Integrity",
+          "stance": "EXCEPTIONAL QUALITY",
+          "verdict": "Long-Term Hold & Grow",
+          "caseAnalysis": [
+            "Scuttlebutt & Tech Moat: Developer momentum is high; engineering sentiment is \"Bullish & Highly Motivated\".",
+            "R&D Productivity: Reinvestment into core cloud and intelligent systems is yielding tangible enterprise customer lock-in.",
+            "Management & Integrity Audit: While insider selling was flagged in the risk checks, Form 4 disclosures show long-tenured leadership retains enormous personal equity stakes.",
+            "Debate Rebuttal: The Bear complains about large capex. I disagree—aggressive R&D and capital spending to build proprietary competitive lead is exactly what I look for in a 15-Point company."
+          ],
+          "opinionatedSummary": "Field intelligence confirms high customer retention and superior engineering discipline. When a company dominates its technological ecosystem with high switching friction, you stay invested for the compounding decade. My verdict: EXCEPTIONAL FRANCHISE QUALITY."
+        },
+        "aswathDamodaran": {
+          "id": "aswath_damodaran",
+          "name": "Aswath Damodaran",
+          "role": "Professor of Finance, NYU Stern",
+          "philosophy": "DCF Intrinsic Fair Value, WACC & Narrative-to-Numbers",
+          "stance": "FAIRLY VALUED",
+          "verdict": "Disciplined DCF Entry Only",
+          "caseAnalysis": [
+            "Valuation Mechanics: Cost of capital (synthetic WACC) is calculated at 9.58%.",
+            "Intrinsic Fair Value: Multi-stage DCF yields an intrinsic equity value of $250.80 per share vs current price of $228.00.",
+            "Narrative-to-Numbers Reality Filter: The Bull's story of enterprise dominance is Possible and Plausible. However, the Probable path suggests modest multiple compression over time.",
+            "Debate Rebuttal: Both Bull and Bear make emotional appeals. The math indicates the stock is Overvalued. Do not chase at peak multiples, but accumulate when priced below intrinsic DCF."
+          ],
+          "opinionatedSummary": "The market price is closely anchored to its intrinsic discounted cash flow fair value ($250.80). The narrative of durable enterprise cloud leadership holds up under accounting normalization, but upside is constrained by current valuation. My verdict: NEUTRAL / FAIRLY VALUED."
+        }
+      }
+    },
+    "stage4_ExpertsDebate": {
+      "rounds": [
+        {
+          "roundNumber": 1,
+          "title": "Round 1: Economic Moats vs DCF Multiple (Buffett vs Damodaran)",
+          "turns": [
+            {
+              "speaker": "Warren Buffett",
+              "role": "Chairman & CEO, Berkshire Hathaway",
+              "argument": "It is far better to buy a wonderful business like Apple Inc. at a fair price than a fair business at a wonderful price. The high return on invested capital and sticky customer ecosystem mean this moat compounds steadily through all macro cycles."
+            },
+            {
+              "speaker": "Aswath Damodaran",
+              "role": "Professor of Finance, NYU Stern",
+              "rebuttalTo": "Warren Buffett",
+              "argument": "Warren, even the most durable moat has a finite intrinsic cash flow value. At 33.5x earnings, the market is pricing in flawless execution. My multi-stage DCF yields an intrinsic fair value of $250.80—paying a multiple premium above intrinsic cash flow erodes expected return."
+            }
+          ]
+        },
+        {
+          "roundNumber": 2,
+          "title": "Round 2: R&D Reinvestment Velocity vs Stalwart Taxonomy (Fisher vs Lynch)",
+          "turns": [
+            {
+              "speaker": "Philip Fisher",
+              "role": "Pioneer of Growth & Scuttlebutt",
+              "argument": "Quantitative multiple screens miss what 360° scuttlebutt reveals: Apple Inc. reinvests aggressively into high-margin platform initiatives with superior R&D productivity. You cannot evaluate a generational tech compounder with static backward-looking PE filters."
+            },
+            {
+              "speaker": "Peter Lynch",
+              "role": "Former Manager, Fidelity Magellan Fund",
+              "rebuttalTo": "Philip Fisher",
+              "argument": "Philip, I love quality businesses, but at over $3.49T market cap, this is clearly a Stalwart, not a Fast Grower. A PEG ratio of 2.3x dictates patience: do not chase at peak multiples, but accumulate aggressively on cyclical 15-20% pullbacks."
+            }
+          ]
+        },
+        {
+          "roundNumber": 3,
+          "title": "Round 3: Final Doctrinal Clash & Committee Mandate",
+          "turns": [
+            {
+              "speaker": "Warren Buffett",
+              "role": "Chairman & CEO, Berkshire Hathaway",
+              "rebuttalTo": "Aswath Damodaran",
+              "argument": "When you possess a wide moat with low debt ($$106.63B) and high liquid reserves ($$65.18B), time is the friend of the wonderful business. But I agree with Aswath: price discipline is essential."
+            },
+            {
+              "speaker": "Aswath Damodaran",
+              "role": "Professor of Finance, NYU Stern",
+              "rebuttalTo": "Warren Buffett",
+              "argument": "Consensus is reached on business quality. The file now passes to Ben Graham with our key question: does current market price offer an adequate Margin of Safety, or must investors hold limit orders?"
+            }
+          ]
+        }
+      ],
+      "conclusion": {
+        "expertConsensusPoints": [
+          "Apple Inc. possesses pristine balance sheet health, verified by 12/14 passed risk checks and $$65.18B in liquid cash.",
+          "Economic moat and high return on capital provide durable franchise pricing power over economic cycles.",
+          "Valuation multiple (33.5x P/E) is trading near or slightly above intrinsic DCF fair value ($250.80), making disciplined entry thresholds imperative."
+        ],
+        "contestedBattleground": "Doctrinal Friction: Whether Apple Inc.'s generational platform moat justifies buying at full valuation multiples (Buffett/Fisher) vs demanding a classical discount to DCF fair value (Damodaran/Lynch).",
+        "irreconcilableDifferences": "Buffett and Fisher are willing to hold through multiple compression for compounding franchise quality, whereas Damodaran and Lynch demand price pullback to intrinsic fair value before deploying fresh capital.",
+        "verdictToSeniorArbiter": "The 4 Experts unanimously validate the exceptional franchise caliber and solvency of Apple Inc., but stand divided on multiple entry tolerance. Transmitted exclusively to Senior Arbiter Benjamin Graham to adjudicate the definitive Margin of Safety and maximum prudent entry price."
+      }
+    },
+    "stage5_SeniorArbiterGraham": {
+      "arbiterName": "Benjamin Graham",
+      "title": "Senior Arbiter & Dean of Wall Street",
+      "compositeGrade": "A-",
+      "recommendation": "PRUDENT ACCUMULATION ON RETRACEMENT",
+      "marginOfSafetyStatus": "MARGIN OF SAFETY COMPRESSED (9.1% discount to DCF fair value)",
+      "maxPrudentEntryPrice": 230.74,
+      "targetFairValue": 250.8,
+      "suggestedPortfolioAllocationPercent": "4.0% - 7.5% (Core Tier-1 Compounder)",
+      "masterOpinionatedSummary": "Having received the objective Company Dossier alongside the Final Conclusion transmitted from the Legendary Experts Debate (Buffett, Lynch, Fisher, Damodaran), my Senior Arbiter adjudication on Apple Inc. (AAPL) is unequivocal:\n\n1. Financial Fortress Integrity: Apple Inc. meets the strictest standards of quantitative solvency. It passes 12/14 risk checks (85.7%), possesses $$65.18B in liquid cash reserves, and produces consistent operating cash flow ($$118.25B). Net shareholders equity is positive and robust ($$66.89B). The 4 experts unanimously confirmed quantitative solvency.\n\n2. Adjudication of the Expert Debate: The core contested battleground—\"Doctrinal Friction: Whether Apple Inc.'s generational platform moat justifies buying at full valuation multiples (Buffett/Fisher) vs demanding a classical discount to DCF fair value (Damodaran/Lynch).\"—reflects the timeless tension between price paid and value received. Damodaran and Lynch have legitimately established that purchasing at 33.5x P/E exposes an investor to duration risk and multiple compression. However, Buffett and Fisher have decisively demonstrated that Apple Inc.'s economic moat (75.37%% ROIC) and switching costs provide a rare structural defense against inflation and competitive disruption.\n\n3. The Margin of Safety Mandate: An investment operation is one which, upon thorough analysis, promises safety of principal and an adequate return. Operations not meeting these requirements are speculative. At $228.00, Apple Inc. is trading near its intrinsic DCF fair value ($250.80). While it does not offer the classic 33% discount to tangible liquidation value that I favored in the 1930s, its extraordinary franchise earnings power replaces physical liquidation value. \n\nMy final counsel: Exercise price discipline. Do not chase momentum at peak multiples. Initiate or maintain a core strategic position with limit orders placed on market pullbacks below $238.26.",
+      "criticalInvalidationTriggers": [
+        "Commercial operating margins compressing below 32% for two consecutive quarters.",
+        "Net cash conversion falling below 80% of reported GAAP net income.",
+        "Enterprise switching moats eroding due to regulatory antitrust mandated unbundling.",
+        "Sustained debt-to-equity expansion above 0.85x without corresponding cash accumulation."
+      ]
+    },
+    "stage4_SeniorArbiterGraham": {
+      "arbiterName": "Benjamin Graham",
+      "title": "Senior Arbiter & Dean of Wall Street",
+      "compositeGrade": "A-",
+      "recommendation": "PRUDENT ACCUMULATION ON RETRACEMENT",
+      "marginOfSafetyStatus": "MARGIN OF SAFETY COMPRESSED (9.1% discount to DCF fair value)",
+      "maxPrudentEntryPrice": 230.74,
+      "targetFairValue": 250.8,
+      "suggestedPortfolioAllocationPercent": "4.0% - 7.5% (Core Tier-1 Compounder)",
+      "masterOpinionatedSummary": "Having received the objective Company Dossier alongside the Final Conclusion transmitted from the Legendary Experts Debate (Buffett, Lynch, Fisher, Damodaran), my Senior Arbiter adjudication on Apple Inc. (AAPL) is unequivocal:\n\n1. Financial Fortress Integrity: Apple Inc. meets the strictest standards of quantitative solvency. It passes 12/14 risk checks (85.7%), possesses $$65.18B in liquid cash reserves, and produces consistent operating cash flow ($$118.25B). Net shareholders equity is positive and robust ($$66.89B). The 4 experts unanimously confirmed quantitative solvency.\n\n2. Adjudication of the Expert Debate: The core contested battleground—\"Doctrinal Friction: Whether Apple Inc.'s generational platform moat justifies buying at full valuation multiples (Buffett/Fisher) vs demanding a classical discount to DCF fair value (Damodaran/Lynch).\"—reflects the timeless tension between price paid and value received. Damodaran and Lynch have legitimately established that purchasing at 33.5x P/E exposes an investor to duration risk and multiple compression. However, Buffett and Fisher have decisively demonstrated that Apple Inc.'s economic moat (75.37%% ROIC) and switching costs provide a rare structural defense against inflation and competitive disruption.\n\n3. The Margin of Safety Mandate: An investment operation is one which, upon thorough analysis, promises safety of principal and an adequate return. Operations not meeting these requirements are speculative. At $228.00, Apple Inc. is trading near its intrinsic DCF fair value ($250.80). While it does not offer the classic 33% discount to tangible liquidation value that I favored in the 1930s, its extraordinary franchise earnings power replaces physical liquidation value. \n\nMy final counsel: Exercise price discipline. Do not chase momentum at peak multiples. Initiate or maintain a core strategic position with limit orders placed on market pullbacks below $238.26.",
+      "criticalInvalidationTriggers": [
+        "Commercial operating margins compressing below 32% for two consecutive quarters.",
+        "Net cash conversion falling below 80% of reported GAAP net income.",
+        "Enterprise switching moats eroding due to regulatory antitrust mandated unbundling.",
+        "Sustained debt-to-equity expansion above 0.85x without corresponding cash accumulation."
+      ]
+    }
+  },
+  "NVDA": {
+    "_meta": {
+      "schemaVersion": "1.1.0",
+      "ticker": "NVDA",
+      "companyName": "NVIDIA Corporation",
+      "timestamp": 1788840929589,
+      "isoDate": "2026-09-08T04:15:29.589Z",
+      "mode": "demo",
+      "aiAugmented": false,
+      "aiProvider": "deterministic_baseline",
+      "aiModel": null,
+      "stages": 5
+    },
+    "companyContext": {
+      "ticker": "NVDA",
+      "name": "NVIDIA Corporation",
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "currentPrice": 125,
+      "marketCap": 3062500000000,
+      "marketCapFormatted": "$3.06T",
+      "peRatio": 52,
+      "pegRatio": 0.95,
+      "revenue": 126000000000,
+      "revenueFormatted": "$126.00B",
+      "netIncome": 65000000000,
+      "netIncomeFormatted": "$65.00B",
+      "operatingCashFlow": 72000000000,
+      "operatingCashFlowFormatted": "$72.00B",
+      "totalDebt": 8500000000,
+      "totalDebtFormatted": "$8.50B",
+      "cash": 38000000000,
+      "cashFormatted": "$38.00B",
+      "equity": 75000000000,
+      "equityFormatted": "$75.00B",
+      "debtToEquity": 0.11,
+      "netMargin": 51.6,
+      "fairValue": 137.5,
+      "valuationStatus": "Overvalued",
+      "riskScore": "13/14",
+      "riskRating": "Low Risk",
+      "riskPassPercent": 92.9,
+      "failedChecks": [
+        {
+          "id": "liquid_and_stable_share_price",
+          "category": "Risk Checks",
+          "question": "Is their share price liquid and stable?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "Share price exhibits elevated volatility compared to the US market (Beta: 1.68)",
+          "details": {
+            "beta": 1.68,
+            "liquidityStatus": "High Volatility"
+          },
+          "timestamp": 1788840929589
+        }
+      ]
+    },
+    "stage1_DossierSummary": {
+      "ticker": "NVDA",
+      "name": "NVIDIA Corporation",
+      "sector": "Technology",
+      "currentPrice": 125,
+      "marketCapFormatted": "$3.06T",
+      "valuationStatus": "Overvalued",
+      "riskScore": "13/14",
+      "riskRating": "Low Risk",
+      "riskPassPercent": 92.9,
+      "signalsSummary": {
+        "totalChecks": 14,
+        "passed": 13,
+        "failed": 1,
+        "warnings": 0,
+        "riskRating": "Low Risk",
+        "passScorePercent": 92.9
+      },
+      "riskChecks": [
+        {
+          "id": "insider_selling_3m",
+          "category": "Risk Checks",
+          "question": "Has there been substantial insider selling in the past 3 months?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "No substantial insider selling detected in the past 3 months",
+          "details": {
+            "flag": "CLEAN_INSIDER_HOLDINGS",
+            "filingsCount": 5,
+            "timeframe": "90 days"
+          },
+          "timestamp": 1788840929589
+        },
+        {
+          "id": "financial_position",
+          "category": "Risk Checks",
+          "question": "Are they in a good financial position?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Debt level is low and not considered a risk",
+          "details": {
+            "netDebt": -29500000000,
+            "isNetCashPositive": true,
+            "debtToEquity": 0.11,
+            "cashAndEquivalents": 38000000000,
+            "totalDebt": 8500000000
+          },
+          "timestamp": 1788840929589
+        },
+        {
+          "id": "meaningful_market_cap",
+          "category": "Risk Checks",
+          "question": "Do they have meaningful market capitalization?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Market cap is meaningful ($3.06T)",
+          "details": {
+            "marketCap": 3062500000000,
+            "threshold": 2000000000,
+            "formatted": "$3.06T"
+          },
+          "timestamp": 1788840929589
+        },
+        {
+          "id": "negative_shareholders_equity",
+          "category": "Risk Checks",
+          "question": "Do they have negative shareholders equity?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "NVDA does not have negative shareholders equity.",
+          "details": {
+            "shareholdersEquity": 75000000000,
+            "formatted": "$75.00B"
+          },
+          "timestamp": 1788840929589
+        },
+        {
+          "id": "concerning_recent_events",
+          "category": "Risk Checks",
+          "question": "Are there any concerning recent events?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "No concerning events detected",
+          "details": {
+            "eventsDetectedCount": 0,
+            "newsSentimentRatio": 75
+          },
+          "timestamp": 1788840929589
+        },
+        {
+          "id": "liquid_and_stable_share_price",
+          "category": "Risk Checks",
+          "question": "Is their share price liquid and stable?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "Share price exhibits elevated volatility compared to the US market (Beta: 1.68)",
+          "details": {
+            "beta": 1.68,
+            "liquidityStatus": "High Volatility"
+          },
+          "timestamp": 1788840929589
+        },
+        {
+          "id": "profit_margins_improved",
+          "category": "Risk Checks",
+          "question": "Have profit margins improved over the past year?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Profit margins improved or NVDA became profitable",
+          "details": {
+            "latestMarginPercent": 51.59,
+            "priorMarginPercent": 48.85,
+            "becameProfitable": false
+          },
+          "timestamp": 1788840929589
+        },
+        {
+          "id": "sufficient_financial_data",
+          "category": "Risk Checks",
+          "question": "Do they have sufficient financial data available?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "They have sufficient analyst coverage",
+          "details": {
+            "auditedYearsCount": 5,
+            "coverageStatus": "Sufficient"
+          },
+          "timestamp": 1788840929589
+        },
+        {
+          "id": "meaningful_revenue",
+          "category": "Risk Checks",
+          "question": "Do they have meaningful levels of revenue?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Revenue is meaningful ($126.00B)",
+          "details": {
+            "revenue": 126000000000,
+            "threshold": 100000000,
+            "formatted": "$126.00B"
+          },
+          "timestamp": 1788840929589
+        },
+        {
+          "id": "shareholders_diluted",
+          "category": "Risk Checks",
+          "question": "Have shareholders been diluted over the past year?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Shareholders have not been meaningfully diluted in the past year or recently listed",
+          "details": {
+            "sharesOutstanding": 24500000000,
+            "dilutionRatePercent": 0
+          },
+          "timestamp": 1788840929589
+        },
+        {
+          "id": "forecast_profitability",
+          "category": "Risk Checks",
+          "question": "Are they forecast to achieve profitability?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "The company is currently profitable",
+          "details": {
+            "netIncome": 65000000000,
+            "isCurrentlyProfitable": true,
+            "formatted": "$65.00B"
+          },
+          "timestamp": 1788840929589
+        },
+        {
+          "id": "high_quality_earnings",
+          "category": "Risk Checks",
+          "question": "Do they have high quality earnings?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "The company’s earnings are high quality",
+          "details": {
+            "operatingCashflow": 72000000000,
+            "netIncome": 65000000000,
+            "cashConversionRatio": 1.11
+          },
+          "timestamp": 1788840929589
+        },
+        {
+          "id": "revenue_earnings_growth_forecast",
+          "category": "Risk Checks",
+          "question": "Are revenue and earnings forecast to grow?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Earnings are forecast to grow by an average of 14% per year for the next 3 years",
+          "details": {
+            "forecastAnnualGrowthRatePercent": 14,
+            "horizonYears": 3
+          },
+          "timestamp": 1788840929589
+        },
+        {
+          "id": "dividend_sustainability",
+          "category": "Risk Checks",
+          "question": "Is their dividend sustainable?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Dividend is too low to be a concern",
+          "details": {
+            "dividendYieldPercent": 0.03,
+            "payoutRatio": 0.02,
+            "assessment": "Low Yield / Non-Material Drag"
+          },
+          "timestamp": 1788840929589
+        }
+      ]
+    },
+    "stage2_AnalysisPersonas": {
+      "personas": {
+        "bullResearcher": {
+          "id": "bull_researcher",
+          "title": "Bull Researcher",
+          "badge": "Growth & Moats",
+          "stance": "BULLISH",
+          "verdict": "Strong Buy / Accumulate",
+          "coreCase": [
+            "Monolithic market position with massive scale ($$126.00B revenue) and high recurring free cash conversion.",
+            "Fortress balance sheet featuring $$38.00B in liquid cash against low leverage (Debt/Equity: 0.11x).",
+            "Robust net profit margin of 51.6% demonstrating strong pricing power and enterprise switching moats.",
+            "Intrinsic fair value estimated at $137.50 (+10.0% upside)."
+          ],
+          "opinionatedSummary": "NVIDIA Corporation is an elite capital compounding machine. With gross margins exceeding peer benchmarks and aggressive secular positioning in modern enterprise tech, temporary valuation premiums or insider selling noise are insignificant compared to its 5-year compounding durability. Accumulate aggressively on any market dip."
+        },
+        "bearResearcher": {
+          "id": "bear_researcher",
+          "title": "Bear Researcher",
+          "badge": "Risk & Friction",
+          "stance": "BEARISH",
+          "verdict": "Underweight / Caution",
+          "coreCase": [
+            "Elevated valuation multiple (P/E: 52x, PEG: 0.95x) leaves zero room for operational slip-ups or macroeconomic contraction.",
+            "Flagged risk checks: Is their share price liquid and stable?. Heavy executive insider selling indicates smart insiders are locking in gains rather than accumulating.",
+            "Diminishing marginal returns on gargantuan capex cycles; future top-line growth is mathematically bound to decelerate due to the law of large numbers.",
+            "Antitrust and regulatory scrutiny threatens bundling power and enterprise software margins."
+          ],
+          "opinionatedSummary": "The risk/reward asymmetry is unfavorable at current price levels ($125.00). Markets are pricing in perfection for NVIDIA Corporation while ignoring persistent insider selling and ballooning infrastructure capital intensity. Capital is better preserved on the sidelines or rotated into cheaper defensive value."
+        },
+        "aggressiveRiskDebater": {
+          "id": "aggressive_risk_debater",
+          "title": "Aggressive Risk Debater",
+          "badge": "Asymmetric Upside",
+          "stance": "VERY BULLISH",
+          "verdict": "Max Allocation",
+          "coreCase": [
+            "Asymmetric upside profile: NVIDIA Corporation is the undisputed foundational platform of the next decade's computing wave.",
+            "Operating cash flow of $$72.00B gives management infinite optionality to acquire disruptors or buy back shares.",
+            "Insider sales are routine pre-scheduled 10b5-1 tax events; treating them as structural red flags is classic market overthinking.",
+            "In a bull regime, premium franchises deservedly command premium multiples. Momentum favors the bold."
+          ],
+          "opinionatedSummary": "Bet on the generational platform champion. Risk in NVIDIA Corporation is largely academic—when a company generates $$72.00B in cash, downside is strictly cushioned by buyback capacity and enterprise ubiquity. Maximize portfolio allocation to growth."
+        },
+        "conservativeRiskDebater": {
+          "id": "conservative_risk_debater",
+          "title": "Conservative Risk Debater",
+          "badge": "Capital Preservation",
+          "stance": "DEFENSIVE / NEUTRAL",
+          "verdict": "Wait for Margin of Safety",
+          "coreCase": [
+            "Primary fiduciary duty is capital preservation: At a 52x P/E, an investor is paying $52 for every $1 of earnings, requiring decades to recoup under adverse market regimes.",
+            "Net debt and total obligations ($$8.50B) must be rigorously scrutinized against potential liquidity shocks.",
+            "Insider selling cannot be cavalierly dismissed—leadership is actively cashing out while retail takes on high-multiple duration risk.",
+            "Demands a minimum 25% Margin of Safety before committing client capital."
+          ],
+          "opinionatedSummary": "Prudence dictates caution. While NVIDIA Corporation possesses undeniable balance sheet strength, paying historically elevated multiples exposes investors to severe multiple compression if interest rates remain elevated or growth slows by even 200 basis points. Hold existing positions, but do not initiate fresh capital without a margin of safety."
+        },
+        "neutralRiskArbiter": {
+          "id": "neutral_risk_arbiter",
+          "title": "Neutral Risk Arbiter",
+          "badge": "Objective Adjudicator",
+          "stance": "BALANCED",
+          "verdict": "Strategic Hold / Phased Accumulation",
+          "coreCase": [
+            "Factual balance sheet score: 13/14 Risk Checks Passed (92.9%), denoting a fundamentally pristine financial condition.",
+            "Valuation status is Overvalued: Intrinsic DCF value lands at $137.50 vs market price of $125.00.",
+            "Bull thesis on cash flow conversion and Bear thesis on multiple duration risk are both quantitatively sound.",
+            "Net position: Risk/reward is balanced; suitable for core strategic holding with staggered accumulation rather than binary all-in bets."
+          ],
+          "opinionatedSummary": "Synthesizing objective financial signals, NVIDIA Corporation qualifies as a tier-1 institutional compounder. The downside is structurally protected by $$38.00B in liquidity, while upside is moderated by its 52x valuation multiple. The optimal strategy is systematic, phased dollar-cost averaging."
+        }
+      },
+      "debate": {
+        "rounds": [
+          {
+            "roundNumber": 1,
+            "title": "Round 1: Opening Theses Clash (Growth vs Multiple Risk)",
+            "turns": [
+              {
+                "speaker": "Bull Researcher",
+                "role": "Bullish Growth Advocate",
+                "argument": "NVIDIA Corporation is firing on all cylinders with $$126.00B in revenue and 51.6% net margins. There is no viable substitute for their core enterprise ecosystem, making revenue growth durable and recurring."
+              },
+              {
+                "speaker": "Bear Researcher",
+                "role": "Bearish Risk Analyst",
+                "rebuttalTo": "Bull Researcher",
+                "argument": "Durability does not justify paying 52x earnings! At this multiple, you are discounting perfection 10 years into the future. Furthermore, our risk checks flag substantial insider selling over the past 3 months. If the future is so radiant, why are company executives cashing out tens of millions in shares?"
+              },
+              {
+                "speaker": "Neutral Risk Arbiter",
+                "role": "Objective Fact-Checker",
+                "ruling": "Fact-check on the record: NVIDIA Corporation indeed generated $$65.00B in net income, and 13 out of 14 risk checks passed with zero balance sheet stress. However, the Bear is correct that the P/E ratio of 52x leaves minimal margin for error."
+              }
+            ]
+          },
+          {
+            "roundNumber": 2,
+            "title": "Round 2: Risk Tolerance Duel (Aggressive vs Conservative)",
+            "turns": [
+              {
+                "speaker": "Aggressive Risk Debater",
+                "role": "High-Tolerance Momentum Seeker",
+                "rebuttalTo": "Bear Researcher",
+                "argument": "The Bear is obsessing over pennies while missing the generational platform shift! Insider selling on pre-planned 10b5-1 schedules is routine executive liquidity, not a structural panic. Look at the cash conversion—$$72.00B in operating cash flow! That is a fortress that incinerates short theses."
+              },
+              {
+                "speaker": "Conservative Risk Debater",
+                "role": "Downside Protection Advocate",
+                "rebuttalTo": "Aggressive Risk Debater",
+                "argument": "Cavalier attitudes toward valuation always end in tears when the macro tide turns. You cannot buy a business simply because its operating cash flow is large; you must evaluate what you pay for that cash flow. If terminal discount rates rise by even 100 bps, this stock drops 20% overnight. Capital preservation must come before euphoria."
+              },
+              {
+                "speaker": "Neutral Risk Arbiter",
+                "role": "Risk-Adjusted Synthesis",
+                "ruling": "Both debaters raise valid structural mechanics. Aggressive rightly points to uncontested cash flow scale ($$72.00B); Conservative rightly warns of duration vulnerability given the 52x multiple."
+              }
+            ]
+          },
+          {
+            "roundNumber": 3,
+            "title": "Round 3: Direct Closing Rebuttals",
+            "turns": [
+              {
+                "speaker": "Bear Researcher",
+                "role": "Bearish Risk Analyst",
+                "rebuttalTo": "Aggressive Risk Debater",
+                "argument": "To the Aggressive Debater: If cloud growth rates normalize or enterprise software budgets compress, what is your downside floor? You have no tangible margin of safety other than hope."
+              },
+              {
+                "speaker": "Bull Researcher",
+                "role": "Bullish Growth Advocate",
+                "rebuttalTo": "Bear Researcher",
+                "argument": "The downside floor is $$38.00B in cash, high ROIC, and massive share repurchase capacity that protects earnings per share even in slower top-line environments. Bet on compounding quality, not cyclical paralysis."
+              }
+            ]
+          }
+        ],
+        "conclusion": {
+          "consensusPoints": [
+            "NVIDIA Corporation possesses exceptional balance sheet health, zero solvency risk, and elite cash generation ($$72.00B).",
+            "Core financial quality is confirmed by passing 13 of 14 objective risk checks (92.9% pass score)."
+          ],
+          "contestedBattleground": "The debate hinges strictly on Valuation Multiple Friction (52x P/E) and insider selling vs Generational Platform Durability and Buyback Cushion.",
+          "verdictToExperts": "NVIDIA Corporation is a pristine enterprise trading at a full valuation. The 5 Analysis Personas refer this file to the 4 Legendary Experts to determine if the moat, return on capital, scuttlebutt, and DCF justify entering at current market prices."
+        }
+      }
+    },
+    "stage3_ExpertPersonas": {
+      "debateFedToExperts": {
+        "consensusPoints": [
+          "NVIDIA Corporation possesses exceptional balance sheet health, zero solvency risk, and elite cash generation ($$72.00B).",
+          "Core financial quality is confirmed by passing 13 of 14 objective risk checks (92.9% pass score)."
+        ],
+        "contestedBattleground": "The debate hinges strictly on Valuation Multiple Friction (52x P/E) and insider selling vs Generational Platform Durability and Buyback Cushion.",
+        "verdictToExperts": "NVIDIA Corporation is a pristine enterprise trading at a full valuation. The 5 Analysis Personas refer this file to the 4 Legendary Experts to determine if the moat, return on capital, scuttlebutt, and DCF justify entering at current market prices."
+      },
+      "experts": {
+        "warrenBuffett": {
+          "id": "warren_buffett",
+          "name": "Warren Buffett",
+          "role": "Chairman & CEO, Berkshire Hathaway",
+          "philosophy": "Economic Moats, Owner Earnings & Capital Discipline",
+          "stance": "BULLISH ON MOAT",
+          "verdict": "Accumulate High-Quality Compounder",
+          "caseAnalysis": [
+            "Economic Moat Audit: Average ROIC of 64.78%% clears our 15% hurdle with ease, proving a wide enterprise moat and high pricing power.",
+            "Owner Earnings: Generating $64.30B in true spendable cash for owners after real capital maintenance.",
+            "Solvency Fortress: $$38.00B in cash vs $$8.50B in debt demonstrates pristine financial resilience.",
+            "Debate Rebuttal: The Bear is right to be skeptical of high multiples, but as I learned from Charlie Munger: It's far better to buy a wonderful company at a fair price than a fair company at a wonderful price."
+          ],
+          "opinionatedSummary": "NVIDIA Corporation is a textbook wonderful business with an enduring moat. While it is not a 50-cent dollar cigar butt, its ability to redeploy capital at high rates of return makes it an exceptional candidate for long-term holding. My verdict: ACCUMULATE ON QUALITY."
+        },
+        "peterLynch": {
+          "id": "peter_lynch",
+          "name": "Peter Lynch",
+          "role": "Former Manager, Fidelity Magellan Fund",
+          "philosophy": "Circle of Competence, PEG Ratio & Company Taxonomy",
+          "stance": "COMPOUNDING STALWART",
+          "verdict": "Buy on Cyclical Pullbacks",
+          "caseAnalysis": [
+            "Taxonomy Classification: Classified as a \"Fast Grower\". It is a multibillion-dollar blue-chip engine that offers defensive resilience and consistent double-digit growth.",
+            "PEG Ratio Check: PEG stands at 0.95x. While our favorite hunting ground is PEG < 1.0, a Stalwart with this level of recurring cash flow is reasonable up to 1.5x - 2.0x.",
+            "Street-Level Edge: Ubiquitous across Fortune 500 enterprises and developer workflows. Switching costs are extraordinarily high.",
+            "Debate Rebuttal: I agree with the Bull that you don't sell a champion simply because it had a good run, but watch the inventory/sales growth spread and enterprise budget slowdowns closely."
+          ],
+          "opinionatedSummary": "As a Fast Grower, NVIDIA Corporation won't double overnight, but it will protect you in downturns and compound steadily. Don't let the noise scare you out of a winning position. My verdict: SOLID STALWART HOLD / BUY ON DIPS."
+        },
+        "philipFisher": {
+          "id": "philip_fisher",
+          "name": "Philip Fisher",
+          "role": "Pioneer of Growth Investing & Scuttlebutt",
+          "philosophy": "360° Scuttlebutt, R&D Productivity & Management Integrity",
+          "stance": "EXCEPTIONAL QUALITY",
+          "verdict": "Long-Term Hold & Grow",
+          "caseAnalysis": [
+            "Scuttlebutt & Tech Moat: Developer momentum is high; engineering sentiment is \"Bullish & Highly Motivated\".",
+            "R&D Productivity: Reinvestment into core cloud and intelligent systems is yielding tangible enterprise customer lock-in.",
+            "Management & Integrity Audit: While insider selling was flagged in the risk checks, Form 4 disclosures show long-tenured leadership retains enormous personal equity stakes.",
+            "Debate Rebuttal: The Bear complains about large capex. I disagree—aggressive R&D and capital spending to build proprietary competitive lead is exactly what I look for in a 15-Point company."
+          ],
+          "opinionatedSummary": "Field intelligence confirms high customer retention and superior engineering discipline. When a company dominates its technological ecosystem with high switching friction, you stay invested for the compounding decade. My verdict: EXCEPTIONAL FRANCHISE QUALITY."
+        },
+        "aswathDamodaran": {
+          "id": "aswath_damodaran",
+          "name": "Aswath Damodaran",
+          "role": "Professor of Finance, NYU Stern",
+          "philosophy": "DCF Intrinsic Fair Value, WACC & Narrative-to-Numbers",
+          "stance": "FAIRLY VALUED",
+          "verdict": "Disciplined DCF Entry Only",
+          "caseAnalysis": [
+            "Valuation Mechanics: Cost of capital (synthetic WACC) is calculated at 12.48%.",
+            "Intrinsic Fair Value: Multi-stage DCF yields an intrinsic equity value of $137.50 per share vs current price of $125.00.",
+            "Narrative-to-Numbers Reality Filter: The Bull's story of enterprise dominance is Possible and Plausible. However, the Probable path suggests modest multiple compression over time.",
+            "Debate Rebuttal: Both Bull and Bear make emotional appeals. The math indicates the stock is Overvalued. Do not chase at peak multiples, but accumulate when priced below intrinsic DCF."
+          ],
+          "opinionatedSummary": "The market price is closely anchored to its intrinsic discounted cash flow fair value ($137.50). The narrative of durable enterprise cloud leadership holds up under accounting normalization, but upside is constrained by current valuation. My verdict: NEUTRAL / FAIRLY VALUED."
+        }
+      }
+    },
+    "stage4_ExpertsDebate": {
+      "rounds": [
+        {
+          "roundNumber": 1,
+          "title": "Round 1: Economic Moats vs DCF Multiple (Buffett vs Damodaran)",
+          "turns": [
+            {
+              "speaker": "Warren Buffett",
+              "role": "Chairman & CEO, Berkshire Hathaway",
+              "argument": "It is far better to buy a wonderful business like NVIDIA Corporation at a fair price than a fair business at a wonderful price. The high return on invested capital and sticky customer ecosystem mean this moat compounds steadily through all macro cycles."
+            },
+            {
+              "speaker": "Aswath Damodaran",
+              "role": "Professor of Finance, NYU Stern",
+              "rebuttalTo": "Warren Buffett",
+              "argument": "Warren, even the most durable moat has a finite intrinsic cash flow value. At 52x earnings, the market is pricing in flawless execution. My multi-stage DCF yields an intrinsic fair value of $137.50—paying a multiple premium above intrinsic cash flow erodes expected return."
+            }
+          ]
+        },
+        {
+          "roundNumber": 2,
+          "title": "Round 2: R&D Reinvestment Velocity vs Stalwart Taxonomy (Fisher vs Lynch)",
+          "turns": [
+            {
+              "speaker": "Philip Fisher",
+              "role": "Pioneer of Growth & Scuttlebutt",
+              "argument": "Quantitative multiple screens miss what 360° scuttlebutt reveals: NVIDIA Corporation reinvests aggressively into high-margin platform initiatives with superior R&D productivity. You cannot evaluate a generational tech compounder with static backward-looking PE filters."
+            },
+            {
+              "speaker": "Peter Lynch",
+              "role": "Former Manager, Fidelity Magellan Fund",
+              "rebuttalTo": "Philip Fisher",
+              "argument": "Philip, I love quality businesses, but at over $3.06T market cap, this is clearly a Stalwart, not a Fast Grower. A PEG ratio of 0.95x dictates patience: do not chase at peak multiples, but accumulate aggressively on cyclical 15-20% pullbacks."
+            }
+          ]
+        },
+        {
+          "roundNumber": 3,
+          "title": "Round 3: Final Doctrinal Clash & Committee Mandate",
+          "turns": [
+            {
+              "speaker": "Warren Buffett",
+              "role": "Chairman & CEO, Berkshire Hathaway",
+              "rebuttalTo": "Aswath Damodaran",
+              "argument": "When you possess a wide moat with low debt ($$8.50B) and high liquid reserves ($$38.00B), time is the friend of the wonderful business. But I agree with Aswath: price discipline is essential."
+            },
+            {
+              "speaker": "Aswath Damodaran",
+              "role": "Professor of Finance, NYU Stern",
+              "rebuttalTo": "Warren Buffett",
+              "argument": "Consensus is reached on business quality. The file now passes to Ben Graham with our key question: does current market price offer an adequate Margin of Safety, or must investors hold limit orders?"
+            }
+          ]
+        }
+      ],
+      "conclusion": {
+        "expertConsensusPoints": [
+          "NVIDIA Corporation possesses pristine balance sheet health, verified by 13/14 passed risk checks and $$38.00B in liquid cash.",
+          "Economic moat and high return on capital provide durable franchise pricing power over economic cycles.",
+          "Valuation multiple (52x P/E) is trading near or slightly above intrinsic DCF fair value ($137.50), making disciplined entry thresholds imperative."
+        ],
+        "contestedBattleground": "Doctrinal Friction: Whether NVIDIA Corporation's generational platform moat justifies buying at full valuation multiples (Buffett/Fisher) vs demanding a classical discount to DCF fair value (Damodaran/Lynch).",
+        "irreconcilableDifferences": "Buffett and Fisher are willing to hold through multiple compression for compounding franchise quality, whereas Damodaran and Lynch demand price pullback to intrinsic fair value before deploying fresh capital.",
+        "verdictToSeniorArbiter": "The 4 Experts unanimously validate the exceptional franchise caliber and solvency of NVIDIA Corporation, but stand divided on multiple entry tolerance. Transmitted exclusively to Senior Arbiter Benjamin Graham to adjudicate the definitive Margin of Safety and maximum prudent entry price."
+      }
+    },
+    "stage5_SeniorArbiterGraham": {
+      "arbiterName": "Benjamin Graham",
+      "title": "Senior Arbiter & Dean of Wall Street",
+      "compositeGrade": "A-",
+      "recommendation": "PRUDENT ACCUMULATION ON RETRACEMENT",
+      "marginOfSafetyStatus": "MARGIN OF SAFETY COMPRESSED (9.1% discount to DCF fair value)",
+      "maxPrudentEntryPrice": 126.5,
+      "targetFairValue": 137.5,
+      "suggestedPortfolioAllocationPercent": "4.0% - 7.5% (Core Tier-1 Compounder)",
+      "masterOpinionatedSummary": "Having received the objective Company Dossier alongside the Final Conclusion transmitted from the Legendary Experts Debate (Buffett, Lynch, Fisher, Damodaran), my Senior Arbiter adjudication on NVIDIA Corporation (NVDA) is unequivocal:\n\n1. Financial Fortress Integrity: NVIDIA Corporation meets the strictest standards of quantitative solvency. It passes 13/14 risk checks (92.9%), possesses $$38.00B in liquid cash reserves, and produces consistent operating cash flow ($$72.00B). Net shareholders equity is positive and robust ($$75.00B). The 4 experts unanimously confirmed quantitative solvency.\n\n2. Adjudication of the Expert Debate: The core contested battleground—\"Doctrinal Friction: Whether NVIDIA Corporation's generational platform moat justifies buying at full valuation multiples (Buffett/Fisher) vs demanding a classical discount to DCF fair value (Damodaran/Lynch).\"—reflects the timeless tension between price paid and value received. Damodaran and Lynch have legitimately established that purchasing at 52x P/E exposes an investor to duration risk and multiple compression. However, Buffett and Fisher have decisively demonstrated that NVIDIA Corporation's economic moat (64.78%% ROIC) and switching costs provide a rare structural defense against inflation and competitive disruption.\n\n3. The Margin of Safety Mandate: An investment operation is one which, upon thorough analysis, promises safety of principal and an adequate return. Operations not meeting these requirements are speculative. At $125.00, NVIDIA Corporation is trading near its intrinsic DCF fair value ($137.50). While it does not offer the classic 33% discount to tangible liquidation value that I favored in the 1930s, its extraordinary franchise earnings power replaces physical liquidation value. \n\nMy final counsel: Exercise price discipline. Do not chase momentum at peak multiples. Initiate or maintain a core strategic position with limit orders placed on market pullbacks below $130.63.",
+      "criticalInvalidationTriggers": [
+        "Commercial operating margins compressing below 32% for two consecutive quarters.",
+        "Net cash conversion falling below 80% of reported GAAP net income.",
+        "Enterprise switching moats eroding due to regulatory antitrust mandated unbundling.",
+        "Sustained debt-to-equity expansion above 0.85x without corresponding cash accumulation."
+      ]
+    },
+    "stage4_SeniorArbiterGraham": {
+      "arbiterName": "Benjamin Graham",
+      "title": "Senior Arbiter & Dean of Wall Street",
+      "compositeGrade": "A-",
+      "recommendation": "PRUDENT ACCUMULATION ON RETRACEMENT",
+      "marginOfSafetyStatus": "MARGIN OF SAFETY COMPRESSED (9.1% discount to DCF fair value)",
+      "maxPrudentEntryPrice": 126.5,
+      "targetFairValue": 137.5,
+      "suggestedPortfolioAllocationPercent": "4.0% - 7.5% (Core Tier-1 Compounder)",
+      "masterOpinionatedSummary": "Having received the objective Company Dossier alongside the Final Conclusion transmitted from the Legendary Experts Debate (Buffett, Lynch, Fisher, Damodaran), my Senior Arbiter adjudication on NVIDIA Corporation (NVDA) is unequivocal:\n\n1. Financial Fortress Integrity: NVIDIA Corporation meets the strictest standards of quantitative solvency. It passes 13/14 risk checks (92.9%), possesses $$38.00B in liquid cash reserves, and produces consistent operating cash flow ($$72.00B). Net shareholders equity is positive and robust ($$75.00B). The 4 experts unanimously confirmed quantitative solvency.\n\n2. Adjudication of the Expert Debate: The core contested battleground—\"Doctrinal Friction: Whether NVIDIA Corporation's generational platform moat justifies buying at full valuation multiples (Buffett/Fisher) vs demanding a classical discount to DCF fair value (Damodaran/Lynch).\"—reflects the timeless tension between price paid and value received. Damodaran and Lynch have legitimately established that purchasing at 52x P/E exposes an investor to duration risk and multiple compression. However, Buffett and Fisher have decisively demonstrated that NVIDIA Corporation's economic moat (64.78%% ROIC) and switching costs provide a rare structural defense against inflation and competitive disruption.\n\n3. The Margin of Safety Mandate: An investment operation is one which, upon thorough analysis, promises safety of principal and an adequate return. Operations not meeting these requirements are speculative. At $125.00, NVIDIA Corporation is trading near its intrinsic DCF fair value ($137.50). While it does not offer the classic 33% discount to tangible liquidation value that I favored in the 1930s, its extraordinary franchise earnings power replaces physical liquidation value. \n\nMy final counsel: Exercise price discipline. Do not chase momentum at peak multiples. Initiate or maintain a core strategic position with limit orders placed on market pullbacks below $130.63.",
+      "criticalInvalidationTriggers": [
+        "Commercial operating margins compressing below 32% for two consecutive quarters.",
+        "Net cash conversion falling below 80% of reported GAAP net income.",
+        "Enterprise switching moats eroding due to regulatory antitrust mandated unbundling.",
+        "Sustained debt-to-equity expansion above 0.85x without corresponding cash accumulation."
+      ]
+    }
+  },
+  "TSLA": {
+    "_meta": {
+      "schemaVersion": "1.1.0",
+      "ticker": "TSLA",
+      "companyName": "Tesla, Inc.",
+      "timestamp": 1788840931373,
+      "isoDate": "2026-09-08T04:15:31.373Z",
+      "mode": "demo",
+      "aiAugmented": false,
+      "aiProvider": "deterministic_baseline",
+      "aiModel": null,
+      "stages": 5
+    },
+    "companyContext": {
+      "ticker": "TSLA",
+      "name": "Tesla, Inc.",
+      "sector": "Consumer Cyclical",
+      "industry": "Auto Manufacturers",
+      "currentPrice": 354.08,
+      "marketCap": 1398455795712,
+      "marketCapFormatted": "$1.40T",
+      "peRatio": 321.8909,
+      "pegRatio": 4.23,
+      "revenue": 94827000000,
+      "revenueFormatted": "$94.83B",
+      "netIncome": 3794000000,
+      "netIncomeFormatted": "$3.79B",
+      "operatingCashFlow": 14747000000,
+      "operatingCashFlowFormatted": "$14.75B",
+      "totalDebt": 14719000000,
+      "totalDebtFormatted": "$14.72B",
+      "cash": 16513000000,
+      "cashFormatted": "$16.51B",
+      "equity": 82137000000,
+      "equityFormatted": "$82.14B",
+      "debtToEquity": 0.5,
+      "netMargin": 4,
+      "fairValue": 389.488,
+      "valuationStatus": "Overvalued",
+      "riskScore": "12/14",
+      "riskRating": "Low Risk",
+      "riskPassPercent": 85.7,
+      "failedChecks": [
+        {
+          "id": "liquid_and_stable_share_price",
+          "category": "Risk Checks",
+          "question": "Is their share price liquid and stable?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "Share price exhibits elevated volatility compared to the US market (Beta: 1.85)",
+          "details": {
+            "beta": 1.85,
+            "liquidityStatus": "High Volatility"
+          },
+          "timestamp": 1788840931373
+        },
+        {
+          "id": "profit_margins_improved",
+          "category": "Risk Checks",
+          "question": "Have profit margins improved over the past year?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "Profit margins contracted from 7.3% to 4% over the past year",
+          "details": {
+            "latestMarginPercent": 4,
+            "priorMarginPercent": 7.3
+          },
+          "timestamp": 1788840931373
+        }
+      ]
+    },
+    "stage1_DossierSummary": {
+      "ticker": "TSLA",
+      "name": "Tesla, Inc.",
+      "sector": "Consumer Cyclical",
+      "currentPrice": 354.08,
+      "marketCapFormatted": "$1.40T",
+      "valuationStatus": "Overvalued",
+      "riskScore": "12/14",
+      "riskRating": "Low Risk",
+      "riskPassPercent": 85.7,
+      "signalsSummary": {
+        "totalChecks": 14,
+        "passed": 12,
+        "failed": 2,
+        "warnings": 0,
+        "riskRating": "Low Risk",
+        "passScorePercent": 85.7
+      },
+      "riskChecks": [
+        {
+          "id": "insider_selling_3m",
+          "category": "Risk Checks",
+          "question": "Has there been substantial insider selling in the past 3 months?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "No substantial insider selling detected in the past 3 months",
+          "details": {
+            "flag": "CLEAN_INSIDER_HOLDINGS",
+            "filingsCount": 5,
+            "timeframe": "90 days"
+          },
+          "timestamp": 1788840931373
+        },
+        {
+          "id": "financial_position",
+          "category": "Risk Checks",
+          "question": "Are they in a good financial position?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Debt level is low and not considered a risk",
+          "details": {
+            "netDebt": -1794000000,
+            "isNetCashPositive": true,
+            "debtToEquity": 0.5,
+            "cashAndEquivalents": 16513000000,
+            "totalDebt": 14719000000
+          },
+          "timestamp": 1788840931373
+        },
+        {
+          "id": "meaningful_market_cap",
+          "category": "Risk Checks",
+          "question": "Do they have meaningful market capitalization?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Market cap is meaningful ($1.40T)",
+          "details": {
+            "marketCap": 1398455795712,
+            "threshold": 2000000000,
+            "formatted": "$1.40T"
+          },
+          "timestamp": 1788840931373
+        },
+        {
+          "id": "negative_shareholders_equity",
+          "category": "Risk Checks",
+          "question": "Do they have negative shareholders equity?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "TSLA does not have negative shareholders equity.",
+          "details": {
+            "shareholdersEquity": 82137000000,
+            "formatted": "$82.14B"
+          },
+          "timestamp": 1788840931373
+        },
+        {
+          "id": "concerning_recent_events",
+          "category": "Risk Checks",
+          "question": "Are there any concerning recent events?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "No concerning events detected",
+          "details": {
+            "eventsDetectedCount": 0,
+            "newsSentimentRatio": 100
+          },
+          "timestamp": 1788840931373
+        },
+        {
+          "id": "liquid_and_stable_share_price",
+          "category": "Risk Checks",
+          "question": "Is their share price liquid and stable?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "Share price exhibits elevated volatility compared to the US market (Beta: 1.85)",
+          "details": {
+            "beta": 1.85,
+            "liquidityStatus": "High Volatility"
+          },
+          "timestamp": 1788840931373
+        },
+        {
+          "id": "profit_margins_improved",
+          "category": "Risk Checks",
+          "question": "Have profit margins improved over the past year?",
+          "status": "FAIL",
+          "verdict": "Fail",
+          "summary": "Profit margins contracted from 7.3% to 4% over the past year",
+          "details": {
+            "latestMarginPercent": 4,
+            "priorMarginPercent": 7.3
+          },
+          "timestamp": 1788840931373
+        },
+        {
+          "id": "sufficient_financial_data",
+          "category": "Risk Checks",
+          "question": "Do they have sufficient financial data available?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "They have sufficient analyst coverage",
+          "details": {
+            "auditedYearsCount": 4,
+            "coverageStatus": "Sufficient"
+          },
+          "timestamp": 1788840931373
+        },
+        {
+          "id": "meaningful_revenue",
+          "category": "Risk Checks",
+          "question": "Do they have meaningful levels of revenue?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Revenue is meaningful ($94.83B)",
+          "details": {
+            "revenue": 94827000000,
+            "threshold": 100000000,
+            "formatted": "$94.83B"
+          },
+          "timestamp": 1788840931373
+        },
+        {
+          "id": "shareholders_diluted",
+          "category": "Risk Checks",
+          "question": "Have shareholders been diluted over the past year?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Shareholders have not been meaningfully diluted in the past year or recently listed",
+          "details": {
+            "sharesOutstanding": 3949547394,
+            "dilutionRatePercent": 0
+          },
+          "timestamp": 1788840931373
+        },
+        {
+          "id": "forecast_profitability",
+          "category": "Risk Checks",
+          "question": "Are they forecast to achieve profitability?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "The company is currently profitable",
+          "details": {
+            "netIncome": 3794000000,
+            "isCurrentlyProfitable": true,
+            "formatted": "$3.79B"
+          },
+          "timestamp": 1788840931373
+        },
+        {
+          "id": "high_quality_earnings",
+          "category": "Risk Checks",
+          "question": "Do they have high quality earnings?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "The company’s earnings are high quality",
+          "details": {
+            "operatingCashflow": 14747000000,
+            "netIncome": 3794000000,
+            "cashConversionRatio": 3.89
+          },
+          "timestamp": 1788840931373
+        },
+        {
+          "id": "revenue_earnings_growth_forecast",
+          "category": "Risk Checks",
+          "question": "Are revenue and earnings forecast to grow?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Earnings are forecast to grow by an average of 14% per year for the next 3 years",
+          "details": {
+            "forecastAnnualGrowthRatePercent": 14,
+            "horizonYears": 3
+          },
+          "timestamp": 1788840931373
+        },
+        {
+          "id": "dividend_sustainability",
+          "category": "Risk Checks",
+          "question": "Is their dividend sustainable?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Dividend is too low to be a concern",
+          "details": {
+            "dividendYieldPercent": 1,
+            "payoutRatio": 0.15,
+            "assessment": "Low Yield / Non-Material Drag"
+          },
+          "timestamp": 1788840931373
+        }
+      ]
+    },
+    "stage2_AnalysisPersonas": {
+      "personas": {
+        "bullResearcher": {
+          "id": "bull_researcher",
+          "title": "Bull Researcher",
+          "badge": "Growth & Moats",
+          "stance": "BULLISH",
+          "verdict": "Strong Buy / Accumulate",
+          "coreCase": [
+            "Monolithic market position with massive scale ($$94.83B revenue) and high recurring free cash conversion.",
+            "Fortress balance sheet featuring $$16.51B in liquid cash against low leverage (Debt/Equity: 0.5x).",
+            "Robust net profit margin of 4% demonstrating strong pricing power and enterprise switching moats.",
+            "Intrinsic fair value estimated at $389.49 (+10.0% upside)."
+          ],
+          "opinionatedSummary": "Tesla, Inc. is an elite capital compounding machine. With gross margins exceeding peer benchmarks and aggressive secular positioning in modern enterprise tech, temporary valuation premiums or insider selling noise are insignificant compared to its 5-year compounding durability. Accumulate aggressively on any market dip."
+        },
+        "bearResearcher": {
+          "id": "bear_researcher",
+          "title": "Bear Researcher",
+          "badge": "Risk & Friction",
+          "stance": "BEARISH",
+          "verdict": "Underweight / Caution",
+          "coreCase": [
+            "Elevated valuation multiple (P/E: 321.8909x, PEG: 4.23x) leaves zero room for operational slip-ups or macroeconomic contraction.",
+            "Flagged risk checks: Is their share price liquid and stable?, Have profit margins improved over the past year?. Heavy executive insider selling indicates smart insiders are locking in gains rather than accumulating.",
+            "Diminishing marginal returns on gargantuan capex cycles; future top-line growth is mathematically bound to decelerate due to the law of large numbers.",
+            "Antitrust and regulatory scrutiny threatens bundling power and enterprise software margins."
+          ],
+          "opinionatedSummary": "The risk/reward asymmetry is unfavorable at current price levels ($354.08). Markets are pricing in perfection for Tesla, Inc. while ignoring persistent insider selling and ballooning infrastructure capital intensity. Capital is better preserved on the sidelines or rotated into cheaper defensive value."
+        },
+        "aggressiveRiskDebater": {
+          "id": "aggressive_risk_debater",
+          "title": "Aggressive Risk Debater",
+          "badge": "Asymmetric Upside",
+          "stance": "VERY BULLISH",
+          "verdict": "Max Allocation",
+          "coreCase": [
+            "Asymmetric upside profile: Tesla, Inc. is the undisputed foundational platform of the next decade's computing wave.",
+            "Operating cash flow of $$14.75B gives management infinite optionality to acquire disruptors or buy back shares.",
+            "Insider sales are routine pre-scheduled 10b5-1 tax events; treating them as structural red flags is classic market overthinking.",
+            "In a bull regime, premium franchises deservedly command premium multiples. Momentum favors the bold."
+          ],
+          "opinionatedSummary": "Bet on the generational platform champion. Risk in Tesla, Inc. is largely academic—when a company generates $$14.75B in cash, downside is strictly cushioned by buyback capacity and enterprise ubiquity. Maximize portfolio allocation to growth."
+        },
+        "conservativeRiskDebater": {
+          "id": "conservative_risk_debater",
+          "title": "Conservative Risk Debater",
+          "badge": "Capital Preservation",
+          "stance": "DEFENSIVE / NEUTRAL",
+          "verdict": "Wait for Margin of Safety",
+          "coreCase": [
+            "Primary fiduciary duty is capital preservation: At a 321.8909x P/E, an investor is paying $321.8909 for every $1 of earnings, requiring decades to recoup under adverse market regimes.",
+            "Net debt and total obligations ($$14.72B) must be rigorously scrutinized against potential liquidity shocks.",
+            "Insider selling cannot be cavalierly dismissed—leadership is actively cashing out while retail takes on high-multiple duration risk.",
+            "Demands a minimum 25% Margin of Safety before committing client capital."
+          ],
+          "opinionatedSummary": "Prudence dictates caution. While Tesla, Inc. possesses undeniable balance sheet strength, paying historically elevated multiples exposes investors to severe multiple compression if interest rates remain elevated or growth slows by even 200 basis points. Hold existing positions, but do not initiate fresh capital without a margin of safety."
+        },
+        "neutralRiskArbiter": {
+          "id": "neutral_risk_arbiter",
+          "title": "Neutral Risk Arbiter",
+          "badge": "Objective Adjudicator",
+          "stance": "BALANCED",
+          "verdict": "Strategic Hold / Phased Accumulation",
+          "coreCase": [
+            "Factual balance sheet score: 12/14 Risk Checks Passed (85.7%), denoting a fundamentally pristine financial condition.",
+            "Valuation status is Overvalued: Intrinsic DCF value lands at $389.49 vs market price of $354.08.",
+            "Bull thesis on cash flow conversion and Bear thesis on multiple duration risk are both quantitatively sound.",
+            "Net position: Risk/reward is balanced; suitable for core strategic holding with staggered accumulation rather than binary all-in bets."
+          ],
+          "opinionatedSummary": "Synthesizing objective financial signals, Tesla, Inc. qualifies as a tier-1 institutional compounder. The downside is structurally protected by $$16.51B in liquidity, while upside is moderated by its 321.8909x valuation multiple. The optimal strategy is systematic, phased dollar-cost averaging."
+        }
+      },
+      "debate": {
+        "rounds": [
+          {
+            "roundNumber": 1,
+            "title": "Round 1: Opening Theses Clash (Growth vs Multiple Risk)",
+            "turns": [
+              {
+                "speaker": "Bull Researcher",
+                "role": "Bullish Growth Advocate",
+                "argument": "Tesla, Inc. is firing on all cylinders with $$94.83B in revenue and 4% net margins. There is no viable substitute for their core enterprise ecosystem, making revenue growth durable and recurring."
+              },
+              {
+                "speaker": "Bear Researcher",
+                "role": "Bearish Risk Analyst",
+                "rebuttalTo": "Bull Researcher",
+                "argument": "Durability does not justify paying 321.8909x earnings! At this multiple, you are discounting perfection 10 years into the future. Furthermore, our risk checks flag substantial insider selling over the past 3 months. If the future is so radiant, why are company executives cashing out tens of millions in shares?"
+              },
+              {
+                "speaker": "Neutral Risk Arbiter",
+                "role": "Objective Fact-Checker",
+                "ruling": "Fact-check on the record: Tesla, Inc. indeed generated $$3.79B in net income, and 13 out of 14 risk checks passed with zero balance sheet stress. However, the Bear is correct that the P/E ratio of 321.8909x leaves minimal margin for error."
+              }
+            ]
+          },
+          {
+            "roundNumber": 2,
+            "title": "Round 2: Risk Tolerance Duel (Aggressive vs Conservative)",
+            "turns": [
+              {
+                "speaker": "Aggressive Risk Debater",
+                "role": "High-Tolerance Momentum Seeker",
+                "rebuttalTo": "Bear Researcher",
+                "argument": "The Bear is obsessing over pennies while missing the generational platform shift! Insider selling on pre-planned 10b5-1 schedules is routine executive liquidity, not a structural panic. Look at the cash conversion—$$14.75B in operating cash flow! That is a fortress that incinerates short theses."
+              },
+              {
+                "speaker": "Conservative Risk Debater",
+                "role": "Downside Protection Advocate",
+                "rebuttalTo": "Aggressive Risk Debater",
+                "argument": "Cavalier attitudes toward valuation always end in tears when the macro tide turns. You cannot buy a business simply because its operating cash flow is large; you must evaluate what you pay for that cash flow. If terminal discount rates rise by even 100 bps, this stock drops 20% overnight. Capital preservation must come before euphoria."
+              },
+              {
+                "speaker": "Neutral Risk Arbiter",
+                "role": "Risk-Adjusted Synthesis",
+                "ruling": "Both debaters raise valid structural mechanics. Aggressive rightly points to uncontested cash flow scale ($$14.75B); Conservative rightly warns of duration vulnerability given the 321.8909x multiple."
+              }
+            ]
+          },
+          {
+            "roundNumber": 3,
+            "title": "Round 3: Direct Closing Rebuttals",
+            "turns": [
+              {
+                "speaker": "Bear Researcher",
+                "role": "Bearish Risk Analyst",
+                "rebuttalTo": "Aggressive Risk Debater",
+                "argument": "To the Aggressive Debater: If cloud growth rates normalize or enterprise software budgets compress, what is your downside floor? You have no tangible margin of safety other than hope."
+              },
+              {
+                "speaker": "Bull Researcher",
+                "role": "Bullish Growth Advocate",
+                "rebuttalTo": "Bear Researcher",
+                "argument": "The downside floor is $$16.51B in cash, high ROIC, and massive share repurchase capacity that protects earnings per share even in slower top-line environments. Bet on compounding quality, not cyclical paralysis."
+              }
+            ]
+          }
+        ],
+        "conclusion": {
+          "consensusPoints": [
+            "Tesla, Inc. possesses exceptional balance sheet health, zero solvency risk, and elite cash generation ($$14.75B).",
+            "Core financial quality is confirmed by passing 13 of 14 objective risk checks (85.7% pass score)."
+          ],
+          "contestedBattleground": "The debate hinges strictly on Valuation Multiple Friction (321.8909x P/E) and insider selling vs Generational Platform Durability and Buyback Cushion.",
+          "verdictToExperts": "Tesla, Inc. is a pristine enterprise trading at a full valuation. The 5 Analysis Personas refer this file to the 4 Legendary Experts to determine if the moat, return on capital, scuttlebutt, and DCF justify entering at current market prices."
+        }
+      }
+    },
+    "stage3_ExpertPersonas": {
+      "debateFedToExperts": {
+        "consensusPoints": [
+          "Tesla, Inc. possesses exceptional balance sheet health, zero solvency risk, and elite cash generation ($$14.75B).",
+          "Core financial quality is confirmed by passing 13 of 14 objective risk checks (85.7% pass score)."
+        ],
+        "contestedBattleground": "The debate hinges strictly on Valuation Multiple Friction (321.8909x P/E) and insider selling vs Generational Platform Durability and Buyback Cushion.",
+        "verdictToExperts": "Tesla, Inc. is a pristine enterprise trading at a full valuation. The 5 Analysis Personas refer this file to the 4 Legendary Experts to determine if the moat, return on capital, scuttlebutt, and DCF justify entering at current market prices."
+      },
+      "experts": {
+        "warrenBuffett": {
+          "id": "warren_buffett",
+          "name": "Warren Buffett",
+          "role": "Chairman & CEO, Berkshire Hathaway",
+          "philosophy": "Economic Moats, Owner Earnings & Capital Discipline",
+          "stance": "BULLISH ON MOAT",
+          "verdict": "Accumulate High-Quality Compounder",
+          "caseAnalysis": [
+            "Economic Moat Audit: Average ROIC of 14.51%% clears our 15% hurdle with ease, proving a wide enterprise moat and high pricing power.",
+            "Owner Earnings: Generating $2.09B in true spendable cash for owners after real capital maintenance.",
+            "Solvency Fortress: $$16.51B in cash vs $$14.72B in debt demonstrates pristine financial resilience.",
+            "Debate Rebuttal: The Bear is right to be skeptical of high multiples, but as I learned from Charlie Munger: It's far better to buy a wonderful company at a fair price than a fair company at a wonderful price."
+          ],
+          "opinionatedSummary": "Tesla, Inc. is a textbook wonderful business with an enduring moat. While it is not a 50-cent dollar cigar butt, its ability to redeploy capital at high rates of return makes it an exceptional candidate for long-term holding. My verdict: ACCUMULATE ON QUALITY."
+        },
+        "peterLynch": {
+          "id": "peter_lynch",
+          "name": "Peter Lynch",
+          "role": "Former Manager, Fidelity Magellan Fund",
+          "philosophy": "Circle of Competence, PEG Ratio & Company Taxonomy",
+          "stance": "COMPOUNDING STALWART",
+          "verdict": "Buy on Cyclical Pullbacks",
+          "caseAnalysis": [
+            "Taxonomy Classification: Classified as a \"Slow Grower\". It is a multibillion-dollar blue-chip engine that offers defensive resilience and consistent double-digit growth.",
+            "PEG Ratio Check: PEG stands at 4.23x. While our favorite hunting ground is PEG < 1.0, a Stalwart with this level of recurring cash flow is reasonable up to 1.5x - 2.0x.",
+            "Street-Level Edge: Ubiquitous across Fortune 500 enterprises and developer workflows. Switching costs are extraordinarily high.",
+            "Debate Rebuttal: I agree with the Bull that you don't sell a champion simply because it had a good run, but watch the inventory/sales growth spread and enterprise budget slowdowns closely."
+          ],
+          "opinionatedSummary": "As a Slow Grower, Tesla, Inc. won't double overnight, but it will protect you in downturns and compound steadily. Don't let the noise scare you out of a winning position. My verdict: SOLID STALWART HOLD / BUY ON DIPS."
+        },
+        "philipFisher": {
+          "id": "philip_fisher",
+          "name": "Philip Fisher",
+          "role": "Pioneer of Growth Investing & Scuttlebutt",
+          "philosophy": "360° Scuttlebutt, R&D Productivity & Management Integrity",
+          "stance": "EXCEPTIONAL QUALITY",
+          "verdict": "Long-Term Hold & Grow",
+          "caseAnalysis": [
+            "Scuttlebutt & Tech Moat: Developer momentum is high; engineering sentiment is \"Bullish & Highly Motivated\".",
+            "R&D Productivity: Reinvestment into core cloud and intelligent systems is yielding tangible enterprise customer lock-in.",
+            "Management & Integrity Audit: While insider selling was flagged in the risk checks, Form 4 disclosures show long-tenured leadership retains enormous personal equity stakes.",
+            "Debate Rebuttal: The Bear complains about large capex. I disagree—aggressive R&D and capital spending to build proprietary competitive lead is exactly what I look for in a 15-Point company."
+          ],
+          "opinionatedSummary": "Field intelligence confirms high customer retention and superior engineering discipline. When a company dominates its technological ecosystem with high switching friction, you stay invested for the compounding decade. My verdict: EXCEPTIONAL FRANCHISE QUALITY."
+        },
+        "aswathDamodaran": {
+          "id": "aswath_damodaran",
+          "name": "Aswath Damodaran",
+          "role": "Professor of Finance, NYU Stern",
+          "philosophy": "DCF Intrinsic Fair Value, WACC & Narrative-to-Numbers",
+          "stance": "FAIRLY VALUED",
+          "verdict": "Disciplined DCF Entry Only",
+          "caseAnalysis": [
+            "Valuation Mechanics: Cost of capital (synthetic WACC) is calculated at 13.17%.",
+            "Intrinsic Fair Value: Multi-stage DCF yields an intrinsic equity value of $389.49 per share vs current price of $354.08.",
+            "Narrative-to-Numbers Reality Filter: The Bull's story of enterprise dominance is Possible and Plausible. However, the Probable path suggests modest multiple compression over time.",
+            "Debate Rebuttal: Both Bull and Bear make emotional appeals. The math indicates the stock is Overvalued. Do not chase at peak multiples, but accumulate when priced below intrinsic DCF."
+          ],
+          "opinionatedSummary": "The market price is closely anchored to its intrinsic discounted cash flow fair value ($389.49). The narrative of durable enterprise cloud leadership holds up under accounting normalization, but upside is constrained by current valuation. My verdict: NEUTRAL / FAIRLY VALUED."
+        }
+      }
+    },
+    "stage4_ExpertsDebate": {
+      "rounds": [
+        {
+          "roundNumber": 1,
+          "title": "Round 1: Economic Moats vs DCF Multiple (Buffett vs Damodaran)",
+          "turns": [
+            {
+              "speaker": "Warren Buffett",
+              "role": "Chairman & CEO, Berkshire Hathaway",
+              "argument": "It is far better to buy a wonderful business like Tesla, Inc. at a fair price than a fair business at a wonderful price. The high return on invested capital and sticky customer ecosystem mean this moat compounds steadily through all macro cycles."
+            },
+            {
+              "speaker": "Aswath Damodaran",
+              "role": "Professor of Finance, NYU Stern",
+              "rebuttalTo": "Warren Buffett",
+              "argument": "Warren, even the most durable moat has a finite intrinsic cash flow value. At 321.8909x earnings, the market is pricing in flawless execution. My multi-stage DCF yields an intrinsic fair value of $389.49—paying a multiple premium above intrinsic cash flow erodes expected return."
+            }
+          ]
+        },
+        {
+          "roundNumber": 2,
+          "title": "Round 2: R&D Reinvestment Velocity vs Stalwart Taxonomy (Fisher vs Lynch)",
+          "turns": [
+            {
+              "speaker": "Philip Fisher",
+              "role": "Pioneer of Growth & Scuttlebutt",
+              "argument": "Quantitative multiple screens miss what 360° scuttlebutt reveals: Tesla, Inc. reinvests aggressively into high-margin platform initiatives with superior R&D productivity. You cannot evaluate a generational tech compounder with static backward-looking PE filters."
+            },
+            {
+              "speaker": "Peter Lynch",
+              "role": "Former Manager, Fidelity Magellan Fund",
+              "rebuttalTo": "Philip Fisher",
+              "argument": "Philip, I love quality businesses, but at over $1.40T market cap, this is clearly a Stalwart, not a Fast Grower. A PEG ratio of 4.23x dictates patience: do not chase at peak multiples, but accumulate aggressively on cyclical 15-20% pullbacks."
+            }
+          ]
+        },
+        {
+          "roundNumber": 3,
+          "title": "Round 3: Final Doctrinal Clash & Committee Mandate",
+          "turns": [
+            {
+              "speaker": "Warren Buffett",
+              "role": "Chairman & CEO, Berkshire Hathaway",
+              "rebuttalTo": "Aswath Damodaran",
+              "argument": "When you possess a wide moat with low debt ($$14.72B) and high liquid reserves ($$16.51B), time is the friend of the wonderful business. But I agree with Aswath: price discipline is essential."
+            },
+            {
+              "speaker": "Aswath Damodaran",
+              "role": "Professor of Finance, NYU Stern",
+              "rebuttalTo": "Warren Buffett",
+              "argument": "Consensus is reached on business quality. The file now passes to Ben Graham with our key question: does current market price offer an adequate Margin of Safety, or must investors hold limit orders?"
+            }
+          ]
+        }
+      ],
+      "conclusion": {
+        "expertConsensusPoints": [
+          "Tesla, Inc. possesses pristine balance sheet health, verified by 12/14 passed risk checks and $$16.51B in liquid cash.",
+          "Economic moat and high return on capital provide durable franchise pricing power over economic cycles.",
+          "Valuation multiple (321.8909x P/E) is trading near or slightly above intrinsic DCF fair value ($389.49), making disciplined entry thresholds imperative."
+        ],
+        "contestedBattleground": "Doctrinal Friction: Whether Tesla, Inc.'s generational platform moat justifies buying at full valuation multiples (Buffett/Fisher) vs demanding a classical discount to DCF fair value (Damodaran/Lynch).",
+        "irreconcilableDifferences": "Buffett and Fisher are willing to hold through multiple compression for compounding franchise quality, whereas Damodaran and Lynch demand price pullback to intrinsic fair value before deploying fresh capital.",
+        "verdictToSeniorArbiter": "The 4 Experts unanimously validate the exceptional franchise caliber and solvency of Tesla, Inc., but stand divided on multiple entry tolerance. Transmitted exclusively to Senior Arbiter Benjamin Graham to adjudicate the definitive Margin of Safety and maximum prudent entry price."
+      }
+    },
+    "stage5_SeniorArbiterGraham": {
+      "arbiterName": "Benjamin Graham",
+      "title": "Senior Arbiter & Dean of Wall Street",
+      "compositeGrade": "A-",
+      "recommendation": "PRUDENT ACCUMULATION ON RETRACEMENT",
+      "marginOfSafetyStatus": "MARGIN OF SAFETY COMPRESSED (9.1% discount to DCF fair value)",
+      "maxPrudentEntryPrice": 358.33,
+      "targetFairValue": 389.49,
+      "suggestedPortfolioAllocationPercent": "4.0% - 7.5% (Core Tier-1 Compounder)",
+      "masterOpinionatedSummary": "Having received the objective Company Dossier alongside the Final Conclusion transmitted from the Legendary Experts Debate (Buffett, Lynch, Fisher, Damodaran), my Senior Arbiter adjudication on Tesla, Inc. (TSLA) is unequivocal:\n\n1. Financial Fortress Integrity: Tesla, Inc. meets the strictest standards of quantitative solvency. It passes 12/14 risk checks (85.7%), possesses $$16.51B in liquid cash reserves, and produces consistent operating cash flow ($$14.75B). Net shareholders equity is positive and robust ($$82.14B). The 4 experts unanimously confirmed quantitative solvency.\n\n2. Adjudication of the Expert Debate: The core contested battleground—\"Doctrinal Friction: Whether Tesla, Inc.'s generational platform moat justifies buying at full valuation multiples (Buffett/Fisher) vs demanding a classical discount to DCF fair value (Damodaran/Lynch).\"—reflects the timeless tension between price paid and value received. Damodaran and Lynch have legitimately established that purchasing at 321.8909x P/E exposes an investor to duration risk and multiple compression. However, Buffett and Fisher have decisively demonstrated that Tesla, Inc.'s economic moat (14.51%% ROIC) and switching costs provide a rare structural defense against inflation and competitive disruption.\n\n3. The Margin of Safety Mandate: An investment operation is one which, upon thorough analysis, promises safety of principal and an adequate return. Operations not meeting these requirements are speculative. At $354.08, Tesla, Inc. is trading near its intrinsic DCF fair value ($389.49). While it does not offer the classic 33% discount to tangible liquidation value that I favored in the 1930s, its extraordinary franchise earnings power replaces physical liquidation value. \n\nMy final counsel: Exercise price discipline. Do not chase momentum at peak multiples. Initiate or maintain a core strategic position with limit orders placed on market pullbacks below $370.01.",
+      "criticalInvalidationTriggers": [
+        "Commercial operating margins compressing below 32% for two consecutive quarters.",
+        "Net cash conversion falling below 80% of reported GAAP net income.",
+        "Enterprise switching moats eroding due to regulatory antitrust mandated unbundling.",
+        "Sustained debt-to-equity expansion above 0.85x without corresponding cash accumulation."
+      ]
+    },
+    "stage4_SeniorArbiterGraham": {
+      "arbiterName": "Benjamin Graham",
+      "title": "Senior Arbiter & Dean of Wall Street",
+      "compositeGrade": "A-",
+      "recommendation": "PRUDENT ACCUMULATION ON RETRACEMENT",
+      "marginOfSafetyStatus": "MARGIN OF SAFETY COMPRESSED (9.1% discount to DCF fair value)",
+      "maxPrudentEntryPrice": 358.33,
+      "targetFairValue": 389.49,
+      "suggestedPortfolioAllocationPercent": "4.0% - 7.5% (Core Tier-1 Compounder)",
+      "masterOpinionatedSummary": "Having received the objective Company Dossier alongside the Final Conclusion transmitted from the Legendary Experts Debate (Buffett, Lynch, Fisher, Damodaran), my Senior Arbiter adjudication on Tesla, Inc. (TSLA) is unequivocal:\n\n1. Financial Fortress Integrity: Tesla, Inc. meets the strictest standards of quantitative solvency. It passes 12/14 risk checks (85.7%), possesses $$16.51B in liquid cash reserves, and produces consistent operating cash flow ($$14.75B). Net shareholders equity is positive and robust ($$82.14B). The 4 experts unanimously confirmed quantitative solvency.\n\n2. Adjudication of the Expert Debate: The core contested battleground—\"Doctrinal Friction: Whether Tesla, Inc.'s generational platform moat justifies buying at full valuation multiples (Buffett/Fisher) vs demanding a classical discount to DCF fair value (Damodaran/Lynch).\"—reflects the timeless tension between price paid and value received. Damodaran and Lynch have legitimately established that purchasing at 321.8909x P/E exposes an investor to duration risk and multiple compression. However, Buffett and Fisher have decisively demonstrated that Tesla, Inc.'s economic moat (14.51%% ROIC) and switching costs provide a rare structural defense against inflation and competitive disruption.\n\n3. The Margin of Safety Mandate: An investment operation is one which, upon thorough analysis, promises safety of principal and an adequate return. Operations not meeting these requirements are speculative. At $354.08, Tesla, Inc. is trading near its intrinsic DCF fair value ($389.49). While it does not offer the classic 33% discount to tangible liquidation value that I favored in the 1930s, its extraordinary franchise earnings power replaces physical liquidation value. \n\nMy final counsel: Exercise price discipline. Do not chase momentum at peak multiples. Initiate or maintain a core strategic position with limit orders placed on market pullbacks below $370.01.",
+      "criticalInvalidationTriggers": [
+        "Commercial operating margins compressing below 32% for two consecutive quarters.",
+        "Net cash conversion falling below 80% of reported GAAP net income.",
+        "Enterprise switching moats eroding due to regulatory antitrust mandated unbundling.",
+        "Sustained debt-to-equity expansion above 0.85x without corresponding cash accumulation."
+      ]
+    }
+  },
+  "AMZN": {
+    "_meta": {
+      "schemaVersion": "1.1.0",
+      "ticker": "AMZN",
+      "companyName": "Amazon.com, Inc.",
+      "timestamp": 1788840932758,
+      "isoDate": "2026-09-08T04:15:32.758Z",
+      "mode": "demo",
+      "aiAugmented": false,
+      "aiProvider": "deterministic_baseline",
+      "aiModel": null,
+      "stages": 5
+    },
+    "companyContext": {
+      "ticker": "AMZN",
+      "name": "Amazon.com, Inc.",
+      "sector": "Consumer Cyclical",
+      "industry": "Internet Retail",
+      "currentPrice": 258.51,
+      "marketCap": 2788369891328,
+      "marketCapFormatted": "$2.79T",
+      "peRatio": 20.797264,
+      "pegRatio": 1.51,
+      "revenue": 716924000000,
+      "revenueFormatted": "$716.92B",
+      "netIncome": 77670000000,
+      "netIncomeFormatted": "$77.67B",
+      "operatingCashFlow": 139514000000,
+      "operatingCashFlowFormatted": "$139.51B",
+      "totalDebt": 152987000000,
+      "totalDebtFormatted": "$152.99B",
+      "cash": 86810000000,
+      "cashFormatted": "$86.81B",
+      "equity": 411065000000,
+      "equityFormatted": "$411.06B",
+      "debtToEquity": 0.5,
+      "netMargin": 10.8,
+      "fairValue": 284.361,
+      "valuationStatus": "Overvalued",
+      "riskScore": "14/14",
+      "riskRating": "Low Risk",
+      "riskPassPercent": 100,
+      "failedChecks": []
+    },
+    "stage1_DossierSummary": {
+      "ticker": "AMZN",
+      "name": "Amazon.com, Inc.",
+      "sector": "Consumer Cyclical",
+      "currentPrice": 258.51,
+      "marketCapFormatted": "$2.79T",
+      "valuationStatus": "Overvalued",
+      "riskScore": "14/14",
+      "riskRating": "Low Risk",
+      "riskPassPercent": 100,
+      "signalsSummary": {
+        "totalChecks": 14,
+        "passed": 14,
+        "failed": 0,
+        "warnings": 0,
+        "riskRating": "Low Risk",
+        "passScorePercent": 100
+      },
+      "riskChecks": [
+        {
+          "id": "insider_selling_3m",
+          "category": "Risk Checks",
+          "question": "Has there been substantial insider selling in the past 3 months?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "No substantial insider selling detected in the past 3 months",
+          "details": {
+            "flag": "CLEAN_INSIDER_HOLDINGS",
+            "filingsCount": 5,
+            "timeframe": "90 days"
+          },
+          "timestamp": 1788840932757
+        },
+        {
+          "id": "financial_position",
+          "category": "Risk Checks",
+          "question": "Are they in a good financial position?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Debt level is low and not considered a risk",
+          "details": {
+            "netDebt": 66177000000,
+            "isNetCashPositive": false,
+            "debtToEquity": 0.5,
+            "cashAndEquivalents": 86810000000,
+            "totalDebt": 152987000000
+          },
+          "timestamp": 1788840932757
+        },
+        {
+          "id": "meaningful_market_cap",
+          "category": "Risk Checks",
+          "question": "Do they have meaningful market capitalization?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Market cap is meaningful ($2.79T)",
+          "details": {
+            "marketCap": 2788369891328,
+            "threshold": 2000000000,
+            "formatted": "$2.79T"
+          },
+          "timestamp": 1788840932757
+        },
+        {
+          "id": "negative_shareholders_equity",
+          "category": "Risk Checks",
+          "question": "Do they have negative shareholders equity?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "AMZN does not have negative shareholders equity.",
+          "details": {
+            "shareholdersEquity": 411065000000,
+            "formatted": "$411.06B"
+          },
+          "timestamp": 1788840932758
+        },
+        {
+          "id": "concerning_recent_events",
+          "category": "Risk Checks",
+          "question": "Are there any concerning recent events?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "No concerning events detected",
+          "details": {
+            "eventsDetectedCount": 0,
+            "newsSentimentRatio": 100
+          },
+          "timestamp": 1788840932758
+        },
+        {
+          "id": "liquid_and_stable_share_price",
+          "category": "Risk Checks",
+          "question": "Is their share price liquid and stable?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Share price has been stable over the past 3 months compared to the US market",
+          "details": {
+            "beta": 1.44,
+            "liquidityStatus": "High Liquidity"
+          },
+          "timestamp": 1788840932758
+        },
+        {
+          "id": "profit_margins_improved",
+          "category": "Risk Checks",
+          "question": "Have profit margins improved over the past year?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Profit margins improved or AMZN became profitable",
+          "details": {
+            "latestMarginPercent": 10.83,
+            "priorMarginPercent": 9.29,
+            "becameProfitable": false
+          },
+          "timestamp": 1788840932758
+        },
+        {
+          "id": "sufficient_financial_data",
+          "category": "Risk Checks",
+          "question": "Do they have sufficient financial data available?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "They have sufficient analyst coverage",
+          "details": {
+            "auditedYearsCount": 4,
+            "coverageStatus": "Sufficient"
+          },
+          "timestamp": 1788840932758
+        },
+        {
+          "id": "meaningful_revenue",
+          "category": "Risk Checks",
+          "question": "Do they have meaningful levels of revenue?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Revenue is meaningful ($716.92B)",
+          "details": {
+            "revenue": 716924000000,
+            "threshold": 100000000,
+            "formatted": "$716.92B"
+          },
+          "timestamp": 1788840932758
+        },
+        {
+          "id": "shareholders_diluted",
+          "category": "Risk Checks",
+          "question": "Have shareholders been diluted over the past year?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Shareholders have not been meaningfully diluted in the past year or recently listed",
+          "details": {
+            "sharesOutstanding": 10786313572,
+            "dilutionRatePercent": 0
+          },
+          "timestamp": 1788840932758
+        },
+        {
+          "id": "forecast_profitability",
+          "category": "Risk Checks",
+          "question": "Are they forecast to achieve profitability?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "The company is currently profitable",
+          "details": {
+            "netIncome": 77670000000,
+            "isCurrentlyProfitable": true,
+            "formatted": "$77.67B"
+          },
+          "timestamp": 1788840932758
+        },
+        {
+          "id": "high_quality_earnings",
+          "category": "Risk Checks",
+          "question": "Do they have high quality earnings?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "The company’s earnings are high quality",
+          "details": {
+            "operatingCashflow": 139514000000,
+            "netIncome": 77670000000,
+            "cashConversionRatio": 1.8
+          },
+          "timestamp": 1788840932758
+        },
+        {
+          "id": "revenue_earnings_growth_forecast",
+          "category": "Risk Checks",
+          "question": "Are revenue and earnings forecast to grow?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Earnings are forecast to grow by an average of 14% per year for the next 3 years",
+          "details": {
+            "forecastAnnualGrowthRatePercent": 14,
+            "horizonYears": 3
+          },
+          "timestamp": 1788840932758
+        },
+        {
+          "id": "dividend_sustainability",
+          "category": "Risk Checks",
+          "question": "Is their dividend sustainable?",
+          "status": "PASS",
+          "verdict": "Pass",
+          "summary": "Dividend is too low to be a concern",
+          "details": {
+            "dividendYieldPercent": 1,
+            "payoutRatio": 0.15,
+            "assessment": "Low Yield / Non-Material Drag"
+          },
+          "timestamp": 1788840932758
+        }
+      ]
+    },
+    "stage2_AnalysisPersonas": {
+      "personas": {
+        "bullResearcher": {
+          "id": "bull_researcher",
+          "title": "Bull Researcher",
+          "badge": "Growth & Moats",
+          "stance": "BULLISH",
+          "verdict": "Strong Buy / Accumulate",
+          "coreCase": [
+            "Monolithic market position with massive scale ($$716.92B revenue) and high recurring free cash conversion.",
+            "Fortress balance sheet featuring $$86.81B in liquid cash against low leverage (Debt/Equity: 0.5x).",
+            "Robust net profit margin of 10.8% demonstrating strong pricing power and enterprise switching moats.",
+            "Intrinsic fair value estimated at $284.36 (+10.0% upside)."
+          ],
+          "opinionatedSummary": "Amazon.com, Inc. is an elite capital compounding machine. With gross margins exceeding peer benchmarks and aggressive secular positioning in modern enterprise tech, temporary valuation premiums or insider selling noise are insignificant compared to its 5-year compounding durability. Accumulate aggressively on any market dip."
+        },
+        "bearResearcher": {
+          "id": "bear_researcher",
+          "title": "Bear Researcher",
+          "badge": "Risk & Friction",
+          "stance": "BEARISH",
+          "verdict": "Underweight / Caution",
+          "coreCase": [
+            "Elevated valuation multiple (P/E: 20.797264x, PEG: 1.51x) leaves zero room for operational slip-ups or macroeconomic contraction.",
+            "Flagged risk checks: None. Heavy executive insider selling indicates smart insiders are locking in gains rather than accumulating.",
+            "Diminishing marginal returns on gargantuan capex cycles; future top-line growth is mathematically bound to decelerate due to the law of large numbers.",
+            "Antitrust and regulatory scrutiny threatens bundling power and enterprise software margins."
+          ],
+          "opinionatedSummary": "The risk/reward asymmetry is unfavorable at current price levels ($258.51). Markets are pricing in perfection for Amazon.com, Inc. while ignoring persistent insider selling and ballooning infrastructure capital intensity. Capital is better preserved on the sidelines or rotated into cheaper defensive value."
+        },
+        "aggressiveRiskDebater": {
+          "id": "aggressive_risk_debater",
+          "title": "Aggressive Risk Debater",
+          "badge": "Asymmetric Upside",
+          "stance": "VERY BULLISH",
+          "verdict": "Max Allocation",
+          "coreCase": [
+            "Asymmetric upside profile: Amazon.com, Inc. is the undisputed foundational platform of the next decade's computing wave.",
+            "Operating cash flow of $$139.51B gives management infinite optionality to acquire disruptors or buy back shares.",
+            "Insider sales are routine pre-scheduled 10b5-1 tax events; treating them as structural red flags is classic market overthinking.",
+            "In a bull regime, premium franchises deservedly command premium multiples. Momentum favors the bold."
+          ],
+          "opinionatedSummary": "Bet on the generational platform champion. Risk in Amazon.com, Inc. is largely academic—when a company generates $$139.51B in cash, downside is strictly cushioned by buyback capacity and enterprise ubiquity. Maximize portfolio allocation to growth."
+        },
+        "conservativeRiskDebater": {
+          "id": "conservative_risk_debater",
+          "title": "Conservative Risk Debater",
+          "badge": "Capital Preservation",
+          "stance": "DEFENSIVE / NEUTRAL",
+          "verdict": "Wait for Margin of Safety",
+          "coreCase": [
+            "Primary fiduciary duty is capital preservation: At a 20.797264x P/E, an investor is paying $20.797264 for every $1 of earnings, requiring decades to recoup under adverse market regimes.",
+            "Net debt and total obligations ($$152.99B) must be rigorously scrutinized against potential liquidity shocks.",
+            "Insider selling cannot be cavalierly dismissed—leadership is actively cashing out while retail takes on high-multiple duration risk.",
+            "Demands a minimum 25% Margin of Safety before committing client capital."
+          ],
+          "opinionatedSummary": "Prudence dictates caution. While Amazon.com, Inc. possesses undeniable balance sheet strength, paying historically elevated multiples exposes investors to severe multiple compression if interest rates remain elevated or growth slows by even 200 basis points. Hold existing positions, but do not initiate fresh capital without a margin of safety."
+        },
+        "neutralRiskArbiter": {
+          "id": "neutral_risk_arbiter",
+          "title": "Neutral Risk Arbiter",
+          "badge": "Objective Adjudicator",
+          "stance": "BALANCED",
+          "verdict": "Strategic Hold / Phased Accumulation",
+          "coreCase": [
+            "Factual balance sheet score: 14/14 Risk Checks Passed (100%), denoting a fundamentally pristine financial condition.",
+            "Valuation status is Overvalued: Intrinsic DCF value lands at $284.36 vs market price of $258.51.",
+            "Bull thesis on cash flow conversion and Bear thesis on multiple duration risk are both quantitatively sound.",
+            "Net position: Risk/reward is balanced; suitable for core strategic holding with staggered accumulation rather than binary all-in bets."
+          ],
+          "opinionatedSummary": "Synthesizing objective financial signals, Amazon.com, Inc. qualifies as a tier-1 institutional compounder. The downside is structurally protected by $$86.81B in liquidity, while upside is moderated by its 20.797264x valuation multiple. The optimal strategy is systematic, phased dollar-cost averaging."
+        }
+      },
+      "debate": {
+        "rounds": [
+          {
+            "roundNumber": 1,
+            "title": "Round 1: Opening Theses Clash (Growth vs Multiple Risk)",
+            "turns": [
+              {
+                "speaker": "Bull Researcher",
+                "role": "Bullish Growth Advocate",
+                "argument": "Amazon.com, Inc. is firing on all cylinders with $$716.92B in revenue and 10.8% net margins. There is no viable substitute for their core enterprise ecosystem, making revenue growth durable and recurring."
+              },
+              {
+                "speaker": "Bear Researcher",
+                "role": "Bearish Risk Analyst",
+                "rebuttalTo": "Bull Researcher",
+                "argument": "Durability does not justify paying 20.797264x earnings! At this multiple, you are discounting perfection 10 years into the future. Furthermore, our risk checks flag substantial insider selling over the past 3 months. If the future is so radiant, why are company executives cashing out tens of millions in shares?"
+              },
+              {
+                "speaker": "Neutral Risk Arbiter",
+                "role": "Objective Fact-Checker",
+                "ruling": "Fact-check on the record: Amazon.com, Inc. indeed generated $$77.67B in net income, and 13 out of 14 risk checks passed with zero balance sheet stress. However, the Bear is correct that the P/E ratio of 20.797264x leaves minimal margin for error."
+              }
+            ]
+          },
+          {
+            "roundNumber": 2,
+            "title": "Round 2: Risk Tolerance Duel (Aggressive vs Conservative)",
+            "turns": [
+              {
+                "speaker": "Aggressive Risk Debater",
+                "role": "High-Tolerance Momentum Seeker",
+                "rebuttalTo": "Bear Researcher",
+                "argument": "The Bear is obsessing over pennies while missing the generational platform shift! Insider selling on pre-planned 10b5-1 schedules is routine executive liquidity, not a structural panic. Look at the cash conversion—$$139.51B in operating cash flow! That is a fortress that incinerates short theses."
+              },
+              {
+                "speaker": "Conservative Risk Debater",
+                "role": "Downside Protection Advocate",
+                "rebuttalTo": "Aggressive Risk Debater",
+                "argument": "Cavalier attitudes toward valuation always end in tears when the macro tide turns. You cannot buy a business simply because its operating cash flow is large; you must evaluate what you pay for that cash flow. If terminal discount rates rise by even 100 bps, this stock drops 20% overnight. Capital preservation must come before euphoria."
+              },
+              {
+                "speaker": "Neutral Risk Arbiter",
+                "role": "Risk-Adjusted Synthesis",
+                "ruling": "Both debaters raise valid structural mechanics. Aggressive rightly points to uncontested cash flow scale ($$139.51B); Conservative rightly warns of duration vulnerability given the 20.797264x multiple."
+              }
+            ]
+          },
+          {
+            "roundNumber": 3,
+            "title": "Round 3: Direct Closing Rebuttals",
+            "turns": [
+              {
+                "speaker": "Bear Researcher",
+                "role": "Bearish Risk Analyst",
+                "rebuttalTo": "Aggressive Risk Debater",
+                "argument": "To the Aggressive Debater: If cloud growth rates normalize or enterprise software budgets compress, what is your downside floor? You have no tangible margin of safety other than hope."
+              },
+              {
+                "speaker": "Bull Researcher",
+                "role": "Bullish Growth Advocate",
+                "rebuttalTo": "Bear Researcher",
+                "argument": "The downside floor is $$86.81B in cash, high ROIC, and massive share repurchase capacity that protects earnings per share even in slower top-line environments. Bet on compounding quality, not cyclical paralysis."
+              }
+            ]
+          }
+        ],
+        "conclusion": {
+          "consensusPoints": [
+            "Amazon.com, Inc. possesses exceptional balance sheet health, zero solvency risk, and elite cash generation ($$139.51B).",
+            "Core financial quality is confirmed by passing 13 of 14 objective risk checks (100% pass score)."
+          ],
+          "contestedBattleground": "The debate hinges strictly on Valuation Multiple Friction (20.797264x P/E) and insider selling vs Generational Platform Durability and Buyback Cushion.",
+          "verdictToExperts": "Amazon.com, Inc. is a pristine enterprise trading at a full valuation. The 5 Analysis Personas refer this file to the 4 Legendary Experts to determine if the moat, return on capital, scuttlebutt, and DCF justify entering at current market prices."
+        }
+      }
+    },
+    "stage3_ExpertPersonas": {
+      "debateFedToExperts": {
+        "consensusPoints": [
+          "Amazon.com, Inc. possesses exceptional balance sheet health, zero solvency risk, and elite cash generation ($$139.51B).",
+          "Core financial quality is confirmed by passing 13 of 14 objective risk checks (100% pass score)."
+        ],
+        "contestedBattleground": "The debate hinges strictly on Valuation Multiple Friction (20.797264x P/E) and insider selling vs Generational Platform Durability and Buyback Cushion.",
+        "verdictToExperts": "Amazon.com, Inc. is a pristine enterprise trading at a full valuation. The 5 Analysis Personas refer this file to the 4 Legendary Experts to determine if the moat, return on capital, scuttlebutt, and DCF justify entering at current market prices."
+      },
+      "experts": {
+        "warrenBuffett": {
+          "id": "warren_buffett",
+          "name": "Warren Buffett",
+          "role": "Chairman & CEO, Berkshire Hathaway",
+          "philosophy": "Economic Moats, Owner Earnings & Capital Discipline",
+          "stance": "BULLISH ON MOAT",
+          "verdict": "Accumulate High-Quality Compounder",
+          "caseAnalysis": [
+            "Economic Moat Audit: Average ROIC of 11.12%% clears our 15% hurdle with ease, proving a wide enterprise moat and high pricing power.",
+            "Owner Earnings: Generating $51.31B in true spendable cash for owners after real capital maintenance.",
+            "Solvency Fortress: $$86.81B in cash vs $$152.99B in debt demonstrates pristine financial resilience.",
+            "Debate Rebuttal: The Bear is right to be skeptical of high multiples, but as I learned from Charlie Munger: It's far better to buy a wonderful company at a fair price than a fair company at a wonderful price."
+          ],
+          "opinionatedSummary": "Amazon.com, Inc. is a textbook wonderful business with an enduring moat. While it is not a 50-cent dollar cigar butt, its ability to redeploy capital at high rates of return makes it an exceptional candidate for long-term holding. My verdict: ACCUMULATE ON QUALITY."
+        },
+        "peterLynch": {
+          "id": "peter_lynch",
+          "name": "Peter Lynch",
+          "role": "Former Manager, Fidelity Magellan Fund",
+          "philosophy": "Circle of Competence, PEG Ratio & Company Taxonomy",
+          "stance": "COMPOUNDING STALWART",
+          "verdict": "Buy on Cyclical Pullbacks",
+          "caseAnalysis": [
+            "Taxonomy Classification: Classified as a \"Stalwart\". It is a multibillion-dollar blue-chip engine that offers defensive resilience and consistent double-digit growth.",
+            "PEG Ratio Check: PEG stands at 1.51x. While our favorite hunting ground is PEG < 1.0, a Stalwart with this level of recurring cash flow is reasonable up to 1.5x - 2.0x.",
+            "Street-Level Edge: Ubiquitous across Fortune 500 enterprises and developer workflows. Switching costs are extraordinarily high.",
+            "Debate Rebuttal: I agree with the Bull that you don't sell a champion simply because it had a good run, but watch the inventory/sales growth spread and enterprise budget slowdowns closely."
+          ],
+          "opinionatedSummary": "As a Stalwart, Amazon.com, Inc. won't double overnight, but it will protect you in downturns and compound steadily. Don't let the noise scare you out of a winning position. My verdict: SOLID STALWART HOLD / BUY ON DIPS."
+        },
+        "philipFisher": {
+          "id": "philip_fisher",
+          "name": "Philip Fisher",
+          "role": "Pioneer of Growth Investing & Scuttlebutt",
+          "philosophy": "360° Scuttlebutt, R&D Productivity & Management Integrity",
+          "stance": "EXCEPTIONAL QUALITY",
+          "verdict": "Long-Term Hold & Grow",
+          "caseAnalysis": [
+            "Scuttlebutt & Tech Moat: Developer momentum is high; engineering sentiment is \"Bullish & Highly Motivated\".",
+            "R&D Productivity: Reinvestment into core cloud and intelligent systems is yielding tangible enterprise customer lock-in.",
+            "Management & Integrity Audit: While insider selling was flagged in the risk checks, Form 4 disclosures show long-tenured leadership retains enormous personal equity stakes.",
+            "Debate Rebuttal: The Bear complains about large capex. I disagree—aggressive R&D and capital spending to build proprietary competitive lead is exactly what I look for in a 15-Point company."
+          ],
+          "opinionatedSummary": "Field intelligence confirms high customer retention and superior engineering discipline. When a company dominates its technological ecosystem with high switching friction, you stay invested for the compounding decade. My verdict: EXCEPTIONAL FRANCHISE QUALITY."
+        },
+        "aswathDamodaran": {
+          "id": "aswath_damodaran",
+          "name": "Aswath Damodaran",
+          "role": "Professor of Finance, NYU Stern",
+          "philosophy": "DCF Intrinsic Fair Value, WACC & Narrative-to-Numbers",
+          "stance": "FAIRLY VALUED",
+          "verdict": "Disciplined DCF Entry Only",
+          "caseAnalysis": [
+            "Valuation Mechanics: Cost of capital (synthetic WACC) is calculated at 11.04%.",
+            "Intrinsic Fair Value: Multi-stage DCF yields an intrinsic equity value of $284.36 per share vs current price of $258.51.",
+            "Narrative-to-Numbers Reality Filter: The Bull's story of enterprise dominance is Possible and Plausible. However, the Probable path suggests modest multiple compression over time.",
+            "Debate Rebuttal: Both Bull and Bear make emotional appeals. The math indicates the stock is Overvalued. Do not chase at peak multiples, but accumulate when priced below intrinsic DCF."
+          ],
+          "opinionatedSummary": "The market price is closely anchored to its intrinsic discounted cash flow fair value ($284.36). The narrative of durable enterprise cloud leadership holds up under accounting normalization, but upside is constrained by current valuation. My verdict: NEUTRAL / FAIRLY VALUED."
+        }
+      }
+    },
+    "stage4_ExpertsDebate": {
+      "rounds": [
+        {
+          "roundNumber": 1,
+          "title": "Round 1: Economic Moats vs DCF Multiple (Buffett vs Damodaran)",
+          "turns": [
+            {
+              "speaker": "Warren Buffett",
+              "role": "Chairman & CEO, Berkshire Hathaway",
+              "argument": "It is far better to buy a wonderful business like Amazon.com, Inc. at a fair price than a fair business at a wonderful price. The high return on invested capital and sticky customer ecosystem mean this moat compounds steadily through all macro cycles."
+            },
+            {
+              "speaker": "Aswath Damodaran",
+              "role": "Professor of Finance, NYU Stern",
+              "rebuttalTo": "Warren Buffett",
+              "argument": "Warren, even the most durable moat has a finite intrinsic cash flow value. At 20.797264x earnings, the market is pricing in flawless execution. My multi-stage DCF yields an intrinsic fair value of $284.36—paying a multiple premium above intrinsic cash flow erodes expected return."
+            }
+          ]
+        },
+        {
+          "roundNumber": 2,
+          "title": "Round 2: R&D Reinvestment Velocity vs Stalwart Taxonomy (Fisher vs Lynch)",
+          "turns": [
+            {
+              "speaker": "Philip Fisher",
+              "role": "Pioneer of Growth & Scuttlebutt",
+              "argument": "Quantitative multiple screens miss what 360° scuttlebutt reveals: Amazon.com, Inc. reinvests aggressively into high-margin platform initiatives with superior R&D productivity. You cannot evaluate a generational tech compounder with static backward-looking PE filters."
+            },
+            {
+              "speaker": "Peter Lynch",
+              "role": "Former Manager, Fidelity Magellan Fund",
+              "rebuttalTo": "Philip Fisher",
+              "argument": "Philip, I love quality businesses, but at over $2.79T market cap, this is clearly a Stalwart, not a Fast Grower. A PEG ratio of 1.51x dictates patience: do not chase at peak multiples, but accumulate aggressively on cyclical 15-20% pullbacks."
+            }
+          ]
+        },
+        {
+          "roundNumber": 3,
+          "title": "Round 3: Final Doctrinal Clash & Committee Mandate",
+          "turns": [
+            {
+              "speaker": "Warren Buffett",
+              "role": "Chairman & CEO, Berkshire Hathaway",
+              "rebuttalTo": "Aswath Damodaran",
+              "argument": "When you possess a wide moat with low debt ($$152.99B) and high liquid reserves ($$86.81B), time is the friend of the wonderful business. But I agree with Aswath: price discipline is essential."
+            },
+            {
+              "speaker": "Aswath Damodaran",
+              "role": "Professor of Finance, NYU Stern",
+              "rebuttalTo": "Warren Buffett",
+              "argument": "Consensus is reached on business quality. The file now passes to Ben Graham with our key question: does current market price offer an adequate Margin of Safety, or must investors hold limit orders?"
+            }
+          ]
+        }
+      ],
+      "conclusion": {
+        "expertConsensusPoints": [
+          "Amazon.com, Inc. possesses pristine balance sheet health, verified by 14/14 passed risk checks and $$86.81B in liquid cash.",
+          "Economic moat and high return on capital provide durable franchise pricing power over economic cycles.",
+          "Valuation multiple (20.797264x P/E) is trading near or slightly above intrinsic DCF fair value ($284.36), making disciplined entry thresholds imperative."
+        ],
+        "contestedBattleground": "Doctrinal Friction: Whether Amazon.com, Inc.'s generational platform moat justifies buying at full valuation multiples (Buffett/Fisher) vs demanding a classical discount to DCF fair value (Damodaran/Lynch).",
+        "irreconcilableDifferences": "Buffett and Fisher are willing to hold through multiple compression for compounding franchise quality, whereas Damodaran and Lynch demand price pullback to intrinsic fair value before deploying fresh capital.",
+        "verdictToSeniorArbiter": "The 4 Experts unanimously validate the exceptional franchise caliber and solvency of Amazon.com, Inc., but stand divided on multiple entry tolerance. Transmitted exclusively to Senior Arbiter Benjamin Graham to adjudicate the definitive Margin of Safety and maximum prudent entry price."
+      }
+    },
+    "stage5_SeniorArbiterGraham": {
+      "arbiterName": "Benjamin Graham",
+      "title": "Senior Arbiter & Dean of Wall Street",
+      "compositeGrade": "A-",
+      "recommendation": "PRUDENT ACCUMULATION ON RETRACEMENT",
+      "marginOfSafetyStatus": "MARGIN OF SAFETY COMPRESSED (9.1% discount to DCF fair value)",
+      "maxPrudentEntryPrice": 261.61,
+      "targetFairValue": 284.36,
+      "suggestedPortfolioAllocationPercent": "4.0% - 7.5% (Core Tier-1 Compounder)",
+      "masterOpinionatedSummary": "Having received the objective Company Dossier alongside the Final Conclusion transmitted from the Legendary Experts Debate (Buffett, Lynch, Fisher, Damodaran), my Senior Arbiter adjudication on Amazon.com, Inc. (AMZN) is unequivocal:\n\n1. Financial Fortress Integrity: Amazon.com, Inc. meets the strictest standards of quantitative solvency. It passes 14/14 risk checks (100%), possesses $$86.81B in liquid cash reserves, and produces consistent operating cash flow ($$139.51B). Net shareholders equity is positive and robust ($$411.06B). The 4 experts unanimously confirmed quantitative solvency.\n\n2. Adjudication of the Expert Debate: The core contested battleground—\"Doctrinal Friction: Whether Amazon.com, Inc.'s generational platform moat justifies buying at full valuation multiples (Buffett/Fisher) vs demanding a classical discount to DCF fair value (Damodaran/Lynch).\"—reflects the timeless tension between price paid and value received. Damodaran and Lynch have legitimately established that purchasing at 20.797264x P/E exposes an investor to duration risk and multiple compression. However, Buffett and Fisher have decisively demonstrated that Amazon.com, Inc.'s economic moat (11.12%% ROIC) and switching costs provide a rare structural defense against inflation and competitive disruption.\n\n3. The Margin of Safety Mandate: An investment operation is one which, upon thorough analysis, promises safety of principal and an adequate return. Operations not meeting these requirements are speculative. At $258.51, Amazon.com, Inc. is trading near its intrinsic DCF fair value ($284.36). While it does not offer the classic 33% discount to tangible liquidation value that I favored in the 1930s, its extraordinary franchise earnings power replaces physical liquidation value. \n\nMy final counsel: Exercise price discipline. Do not chase momentum at peak multiples. Initiate or maintain a core strategic position with limit orders placed on market pullbacks below $270.14.",
+      "criticalInvalidationTriggers": [
+        "Commercial operating margins compressing below 32% for two consecutive quarters.",
+        "Net cash conversion falling below 80% of reported GAAP net income.",
+        "Enterprise switching moats eroding due to regulatory antitrust mandated unbundling.",
+        "Sustained debt-to-equity expansion above 0.85x without corresponding cash accumulation."
+      ]
+    },
+    "stage4_SeniorArbiterGraham": {
+      "arbiterName": "Benjamin Graham",
+      "title": "Senior Arbiter & Dean of Wall Street",
+      "compositeGrade": "A-",
+      "recommendation": "PRUDENT ACCUMULATION ON RETRACEMENT",
+      "marginOfSafetyStatus": "MARGIN OF SAFETY COMPRESSED (9.1% discount to DCF fair value)",
+      "maxPrudentEntryPrice": 261.61,
+      "targetFairValue": 284.36,
+      "suggestedPortfolioAllocationPercent": "4.0% - 7.5% (Core Tier-1 Compounder)",
+      "masterOpinionatedSummary": "Having received the objective Company Dossier alongside the Final Conclusion transmitted from the Legendary Experts Debate (Buffett, Lynch, Fisher, Damodaran), my Senior Arbiter adjudication on Amazon.com, Inc. (AMZN) is unequivocal:\n\n1. Financial Fortress Integrity: Amazon.com, Inc. meets the strictest standards of quantitative solvency. It passes 14/14 risk checks (100%), possesses $$86.81B in liquid cash reserves, and produces consistent operating cash flow ($$139.51B). Net shareholders equity is positive and robust ($$411.06B). The 4 experts unanimously confirmed quantitative solvency.\n\n2. Adjudication of the Expert Debate: The core contested battleground—\"Doctrinal Friction: Whether Amazon.com, Inc.'s generational platform moat justifies buying at full valuation multiples (Buffett/Fisher) vs demanding a classical discount to DCF fair value (Damodaran/Lynch).\"—reflects the timeless tension between price paid and value received. Damodaran and Lynch have legitimately established that purchasing at 20.797264x P/E exposes an investor to duration risk and multiple compression. However, Buffett and Fisher have decisively demonstrated that Amazon.com, Inc.'s economic moat (11.12%% ROIC) and switching costs provide a rare structural defense against inflation and competitive disruption.\n\n3. The Margin of Safety Mandate: An investment operation is one which, upon thorough analysis, promises safety of principal and an adequate return. Operations not meeting these requirements are speculative. At $258.51, Amazon.com, Inc. is trading near its intrinsic DCF fair value ($284.36). While it does not offer the classic 33% discount to tangible liquidation value that I favored in the 1930s, its extraordinary franchise earnings power replaces physical liquidation value. \n\nMy final counsel: Exercise price discipline. Do not chase momentum at peak multiples. Initiate or maintain a core strategic position with limit orders placed on market pullbacks below $270.14.",
+      "criticalInvalidationTriggers": [
+        "Commercial operating margins compressing below 32% for two consecutive quarters.",
+        "Net cash conversion falling below 80% of reported GAAP net income.",
+        "Enterprise switching moats eroding due to regulatory antitrust mandated unbundling.",
+        "Sustained debt-to-equity expansion above 0.85x without corresponding cash accumulation."
+      ]
+    }
   }
 }
 };

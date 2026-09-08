@@ -23,6 +23,10 @@
     ],
     "rewrites": [
       {
+        "source": "/analysis",
+        "destination": "/analysis.html"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }

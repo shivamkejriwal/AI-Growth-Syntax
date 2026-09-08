@@ -23,6 +23,8 @@ export { ExaClient } from './lib/exaClient.js';
 export { DuckDuckGoClient } from './lib/duckduckgoClient.js';
 export { CompetitorEngine } from './lib/competitorEngine.js';
 export { FoddaClient } from './lib/foddaClient.js';
+export { CongressionalClient } from './lib/congressionalClient.js';
+export { InstitutionalHoldingsClient } from './lib/institutionalHoldingsClient.js';
 export { CompositeInvestor, formatCurrency } from './lib/compositeInvestor.js';
 export { getDemoFinancials, DEMO_DATASETS } from './lib/demoData.js';
 export { DiskCache, defaultCache } from './lib/cache.js';

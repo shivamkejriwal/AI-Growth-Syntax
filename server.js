@@ -28,9 +28,12 @@ import { DuckDuckGoClient } from './lib/duckduckgoClient.js';
 import { CompetitorEngine } from './lib/competitorEngine.js';
 import { FoddaClient } from './lib/foddaClient.js';
 import { SeekingAlphaClient } from './lib/seekingAlphaClient.js';
+import { CongressionalClient } from './lib/congressionalClient.js';
+import { InstitutionalHoldingsClient } from './lib/institutionalHoldingsClient.js';
 import { getActiveMode, getModeConfig, APP_MODES } from './lib/modes.js';
 import { defaultMockDataManager } from './lib/mockDataManager.js';
 import { defaultDb } from './lib/db.js';
+import { defaultCompanyAnalysisOrchestrator } from './lib/companyAnalysisOrchestrator.js';
 import {
   defaultOntologyGraph,
   defaultIngestionPipeline,
@@ -60,6 +63,8 @@ const duckduckgo = new DuckDuckGoClient();
 const competitorEngine = new CompetitorEngine();
 const fodda = new FoddaClient();
 const seekingAlpha = new SeekingAlphaClient();
+const congressional = new CongressionalClient();
+const institutional = new InstitutionalHoldingsClient();
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
@@ -280,6 +285,37 @@ export async function handleRequest(req, res) {
     }
 
     // -------------------------------------------------------------
+    // API: /api/congress?ticker=<sym>&limit=<20>
+    // Returns Congressional Stock Trades (House & Senate STOCK Act)
+    // -------------------------------------------------------------
+    if (pathname === '/api/congress' && req.method === 'GET') {
+      const ticker = (searchParams.get('ticker') || 'NVDA').trim().toUpperCase();
+      const limit = parseInt(searchParams.get('limit') || '20', 10);
+      const data = await congressional.getCongressionalTrades(ticker, limit);
+      return sendJson(res, 200, { success: true, ticker, data });
+    }
+
+    // -------------------------------------------------------------
+    // API: /api/institutional?ticker=<sym>&limit=<15>
+    // Returns SEC Form 13F Institutional Ownership & Whale Holdings
+    // -------------------------------------------------------------
+    if (pathname === '/api/institutional' && req.method === 'GET') {
+      const ticker = (searchParams.get('ticker') || 'AAPL').trim().toUpperCase();
+      const limit = parseInt(searchParams.get('limit') || '15', 10);
+      const data = await institutional.getInstitutionalHoldings(ticker, limit);
+      return sendJson(res, 200, { success: true, ticker, data });
+    }
+
+    // -------------------------------------------------------------
+    // API: /api/regional-surveys
+    // Returns Regional Federal Reserve Manufacturing & Business Surveys
+    // -------------------------------------------------------------
+    if (pathname === '/api/regional-surveys' && req.method === 'GET') {
+      const surveys = await investor.fred.getRegionalFedSurveys();
+      return sendJson(res, 200, { success: true, surveys });
+    }
+
+    // -------------------------------------------------------------
     // API: /api/macro
     // -------------------------------------------------------------
     if (pathname === '/api/macro' && req.method === 'GET') {
@@ -338,6 +374,24 @@ export async function handleRequest(req, res) {
         expertsDebate = await expertsDesk.runExpertsDebate(ticker, { mode });
       }
       return sendJson(res, 200, expertsDebate);
+    }
+
+    // -------------------------------------------------------------
+    // API: /api/company-analysis?ticker=<sym>&mode=<live|demo>&refresh=<true|false>
+    // Full sequential workflow: Raw Data -> Dossier -> 5 Personas -> 4 Experts -> Benjamin Graham
+    // -------------------------------------------------------------
+    if (pathname === '/api/company-analysis' && req.method === 'GET') {
+      const ticker = (searchParams.get('ticker') || 'MSFT').trim().toUpperCase();
+      const mode = searchParams.get('mode') || 'live';
+      const forceRefresh = searchParams.get('refresh') === 'true' || searchParams.get('refresh') === '1';
+
+      try {
+        const analysis = await defaultCompanyAnalysisOrchestrator.runAnalysis(ticker, { mode, forceRefresh });
+        return sendJson(res, 200, analysis);
+      } catch (err) {
+        console.error(`[CompanyAnalysis API Error] for ${ticker}:`, err);
+        return sendJson(res, 500, { error: err.message });
+      }
     }
 
     // -------------------------------------------------------------
@@ -680,7 +734,7 @@ export async function handleRequest(req, res) {
     // -------------------------------------------------------------
     // Static Files (/public/*)
     // -------------------------------------------------------------
-    let relativePath = pathname === '/' ? 'index.html' : pathname.replace(/^\/+/, '');
+    let relativePath = pathname === '/' ? 'index.html' : (pathname === '/analysis' ? 'analysis.html' : pathname.replace(/^\/+/, ''));
     const safeFilePath = path.normalize(path.join(PUBLIC_DIR, relativePath));
 
     // Security check: ensure within public folder
@@ -692,7 +746,12 @@ export async function handleRequest(req, res) {
       const ext = path.extname(safeFilePath).toLowerCase();
       const contentType = MIME_TYPES[ext] || 'application/octet-stream';
       const fileBuffer = fs.readFileSync(safeFilePath);
-      res.writeHead(200, { 'Content-Type': contentType });
+      res.writeHead(200, { 
+        'Content-Type': contentType,
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Pragma': 'no-cache',
+        'Expires': '0'
+      });
       return res.end(fileBuffer);
     }
 

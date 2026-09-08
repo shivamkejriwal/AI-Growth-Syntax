@@ -28,6 +28,7 @@ Usage:
 
 Options:
   --demo            Run using pre-loaded offline financial data (no API key needed)
+  --signals         Output Investment & Research Risk Check Signals checklist
   --export-md       Generate and save Investment Decision Memorandum markdown file
   --company-data    Output purely standardized objective company financials (no experts)
   --json            Output canonical Single Company JSON to stdout
@@ -37,16 +38,18 @@ Options:
 
 Examples:
   node cli/analyze.js MSFT
+  node cli/analyze.js MSFT --signals
   node cli/analyze.js MSFT --company-data
   node cli/analyze.js AAPL --export-md
   node cli/analyze.js NVDA --json
-  node cli/analyze.js DEMO --demo --export-md
+  node cli/analyze.js DEMO --demo --signals
 `);
     process.exit(0);
   }
 
   const ticker = args[0].toUpperCase();
   const isDemo = args.includes('--demo') || ticker === 'DEMO';
+  const showSignals = args.includes('--signals');
   const exportMd = args.includes('--export-md');
   const asJson = args.includes('--json');
   const showCompanyData = args.includes('--company-data');
@@ -162,6 +165,24 @@ Examples:
       console.log(`   • Possible:  ${p.possible.status} — ${p.possible.verdict}`);
       console.log(`   • Plausible: ${p.plausible.status} — ${p.plausible.verdict}`);
       console.log(`   • Probable:  ${p.probable.status} — ${p.probable.verdict}`);
+    }
+
+    if (showSignals || dossier.signals) {
+      console.log(`\n------------------------------------------------------------------------------`);
+      console.log(`[Investment Signals Based on Risk Checks]`);
+      console.log(`${dossier.metadata.companyName} (${dossier.metadata.symbol}) Risk Checks`);
+      console.log(`Score: ${dossier.signals.summary.passed}/${dossier.signals.summary.totalChecks} Passed (${dossier.signals.summary.passScorePercent}%) | Rating: ${dossier.signals.summary.riskRating}`);
+
+      for (const check of dossier.signals.riskChecks) {
+        console.log(`\n${check.verdict}`);
+        console.log(`${check.question}\n`);
+        console.log(`${check.summary}`);
+      }
+
+      if (dossier.signals.customSignals && Object.keys(dossier.signals.customSignals).length > 0) {
+        console.log(`\n[Unstructured / Custom Research Signals]`);
+        console.log(JSON.stringify(dossier.signals.customSignals, null, 2));
+      }
     }
 
     if (exportMd) {
